@@ -7,6 +7,9 @@
 | `effect` | `kind?: string`, `identity?: string`, `occurrence: number` | exactly one of `kind`/`identity`; occurrence ≥ 1 |
 | `write` | `index: number` | ≥ 1; only with strategies `crash`, `processKill` |
 
+Kind anchors match the attempt's `kind` **exactly** (e.g. fakes use `payment.charge`; a user
+`instrument(fn, { kind: "payment" })` uses `payment`).
+
 ## FaultPoint
 
 `"before" | "after"` (effect anchors only). `delay` ignores point (acts while in flight).
