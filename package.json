@@ -1,0 +1,23 @@
+{
+	"name": "replayguard-workspace",
+	"private": true,
+	"type": "module",
+	"license": "Apache-2.0",
+	"packageManager": "pnpm@12.8.1",
+	"engines": {
+		"node": ">=22"
+	},
+	"scripts": {
+		"build": "turbo run build",
+		"check-types": "turbo run check-types",
+		"test": "turbo run test",
+		"lint": "biome check .",
+		"lint:fix": "biome check --write .",
+		"spike": "pnpm --filter @replayguard/spike-engine-assumptions test"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "2.5.15",
+		"turbo": "2.11.9",
+		"typescript": "~6.0.3"
+	}
+}

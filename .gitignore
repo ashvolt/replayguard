@@ -1,0 +1,13 @@
+node_modules/
+dist/
+coverage/
+reports/
+.turbo/
+.stryker-tmp/
+*.log
+.env
+.env.*
+!.env.example
+
+# Agent-local settings may hold credentials; shared skills under .claude/skills are committed.
+.claude/settings.local.json

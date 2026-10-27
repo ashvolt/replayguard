@@ -1,0 +1,17 @@
+packages:
+  - "packages/*"
+  - "tools/*"
+  - "spikes/*"
+
+# Supply-chain guard: refuse dependency versions published less than 7 days ago.
+minimumReleaseAge: 10080
+
+# Install scripts are denied unless explicitly allowed here.
+allowBuilds:
+  esbuild: true
+  "@biomejs/biome": true
+  "@google/genai": false
+  better-sqlite3: false
+  cbor-extract: false
+  koffi: false
+  protobufjs: false

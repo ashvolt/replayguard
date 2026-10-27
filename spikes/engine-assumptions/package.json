@@ -1,0 +1,19 @@
+{
+	"name": "@replayguard/spike-engine-assumptions",
+	"private": true,
+	"type": "module",
+	"description": "Throwaway spike: verifies Rivet workflow engine side-effect assumptions before ReplayGuard specs are written.",
+	"scripts": {
+		"test": "vitest run",
+		"check-types": "tsc --noEmit"
+	},
+	"dependencies": {
+		"@rivet-dev/workflows": "1.0.0",
+		"rivetkit": "2.3.27"
+	},
+	"devDependencies": {
+		"@types/node": "22.20.5",
+		"typescript": "~6.0.3",
+		"vitest": "5.0.5"
+	}
+}
