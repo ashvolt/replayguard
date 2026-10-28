@@ -1,0 +1,18 @@
+{
+	"name": "@replayguard/spike-actor-restart",
+	"private": true,
+	"type": "module",
+	"description": "Throwaway spike (spec 012 T002): can a RivetKit workflow actor survive a host kill + restart?",
+	"scripts": {
+		"spike": "vitest run",
+		"check-types": "tsc --noEmit"
+	},
+	"dependencies": {
+		"rivetkit": "2.3.27"
+	},
+	"devDependencies": {
+		"@types/node": "22.20.5",
+		"typescript": "~6.0.3",
+		"vitest": "4.1.12"
+	}
+}

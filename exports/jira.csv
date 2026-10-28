@@ -1910,7 +1910,7 @@ ReplayGuard-ID: 012-rivetkit-adapter-T001",Medium,To Do,012-rivetkit-adapter,set
 Phase: Phase 1: Setup (Shared Infrastructure)
 
 Source: specs/012-rivetkit-adapter/tasks.md:19
-ReplayGuard-ID: 012-rivetkit-adapter-T002",Medium,To Do,012-rivetkit-adapter,setup,
+ReplayGuard-ID: 012-rivetkit-adapter-T002",Medium,Done,012-rivetkit-adapter,setup,
 339,333,Task,"T003 Extract shared runtime conformance suite (H0, H1, H1b, H3a, H3b, H4, clean baseline) parameterized by runtime factory in packages/adapter-workflows/test-support/conformance.ts","Extract shared runtime conformance suite (H0, H1, H1b, H3a, H3b, H4, clean baseline) parameterized by runtime factory in packages/adapter-workflows/test-support/conformance.ts
 
 Phase: Phase 2: Foundational (Blocking Prerequisites)

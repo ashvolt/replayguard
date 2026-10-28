@@ -1572,7 +1572,7 @@ Source: specs/012-rivetkit-adapter/tasks.md:18",012-rivetkit-adapter;setup,Mediu
 
 Phase: Phase 1: Setup (Shared Infrastructure)
 
-Source: specs/012-rivetkit-adapter/tasks.md:19",012-rivetkit-adapter;setup,Medium,To Do,012-rivetkit-adapter
+Source: specs/012-rivetkit-adapter/tasks.md:19",012-rivetkit-adapter;setup,Medium,Done,012-rivetkit-adapter
 012-rivetkit-adapter-T003,012-rivetkit-adapter,Task,"T003 Extract shared runtime conformance suite (H0, H1, H1b, H3a, H3b, H4, clean baseline) parameterized by runtime factory in packages/adapter-workflows/test-support/conformance.ts","Extract shared runtime conformance suite (H0, H1, H1b, H3a, H3b, H4, clean baseline) parameterized by runtime factory in packages/adapter-workflows/test-support/conformance.ts
 
 Phase: Phase 2: Foundational (Blocking Prerequisites)

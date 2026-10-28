@@ -6520,7 +6520,7 @@
     {
       "sourceId": "012-rivetkit-adapter-T002",
       "parentSourceId": "012-rivetkit-adapter",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Task"

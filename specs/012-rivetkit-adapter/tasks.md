@@ -16,7 +16,7 @@ description: "Task list for 012-rivetkit-adapter"
 ## Phase 1: Setup (Shared Infrastructure)
 
 - [ ] T001 Configure dependencies (core, adapter-workflows) and peers (`rivetkit >=2.3.11 <2.4.0`, `@rivet-dev/workflows ^1.0.0`) in packages/adapter-rivetkit/package.json
-- [ ] T002 Spike: validate actor host kill + restart resumes workflow from persisted history; record decision (parent-owned engine vs restart both) in spikes/actor-restart/FINDINGS.md
+- [X] T002 Spike: validate actor host kill + restart resumes workflow from persisted history; record decision (parent-owned engine vs restart both) in spikes/actor-restart/FINDINGS.md
 
 ---
 
