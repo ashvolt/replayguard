@@ -18,7 +18,36 @@ function setup() {
 	};
 }
 
-describe("throwAfter strategy (lost response)", () => {
+describe("throwAfter strategy (lost request / lost response)", () => {
+	it("before: the request is lost, the provider is never called, nothing is recorded", async () => {
+		const { ledger, persistence, env } = setup();
+		const armed = new FaultController().arm([fault.loseRequest("email")], env);
+		let called = false;
+		const send = instrument(
+			ledger,
+			async () => {
+				called = true;
+			},
+			{ kind: "email" },
+		);
+		await expect(send()).rejects.toBeInstanceOf(SimulatedNetworkError);
+		expect(called).toBe(false);
+		expect(ledger.attempts()).toHaveLength(0);
+		expect(persistence.crashed).toBe(false);
+		expect(ledger.snapshot().faults[0]?.anchor).toBe("lost request before email#1");
+		expect(armed.outcomes()[0]?.triggered).toBe(true);
+		await send();
+		expect(called).toBe(true);
+	});
+
+	it("before: honors a custom error factory", async () => {
+		const { ledger, env } = setup();
+		const custom = new Error("DNS failure");
+		new FaultController().arm([fault.loseRequest("email", 1, () => custom)], env);
+		const send = instrument(ledger, async () => 1, { kind: "email" });
+		await expect(send()).rejects.toBe(custom);
+	});
+
 	it("applies the effect then throws a simulated network error", async () => {
 		const { ledger, persistence, env } = setup();
 		new FaultController().arm([fault.loseResponse("email")], env);

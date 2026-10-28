@@ -24,7 +24,7 @@ describe("FaultController", () => {
 			e,
 		);
 		const send = instrument(e.ledger, async () => "sent", { kind: "email" });
-		await expect(send()).rejects.toThrow(/response lost/);
+		await expect(send()).rejects.toThrow(/lost response after email#1/);
 		const outcomes = armed.outcomes();
 		expect(outcomes.map((o) => [o.specIndex, o.strategy, o.triggered])).toEqual([
 			[0, "none", false],

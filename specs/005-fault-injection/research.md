@@ -51,3 +51,18 @@
 
 - **Decision**: Anchors refer to `kindOccurrence`/`identityOccurrence` counted across runs within a
   case; occurrences are stable because cases replay identical workflows with identical inputs.
+
+## R8 — Implementation refinements (2026-10-28)
+
+- **Lost request**: `throwAfter` gained `point: "before"` (`fault.loseRequest`) — the request never
+  reaches the provider; required for the 8-case exploration in spec 006 and for `skipped` detection.
+- **Process checkpoints**: instead of a kill-only channel, the child pauses at `before-start`,
+  `in-flight` and `after-settle`; the parent mirrors the ledger with authoritative occurrence counts
+  across restarts and runs the same hooks. Crash-style faults kill the child; `throwAfter` replies
+  with an error; `delay` simply delays the reply. Every strategy therefore works in process mode.
+  Durable-write anchors are not supported there (no write relay).
+- **`MemoryDriver`**: Rivet's `InMemoryDriver` awaits a timer per KV operation (~110 ms per run on
+  Windows); `MemoryDriver` subclasses it with synchronous storage (same conformance suite). Needed
+  for SC-002 and for deterministic timing in H3a.
+- **`createCrashStrategy(name, isolated)`**: `processKill` reuses crash semantics with process
+  isolation required.

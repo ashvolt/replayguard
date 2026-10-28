@@ -1,7 +1,6 @@
 /**
- * Error thrown by the `throwAfter` (lost response) fault: the provider applied the effect, but the
- * response never reached the caller. Uses `code: "ECONNRESET"` like Node's network errors so
- * retry logic treats it as a transient network failure.
+ * Error thrown by the `throwAfter` fault: the request or the response was lost on the network.
+ * Uses `code: "ECONNRESET"` like Node's network errors so retry logic treats it as transient.
  *
  * @example
  * if (error instanceof SimulatedNetworkError) console.log(error.code); // "ECONNRESET"
@@ -11,9 +10,7 @@ export class SimulatedNetworkError extends Error {
 	readonly code = "ECONNRESET";
 
 	constructor(description: string) {
-		super(
-			`ECONNRESET: response lost after the provider applied the effect (simulated: ${description})`,
-		);
+		super(`ECONNRESET: simulated network failure (${description})`);
 		this.name = "SimulatedNetworkError";
 	}
 }

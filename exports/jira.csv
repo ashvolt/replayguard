@@ -812,7 +812,7 @@ ReplayGuard-ID: 004-effect-ledger-T028",Medium,Done,004-effect-ledger,polish,
 143,,Epic,005 Fault Injection Strategies,"Fault Injection Strategies (005-fault-injection).
 
 Source: specs/005-fault-injection/spec.md:1
-ReplayGuard-ID: 005-fault-injection",High,To Do,005-fault-injection,,
+ReplayGuard-ID: 005-fault-injection",High,Done,005-fault-injection,,
 144,143,Story,US1: Crash right after the provider succeeded,"User story 1 (P1) of 005-fault-injection.
 
 Source: specs/005-fault-injection/spec.md:22
@@ -828,7 +828,7 @@ ReplayGuard-ID: 005-fault-injection-US3",High,Done,005-fault-injection,us3,
 147,143,Story,US4: Kill the real process,"User story 4 (P2) of 005-fault-injection.
 
 Source: specs/005-fault-injection/spec.md:83
-ReplayGuard-ID: 005-fault-injection-US4",Medium,To Do,005-fault-injection,us4,
+ReplayGuard-ID: 005-fault-injection-US4",Medium,Done,005-fault-injection,us4,
 148,143,Story,US5: No-fault baseline,"User story 5 (P2) of 005-fault-injection.
 
 Source: specs/005-fault-injection/spec.md:105
@@ -970,43 +970,43 @@ ReplayGuard-ID: 005-fault-injection-T022",High,Done,005-fault-injection,us3,
 Phase: Phase 6: User Story 4 - Kill the real process (Priority: P2)
 
 Source: specs/005-fault-injection/tasks.md:83
-ReplayGuard-ID: 005-fault-injection-T023",Medium,To Do,005-fault-injection,us4,parallel
+ReplayGuard-ID: 005-fault-injection-T023",Medium,Done,005-fault-injection,us4,parallel
 172,147,Sub-task,"T024 Implement `FileDriver` (extends InMemoryDriver, `<dir>/kv.json`, latency 0) in packages/adapter-workflows/src/file-driver.ts","Implement `FileDriver` (extends InMemoryDriver, `<dir>/kv.json`, latency 0) in packages/adapter-workflows/src/file-driver.ts
 
 Phase: Phase 6: User Story 4 - Kill the real process (Priority: P2)
 
 Source: specs/005-fault-injection/tasks.md:84
-ReplayGuard-ID: 005-fault-injection-T024",Medium,To Do,005-fault-injection,us4,
+ReplayGuard-ID: 005-fault-injection-T024",Medium,Done,005-fault-injection,us4,
 173,147,Sub-task,"T025 Write failing IPC protocol schema tests (valid/invalid messages, no functions) in packages/adapter-workflows/test/process/protocol.test.ts","Write failing IPC protocol schema tests (valid/invalid messages, no functions) in packages/adapter-workflows/test/process/protocol.test.ts
 
 Phase: Phase 6: User Story 4 - Kill the real process (Priority: P2)
 
 Source: specs/005-fault-injection/tasks.md:85
-ReplayGuard-ID: 005-fault-injection-T025",Medium,To Do,005-fault-injection,us4,parallel
+ReplayGuard-ID: 005-fault-injection-T025",Medium,Done,005-fault-injection,us4,parallel
 174,147,Sub-task,T026 Implement IPC message schemas in packages/adapter-workflows/src/process/protocol.ts,"Implement IPC message schemas in packages/adapter-workflows/src/process/protocol.ts
 
 Phase: Phase 6: User Story 4 - Kill the real process (Priority: P2)
 
 Source: specs/005-fault-injection/tasks.md:86
-ReplayGuard-ID: 005-fault-injection-T026",Medium,To Do,005-fault-injection,us4,
+ReplayGuard-ID: 005-fault-injection-T026",Medium,Done,005-fault-injection,us4,
 175,147,Sub-task,"T027 Implement child host (load scenario module inside project root, build effects, relay ledger events, await `continue` after each settle) in packages/adapter-workflows/src/process/child-host.ts and packages/adapter-workflows/src/process/child-entry.ts","Implement child host (load scenario module inside project root, build effects, relay ledger events, await `continue` after each settle) in packages/adapter-workflows/src/process/child-host.ts and packages/adapter-workflows/src/process/child-entry.ts
 
 Phase: Phase 6: User Story 4 - Kill the real process (Priority: P2)
 
 Source: specs/005-fault-injection/tasks.md:87
-ReplayGuard-ID: 005-fault-injection-T027",Medium,To Do,005-fault-injection,us4,
+ReplayGuard-ID: 005-fault-injection-T027",Medium,Done,005-fault-injection,us4,
 176,147,Sub-task,"T028 Implement `processKill` strategy and parent controller (fork without shell, kill at anchor, harness timeout) in packages/adapter-workflows/src/process/process-kill.ts","Implement `processKill` strategy and parent controller (fork without shell, kill at anchor, harness timeout) in packages/adapter-workflows/src/process/process-kill.ts
 
 Phase: Phase 6: User Story 4 - Kill the real process (Priority: P2)
 
 Source: specs/005-fault-injection/tasks.md:88
-ReplayGuard-ID: 005-fault-injection-T028",Medium,To Do,005-fault-injection,us4,
+ReplayGuard-ID: 005-fault-injection-T028",Medium,Done,005-fault-injection,us4,
 177,147,Sub-task,"T029 Write process-kill integration tests on all OSes (kill after anchor, not-triggered, hang → harness timeout, ledger parity with in-process crash for H1 per SC-002) in packages/adapter-workflows/test/process/process-kill.integration.test.ts","Write process-kill integration tests on all OSes (kill after anchor, not-triggered, hang → harness timeout, ledger parity with in-process crash for H1 per SC-002) in packages/adapter-workflows/test/process/process-kill.integration.test.ts
 
 Phase: Phase 6: User Story 4 - Kill the real process (Priority: P2)
 
 Source: specs/005-fault-injection/tasks.md:89
-ReplayGuard-ID: 005-fault-injection-T029",Medium,To Do,005-fault-injection,us4,
+ReplayGuard-ID: 005-fault-injection-T029",Medium,Done,005-fault-injection,us4,
 178,148,Sub-task,T030 Write baseline equivalence test (instrumented vs plain engine run outputs) in packages/adapter-workflows/test/baseline.test.ts,"Write baseline equivalence test (instrumented vs plain engine run outputs) in packages/adapter-workflows/test/baseline.test.ts
 
 Phase: Phase 7: User Story 5 - No-fault baseline (Priority: P2)
@@ -1018,7 +1018,7 @@ ReplayGuard-ID: 005-fault-injection-T030",Medium,Done,005-fault-injection,us5,
 Phase: Phase 8: Polish & Cross-Cutting Concerns
 
 Source: specs/005-fault-injection/tasks.md:105
-ReplayGuard-ID: 005-fault-injection-T031",Medium,To Do,005-fault-injection,polish,parallel
+ReplayGuard-ID: 005-fault-injection-T031",Medium,Done,005-fault-injection,polish,parallel
 180,143,Task,T032 Add Stryker 85% config coverage for packages/core/src/faults in packages/core/stryker.config.json,"Add Stryker 85% config coverage for packages/core/src/faults in packages/core/stryker.config.json
 
 Phase: Phase 8: Polish & Cross-Cutting Concerns
@@ -1036,189 +1036,189 @@ ReplayGuard-ID: 005-fault-injection-T033",Medium,Done,005-fault-injection,polish
 Phase: Phase 8: Polish & Cross-Cutting Concerns
 
 Source: specs/005-fault-injection/tasks.md:108
-ReplayGuard-ID: 005-fault-injection-T034",Medium,To Do,005-fault-injection,polish,
+ReplayGuard-ID: 005-fault-injection-T034",Medium,Done,005-fault-injection,polish,
 183,,Epic,006 Scenario Runner & Fault Matrix,"Scenario Runner & Fault Matrix (006-scenario-runner).
 
 Source: specs/006-scenario-runner/spec.md:1
-ReplayGuard-ID: 006-scenario-runner",High,To Do,006-scenario-runner,,
+ReplayGuard-ID: 006-scenario-runner",High,Done,006-scenario-runner,,
 184,183,Story,US1: Run one explicit fault scenario,"User story 1 (P1) of 006-scenario-runner.
 
 Source: specs/006-scenario-runner/spec.md:22
-ReplayGuard-ID: 006-scenario-runner-US1",High,To Do,006-scenario-runner,us1,
+ReplayGuard-ID: 006-scenario-runner-US1",High,Done,006-scenario-runner,us1,
 185,183,Story,US2: Automatically explore all fault points,"User story 2 (P1) of 006-scenario-runner.
 
 Source: specs/006-scenario-runner/spec.md:45
-ReplayGuard-ID: 006-scenario-runner-US2",High,To Do,006-scenario-runner,us2,
+ReplayGuard-ID: 006-scenario-runner-US2",High,Done,006-scenario-runner,us2,
 186,183,Story,"US3: Fluent, validated scenario definition","User story 3 (P2) of 006-scenario-runner.
 
 Source: specs/006-scenario-runner/spec.md:69
-ReplayGuard-ID: 006-scenario-runner-US3",Medium,To Do,006-scenario-runner,us3,
+ReplayGuard-ID: 006-scenario-runner-US3",Medium,Done,006-scenario-runner,us3,
 187,183,Story,"US4: Isolated, repeatable cases","User story 4 (P2) of 006-scenario-runner.
 
 Source: specs/006-scenario-runner/spec.md:88
-ReplayGuard-ID: 006-scenario-runner-US4",Medium,To Do,006-scenario-runner,us4,
+ReplayGuard-ID: 006-scenario-runner-US4",Medium,Done,006-scenario-runner,us4,
 188,183,Task,T001 Create `runtime/` and `scenario/` modules with barrel exports in packages/core/src/index.ts,"Create `runtime/` and `scenario/` modules with barrel exports in packages/core/src/index.ts
 
 Phase: Phase 1: Setup (Shared Infrastructure)
 
 Source: specs/006-scenario-runner/tasks.md:18
-ReplayGuard-ID: 006-scenario-runner-T001",Medium,To Do,006-scenario-runner,setup,
+ReplayGuard-ID: 006-scenario-runner-T001",Medium,Done,006-scenario-runner,setup,
 189,183,Task,"T002 Define `WorkflowRuntime`, `RuntimeCase`, `RunOutcome` port types in packages/core/src/runtime/port.ts","Define `WorkflowRuntime`, `RuntimeCase`, `RunOutcome` port types in packages/core/src/runtime/port.ts
 
 Phase: Phase 2: Foundational (Blocking Prerequisites)
 
 Source: specs/006-scenario-runner/tasks.md:24
-ReplayGuard-ID: 006-scenario-runner-T002",Medium,To Do,006-scenario-runner,foundational,
+ReplayGuard-ID: 006-scenario-runner-T002",Medium,Done,006-scenario-runner,foundational,
 190,183,Task,"T003 Implement an in-memory fake runtime for unit tests (scripted outcomes, crash on demand) in packages/core/test/support/fake-runtime.ts","Implement an in-memory fake runtime for unit tests (scripted outcomes, crash on demand) in packages/core/test/support/fake-runtime.ts
 
 Phase: Phase 2: Foundational (Blocking Prerequisites)
 
 Source: specs/006-scenario-runner/tasks.md:25
-ReplayGuard-ID: 006-scenario-runner-T003",Medium,To Do,006-scenario-runner,foundational,parallel
+ReplayGuard-ID: 006-scenario-runner-T003",Medium,Done,006-scenario-runner,foundational,parallel
 191,183,Task,"T004 Define ScenarioDefinition, EffectContext, Budget (""maxRuns 1–1000 = 20, caseTimeoutMs 1–600000 = 10000, graceMs 0–10000 = 25""), ExploreOptions (""maxCases 1–500 = 50""), CaseResult, ScenarioResult types in packages/core/src/scenario/types.ts and packa…","Define ScenarioDefinition, EffectContext, Budget (""maxRuns 1–1000 = 20, caseTimeoutMs 1–600000 = 10000, graceMs 0–10000 = 25""), ExploreOptions (""maxCases 1–500 = 50""), CaseResult, ScenarioResult types in packages/core/src/scenario/types.ts and packages/core/src/scenario/result.ts
 
 Phase: Phase 2: Foundational (Blocking Prerequisites)
 
 Source: specs/006-scenario-runner/tasks.md:26
-ReplayGuard-ID: 006-scenario-runner-T004",Medium,To Do,006-scenario-runner,foundational,
+ReplayGuard-ID: 006-scenario-runner-T004",Medium,Done,006-scenario-runner,foundational,
 192,184,Sub-task,"T005 Write failing runner lifecycle tests with fake runtime (baseline first, crash → restart, sleeping → wait until wakeAt, waiting → settle, budget-exceeded on maxRuns and timeout, grace period captures late completion, harness error isolation) in packa…","Write failing runner lifecycle tests with fake runtime (baseline first, crash → restart, sleeping → wait until wakeAt, waiting → settle, budget-exceeded on maxRuns and timeout, grace period captures late completion, harness error isolation) in packages/core/test/scenario/runner.test.ts
 
 Phase: Phase 3: User Story 1 - Run one explicit fault scenario (Priority: P1) 🎯 MVP
 
 Source: specs/006-scenario-runner/tasks.md:38
-ReplayGuard-ID: 006-scenario-runner-T005",High,To Do,006-scenario-runner,us1,parallel
+ReplayGuard-ID: 006-scenario-runner-T005",High,Done,006-scenario-runner,us1,parallel
 193,184,Sub-task,T006 Implement `ScenarioRunner.runCase` template method and `run()` in packages/core/src/scenario/runner.ts,"Implement `ScenarioRunner.runCase` template method and `run()` in packages/core/src/scenario/runner.ts
 
 Phase: Phase 3: User Story 1 - Run one explicit fault scenario (Priority: P1) 🎯 MVP
 
 Source: specs/006-scenario-runner/tasks.md:39
-ReplayGuard-ID: 006-scenario-runner-T006",High,To Do,006-scenario-runner,us1,
+ReplayGuard-ID: 006-scenario-runner-T006",High,Done,006-scenario-runner,us1,
 194,184,Sub-task,"T007 Implement `EffectContext` creation (bound instrument, ledger, clock, sleeper, caseIndex) in packages/core/src/scenario/context.ts","Implement `EffectContext` creation (bound instrument, ledger, clock, sleeper, caseIndex) in packages/core/src/scenario/context.ts
 
 Phase: Phase 3: User Story 1 - Run one explicit fault scenario (Priority: P1) 🎯 MVP
 
 Source: specs/006-scenario-runner/tasks.md:40
-ReplayGuard-ID: 006-scenario-runner-T007",High,To Do,006-scenario-runner,us1,
+ReplayGuard-ID: 006-scenario-runner-T007",High,Done,006-scenario-runner,us1,
 195,184,Sub-task,"T008 Write failing engine runtime tests (yield-mode mapping completed/sleeping/waiting/crashed/failed, fresh InMemoryDriver per case wrapped in FaultyDriver, fixed workflowId) in packages/adapter-workflows/test/runtime.test.ts","Write failing engine runtime tests (yield-mode mapping completed/sleeping/waiting/crashed/failed, fresh InMemoryDriver per case wrapped in FaultyDriver, fixed workflowId) in packages/adapter-workflows/test/runtime.test.ts
 
 Phase: Phase 3: User Story 1 - Run one explicit fault scenario (Priority: P1) 🎯 MVP
 
 Source: specs/006-scenario-runner/tasks.md:41
-ReplayGuard-ID: 006-scenario-runner-T008",High,To Do,006-scenario-runner,us1,parallel
+ReplayGuard-ID: 006-scenario-runner-T008",High,Done,006-scenario-runner,us1,parallel
 196,184,Sub-task,T009 Implement `workflowsRuntime()` in packages/adapter-workflows/src/runtime.ts,"Implement `workflowsRuntime()` in packages/adapter-workflows/src/runtime.ts
 
 Phase: Phase 3: User Story 1 - Run one explicit fault scenario (Priority: P1) 🎯 MVP
 
 Source: specs/006-scenario-runner/tasks.md:42
-ReplayGuard-ID: 006-scenario-runner-T009",High,To Do,006-scenario-runner,us1,
+ReplayGuard-ID: 006-scenario-runner-T009",High,Done,006-scenario-runner,us1,
 197,184,Sub-task,T010 Implement `workflowsProcessRuntime()` spawning per run via 005 child host in packages/adapter-workflows/src/process/process-runtime.ts,"Implement `workflowsProcessRuntime()` spawning per run via 005 child host in packages/adapter-workflows/src/process/process-runtime.ts
 
 Phase: Phase 3: User Story 1 - Run one explicit fault scenario (Priority: P1) 🎯 MVP
 
 Source: specs/006-scenario-runner/tasks.md:43
-ReplayGuard-ID: 006-scenario-runner-T010",High,To Do,006-scenario-runner,us1,
+ReplayGuard-ID: 006-scenario-runner-T010",High,Done,006-scenario-runner,us1,
 198,184,Sub-task,T011 Write end-to-end test: explicit crash case with real engine in packages/adapter-workflows/test/scenario.e2e.test.ts,"Write end-to-end test: explicit crash case with real engine in packages/adapter-workflows/test/scenario.e2e.test.ts
 
 Phase: Phase 3: User Story 1 - Run one explicit fault scenario (Priority: P1) 🎯 MVP
 
 Source: specs/006-scenario-runner/tasks.md:44
-ReplayGuard-ID: 006-scenario-runner-T011",High,To Do,006-scenario-runner,us1,
+ReplayGuard-ID: 006-scenario-runner-T011",High,Done,006-scenario-runner,us1,
 199,185,Sub-task,"T012 Write failing discovery tests (occurrences from baseline in seq order, parallel branches ordering) in packages/core/test/scenario/discovery.test.ts","Write failing discovery tests (occurrences from baseline in seq order, parallel branches ordering) in packages/core/test/scenario/discovery.test.ts
 
 Phase: Phase 4: User Story 2 - Automatically explore all fault points (Priority: P1)
 
 Source: specs/006-scenario-runner/tasks.md:54
-ReplayGuard-ID: 006-scenario-runner-T012",High,To Do,006-scenario-runner,us2,parallel
+ReplayGuard-ID: 006-scenario-runner-T012",High,Done,006-scenario-runner,us2,parallel
 200,185,Sub-task,"T013 Write failing matrix tests incl. fast-check (count, ordering after→before then strategy order, dedupe vs explicit, budget truncation reports skipped, delay only with delayMs, processKill only with process runtime) in packages/core/test/scenario/matr…","Write failing matrix tests incl. fast-check (count, ordering after→before then strategy order, dedupe vs explicit, budget truncation reports skipped, delay only with delayMs, processKill only with process runtime) in packages/core/test/scenario/matrix.test.ts
 
 Phase: Phase 4: User Story 2 - Automatically explore all fault points (Priority: P1)
 
 Source: specs/006-scenario-runner/tasks.md:55
-ReplayGuard-ID: 006-scenario-runner-T013",High,To Do,006-scenario-runner,us2,parallel
+ReplayGuard-ID: 006-scenario-runner-T013",High,Done,006-scenario-runner,us2,parallel
 201,185,Sub-task,T014 Implement discovery in packages/core/src/scenario/discovery.ts,"Implement discovery in packages/core/src/scenario/discovery.ts
 
 Phase: Phase 4: User Story 2 - Automatically explore all fault points (Priority: P1)
 
 Source: specs/006-scenario-runner/tasks.md:56
-ReplayGuard-ID: 006-scenario-runner-T014",High,To Do,006-scenario-runner,us2,
+ReplayGuard-ID: 006-scenario-runner-T014",High,Done,006-scenario-runner,us2,
 202,185,Sub-task,T015 Implement matrix generation in packages/core/src/scenario/matrix.ts,"Implement matrix generation in packages/core/src/scenario/matrix.ts
 
 Phase: Phase 4: User Story 2 - Automatically explore all fault points (Priority: P1)
 
 Source: specs/006-scenario-runner/tasks.md:57
-ReplayGuard-ID: 006-scenario-runner-T015",High,To Do,006-scenario-runner,us2,
+ReplayGuard-ID: 006-scenario-runner-T015",High,Done,006-scenario-runner,us2,
 203,185,Sub-task,"T016 Integrate exploration into runner, generated case names (`crash@after:payment.charge#1`) and `baselineClean: false` flag when the baseline failed in packages/core/src/scenario/runner.ts","Integrate exploration into runner, generated case names (`crash@after:payment.charge#1`) and `baselineClean: false` flag when the baseline failed in packages/core/src/scenario/runner.ts
 
 Phase: Phase 4: User Story 2 - Automatically explore all fault points (Priority: P1)
 
 Source: specs/006-scenario-runner/tasks.md:58
-ReplayGuard-ID: 006-scenario-runner-T016",High,To Do,006-scenario-runner,us2,
+ReplayGuard-ID: 006-scenario-runner-T016",High,Done,006-scenario-runner,us2,
 204,186,Sub-task,"T017 Write failing builder tests (required fields, duplicate case names, processKill without process runtime, generics inference via expectTypeOf) in packages/core/test/scenario/builder.test.ts","Write failing builder tests (required fields, duplicate case names, processKill without process runtime, generics inference via expectTypeOf) in packages/core/test/scenario/builder.test.ts
 
 Phase: Phase 5: User Story 3 - Fluent, validated scenario definition (Priority: P2)
 
 Source: specs/006-scenario-runner/tasks.md:68
-ReplayGuard-ID: 006-scenario-runner-T017",Medium,To Do,006-scenario-runner,us3,parallel
+ReplayGuard-ID: 006-scenario-runner-T017",Medium,Done,006-scenario-runner,us3,parallel
 205,186,Sub-task,T018 Implement Valibot option schema in packages/core/src/scenario/schema.ts,"Implement Valibot option schema in packages/core/src/scenario/schema.ts
 
 Phase: Phase 5: User Story 3 - Fluent, validated scenario definition (Priority: P2)
 
 Source: specs/006-scenario-runner/tasks.md:69
-ReplayGuard-ID: 006-scenario-runner-T018",Medium,To Do,006-scenario-runner,us3,
+ReplayGuard-ID: 006-scenario-runner-T018",Medium,Done,006-scenario-runner,us3,
 206,186,Sub-task,T019 Implement `scenario()` builder and `Scenario.run()` in packages/core/src/scenario/builder.ts,"Implement `scenario()` builder and `Scenario.run()` in packages/core/src/scenario/builder.ts
 
 Phase: Phase 5: User Story 3 - Fluent, validated scenario definition (Priority: P2)
 
 Source: specs/006-scenario-runner/tasks.md:70
-ReplayGuard-ID: 006-scenario-runner-T019",Medium,To Do,006-scenario-runner,us3,
+ReplayGuard-ID: 006-scenario-runner-T019",Medium,Done,006-scenario-runner,us3,
 207,187,Sub-task,"T020 Write failing isolation tests (factories called per case, no shared fake state) in packages/core/test/scenario/isolation.test.ts","Write failing isolation tests (factories called per case, no shared fake state) in packages/core/test/scenario/isolation.test.ts
 
 Phase: Phase 6: User Story 4 - Isolated, repeatable cases (Priority: P2)
 
 Source: specs/006-scenario-runner/tasks.md:80
-ReplayGuard-ID: 006-scenario-runner-T020",Medium,To Do,006-scenario-runner,us4,parallel
+ReplayGuard-ID: 006-scenario-runner-T020",Medium,Done,006-scenario-runner,us4,parallel
 208,187,Sub-task,T021 Write repeatability test (100 runs same seed → identical case order and statuses) in packages/adapter-workflows/test/repeatability.test.ts,"Write repeatability test (100 runs same seed → identical case order and statuses) in packages/adapter-workflows/test/repeatability.test.ts
 
 Phase: Phase 6: User Story 4 - Isolated, repeatable cases (Priority: P2)
 
 Source: specs/006-scenario-runner/tasks.md:81
-ReplayGuard-ID: 006-scenario-runner-T021",Medium,To Do,006-scenario-runner,us4,parallel
+ReplayGuard-ID: 006-scenario-runner-T021",Medium,Done,006-scenario-runner,us4,parallel
 209,187,Sub-task,T022 Implement seeded ordering utility (mulberry32) used for sampling ties in packages/core/src/scenario/seed.ts,"Implement seeded ordering utility (mulberry32) used for sampling ties in packages/core/src/scenario/seed.ts
 
 Phase: Phase 6: User Story 4 - Isolated, repeatable cases (Priority: P2)
 
 Source: specs/006-scenario-runner/tasks.md:82
-ReplayGuard-ID: 006-scenario-runner-T022",Medium,To Do,006-scenario-runner,us4,
+ReplayGuard-ID: 006-scenario-runner-T022",Medium,Done,006-scenario-runner,us4,
 210,183,Task,"T023 Scripted message delivery (`deliver(name, body, afterRun)`) with tests in packages/core/src/scenario/runner.ts and packages/core/test/scenario/messages.test.ts","Scripted message delivery (`deliver(name, body, afterRun)`) with tests in packages/core/src/scenario/runner.ts and packages/core/test/scenario/messages.test.ts
 
 Phase: Phase 7: Polish & Cross-Cutting Concerns
 
 Source: specs/006-scenario-runner/tasks.md:88
-ReplayGuard-ID: 006-scenario-runner-T023",Medium,To Do,006-scenario-runner,polish,parallel
+ReplayGuard-ID: 006-scenario-runner-T023",Medium,Done,006-scenario-runner,polish,parallel
 211,183,Task,T024 Performance test: 20 in-process cases < 5 s in packages/adapter-workflows/test/perf.test.ts,"Performance test: 20 in-process cases < 5 s in packages/adapter-workflows/test/perf.test.ts
 
 Phase: Phase 7: Polish & Cross-Cutting Concerns
 
 Source: specs/006-scenario-runner/tasks.md:89
-ReplayGuard-ID: 006-scenario-runner-T024",Medium,To Do,006-scenario-runner,polish,parallel
+ReplayGuard-ID: 006-scenario-runner-T024",Medium,Done,006-scenario-runner,polish,parallel
 212,183,Task,"T025 Guide ""Writing scenarios"" in docs/guides/scenarios.md","Guide ""Writing scenarios"" in docs/guides/scenarios.md
 
 Phase: Phase 7: Polish & Cross-Cutting Concerns
 
 Source: specs/006-scenario-runner/tasks.md:90
-ReplayGuard-ID: 006-scenario-runner-T025",Medium,To Do,006-scenario-runner,polish,parallel
+ReplayGuard-ID: 006-scenario-runner-T025",Medium,Done,006-scenario-runner,polish,parallel
 213,183,Task,T026 Author diagrams covering T001–T027 in specs/006-scenario-runner/diagram.yaml,"Author diagrams covering T001–T027 in specs/006-scenario-runner/diagram.yaml
 
 Phase: Phase 7: Polish & Cross-Cutting Concerns
 
 Source: specs/006-scenario-runner/tasks.md:91
-ReplayGuard-ID: 006-scenario-runner-T026",Medium,To Do,006-scenario-runner,polish,
+ReplayGuard-ID: 006-scenario-runner-T026",Medium,Done,006-scenario-runner,polish,
 214,183,Task,T027 Validate quickstart scenarios in specs/006-scenario-runner/quickstart.md,"Validate quickstart scenarios in specs/006-scenario-runner/quickstart.md
 
 Phase: Phase 7: Polish & Cross-Cutting Concerns
 
 Source: specs/006-scenario-runner/tasks.md:92
-ReplayGuard-ID: 006-scenario-runner-T027",Medium,To Do,006-scenario-runner,polish,
+ReplayGuard-ID: 006-scenario-runner-T027",Medium,Done,006-scenario-runner,polish,
 215,,Epic,007 Outcome Classifier & Verdict Policy,"Outcome Classifier & Verdict Policy (007-outcome-classifier).
 
 Source: specs/007-outcome-classifier/spec.md:1

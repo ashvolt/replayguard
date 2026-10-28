@@ -669,7 +669,7 @@ Phase: Phase 7: Polish & Cross-Cutting Concerns
 Source: specs/004-effect-ledger/tasks.md:93",004-effect-ledger;polish,Medium,Done,004-effect-ledger
 005-fault-injection,,Epic,005 Fault Injection Strategies,"Fault Injection Strategies (005-fault-injection).
 
-Source: specs/005-fault-injection/spec.md:1",005-fault-injection,High,To Do,005-fault-injection
+Source: specs/005-fault-injection/spec.md:1",005-fault-injection,High,Done,005-fault-injection
 005-fault-injection-US1,005-fault-injection,Story,US1: Crash right after the provider succeeded,"User story 1 (P1) of 005-fault-injection.
 
 Source: specs/005-fault-injection/spec.md:22",005-fault-injection;us1,High,Done,005-fault-injection
@@ -681,7 +681,7 @@ Source: specs/005-fault-injection/spec.md:45",005-fault-injection;us2,High,Done,
 Source: specs/005-fault-injection/spec.md:64",005-fault-injection;us3,High,Done,005-fault-injection
 005-fault-injection-US4,005-fault-injection,Story,US4: Kill the real process,"User story 4 (P2) of 005-fault-injection.
 
-Source: specs/005-fault-injection/spec.md:83",005-fault-injection;us4,Medium,To Do,005-fault-injection
+Source: specs/005-fault-injection/spec.md:83",005-fault-injection;us4,Medium,Done,005-fault-injection
 005-fault-injection-US5,005-fault-injection,Story,US5: No-fault baseline,"User story 5 (P2) of 005-fault-injection.
 
 Source: specs/005-fault-injection/spec.md:105",005-fault-injection;us5,Medium,Done,005-fault-injection
@@ -799,37 +799,37 @@ Source: specs/005-fault-injection/tasks.md:73",005-fault-injection;us3,High,Done
 
 Phase: Phase 6: User Story 4 - Kill the real process (Priority: P2)
 
-Source: specs/005-fault-injection/tasks.md:83",005-fault-injection;us4;parallel,Medium,To Do,005-fault-injection
+Source: specs/005-fault-injection/tasks.md:83",005-fault-injection;us4;parallel,Medium,Done,005-fault-injection
 005-fault-injection-T024,005-fault-injection-US4,Sub-task,"T024 Implement `FileDriver` (extends InMemoryDriver, `<dir>/kv.json`, latency 0) in packages/adapter-workflows/src/file-driver.ts","Implement `FileDriver` (extends InMemoryDriver, `<dir>/kv.json`, latency 0) in packages/adapter-workflows/src/file-driver.ts
 
 Phase: Phase 6: User Story 4 - Kill the real process (Priority: P2)
 
-Source: specs/005-fault-injection/tasks.md:84",005-fault-injection;us4,Medium,To Do,005-fault-injection
+Source: specs/005-fault-injection/tasks.md:84",005-fault-injection;us4,Medium,Done,005-fault-injection
 005-fault-injection-T025,005-fault-injection-US4,Sub-task,"T025 Write failing IPC protocol schema tests (valid/invalid messages, no functions) in packages/adapter-workflows/test/process/protocol.test.ts","Write failing IPC protocol schema tests (valid/invalid messages, no functions) in packages/adapter-workflows/test/process/protocol.test.ts
 
 Phase: Phase 6: User Story 4 - Kill the real process (Priority: P2)
 
-Source: specs/005-fault-injection/tasks.md:85",005-fault-injection;us4;parallel,Medium,To Do,005-fault-injection
+Source: specs/005-fault-injection/tasks.md:85",005-fault-injection;us4;parallel,Medium,Done,005-fault-injection
 005-fault-injection-T026,005-fault-injection-US4,Sub-task,T026 Implement IPC message schemas in packages/adapter-workflows/src/process/protocol.ts,"Implement IPC message schemas in packages/adapter-workflows/src/process/protocol.ts
 
 Phase: Phase 6: User Story 4 - Kill the real process (Priority: P2)
 
-Source: specs/005-fault-injection/tasks.md:86",005-fault-injection;us4,Medium,To Do,005-fault-injection
+Source: specs/005-fault-injection/tasks.md:86",005-fault-injection;us4,Medium,Done,005-fault-injection
 005-fault-injection-T027,005-fault-injection-US4,Sub-task,"T027 Implement child host (load scenario module inside project root, build effects, relay ledger events, await `continue` after each settle) in packages/adapter-workflows/src/process/child-host.ts and packages/adapter-workflows/src/process/child-entry.ts","Implement child host (load scenario module inside project root, build effects, relay ledger events, await `continue` after each settle) in packages/adapter-workflows/src/process/child-host.ts and packages/adapter-workflows/src/process/child-entry.ts
 
 Phase: Phase 6: User Story 4 - Kill the real process (Priority: P2)
 
-Source: specs/005-fault-injection/tasks.md:87",005-fault-injection;us4,Medium,To Do,005-fault-injection
+Source: specs/005-fault-injection/tasks.md:87",005-fault-injection;us4,Medium,Done,005-fault-injection
 005-fault-injection-T028,005-fault-injection-US4,Sub-task,"T028 Implement `processKill` strategy and parent controller (fork without shell, kill at anchor, harness timeout) in packages/adapter-workflows/src/process/process-kill.ts","Implement `processKill` strategy and parent controller (fork without shell, kill at anchor, harness timeout) in packages/adapter-workflows/src/process/process-kill.ts
 
 Phase: Phase 6: User Story 4 - Kill the real process (Priority: P2)
 
-Source: specs/005-fault-injection/tasks.md:88",005-fault-injection;us4,Medium,To Do,005-fault-injection
+Source: specs/005-fault-injection/tasks.md:88",005-fault-injection;us4,Medium,Done,005-fault-injection
 005-fault-injection-T029,005-fault-injection-US4,Sub-task,"T029 Write process-kill integration tests on all OSes (kill after anchor, not-triggered, hang → harness timeout, ledger parity with in-process crash for H1 per SC-002) in packages/adapter-workflows/test/process/process-kill.integration.test.ts","Write process-kill integration tests on all OSes (kill after anchor, not-triggered, hang → harness timeout, ledger parity with in-process crash for H1 per SC-002) in packages/adapter-workflows/test/process/process-kill.integration.test.ts
 
 Phase: Phase 6: User Story 4 - Kill the real process (Priority: P2)
 
-Source: specs/005-fault-injection/tasks.md:89",005-fault-injection;us4,Medium,To Do,005-fault-injection
+Source: specs/005-fault-injection/tasks.md:89",005-fault-injection;us4,Medium,Done,005-fault-injection
 005-fault-injection-T030,005-fault-injection-US5,Sub-task,T030 Write baseline equivalence test (instrumented vs plain engine run outputs) in packages/adapter-workflows/test/baseline.test.ts,"Write baseline equivalence test (instrumented vs plain engine run outputs) in packages/adapter-workflows/test/baseline.test.ts
 
 Phase: Phase 7: User Story 5 - No-fault baseline (Priority: P2)
@@ -839,7 +839,7 @@ Source: specs/005-fault-injection/tasks.md:99",005-fault-injection;us5,Medium,Do
 
 Phase: Phase 8: Polish & Cross-Cutting Concerns
 
-Source: specs/005-fault-injection/tasks.md:105",005-fault-injection;polish;parallel,Medium,To Do,005-fault-injection
+Source: specs/005-fault-injection/tasks.md:105",005-fault-injection;polish;parallel,Medium,Done,005-fault-injection
 005-fault-injection-T032,005-fault-injection,Task,T032 Add Stryker 85% config coverage for packages/core/src/faults in packages/core/stryker.config.json,"Add Stryker 85% config coverage for packages/core/src/faults in packages/core/stryker.config.json
 
 Phase: Phase 8: Polish & Cross-Cutting Concerns
@@ -854,157 +854,157 @@ Source: specs/005-fault-injection/tasks.md:107",005-fault-injection;polish,Mediu
 
 Phase: Phase 8: Polish & Cross-Cutting Concerns
 
-Source: specs/005-fault-injection/tasks.md:108",005-fault-injection;polish,Medium,To Do,005-fault-injection
+Source: specs/005-fault-injection/tasks.md:108",005-fault-injection;polish,Medium,Done,005-fault-injection
 006-scenario-runner,,Epic,006 Scenario Runner & Fault Matrix,"Scenario Runner & Fault Matrix (006-scenario-runner).
 
-Source: specs/006-scenario-runner/spec.md:1",006-scenario-runner,High,To Do,006-scenario-runner
+Source: specs/006-scenario-runner/spec.md:1",006-scenario-runner,High,Done,006-scenario-runner
 006-scenario-runner-US1,006-scenario-runner,Story,US1: Run one explicit fault scenario,"User story 1 (P1) of 006-scenario-runner.
 
-Source: specs/006-scenario-runner/spec.md:22",006-scenario-runner;us1,High,To Do,006-scenario-runner
+Source: specs/006-scenario-runner/spec.md:22",006-scenario-runner;us1,High,Done,006-scenario-runner
 006-scenario-runner-US2,006-scenario-runner,Story,US2: Automatically explore all fault points,"User story 2 (P1) of 006-scenario-runner.
 
-Source: specs/006-scenario-runner/spec.md:45",006-scenario-runner;us2,High,To Do,006-scenario-runner
+Source: specs/006-scenario-runner/spec.md:45",006-scenario-runner;us2,High,Done,006-scenario-runner
 006-scenario-runner-US3,006-scenario-runner,Story,"US3: Fluent, validated scenario definition","User story 3 (P2) of 006-scenario-runner.
 
-Source: specs/006-scenario-runner/spec.md:69",006-scenario-runner;us3,Medium,To Do,006-scenario-runner
+Source: specs/006-scenario-runner/spec.md:69",006-scenario-runner;us3,Medium,Done,006-scenario-runner
 006-scenario-runner-US4,006-scenario-runner,Story,"US4: Isolated, repeatable cases","User story 4 (P2) of 006-scenario-runner.
 
-Source: specs/006-scenario-runner/spec.md:88",006-scenario-runner;us4,Medium,To Do,006-scenario-runner
+Source: specs/006-scenario-runner/spec.md:88",006-scenario-runner;us4,Medium,Done,006-scenario-runner
 006-scenario-runner-T001,006-scenario-runner,Task,T001 Create `runtime/` and `scenario/` modules with barrel exports in packages/core/src/index.ts,"Create `runtime/` and `scenario/` modules with barrel exports in packages/core/src/index.ts
 
 Phase: Phase 1: Setup (Shared Infrastructure)
 
-Source: specs/006-scenario-runner/tasks.md:18",006-scenario-runner;setup,Medium,To Do,006-scenario-runner
+Source: specs/006-scenario-runner/tasks.md:18",006-scenario-runner;setup,Medium,Done,006-scenario-runner
 006-scenario-runner-T002,006-scenario-runner,Task,"T002 Define `WorkflowRuntime`, `RuntimeCase`, `RunOutcome` port types in packages/core/src/runtime/port.ts","Define `WorkflowRuntime`, `RuntimeCase`, `RunOutcome` port types in packages/core/src/runtime/port.ts
 
 Phase: Phase 2: Foundational (Blocking Prerequisites)
 
-Source: specs/006-scenario-runner/tasks.md:24",006-scenario-runner;foundational,Medium,To Do,006-scenario-runner
+Source: specs/006-scenario-runner/tasks.md:24",006-scenario-runner;foundational,Medium,Done,006-scenario-runner
 006-scenario-runner-T003,006-scenario-runner,Task,"T003 Implement an in-memory fake runtime for unit tests (scripted outcomes, crash on demand) in packages/core/test/support/fake-runtime.ts","Implement an in-memory fake runtime for unit tests (scripted outcomes, crash on demand) in packages/core/test/support/fake-runtime.ts
 
 Phase: Phase 2: Foundational (Blocking Prerequisites)
 
-Source: specs/006-scenario-runner/tasks.md:25",006-scenario-runner;foundational;parallel,Medium,To Do,006-scenario-runner
+Source: specs/006-scenario-runner/tasks.md:25",006-scenario-runner;foundational;parallel,Medium,Done,006-scenario-runner
 006-scenario-runner-T004,006-scenario-runner,Task,"T004 Define ScenarioDefinition, EffectContext, Budget (""maxRuns 1–1000 = 20, caseTimeoutMs 1–600000 = 10000, graceMs 0–10000 = 25""), ExploreOptions (""maxCases 1–500 = 50""), CaseResult, ScenarioResult types in packages/core/src/scenario/types.ts and packa…","Define ScenarioDefinition, EffectContext, Budget (""maxRuns 1–1000 = 20, caseTimeoutMs 1–600000 = 10000, graceMs 0–10000 = 25""), ExploreOptions (""maxCases 1–500 = 50""), CaseResult, ScenarioResult types in packages/core/src/scenario/types.ts and packages/core/src/scenario/result.ts
 
 Phase: Phase 2: Foundational (Blocking Prerequisites)
 
-Source: specs/006-scenario-runner/tasks.md:26",006-scenario-runner;foundational,Medium,To Do,006-scenario-runner
+Source: specs/006-scenario-runner/tasks.md:26",006-scenario-runner;foundational,Medium,Done,006-scenario-runner
 006-scenario-runner-T005,006-scenario-runner-US1,Sub-task,"T005 Write failing runner lifecycle tests with fake runtime (baseline first, crash → restart, sleeping → wait until wakeAt, waiting → settle, budget-exceeded on maxRuns and timeout, grace period captures late completion, harness error isolation) in packa…","Write failing runner lifecycle tests with fake runtime (baseline first, crash → restart, sleeping → wait until wakeAt, waiting → settle, budget-exceeded on maxRuns and timeout, grace period captures late completion, harness error isolation) in packages/core/test/scenario/runner.test.ts
 
 Phase: Phase 3: User Story 1 - Run one explicit fault scenario (Priority: P1) 🎯 MVP
 
-Source: specs/006-scenario-runner/tasks.md:38",006-scenario-runner;us1;parallel,High,To Do,006-scenario-runner
+Source: specs/006-scenario-runner/tasks.md:38",006-scenario-runner;us1;parallel,High,Done,006-scenario-runner
 006-scenario-runner-T006,006-scenario-runner-US1,Sub-task,T006 Implement `ScenarioRunner.runCase` template method and `run()` in packages/core/src/scenario/runner.ts,"Implement `ScenarioRunner.runCase` template method and `run()` in packages/core/src/scenario/runner.ts
 
 Phase: Phase 3: User Story 1 - Run one explicit fault scenario (Priority: P1) 🎯 MVP
 
-Source: specs/006-scenario-runner/tasks.md:39",006-scenario-runner;us1,High,To Do,006-scenario-runner
+Source: specs/006-scenario-runner/tasks.md:39",006-scenario-runner;us1,High,Done,006-scenario-runner
 006-scenario-runner-T007,006-scenario-runner-US1,Sub-task,"T007 Implement `EffectContext` creation (bound instrument, ledger, clock, sleeper, caseIndex) in packages/core/src/scenario/context.ts","Implement `EffectContext` creation (bound instrument, ledger, clock, sleeper, caseIndex) in packages/core/src/scenario/context.ts
 
 Phase: Phase 3: User Story 1 - Run one explicit fault scenario (Priority: P1) 🎯 MVP
 
-Source: specs/006-scenario-runner/tasks.md:40",006-scenario-runner;us1,High,To Do,006-scenario-runner
+Source: specs/006-scenario-runner/tasks.md:40",006-scenario-runner;us1,High,Done,006-scenario-runner
 006-scenario-runner-T008,006-scenario-runner-US1,Sub-task,"T008 Write failing engine runtime tests (yield-mode mapping completed/sleeping/waiting/crashed/failed, fresh InMemoryDriver per case wrapped in FaultyDriver, fixed workflowId) in packages/adapter-workflows/test/runtime.test.ts","Write failing engine runtime tests (yield-mode mapping completed/sleeping/waiting/crashed/failed, fresh InMemoryDriver per case wrapped in FaultyDriver, fixed workflowId) in packages/adapter-workflows/test/runtime.test.ts
 
 Phase: Phase 3: User Story 1 - Run one explicit fault scenario (Priority: P1) 🎯 MVP
 
-Source: specs/006-scenario-runner/tasks.md:41",006-scenario-runner;us1;parallel,High,To Do,006-scenario-runner
+Source: specs/006-scenario-runner/tasks.md:41",006-scenario-runner;us1;parallel,High,Done,006-scenario-runner
 006-scenario-runner-T009,006-scenario-runner-US1,Sub-task,T009 Implement `workflowsRuntime()` in packages/adapter-workflows/src/runtime.ts,"Implement `workflowsRuntime()` in packages/adapter-workflows/src/runtime.ts
 
 Phase: Phase 3: User Story 1 - Run one explicit fault scenario (Priority: P1) 🎯 MVP
 
-Source: specs/006-scenario-runner/tasks.md:42",006-scenario-runner;us1,High,To Do,006-scenario-runner
+Source: specs/006-scenario-runner/tasks.md:42",006-scenario-runner;us1,High,Done,006-scenario-runner
 006-scenario-runner-T010,006-scenario-runner-US1,Sub-task,T010 Implement `workflowsProcessRuntime()` spawning per run via 005 child host in packages/adapter-workflows/src/process/process-runtime.ts,"Implement `workflowsProcessRuntime()` spawning per run via 005 child host in packages/adapter-workflows/src/process/process-runtime.ts
 
 Phase: Phase 3: User Story 1 - Run one explicit fault scenario (Priority: P1) 🎯 MVP
 
-Source: specs/006-scenario-runner/tasks.md:43",006-scenario-runner;us1,High,To Do,006-scenario-runner
+Source: specs/006-scenario-runner/tasks.md:43",006-scenario-runner;us1,High,Done,006-scenario-runner
 006-scenario-runner-T011,006-scenario-runner-US1,Sub-task,T011 Write end-to-end test: explicit crash case with real engine in packages/adapter-workflows/test/scenario.e2e.test.ts,"Write end-to-end test: explicit crash case with real engine in packages/adapter-workflows/test/scenario.e2e.test.ts
 
 Phase: Phase 3: User Story 1 - Run one explicit fault scenario (Priority: P1) 🎯 MVP
 
-Source: specs/006-scenario-runner/tasks.md:44",006-scenario-runner;us1,High,To Do,006-scenario-runner
+Source: specs/006-scenario-runner/tasks.md:44",006-scenario-runner;us1,High,Done,006-scenario-runner
 006-scenario-runner-T012,006-scenario-runner-US2,Sub-task,"T012 Write failing discovery tests (occurrences from baseline in seq order, parallel branches ordering) in packages/core/test/scenario/discovery.test.ts","Write failing discovery tests (occurrences from baseline in seq order, parallel branches ordering) in packages/core/test/scenario/discovery.test.ts
 
 Phase: Phase 4: User Story 2 - Automatically explore all fault points (Priority: P1)
 
-Source: specs/006-scenario-runner/tasks.md:54",006-scenario-runner;us2;parallel,High,To Do,006-scenario-runner
+Source: specs/006-scenario-runner/tasks.md:54",006-scenario-runner;us2;parallel,High,Done,006-scenario-runner
 006-scenario-runner-T013,006-scenario-runner-US2,Sub-task,"T013 Write failing matrix tests incl. fast-check (count, ordering after→before then strategy order, dedupe vs explicit, budget truncation reports skipped, delay only with delayMs, processKill only with process runtime) in packages/core/test/scenario/matr…","Write failing matrix tests incl. fast-check (count, ordering after→before then strategy order, dedupe vs explicit, budget truncation reports skipped, delay only with delayMs, processKill only with process runtime) in packages/core/test/scenario/matrix.test.ts
 
 Phase: Phase 4: User Story 2 - Automatically explore all fault points (Priority: P1)
 
-Source: specs/006-scenario-runner/tasks.md:55",006-scenario-runner;us2;parallel,High,To Do,006-scenario-runner
+Source: specs/006-scenario-runner/tasks.md:55",006-scenario-runner;us2;parallel,High,Done,006-scenario-runner
 006-scenario-runner-T014,006-scenario-runner-US2,Sub-task,T014 Implement discovery in packages/core/src/scenario/discovery.ts,"Implement discovery in packages/core/src/scenario/discovery.ts
 
 Phase: Phase 4: User Story 2 - Automatically explore all fault points (Priority: P1)
 
-Source: specs/006-scenario-runner/tasks.md:56",006-scenario-runner;us2,High,To Do,006-scenario-runner
+Source: specs/006-scenario-runner/tasks.md:56",006-scenario-runner;us2,High,Done,006-scenario-runner
 006-scenario-runner-T015,006-scenario-runner-US2,Sub-task,T015 Implement matrix generation in packages/core/src/scenario/matrix.ts,"Implement matrix generation in packages/core/src/scenario/matrix.ts
 
 Phase: Phase 4: User Story 2 - Automatically explore all fault points (Priority: P1)
 
-Source: specs/006-scenario-runner/tasks.md:57",006-scenario-runner;us2,High,To Do,006-scenario-runner
+Source: specs/006-scenario-runner/tasks.md:57",006-scenario-runner;us2,High,Done,006-scenario-runner
 006-scenario-runner-T016,006-scenario-runner-US2,Sub-task,"T016 Integrate exploration into runner, generated case names (`crash@after:payment.charge#1`) and `baselineClean: false` flag when the baseline failed in packages/core/src/scenario/runner.ts","Integrate exploration into runner, generated case names (`crash@after:payment.charge#1`) and `baselineClean: false` flag when the baseline failed in packages/core/src/scenario/runner.ts
 
 Phase: Phase 4: User Story 2 - Automatically explore all fault points (Priority: P1)
 
-Source: specs/006-scenario-runner/tasks.md:58",006-scenario-runner;us2,High,To Do,006-scenario-runner
+Source: specs/006-scenario-runner/tasks.md:58",006-scenario-runner;us2,High,Done,006-scenario-runner
 006-scenario-runner-T017,006-scenario-runner-US3,Sub-task,"T017 Write failing builder tests (required fields, duplicate case names, processKill without process runtime, generics inference via expectTypeOf) in packages/core/test/scenario/builder.test.ts","Write failing builder tests (required fields, duplicate case names, processKill without process runtime, generics inference via expectTypeOf) in packages/core/test/scenario/builder.test.ts
 
 Phase: Phase 5: User Story 3 - Fluent, validated scenario definition (Priority: P2)
 
-Source: specs/006-scenario-runner/tasks.md:68",006-scenario-runner;us3;parallel,Medium,To Do,006-scenario-runner
+Source: specs/006-scenario-runner/tasks.md:68",006-scenario-runner;us3;parallel,Medium,Done,006-scenario-runner
 006-scenario-runner-T018,006-scenario-runner-US3,Sub-task,T018 Implement Valibot option schema in packages/core/src/scenario/schema.ts,"Implement Valibot option schema in packages/core/src/scenario/schema.ts
 
 Phase: Phase 5: User Story 3 - Fluent, validated scenario definition (Priority: P2)
 
-Source: specs/006-scenario-runner/tasks.md:69",006-scenario-runner;us3,Medium,To Do,006-scenario-runner
+Source: specs/006-scenario-runner/tasks.md:69",006-scenario-runner;us3,Medium,Done,006-scenario-runner
 006-scenario-runner-T019,006-scenario-runner-US3,Sub-task,T019 Implement `scenario()` builder and `Scenario.run()` in packages/core/src/scenario/builder.ts,"Implement `scenario()` builder and `Scenario.run()` in packages/core/src/scenario/builder.ts
 
 Phase: Phase 5: User Story 3 - Fluent, validated scenario definition (Priority: P2)
 
-Source: specs/006-scenario-runner/tasks.md:70",006-scenario-runner;us3,Medium,To Do,006-scenario-runner
+Source: specs/006-scenario-runner/tasks.md:70",006-scenario-runner;us3,Medium,Done,006-scenario-runner
 006-scenario-runner-T020,006-scenario-runner-US4,Sub-task,"T020 Write failing isolation tests (factories called per case, no shared fake state) in packages/core/test/scenario/isolation.test.ts","Write failing isolation tests (factories called per case, no shared fake state) in packages/core/test/scenario/isolation.test.ts
 
 Phase: Phase 6: User Story 4 - Isolated, repeatable cases (Priority: P2)
 
-Source: specs/006-scenario-runner/tasks.md:80",006-scenario-runner;us4;parallel,Medium,To Do,006-scenario-runner
+Source: specs/006-scenario-runner/tasks.md:80",006-scenario-runner;us4;parallel,Medium,Done,006-scenario-runner
 006-scenario-runner-T021,006-scenario-runner-US4,Sub-task,T021 Write repeatability test (100 runs same seed → identical case order and statuses) in packages/adapter-workflows/test/repeatability.test.ts,"Write repeatability test (100 runs same seed → identical case order and statuses) in packages/adapter-workflows/test/repeatability.test.ts
 
 Phase: Phase 6: User Story 4 - Isolated, repeatable cases (Priority: P2)
 
-Source: specs/006-scenario-runner/tasks.md:81",006-scenario-runner;us4;parallel,Medium,To Do,006-scenario-runner
+Source: specs/006-scenario-runner/tasks.md:81",006-scenario-runner;us4;parallel,Medium,Done,006-scenario-runner
 006-scenario-runner-T022,006-scenario-runner-US4,Sub-task,T022 Implement seeded ordering utility (mulberry32) used for sampling ties in packages/core/src/scenario/seed.ts,"Implement seeded ordering utility (mulberry32) used for sampling ties in packages/core/src/scenario/seed.ts
 
 Phase: Phase 6: User Story 4 - Isolated, repeatable cases (Priority: P2)
 
-Source: specs/006-scenario-runner/tasks.md:82",006-scenario-runner;us4,Medium,To Do,006-scenario-runner
+Source: specs/006-scenario-runner/tasks.md:82",006-scenario-runner;us4,Medium,Done,006-scenario-runner
 006-scenario-runner-T023,006-scenario-runner,Task,"T023 Scripted message delivery (`deliver(name, body, afterRun)`) with tests in packages/core/src/scenario/runner.ts and packages/core/test/scenario/messages.test.ts","Scripted message delivery (`deliver(name, body, afterRun)`) with tests in packages/core/src/scenario/runner.ts and packages/core/test/scenario/messages.test.ts
 
 Phase: Phase 7: Polish & Cross-Cutting Concerns
 
-Source: specs/006-scenario-runner/tasks.md:88",006-scenario-runner;polish;parallel,Medium,To Do,006-scenario-runner
+Source: specs/006-scenario-runner/tasks.md:88",006-scenario-runner;polish;parallel,Medium,Done,006-scenario-runner
 006-scenario-runner-T024,006-scenario-runner,Task,T024 Performance test: 20 in-process cases < 5 s in packages/adapter-workflows/test/perf.test.ts,"Performance test: 20 in-process cases < 5 s in packages/adapter-workflows/test/perf.test.ts
 
 Phase: Phase 7: Polish & Cross-Cutting Concerns
 
-Source: specs/006-scenario-runner/tasks.md:89",006-scenario-runner;polish;parallel,Medium,To Do,006-scenario-runner
+Source: specs/006-scenario-runner/tasks.md:89",006-scenario-runner;polish;parallel,Medium,Done,006-scenario-runner
 006-scenario-runner-T025,006-scenario-runner,Task,"T025 Guide ""Writing scenarios"" in docs/guides/scenarios.md","Guide ""Writing scenarios"" in docs/guides/scenarios.md
 
 Phase: Phase 7: Polish & Cross-Cutting Concerns
 
-Source: specs/006-scenario-runner/tasks.md:90",006-scenario-runner;polish;parallel,Medium,To Do,006-scenario-runner
+Source: specs/006-scenario-runner/tasks.md:90",006-scenario-runner;polish;parallel,Medium,Done,006-scenario-runner
 006-scenario-runner-T026,006-scenario-runner,Task,T026 Author diagrams covering T001–T027 in specs/006-scenario-runner/diagram.yaml,"Author diagrams covering T001–T027 in specs/006-scenario-runner/diagram.yaml
 
 Phase: Phase 7: Polish & Cross-Cutting Concerns
 
-Source: specs/006-scenario-runner/tasks.md:91",006-scenario-runner;polish,Medium,To Do,006-scenario-runner
+Source: specs/006-scenario-runner/tasks.md:91",006-scenario-runner;polish,Medium,Done,006-scenario-runner
 006-scenario-runner-T027,006-scenario-runner,Task,T027 Validate quickstart scenarios in specs/006-scenario-runner/quickstart.md,"Validate quickstart scenarios in specs/006-scenario-runner/quickstart.md
 
 Phase: Phase 7: Polish & Cross-Cutting Concerns
 
-Source: specs/006-scenario-runner/tasks.md:92",006-scenario-runner;polish,Medium,To Do,006-scenario-runner
+Source: specs/006-scenario-runner/tasks.md:92",006-scenario-runner;polish,Medium,Done,006-scenario-runner
 007-outcome-classifier,,Epic,007 Outcome Classifier & Verdict Policy,"Outcome Classifier & Verdict Policy (007-outcome-classifier).
 
 Source: specs/007-outcome-classifier/spec.md:1",007-outcome-classifier,High,To Do,007-outcome-classifier

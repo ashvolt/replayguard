@@ -3,8 +3,10 @@ import { createTrigger, type FaultStrategy, matchesAnchor } from "../strategy.js
 import { describeFault } from "../types.js";
 
 /**
- * Lost response: the provider applies the anchored attempt, then the caller receives an error
- * (default `SimulatedNetworkError`), so the workflow's retry logic runs.
+ * Network failure at an effect boundary. `after` (default): the provider applies the anchored
+ * attempt, then the caller receives an error (lost response). `before`: the request never reaches
+ * the provider and the caller receives an error (lost request). Default error:
+ * `SimulatedNetworkError`.
  *
  * @example
  * new FaultController([throwAfterStrategy]).arm([fault.loseResponse("email.send")], env);
@@ -17,18 +19,29 @@ export const throwAfterStrategy: FaultStrategy = {
 			throw new TypeError("throwAfterStrategy armed with another spec");
 		const trigger = createTrigger(specIndex, "throwAfter");
 		const label = describeFault(spec);
-		const dispose = env.ledger.addHooks({
-			afterSettle(attempt) {
-				if (
-					trigger.triggered ||
-					attempt.status === "failed" ||
-					!matchesAnchor(spec.anchor, attempt)
-				)
-					return;
-				trigger.fired(env.ledger.recordFault({ strategy: "throwAfter", anchor: label }));
-				throw spec.error ? spec.error() : new SimulatedNetworkError(label);
-			},
-		});
+		const fire = () => {
+			trigger.fired(env.ledger.recordFault({ strategy: "throwAfter", anchor: label }));
+			return spec.error ? spec.error() : new SimulatedNetworkError(label);
+		};
+		const dispose = env.ledger.addHooks(
+			spec.point === "before"
+				? {
+						beforeStart(call) {
+							if (!trigger.triggered && matchesAnchor(spec.anchor, call)) throw fire();
+						},
+					}
+				: {
+						afterSettle(attempt) {
+							if (
+								!trigger.triggered &&
+								attempt.status !== "failed" &&
+								matchesAnchor(spec.anchor, attempt)
+							) {
+								throw fire();
+							}
+						},
+					},
+		);
 		return { outcome: trigger.outcome, dispose };
 	},
 };

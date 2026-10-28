@@ -10,7 +10,7 @@ export {
 } from "./errors.js";
 export { type ArmedFaults, DEFAULT_STRATEGIES, FaultController } from "./faults/controller.js";
 export { SimulatedNetworkError } from "./faults/errors.js";
-export { crashStrategy } from "./faults/strategies/crash.js";
+export { crashStrategy, createCrashStrategy } from "./faults/strategies/crash.js";
 export { delayStrategy } from "./faults/strategies/delay.js";
 export { noneStrategy } from "./faults/strategies/none.js";
 export { throwAfterStrategy } from "./faults/strategies/throw-after.js";
@@ -64,3 +64,41 @@ export type {
 export { type Clock, type ManualClock, manualClock, systemClock } from "./ports/clock.js";
 export type { PersistenceControl } from "./ports/persistence.js";
 export { type ManualSleeper, manualSleeper, type Sleeper, systemSleeper } from "./ports/sleeper.js";
+export type {
+	CompletedOutcome,
+	CrashedOutcome,
+	FailedOutcome,
+	PrepareCaseInput,
+	RunOutcome,
+	RuntimeCase,
+	SleepingOutcome,
+	WaitingOutcome,
+	WorkflowRuntime,
+} from "./runtime/port.js";
+export { type Scenario, ScenarioBuilder, scenario } from "./scenario/builder.js";
+export { createEffectContext } from "./scenario/context.js";
+export { discoverOccurrences, type Occurrence } from "./scenario/discovery.js";
+export type { MatrixResult } from "./scenario/matrix.js";
+export { buildMatrix, type MatrixInput } from "./scenario/matrix.js";
+export type {
+	CaseOrigin,
+	CaseResult,
+	CaseStatus,
+	ScenarioIdentity,
+	ScenarioResult,
+	SkippedCase,
+} from "./scenario/result.js";
+export { type RunOptions, ScenarioRunner } from "./scenario/runner.js";
+export { validateScenarioOptions } from "./scenario/schema.js";
+export { mulberry32 } from "./scenario/seed.js";
+export {
+	type Budget,
+	type CaseDefinition,
+	DEFAULT_BUDGET,
+	DEFAULT_EXPLORE,
+	type EffectContext,
+	type ExploreOptions,
+	type ExploreStrategy,
+	type ScenarioDefinition,
+	type ScriptedMessage,
+} from "./scenario/types.js";

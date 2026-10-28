@@ -80,13 +80,13 @@ description: "Task list for 005-fault-injection"
 
 **Independent Test**: Process-kill H1 scenario yields same ledger outcome as in-process crash.
 
-- [ ] T023 [P] [US4] Write failing FileDriver tests: conformance suite + reopen persistence + atomic write (temp + rename) in packages/adapter-workflows/test/file-driver.test.ts
-- [ ] T024 [US4] Implement `FileDriver` (extends InMemoryDriver, `<dir>/kv.json`, latency 0) in packages/adapter-workflows/src/file-driver.ts
-- [ ] T025 [P] [US4] Write failing IPC protocol schema tests (valid/invalid messages, no functions) in packages/adapter-workflows/test/process/protocol.test.ts
-- [ ] T026 [US4] Implement IPC message schemas in packages/adapter-workflows/src/process/protocol.ts
-- [ ] T027 [US4] Implement child host (load scenario module inside project root, build effects, relay ledger events, await `continue` after each settle) in packages/adapter-workflows/src/process/child-host.ts and packages/adapter-workflows/src/process/child-entry.ts
-- [ ] T028 [US4] Implement `processKill` strategy and parent controller (fork without shell, kill at anchor, harness timeout) in packages/adapter-workflows/src/process/process-kill.ts
-- [ ] T029 [US4] Write process-kill integration tests on all OSes (kill after anchor, not-triggered, hang → harness timeout, ledger parity with in-process crash for H1 per SC-002) in packages/adapter-workflows/test/process/process-kill.integration.test.ts
+- [X] T023 [P] [US4] Write failing FileDriver tests: conformance suite + reopen persistence + atomic write (temp + rename) in packages/adapter-workflows/test/file-driver.test.ts
+- [X] T024 [US4] Implement `FileDriver` (extends InMemoryDriver, `<dir>/kv.json`, latency 0) in packages/adapter-workflows/src/file-driver.ts
+- [X] T025 [P] [US4] Write failing IPC protocol schema tests (valid/invalid messages, no functions) in packages/adapter-workflows/test/process/protocol.test.ts
+- [X] T026 [US4] Implement IPC message schemas in packages/adapter-workflows/src/process/protocol.ts
+- [X] T027 [US4] Implement child host (load scenario module inside project root, build effects, relay ledger events, await `continue` after each settle) in packages/adapter-workflows/src/process/child-host.ts and packages/adapter-workflows/src/process/child-entry.ts
+- [X] T028 [US4] Implement `processKill` strategy and parent controller (fork without shell, kill at anchor, harness timeout) in packages/adapter-workflows/src/process/process-kill.ts
+- [X] T029 [US4] Write process-kill integration tests on all OSes (kill after anchor, not-triggered, hang → harness timeout, ledger parity with in-process crash for H1 per SC-002) in packages/adapter-workflows/test/process/process-kill.integration.test.ts
 
 ---
 
@@ -102,10 +102,10 @@ description: "Task list for 005-fault-injection"
 
 ## Phase 8: Polish & Cross-Cutting Concerns
 
-- [ ] T031 [P] Docs page per strategy with spike evidence in docs/faults/strategies.md
+- [X] T031 [P] Docs page per strategy with spike evidence in docs/faults/strategies.md
 - [X] T032 [P] Add Stryker 85% config coverage for packages/core/src/faults in packages/core/stryker.config.json
 - [X] T033 Author diagrams covering T001–T034 in specs/005-fault-injection/diagram.yaml
-- [ ] T034 Validate quickstart spike-parity table in specs/005-fault-injection/quickstart.md
+- [X] T034 Validate quickstart spike-parity table in specs/005-fault-injection/quickstart.md
 
 ## Dependencies & Execution Order
 

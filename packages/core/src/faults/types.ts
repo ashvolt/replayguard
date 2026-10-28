@@ -54,12 +54,18 @@ export interface CrashSpec {
 	point?: FaultPoint;
 }
 
-/** Lost response: the effect applies, the caller gets an error. */
+/**
+ * Network failure at an effect boundary: `after` (default) = the provider applied the effect but
+ * the response is lost; `before` = the request is lost, so the provider never sees the call.
+ * Either way the caller receives an error.
+ */
 export interface ThrowAfterSpec {
 	/** Strategy name. */
 	strategy: "throwAfter";
-	/** The effect whose response is lost. */
+	/** The affected effect. */
 	anchor: EffectAnchor;
+	/** `after` (lost response, default) or `before` (lost request). */
+	point?: FaultPoint;
 	/** Error to throw (default `SimulatedNetworkError`). */
 	error?: () => Error;
 }
@@ -127,6 +133,7 @@ const FaultSpecSchema = v.pipe(
 			v.strictObject({
 				strategy: v.literal("throwAfter"),
 				anchor: EffectAnchorSchema,
+				point: Point,
 				error: v.optional(v.function()),
 			}),
 			v.strictObject({
@@ -186,7 +193,9 @@ export function describeFault(spec: FaultSpec): string {
 		case "crash":
 			return `crash ${where(spec.anchor, spec.point)}`;
 		case "throwAfter":
-			return `lost response after ${target(spec.anchor)}`;
+			return spec.point === "before"
+				? `lost request before ${target(spec.anchor)}`
+				: `lost response after ${target(spec.anchor)}`;
 		case "delay":
 			return `delay ${spec.delayMs}ms in ${target(spec.anchor)}`;
 		case "processKill":
@@ -231,6 +240,11 @@ export const fault = {
 		error === undefined
 			? { strategy: "throwAfter", anchor: effect(kind, occurrence) }
 			: { strategy: "throwAfter", anchor: effect(kind, occurrence), error },
+	/** The Nth request of `kind` is lost before the provider sees it; the caller gets an error. */
+	loseRequest: (kind: string, occurrence = 1, error?: () => Error): FaultSpec =>
+		error === undefined
+			? { strategy: "throwAfter", anchor: effect(kind, occurrence), point: "before" }
+			: { strategy: "throwAfter", anchor: effect(kind, occurrence), point: "before", error },
 	/** The provider hangs for `delayMs` on the Nth attempt of `kind` (the call keeps running). */
 	delay: (kind: string, delayMs: number, occurrence = 1): FaultSpec => ({
 		strategy: "delay",

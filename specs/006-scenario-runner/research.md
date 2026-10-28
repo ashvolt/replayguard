@@ -42,3 +42,13 @@
 
 - **Decision**: Fixed per scenario (`options.workflowId`, default `"replayguard-wf"`) so
   idempotency keys derived from it are stable across runs/restarts within a case.
+
+## R7 — Implementation refinements (2026-10-28)
+
+- `PrepareCaseInput` carries `effectContext`, `build(ctx)` and `faults`: in-process runtimes build
+  the workflow in the parent; the process runtime rebuilds it in the child from the scenario module.
+- `WorkflowRuntime.strategies` lets a runtime contribute fault strategies (`processKill`).
+- The engine reports a queue wait as `sleeping` with `waitingForMessages` and no `sleepUntil`; the
+  adapter maps that to `waiting`.
+- Case timeouts use a real timer (budgets are wall-clock by nature); retries wait through the
+  injected `Sleeper`.

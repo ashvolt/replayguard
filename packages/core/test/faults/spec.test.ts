@@ -29,6 +29,12 @@ describe("fault helpers", () => {
 			anchor: { type: "effect", kind: "email", occurrence: 2 },
 			error,
 		});
+		expect(fault.loseRequest("email")).toEqual({
+			strategy: "throwAfter",
+			anchor: { type: "effect", kind: "email", occurrence: 1 },
+			point: "before",
+		});
+		expect(fault.loseRequest("email", 1, error)).toMatchObject({ point: "before", error });
 		expect(fault.delay("payment", 500)).toEqual({
 			strategy: "delay",
 			anchor: { type: "effect", kind: "payment", occurrence: 1 },
@@ -47,6 +53,7 @@ describe("fault helpers", () => {
 		expect(describeFault(fault.crashBefore("payment", 2))).toBe("crash before payment#2");
 		expect(describeFault(fault.crashAtWrite(3))).toBe("crash at durable write #3");
 		expect(describeFault(fault.loseResponse("email"))).toBe("lost response after email#1");
+		expect(describeFault(fault.loseRequest("email"))).toBe("lost request before email#1");
 		expect(describeFault(fault.delay("payment", 80))).toBe("delay 80ms in payment#1");
 		expect(describeFault(fault.killAfter("payment"))).toBe("process kill after payment#1");
 		expect(
