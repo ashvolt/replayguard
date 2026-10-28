@@ -1,7 +1,2 @@
-/**
- * Name of this package, for diagnostics.
- *
- * @example
- * console.log(PACKAGE_NAME); // "@replayguard/adapter-workflows"
- */
-export const PACKAGE_NAME = "@replayguard/adapter-workflows";
+export { FaultyDriver } from "./faulty-driver.js";
+export { compareBytes, type DriverSnapshot, MemoryDriver } from "./memory-driver.js";

@@ -2,7 +2,7 @@ import { readFileSync } from "node:fs";
 import { pathToFileURL } from "node:url";
 
 const TYPES = "feat|fix|docs|chore|refactor|test|perf|build|ci|style|revert";
-const SUBJECT = new RegExp(`^(${TYPES})(\\([a-z0-9-]+\\))?!?: \\S.*$`);
+const SUBJECT = new RegExp(`^(${TYPES})(\\([a-z0-9-]+(,[a-z0-9-]+)*\\))?!?: \\S.*$`);
 const EXEMPT = /^(Merge |Revert ")/;
 const MAX_SUBJECT = 100;
 

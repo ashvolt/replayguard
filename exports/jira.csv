@@ -816,15 +816,15 @@ ReplayGuard-ID: 005-fault-injection",High,To Do,005-fault-injection,,
 144,143,Story,US1: Crash right after the provider succeeded,"User story 1 (P1) of 005-fault-injection.
 
 Source: specs/005-fault-injection/spec.md:22
-ReplayGuard-ID: 005-fault-injection-US1",High,To Do,005-fault-injection,us1,
+ReplayGuard-ID: 005-fault-injection-US1",High,Done,005-fault-injection,us1,
 145,143,Story,US2: Lose the provider's response,"User story 2 (P1) of 005-fault-injection.
 
 Source: specs/005-fault-injection/spec.md:45
-ReplayGuard-ID: 005-fault-injection-US2",High,To Do,005-fault-injection,us2,
+ReplayGuard-ID: 005-fault-injection-US2",High,Done,005-fault-injection,us2,
 146,143,Story,US3: Provider hangs past the step timeout,"User story 3 (P1) of 005-fault-injection.
 
 Source: specs/005-fault-injection/spec.md:64
-ReplayGuard-ID: 005-fault-injection-US3",High,To Do,005-fault-injection,us3,
+ReplayGuard-ID: 005-fault-injection-US3",High,Done,005-fault-injection,us3,
 147,143,Story,US4: Kill the real process,"User story 4 (P2) of 005-fault-injection.
 
 Source: specs/005-fault-injection/spec.md:83
@@ -832,139 +832,139 @@ ReplayGuard-ID: 005-fault-injection-US4",Medium,To Do,005-fault-injection,us4,
 148,143,Story,US5: No-fault baseline,"User story 5 (P2) of 005-fault-injection.
 
 Source: specs/005-fault-injection/spec.md:105
-ReplayGuard-ID: 005-fault-injection-US5",Medium,To Do,005-fault-injection,us5,
+ReplayGuard-ID: 005-fault-injection-US5",Medium,Done,005-fault-injection,us5,
 149,143,Task,T001 Create `faults/` module and barrel exports in packages/core/src/faults/index.ts,"Create `faults/` module and barrel exports in packages/core/src/faults/index.ts
 
 Phase: Phase 1: Setup (Shared Infrastructure)
 
 Source: specs/005-fault-injection/tasks.md:18
-ReplayGuard-ID: 005-fault-injection-T001",Medium,To Do,005-fault-injection,setup,
+ReplayGuard-ID: 005-fault-injection-T001",Medium,Done,005-fault-injection,setup,
 150,143,Task,T002 Add `@rivet-dev/workflows` peer + dev dependency (1.x) and `/testing` usage in packages/adapter-workflows/package.json,"Add `@rivet-dev/workflows` peer + dev dependency (1.x) and `/testing` usage in packages/adapter-workflows/package.json
 
 Phase: Phase 1: Setup (Shared Infrastructure)
 
 Source: specs/005-fault-injection/tasks.md:19
-ReplayGuard-ID: 005-fault-injection-T002",Medium,To Do,005-fault-injection,setup,parallel
+ReplayGuard-ID: 005-fault-injection-T002",Medium,Done,005-fault-injection,setup,parallel
 151,143,Task,T003 Write failing tests for `Sleeper` port (system + manual) in packages/core/test/sleeper.test.ts,"Write failing tests for `Sleeper` port (system + manual) in packages/core/test/sleeper.test.ts
 
 Phase: Phase 2: Foundational (Blocking Prerequisites)
 
 Source: specs/005-fault-injection/tasks.md:25
-ReplayGuard-ID: 005-fault-injection-T003",Medium,To Do,005-fault-injection,foundational,parallel
+ReplayGuard-ID: 005-fault-injection-T003",Medium,Done,005-fault-injection,foundational,parallel
 152,143,Task,"T004 Implement `Sleeper`, `systemSleeper`, `manualSleeper` in packages/core/src/ports/sleeper.ts","Implement `Sleeper`, `systemSleeper`, `manualSleeper` in packages/core/src/ports/sleeper.ts
 
 Phase: Phase 2: Foundational (Blocking Prerequisites)
 
 Source: specs/005-fault-injection/tasks.md:26
-ReplayGuard-ID: 005-fault-injection-T004",Medium,To Do,005-fault-injection,foundational,
+ReplayGuard-ID: 005-fault-injection-T004",Medium,Done,005-fault-injection,foundational,
 153,143,Task,"T005 Define `PersistenceControl` port (""crash(), restart(), crashed, writeCount, onBeforeWrite"") in packages/core/src/ports/persistence.ts","Define `PersistenceControl` port (""crash(), restart(), crashed, writeCount, onBeforeWrite"") in packages/core/src/ports/persistence.ts
 
 Phase: Phase 2: Foundational (Blocking Prerequisites)
 
 Source: specs/005-fault-injection/tasks.md:27
-ReplayGuard-ID: 005-fault-injection-T005",Medium,To Do,005-fault-injection,foundational,
+ReplayGuard-ID: 005-fault-injection-T005",Medium,Done,005-fault-injection,foundational,
 154,143,Task,T006 Write failing tests for FaultSpec validation (exactly one of kind/identity; occurrence ≥ 1; `throwAfter` requires `after`; `delayMs` 1–600000; write anchors only for crash/processKill) and `fault.*` helpers in packages/core/test/faults/spec.test.ts,"Write failing tests for FaultSpec validation (exactly one of kind/identity; occurrence ≥ 1; `throwAfter` requires `after`; `delayMs` 1–600000; write anchors only for crash/processKill) and `fault.*` helpers in packages/core/test/faults/spec.test.ts
 
 Phase: Phase 2: Foundational (Blocking Prerequisites)
 
 Source: specs/005-fault-injection/tasks.md:28
-ReplayGuard-ID: 005-fault-injection-T006",Medium,To Do,005-fault-injection,foundational,parallel
+ReplayGuard-ID: 005-fault-injection-T006",Medium,Done,005-fault-injection,foundational,parallel
 155,143,Task,"T007 Implement FaultSpec types, Valibot validation and helpers in packages/core/src/faults/types.ts","Implement FaultSpec types, Valibot validation and helpers in packages/core/src/faults/types.ts
 
 Phase: Phase 2: Foundational (Blocking Prerequisites)
 
 Source: specs/005-fault-injection/tasks.md:29
-ReplayGuard-ID: 005-fault-injection-T007",Medium,To Do,005-fault-injection,foundational,
+ReplayGuard-ID: 005-fault-injection-T007",Medium,Done,005-fault-injection,foundational,
 156,143,Task,"T008 Write failing FaultController tests with a fake PersistenceControl (arms on ledger hooks, fires once, outcome triggered/not-triggered, dispose unregisters) in packages/core/test/faults/controller.test.ts","Write failing FaultController tests with a fake PersistenceControl (arms on ledger hooks, fires once, outcome triggered/not-triggered, dispose unregisters) in packages/core/test/faults/controller.test.ts
 
 Phase: Phase 2: Foundational (Blocking Prerequisites)
 
 Source: specs/005-fault-injection/tasks.md:30
-ReplayGuard-ID: 005-fault-injection-T008",Medium,To Do,005-fault-injection,foundational,parallel
+ReplayGuard-ID: 005-fault-injection-T008",Medium,Done,005-fault-injection,foundational,parallel
 157,143,Task,T009 Implement `FaultStrategy`/`ArmedFault` interfaces and `FaultController` in packages/core/src/faults/strategy.ts and packages/core/src/faults/controller.ts,"Implement `FaultStrategy`/`ArmedFault` interfaces and `FaultController` in packages/core/src/faults/strategy.ts and packages/core/src/faults/controller.ts
 
 Phase: Phase 2: Foundational (Blocking Prerequisites)
 
 Source: specs/005-fault-injection/tasks.md:31
-ReplayGuard-ID: 005-fault-injection-T009",Medium,To Do,005-fault-injection,foundational,
+ReplayGuard-ID: 005-fault-injection-T009",Medium,Done,005-fault-injection,foundational,
 158,143,Task,T010 Write failing driver conformance suite (get/set/delete/deletePrefix/deleteRange/list ordering/batch/alarms) runnable against any EngineDriver in packages/adapter-workflows/test/driver-conformance.ts,"Write failing driver conformance suite (get/set/delete/deletePrefix/deleteRange/list ordering/batch/alarms) runnable against any EngineDriver in packages/adapter-workflows/test/driver-conformance.ts
 
 Phase: Phase 2: Foundational (Blocking Prerequisites)
 
 Source: specs/005-fault-injection/tasks.md:32
-ReplayGuard-ID: 005-fault-injection-T010",Medium,To Do,005-fault-injection,foundational,parallel
+ReplayGuard-ID: 005-fault-injection-T010",Medium,Done,005-fault-injection,foundational,parallel
 159,143,Task,"T011 Write failing FaultyDriver tests (passthrough reads, write counting across 7 write ops, crash rejects writes with CrashSignal, restart clears, onBeforeWrite index) in packages/adapter-workflows/test/faulty-driver.test.ts","Write failing FaultyDriver tests (passthrough reads, write counting across 7 write ops, crash rejects writes with CrashSignal, restart clears, onBeforeWrite index) in packages/adapter-workflows/test/faulty-driver.test.ts
 
 Phase: Phase 2: Foundational (Blocking Prerequisites)
 
 Source: specs/005-fault-injection/tasks.md:33
-ReplayGuard-ID: 005-fault-injection-T011",Medium,To Do,005-fault-injection,foundational,parallel
+ReplayGuard-ID: 005-fault-injection-T011",Medium,Done,005-fault-injection,foundational,parallel
 160,143,Task,T012 Implement `FaultyDriver` decorator implementing `EngineDriver` and `PersistenceControl` in packages/adapter-workflows/src/faulty-driver.ts,"Implement `FaultyDriver` decorator implementing `EngineDriver` and `PersistenceControl` in packages/adapter-workflows/src/faulty-driver.ts
 
 Phase: Phase 2: Foundational (Blocking Prerequisites)
 
 Source: specs/005-fault-injection/tasks.md:34
-ReplayGuard-ID: 005-fault-injection-T012",Medium,To Do,005-fault-injection,foundational,
+ReplayGuard-ID: 005-fault-injection-T012",Medium,Done,005-fault-injection,foundational,
 161,144,Sub-task,"T013 Write failing crash strategy unit tests (records fault, persistence.crash, markRunDead, throws CrashSignal; before vs after; write anchor) in packages/core/test/faults/crash.test.ts","Write failing crash strategy unit tests (records fault, persistence.crash, markRunDead, throws CrashSignal; before vs after; write anchor) in packages/core/test/faults/crash.test.ts
 
 Phase: Phase 3: User Story 1 - Crash right after the provider succeeded (Priority: P1) 🎯 MVP
 
 Source: specs/005-fault-injection/tasks.md:46
-ReplayGuard-ID: 005-fault-injection-T013",High,To Do,005-fault-injection,us1,parallel
+ReplayGuard-ID: 005-fault-injection-T013",High,Done,005-fault-injection,us1,parallel
 162,144,Sub-task,"T014 Port spike H1, H2, H4 as failing acceptance tests using FaultyDriver + crash strategy in packages/adapter-workflows/test/spike-parity.test.ts","Port spike H1, H2, H4 as failing acceptance tests using FaultyDriver + crash strategy in packages/adapter-workflows/test/spike-parity.test.ts
 
 Phase: Phase 3: User Story 1 - Crash right after the provider succeeded (Priority: P1) 🎯 MVP
 
 Source: specs/005-fault-injection/tasks.md:47
-ReplayGuard-ID: 005-fault-injection-T014",High,To Do,005-fault-injection,us1,parallel
+ReplayGuard-ID: 005-fault-injection-T014",High,Done,005-fault-injection,us1,parallel
 163,144,Sub-task,T015 Implement `crash` strategy in packages/core/src/faults/strategies/crash.ts,"Implement `crash` strategy in packages/core/src/faults/strategies/crash.ts
 
 Phase: Phase 3: User Story 1 - Crash right after the provider succeeded (Priority: P1) 🎯 MVP
 
 Source: specs/005-fault-injection/tasks.md:48
-ReplayGuard-ID: 005-fault-injection-T015",High,To Do,005-fault-injection,us1,
+ReplayGuard-ID: 005-fault-injection-T015",High,Done,005-fault-injection,us1,
 164,144,Sub-task,T016 Implement `none` strategy (Null Object) in packages/core/src/faults/strategies/none.ts,"Implement `none` strategy (Null Object) in packages/core/src/faults/strategies/none.ts
 
 Phase: Phase 3: User Story 1 - Crash right after the provider succeeded (Priority: P1) 🎯 MVP
 
 Source: specs/005-fault-injection/tasks.md:49
-ReplayGuard-ID: 005-fault-injection-T016",High,To Do,005-fault-injection,us1,
+ReplayGuard-ID: 005-fault-injection-T016",High,Done,005-fault-injection,us1,
 165,145,Sub-task,"T017 Write failing throwAfter tests (default SimulatedNetworkError, custom error factory, attempt stays applied) in packages/core/test/faults/throw-after.test.ts","Write failing throwAfter tests (default SimulatedNetworkError, custom error factory, attempt stays applied) in packages/core/test/faults/throw-after.test.ts
 
 Phase: Phase 4: User Story 2 - Lose the provider's response (Priority: P1)
 
 Source: specs/005-fault-injection/tasks.md:59
-ReplayGuard-ID: 005-fault-injection-T017",High,To Do,005-fault-injection,us2,parallel
+ReplayGuard-ID: 005-fault-injection-T017",High,Done,005-fault-injection,us2,parallel
 166,145,Sub-task,T018 Implement `SimulatedNetworkError` and `throwAfter` strategy in packages/core/src/faults/errors.ts and packages/core/src/faults/strategies/throw-after.ts,"Implement `SimulatedNetworkError` and `throwAfter` strategy in packages/core/src/faults/errors.ts and packages/core/src/faults/strategies/throw-after.ts
 
 Phase: Phase 4: User Story 2 - Lose the provider's response (Priority: P1)
 
 Source: specs/005-fault-injection/tasks.md:60
-ReplayGuard-ID: 005-fault-injection-T018",High,To Do,005-fault-injection,us2,
+ReplayGuard-ID: 005-fault-injection-T018",High,Done,005-fault-injection,us2,
 167,145,Sub-task,T019 Add H0 acceptance test in packages/adapter-workflows/test/spike-parity.test.ts,"Add H0 acceptance test in packages/adapter-workflows/test/spike-parity.test.ts
 
 Phase: Phase 4: User Story 2 - Lose the provider's response (Priority: P1)
 
 Source: specs/005-fault-injection/tasks.md:61
-ReplayGuard-ID: 005-fault-injection-T019",High,To Do,005-fault-injection,us2,
+ReplayGuard-ID: 005-fault-injection-T019",High,Done,005-fault-injection,us2,
 168,146,Sub-task,"T020 Write failing delay tests with manual sleeper (only targeted occurrence, attempt started before delay) in packages/core/test/faults/delay.test.ts","Write failing delay tests with manual sleeper (only targeted occurrence, attempt started before delay) in packages/core/test/faults/delay.test.ts
 
 Phase: Phase 5: User Story 3 - Provider hangs past the step timeout (Priority: P1)
 
 Source: specs/005-fault-injection/tasks.md:71
-ReplayGuard-ID: 005-fault-injection-T020",High,To Do,005-fault-injection,us3,parallel
+ReplayGuard-ID: 005-fault-injection-T020",High,Done,005-fault-injection,us3,parallel
 169,146,Sub-task,T021 Implement `delay` strategy in packages/core/src/faults/strategies/delay.ts,"Implement `delay` strategy in packages/core/src/faults/strategies/delay.ts
 
 Phase: Phase 5: User Story 3 - Provider hangs past the step timeout (Priority: P1)
 
 Source: specs/005-fault-injection/tasks.md:72
-ReplayGuard-ID: 005-fault-injection-T021",High,To Do,005-fault-injection,us3,
+ReplayGuard-ID: 005-fault-injection-T021",High,Done,005-fault-injection,us3,
 170,146,Sub-task,T022 Add H3a and H3b acceptance tests in packages/adapter-workflows/test/spike-parity.test.ts,"Add H3a and H3b acceptance tests in packages/adapter-workflows/test/spike-parity.test.ts
 
 Phase: Phase 5: User Story 3 - Provider hangs past the step timeout (Priority: P1)
 
 Source: specs/005-fault-injection/tasks.md:73
-ReplayGuard-ID: 005-fault-injection-T022",High,To Do,005-fault-injection,us3,
+ReplayGuard-ID: 005-fault-injection-T022",High,Done,005-fault-injection,us3,
 171,147,Sub-task,T023 Write failing FileDriver tests: conformance suite + reopen persistence + atomic write (temp + rename) in packages/adapter-workflows/test/file-driver.test.ts,"Write failing FileDriver tests: conformance suite + reopen persistence + atomic write (temp + rename) in packages/adapter-workflows/test/file-driver.test.ts
 
 Phase: Phase 6: User Story 4 - Kill the real process (Priority: P2)
@@ -1012,7 +1012,7 @@ ReplayGuard-ID: 005-fault-injection-T029",Medium,To Do,005-fault-injection,us4,
 Phase: Phase 7: User Story 5 - No-fault baseline (Priority: P2)
 
 Source: specs/005-fault-injection/tasks.md:99
-ReplayGuard-ID: 005-fault-injection-T030",Medium,To Do,005-fault-injection,us5,
+ReplayGuard-ID: 005-fault-injection-T030",Medium,Done,005-fault-injection,us5,
 179,143,Task,T031 Docs page per strategy with spike evidence in docs/faults/strategies.md,"Docs page per strategy with spike evidence in docs/faults/strategies.md
 
 Phase: Phase 8: Polish & Cross-Cutting Concerns
@@ -1024,13 +1024,13 @@ ReplayGuard-ID: 005-fault-injection-T031",Medium,To Do,005-fault-injection,polis
 Phase: Phase 8: Polish & Cross-Cutting Concerns
 
 Source: specs/005-fault-injection/tasks.md:106
-ReplayGuard-ID: 005-fault-injection-T032",Medium,To Do,005-fault-injection,polish,parallel
+ReplayGuard-ID: 005-fault-injection-T032",Medium,Done,005-fault-injection,polish,parallel
 181,143,Task,T033 Author diagrams covering T001–T034 in specs/005-fault-injection/diagram.yaml,"Author diagrams covering T001–T034 in specs/005-fault-injection/diagram.yaml
 
 Phase: Phase 8: Polish & Cross-Cutting Concerns
 
 Source: specs/005-fault-injection/tasks.md:107
-ReplayGuard-ID: 005-fault-injection-T033",Medium,To Do,005-fault-injection,polish,
+ReplayGuard-ID: 005-fault-injection-T033",Medium,Done,005-fault-injection,polish,
 182,143,Task,T034 Validate quickstart spike-parity table in specs/005-fault-injection/quickstart.md,"Validate quickstart spike-parity table in specs/005-fault-injection/quickstart.md
 
 Phase: Phase 8: Polish & Cross-Cutting Concerns

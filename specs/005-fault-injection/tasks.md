@@ -15,23 +15,23 @@ description: "Task list for 005-fault-injection"
 
 ## Phase 1: Setup (Shared Infrastructure)
 
-- [ ] T001 Create `faults/` module and barrel exports in packages/core/src/faults/index.ts
-- [ ] T002 [P] Add `@rivet-dev/workflows` peer + dev dependency (1.x) and `/testing` usage in packages/adapter-workflows/package.json
+- [X] T001 Create `faults/` module and barrel exports in packages/core/src/faults/index.ts
+- [X] T002 [P] Add `@rivet-dev/workflows` peer + dev dependency (1.x) and `/testing` usage in packages/adapter-workflows/package.json
 
 ---
 
 ## Phase 2: Foundational (Blocking Prerequisites)
 
-- [ ] T003 [P] Write failing tests for `Sleeper` port (system + manual) in packages/core/test/sleeper.test.ts
-- [ ] T004 Implement `Sleeper`, `systemSleeper`, `manualSleeper` in packages/core/src/ports/sleeper.ts
-- [ ] T005 Define `PersistenceControl` port ("crash(), restart(), crashed, writeCount, onBeforeWrite") in packages/core/src/ports/persistence.ts
-- [ ] T006 [P] Write failing tests for FaultSpec validation (exactly one of kind/identity; occurrence ≥ 1; `throwAfter` requires `after`; `delayMs` 1–600000; write anchors only for crash/processKill) and `fault.*` helpers in packages/core/test/faults/spec.test.ts
-- [ ] T007 Implement FaultSpec types, Valibot validation and helpers in packages/core/src/faults/types.ts
-- [ ] T008 [P] Write failing FaultController tests with a fake PersistenceControl (arms on ledger hooks, fires once, outcome triggered/not-triggered, dispose unregisters) in packages/core/test/faults/controller.test.ts
-- [ ] T009 Implement `FaultStrategy`/`ArmedFault` interfaces and `FaultController` in packages/core/src/faults/strategy.ts and packages/core/src/faults/controller.ts
-- [ ] T010 [P] Write failing driver conformance suite (get/set/delete/deletePrefix/deleteRange/list ordering/batch/alarms) runnable against any EngineDriver in packages/adapter-workflows/test/driver-conformance.ts
-- [ ] T011 [P] Write failing FaultyDriver tests (passthrough reads, write counting across 7 write ops, crash rejects writes with CrashSignal, restart clears, onBeforeWrite index) in packages/adapter-workflows/test/faulty-driver.test.ts
-- [ ] T012 Implement `FaultyDriver` decorator implementing `EngineDriver` and `PersistenceControl` in packages/adapter-workflows/src/faulty-driver.ts
+- [X] T003 [P] Write failing tests for `Sleeper` port (system + manual) in packages/core/test/sleeper.test.ts
+- [X] T004 Implement `Sleeper`, `systemSleeper`, `manualSleeper` in packages/core/src/ports/sleeper.ts
+- [X] T005 Define `PersistenceControl` port ("crash(), restart(), crashed, writeCount, onBeforeWrite") in packages/core/src/ports/persistence.ts
+- [X] T006 [P] Write failing tests for FaultSpec validation (exactly one of kind/identity; occurrence ≥ 1; `throwAfter` requires `after`; `delayMs` 1–600000; write anchors only for crash/processKill) and `fault.*` helpers in packages/core/test/faults/spec.test.ts
+- [X] T007 Implement FaultSpec types, Valibot validation and helpers in packages/core/src/faults/types.ts
+- [X] T008 [P] Write failing FaultController tests with a fake PersistenceControl (arms on ledger hooks, fires once, outcome triggered/not-triggered, dispose unregisters) in packages/core/test/faults/controller.test.ts
+- [X] T009 Implement `FaultStrategy`/`ArmedFault` interfaces and `FaultController` in packages/core/src/faults/strategy.ts and packages/core/src/faults/controller.ts
+- [X] T010 [P] Write failing driver conformance suite (get/set/delete/deletePrefix/deleteRange/list ordering/batch/alarms) runnable against any EngineDriver in packages/adapter-workflows/test/driver-conformance.ts
+- [X] T011 [P] Write failing FaultyDriver tests (passthrough reads, write counting across 7 write ops, crash rejects writes with CrashSignal, restart clears, onBeforeWrite index) in packages/adapter-workflows/test/faulty-driver.test.ts
+- [X] T012 Implement `FaultyDriver` decorator implementing `EngineDriver` and `PersistenceControl` in packages/adapter-workflows/src/faulty-driver.ts
 
 **Checkpoint**: Faults can be armed; persistence can crash.
 
@@ -43,10 +43,10 @@ description: "Task list for 005-fault-injection"
 
 **Independent Test**: Spike H1 via public API → 2 applied payment attempts after restart.
 
-- [ ] T013 [P] [US1] Write failing crash strategy unit tests (records fault, persistence.crash, markRunDead, throws CrashSignal; before vs after; write anchor) in packages/core/test/faults/crash.test.ts
-- [ ] T014 [P] [US1] Port spike H1, H2, H4 as failing acceptance tests using FaultyDriver + crash strategy in packages/adapter-workflows/test/spike-parity.test.ts
-- [ ] T015 [US1] Implement `crash` strategy in packages/core/src/faults/strategies/crash.ts
-- [ ] T016 [US1] Implement `none` strategy (Null Object) in packages/core/src/faults/strategies/none.ts
+- [X] T013 [P] [US1] Write failing crash strategy unit tests (records fault, persistence.crash, markRunDead, throws CrashSignal; before vs after; write anchor) in packages/core/test/faults/crash.test.ts
+- [X] T014 [P] [US1] Port spike H1, H2, H4 as failing acceptance tests using FaultyDriver + crash strategy in packages/adapter-workflows/test/spike-parity.test.ts
+- [X] T015 [US1] Implement `crash` strategy in packages/core/src/faults/strategies/crash.ts
+- [X] T016 [US1] Implement `none` strategy (Null Object) in packages/core/src/faults/strategies/none.ts
 
 ---
 
@@ -56,9 +56,9 @@ description: "Task list for 005-fault-injection"
 
 **Independent Test**: Spike H0 via `fault.loseResponse` → step retries, 2 applied.
 
-- [ ] T017 [P] [US2] Write failing throwAfter tests (default SimulatedNetworkError, custom error factory, attempt stays applied) in packages/core/test/faults/throw-after.test.ts
-- [ ] T018 [US2] Implement `SimulatedNetworkError` and `throwAfter` strategy in packages/core/src/faults/errors.ts and packages/core/src/faults/strategies/throw-after.ts
-- [ ] T019 [US2] Add H0 acceptance test in packages/adapter-workflows/test/spike-parity.test.ts
+- [X] T017 [P] [US2] Write failing throwAfter tests (default SimulatedNetworkError, custom error factory, attempt stays applied) in packages/core/test/faults/throw-after.test.ts
+- [X] T018 [US2] Implement `SimulatedNetworkError` and `throwAfter` strategy in packages/core/src/faults/errors.ts and packages/core/src/faults/strategies/throw-after.ts
+- [X] T019 [US2] Add H0 acceptance test in packages/adapter-workflows/test/spike-parity.test.ts
 
 ---
 
@@ -68,9 +68,9 @@ description: "Task list for 005-fault-injection"
 
 **Independent Test**: Spike H3a/H3b → late completion recorded, overlap detected.
 
-- [ ] T020 [P] [US3] Write failing delay tests with manual sleeper (only targeted occurrence, attempt started before delay) in packages/core/test/faults/delay.test.ts
-- [ ] T021 [US3] Implement `delay` strategy in packages/core/src/faults/strategies/delay.ts
-- [ ] T022 [US3] Add H3a and H3b acceptance tests in packages/adapter-workflows/test/spike-parity.test.ts
+- [X] T020 [P] [US3] Write failing delay tests with manual sleeper (only targeted occurrence, attempt started before delay) in packages/core/test/faults/delay.test.ts
+- [X] T021 [US3] Implement `delay` strategy in packages/core/src/faults/strategies/delay.ts
+- [X] T022 [US3] Add H3a and H3b acceptance tests in packages/adapter-workflows/test/spike-parity.test.ts
 
 ---
 
@@ -96,15 +96,15 @@ description: "Task list for 005-fault-injection"
 
 **Independent Test**: `none` strategy → no fault events; outputs equal to plain run.
 
-- [ ] T030 [US5] Write baseline equivalence test (instrumented vs plain engine run outputs) in packages/adapter-workflows/test/baseline.test.ts
+- [X] T030 [US5] Write baseline equivalence test (instrumented vs plain engine run outputs) in packages/adapter-workflows/test/baseline.test.ts
 
 ---
 
 ## Phase 8: Polish & Cross-Cutting Concerns
 
 - [ ] T031 [P] Docs page per strategy with spike evidence in docs/faults/strategies.md
-- [ ] T032 [P] Add Stryker 85% config coverage for packages/core/src/faults in packages/core/stryker.config.json
-- [ ] T033 Author diagrams covering T001–T034 in specs/005-fault-injection/diagram.yaml
+- [X] T032 [P] Add Stryker 85% config coverage for packages/core/src/faults in packages/core/stryker.config.json
+- [X] T033 Author diagrams covering T001–T034 in specs/005-fault-injection/diagram.yaml
 - [ ] T034 Validate quickstart spike-parity table in specs/005-fault-injection/quickstart.md
 
 ## Dependencies & Execution Order

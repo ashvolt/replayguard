@@ -10,6 +10,7 @@ describe("checkCommitMessage", () => {
 		"fix(core)!: handle crash before flush",
 		"docs(specs): add plan for 004-effect-ledger",
 		"chore(deps): bump vitest",
+		"feat(core,adapter-workflows): add faults",
 		'Revert "feat: add ledger"',
 		"Merge branch 'main' into feature",
 	])("accepts %s", (msg) => {
@@ -20,6 +21,7 @@ describe("checkCommitMessage", () => {
 		["update stuff", "subject must follow Conventional Commits"],
 		["feat:missing space", "subject must follow Conventional Commits"],
 		["Feat: capital type", "subject must follow Conventional Commits"],
+		["feat(core,): trailing comma", "subject must follow Conventional Commits"],
 		[`feat: ${"x".repeat(100)}`, "subject must be at most 100 characters"],
 		["", "commit message is empty"],
 	])("rejects %s", (msg, reason) => {
