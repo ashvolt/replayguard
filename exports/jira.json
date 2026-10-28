@@ -2116,7 +2116,7 @@
     {
       "sourceId": "004-effect-ledger",
       "parentSourceId": null,
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Epic"
@@ -2134,7 +2134,7 @@
     {
       "sourceId": "004-effect-ledger-US1",
       "parentSourceId": "004-effect-ledger",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Story"
@@ -2153,7 +2153,7 @@
     {
       "sourceId": "004-effect-ledger-US2",
       "parentSourceId": "004-effect-ledger",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Story"
@@ -2172,7 +2172,7 @@
     {
       "sourceId": "004-effect-ledger-US3",
       "parentSourceId": "004-effect-ledger",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Story"
@@ -2191,7 +2191,7 @@
     {
       "sourceId": "004-effect-ledger-US4",
       "parentSourceId": "004-effect-ledger",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Story"
@@ -2210,7 +2210,7 @@
     {
       "sourceId": "004-effect-ledger-T001",
       "parentSourceId": "004-effect-ledger",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Task"
@@ -2229,7 +2229,7 @@
     {
       "sourceId": "004-effect-ledger-T002",
       "parentSourceId": "004-effect-ledger",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Task"
@@ -2249,7 +2249,7 @@
     {
       "sourceId": "004-effect-ledger-T003",
       "parentSourceId": "004-effect-ledger",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Task"
@@ -2268,7 +2268,7 @@
     {
       "sourceId": "004-effect-ledger-T004",
       "parentSourceId": "004-effect-ledger",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Task"
@@ -2288,7 +2288,7 @@
     {
       "sourceId": "004-effect-ledger-T005",
       "parentSourceId": "004-effect-ledger",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Task"
@@ -2307,7 +2307,7 @@
     {
       "sourceId": "004-effect-ledger-T006",
       "parentSourceId": "004-effect-ledger",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Task"
@@ -2327,7 +2327,7 @@
     {
       "sourceId": "004-effect-ledger-T007",
       "parentSourceId": "004-effect-ledger",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Task"
@@ -2346,7 +2346,7 @@
     {
       "sourceId": "004-effect-ledger-T008",
       "parentSourceId": "004-effect-ledger",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Task"
@@ -2365,7 +2365,7 @@
     {
       "sourceId": "004-effect-ledger-T009",
       "parentSourceId": "004-effect-ledger-US1",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Sub-task"
@@ -2385,7 +2385,7 @@
     {
       "sourceId": "004-effect-ledger-T010",
       "parentSourceId": "004-effect-ledger-US1",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Sub-task"
@@ -2405,7 +2405,7 @@
     {
       "sourceId": "004-effect-ledger-T011",
       "parentSourceId": "004-effect-ledger-US1",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Sub-task"
@@ -2424,7 +2424,7 @@
     {
       "sourceId": "004-effect-ledger-T012",
       "parentSourceId": "004-effect-ledger-US1",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Sub-task"
@@ -2443,7 +2443,7 @@
     {
       "sourceId": "004-effect-ledger-T013",
       "parentSourceId": "004-effect-ledger-US1",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Sub-task"
@@ -2462,7 +2462,7 @@
     {
       "sourceId": "004-effect-ledger-T014",
       "parentSourceId": "004-effect-ledger-US2",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Sub-task"
@@ -2482,7 +2482,7 @@
     {
       "sourceId": "004-effect-ledger-T015",
       "parentSourceId": "004-effect-ledger-US2",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Sub-task"
@@ -2501,7 +2501,7 @@
     {
       "sourceId": "004-effect-ledger-T016",
       "parentSourceId": "004-effect-ledger-US2",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Sub-task"
@@ -2520,7 +2520,7 @@
     {
       "sourceId": "004-effect-ledger-T017",
       "parentSourceId": "004-effect-ledger-US3",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Sub-task"
@@ -2540,7 +2540,7 @@
     {
       "sourceId": "004-effect-ledger-T018",
       "parentSourceId": "004-effect-ledger-US3",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Sub-task"
@@ -2560,7 +2560,7 @@
     {
       "sourceId": "004-effect-ledger-T019",
       "parentSourceId": "004-effect-ledger-US3",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Sub-task"
@@ -2579,7 +2579,7 @@
     {
       "sourceId": "004-effect-ledger-T020",
       "parentSourceId": "004-effect-ledger-US3",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Sub-task"
@@ -2598,7 +2598,7 @@
     {
       "sourceId": "004-effect-ledger-T021",
       "parentSourceId": "004-effect-ledger-US4",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Sub-task"
@@ -2618,7 +2618,7 @@
     {
       "sourceId": "004-effect-ledger-T022",
       "parentSourceId": "004-effect-ledger-US4",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Sub-task"
@@ -2638,7 +2638,7 @@
     {
       "sourceId": "004-effect-ledger-T023",
       "parentSourceId": "004-effect-ledger-US4",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Sub-task"
@@ -2657,7 +2657,7 @@
     {
       "sourceId": "004-effect-ledger-T024",
       "parentSourceId": "004-effect-ledger",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Task"
@@ -2677,7 +2677,7 @@
     {
       "sourceId": "004-effect-ledger-T025",
       "parentSourceId": "004-effect-ledger",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Task"
@@ -2697,7 +2697,7 @@
     {
       "sourceId": "004-effect-ledger-T026",
       "parentSourceId": "004-effect-ledger",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Task"
@@ -2717,7 +2717,7 @@
     {
       "sourceId": "004-effect-ledger-T027",
       "parentSourceId": "004-effect-ledger",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Task"
@@ -2736,7 +2736,7 @@
     {
       "sourceId": "004-effect-ledger-T028",
       "parentSourceId": "004-effect-ledger",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Task"

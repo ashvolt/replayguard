@@ -13,6 +13,10 @@
   (core fault/classifier modules run a dedicated config with `break: 85`); incremental mode
   cached in CI.
 - **Rationale**: Only mature JS mutation tool; incremental keeps PR runs short.
+- **Finding (2026-10-28)**: `@stryker-mutator/vitest-runner` 10.0.0 never activates mutants under
+  Vitest 5 (tests in `describe` are filtered out — upstream issues #6262/#6263/#6266, fixed in
+  10.1.x which is newer than our 7-day release-age policy). Decision: pin Vitest 4.1.x repo-wide;
+  core then scores 88.6%. Revisit when Stryker ≥ 10.1.1 passes the release-age gate.
 
 ## R3 — Boundary enforcement
 

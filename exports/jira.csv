@@ -624,191 +624,191 @@ ReplayGuard-ID: 003-quality-pipeline-T032",Medium,Done,003-quality-pipeline,poli
 110,,Epic,004 Effect Ledger & Instrumentation,"Effect Ledger & Instrumentation (004-effect-ledger).
 
 Source: specs/004-effect-ledger/spec.md:1
-ReplayGuard-ID: 004-effect-ledger",High,To Do,004-effect-ledger,,
+ReplayGuard-ID: 004-effect-ledger",High,Done,004-effect-ledger,,
 111,110,Story,US1: Instrument my own side-effect function,"User story 1 (P1) of 004-effect-ledger.
 
 Source: specs/004-effect-ledger/spec.md:23
-ReplayGuard-ID: 004-effect-ledger-US1",High,To Do,004-effect-ledger,us1,
+ReplayGuard-ID: 004-effect-ledger-US1",High,Done,004-effect-ledger,us1,
 112,110,Story,US2: Record provider-side deduplication,"User story 2 (P1) of 004-effect-ledger.
 
 Source: specs/004-effect-ledger/spec.md:48
-ReplayGuard-ID: 004-effect-ledger-US2",High,To Do,004-effect-ledger,us2,
+ReplayGuard-ID: 004-effect-ledger-US2",High,Done,004-effect-ledger,us2,
 113,110,Story,US3: Observe in-flight effects at the moment of a fault,"User story 3 (P1) of 004-effect-ledger.
 
 Source: specs/004-effect-ledger/spec.md:69
-ReplayGuard-ID: 004-effect-ledger-US3",High,To Do,004-effect-ledger,us3,
+ReplayGuard-ID: 004-effect-ledger-US3",High,Done,004-effect-ledger,us3,
 114,110,Story,US4: Subscribe to effects as they happen,"User story 4 (P2) of 004-effect-ledger.
 
 Source: specs/004-effect-ledger/spec.md:91
-ReplayGuard-ID: 004-effect-ledger-US4",Medium,To Do,004-effect-ledger,us4,
+ReplayGuard-ID: 004-effect-ledger-US4",Medium,Done,004-effect-ledger,us4,
 115,110,Task,"T001 Create module folders `ports/`, `ledger/`, `instrument/` and barrel exports in packages/core/src/index.ts","Create module folders `ports/`, `ledger/`, `instrument/` and barrel exports in packages/core/src/index.ts
 
 Phase: Phase 1: Setup (Shared Infrastructure)
 
 Source: specs/004-effect-ledger/tasks.md:18
-ReplayGuard-ID: 004-effect-ledger-T001",Medium,To Do,004-effect-ledger,setup,
+ReplayGuard-ID: 004-effect-ledger-T001",Medium,Done,004-effect-ledger,setup,
 116,110,Task,"T002 Write failing tests for error hierarchy (`ReplayGuardError` with stable `code`, `ConfigError`, `CrashSignal`, `HarnessError`, `BudgetExceededError`, `SchemaError`) in packages/core/test/errors.test.ts","Write failing tests for error hierarchy (`ReplayGuardError` with stable `code`, `ConfigError`, `CrashSignal`, `HarnessError`, `BudgetExceededError`, `SchemaError`) in packages/core/test/errors.test.ts
 
 Phase: Phase 2: Foundational (Blocking Prerequisites)
 
 Source: specs/004-effect-ledger/tasks.md:24
-ReplayGuard-ID: 004-effect-ledger-T002",Medium,To Do,004-effect-ledger,foundational,parallel
+ReplayGuard-ID: 004-effect-ledger-T002",Medium,Done,004-effect-ledger,foundational,parallel
 117,110,Task,T003 Implement error hierarchy in packages/core/src/errors.ts,"Implement error hierarchy in packages/core/src/errors.ts
 
 Phase: Phase 2: Foundational (Blocking Prerequisites)
 
 Source: specs/004-effect-ledger/tasks.md:25
-ReplayGuard-ID: 004-effect-ledger-T003",Medium,To Do,004-effect-ledger,foundational,
+ReplayGuard-ID: 004-effect-ledger-T003",Medium,Done,004-effect-ledger,foundational,
 118,110,Task,T004 Write failing tests for `systemClock` monotonicity and `manualClock` advance/set in packages/core/test/clock.test.ts,"Write failing tests for `systemClock` monotonicity and `manualClock` advance/set in packages/core/test/clock.test.ts
 
 Phase: Phase 2: Foundational (Blocking Prerequisites)
 
 Source: specs/004-effect-ledger/tasks.md:26
-ReplayGuard-ID: 004-effect-ledger-T004",Medium,To Do,004-effect-ledger,foundational,parallel
+ReplayGuard-ID: 004-effect-ledger-T004",Medium,Done,004-effect-ledger,foundational,parallel
 119,110,Task,"T005 Implement `Clock`, `systemClock`, `manualClock` in packages/core/src/ports/clock.ts","Implement `Clock`, `systemClock`, `manualClock` in packages/core/src/ports/clock.ts
 
 Phase: Phase 2: Foundational (Blocking Prerequisites)
 
 Source: specs/004-effect-ledger/tasks.md:27
-ReplayGuard-ID: 004-effect-ledger-T005",Medium,To Do,004-effect-ledger,foundational,
+ReplayGuard-ID: 004-effect-ledger-T005",Medium,Done,004-effect-ledger,foundational,
 120,110,Task,"T006 Write failing canonical serialization + FNV-1a-64 tests incl. fast-check (key-order independence, Date/Map/Set handling, unhashable → `RG_CONFIG_UNHASHABLE`) in packages/core/test/canonical.test.ts","Write failing canonical serialization + FNV-1a-64 tests incl. fast-check (key-order independence, Date/Map/Set handling, unhashable → `RG_CONFIG_UNHASHABLE`) in packages/core/test/canonical.test.ts
 
 Phase: Phase 2: Foundational (Blocking Prerequisites)
 
 Source: specs/004-effect-ledger/tasks.md:28
-ReplayGuard-ID: 004-effect-ledger-T006",Medium,To Do,004-effect-ledger,foundational,parallel
+ReplayGuard-ID: 004-effect-ledger-T006",Medium,Done,004-effect-ledger,foundational,parallel
 121,110,Task,T007 Implement `canonicalize` and `canonicalHash` in packages/core/src/ledger/canonical.ts,"Implement `canonicalize` and `canonicalHash` in packages/core/src/ledger/canonical.ts
 
 Phase: Phase 2: Foundational (Blocking Prerequisites)
 
 Source: specs/004-effect-ledger/tasks.md:29
-ReplayGuard-ID: 004-effect-ledger-T007",Medium,To Do,004-effect-ledger,foundational,
+ReplayGuard-ID: 004-effect-ledger-T007",Medium,Done,004-effect-ledger,foundational,
 122,110,Task,"T008 Define ledger types (EffectAttempt status machine ""started → applied | deduplicated | failed"", RunRecord, FaultEvent, LedgerEvent, LedgerSnapshot version 1, PendingCall) in packages/core/src/ledger/types.ts","Define ledger types (EffectAttempt status machine ""started → applied | deduplicated | failed"", RunRecord, FaultEvent, LedgerEvent, LedgerSnapshot version 1, PendingCall) in packages/core/src/ledger/types.ts
 
 Phase: Phase 2: Foundational (Blocking Prerequisites)
 
 Source: specs/004-effect-ledger/tasks.md:30
-ReplayGuard-ID: 004-effect-ledger-T008",Medium,To Do,004-effect-ledger,foundational,
+ReplayGuard-ID: 004-effect-ledger-T008",Medium,Done,004-effect-ledger,foundational,
 123,111,Sub-task,"T009 Write failing ledger core tests (beginRun/endRun, startAttempt/settleAttempt transitions, seq monotonic, kind/identity occurrences, snapshot deep-frozen) in packages/core/test/ledger.test.ts","Write failing ledger core tests (beginRun/endRun, startAttempt/settleAttempt transitions, seq monotonic, kind/identity occurrences, snapshot deep-frozen) in packages/core/test/ledger.test.ts
 
 Phase: Phase 3: User Story 1 - Instrument my own side-effect function (Priority: P1) 🎯 MVP
 
 Source: specs/004-effect-ledger/tasks.md:42
-ReplayGuard-ID: 004-effect-ledger-T009",High,To Do,004-effect-ledger,us1,parallel
+ReplayGuard-ID: 004-effect-ledger-T009",High,Done,004-effect-ledger,us1,parallel
 124,111,Sub-task,"T010 Write failing instrument tests (return passthrough, error rethrow unchanged, identity default/custom subject, sync return values, kind validation ""1–64 chars"") in packages/core/test/instrument.test.ts","Write failing instrument tests (return passthrough, error rethrow unchanged, identity default/custom subject, sync return values, kind validation ""1–64 chars"") in packages/core/test/instrument.test.ts
 
 Phase: Phase 3: User Story 1 - Instrument my own side-effect function (Priority: P1) 🎯 MVP
 
 Source: specs/004-effect-ledger/tasks.md:43
-ReplayGuard-ID: 004-effect-ledger-T010",High,To Do,004-effect-ledger,us1,parallel
+ReplayGuard-ID: 004-effect-ledger-T010",High,Done,004-effect-ledger,us1,parallel
 125,111,Sub-task,T011 Implement `EffectLedger` attempt/run recording and snapshot in packages/core/src/ledger/ledger.ts,"Implement `EffectLedger` attempt/run recording and snapshot in packages/core/src/ledger/ledger.ts
 
 Phase: Phase 3: User Story 1 - Instrument my own side-effect function (Priority: P1) 🎯 MVP
 
 Source: specs/004-effect-ledger/tasks.md:44
-ReplayGuard-ID: 004-effect-ledger-T011",High,To Do,004-effect-ledger,us1,
+ReplayGuard-ID: 004-effect-ledger-T011",High,Done,004-effect-ledger,us1,
 126,111,Sub-task,T012 Implement `instrument()` call sequence (contracts/ledger-api.md steps 1–7) in packages/core/src/instrument/instrument.ts,"Implement `instrument()` call sequence (contracts/ledger-api.md steps 1–7) in packages/core/src/instrument/instrument.ts
 
 Phase: Phase 3: User Story 1 - Instrument my own side-effect function (Priority: P1) 🎯 MVP
 
 Source: specs/004-effect-ledger/tasks.md:45
-ReplayGuard-ID: 004-effect-ledger-T012",High,To Do,004-effect-ledger,us1,
+ReplayGuard-ID: 004-effect-ledger-T012",High,Done,004-effect-ledger,us1,
 127,111,Sub-task,T013 Add fast-check property: every call yields exactly one settled attempt with matching status in packages/core/test/instrument.property.test.ts,"Add fast-check property: every call yields exactly one settled attempt with matching status in packages/core/test/instrument.property.test.ts
 
 Phase: Phase 3: User Story 1 - Instrument my own side-effect function (Priority: P1) 🎯 MVP
 
 Source: specs/004-effect-ledger/tasks.md:46
-ReplayGuard-ID: 004-effect-ledger-T013",High,To Do,004-effect-ledger,us1,
+ReplayGuard-ID: 004-effect-ledger-T013",High,Done,004-effect-ledger,us1,
 128,112,Sub-task,"T014 Write failing tests for idempotency key extraction (""≤ 255 chars"") and dedup detection in packages/core/test/instrument.dedup.test.ts","Write failing tests for idempotency key extraction (""≤ 255 chars"") and dedup detection in packages/core/test/instrument.dedup.test.ts
 
 Phase: Phase 4: User Story 2 - Record provider-side deduplication (Priority: P1)
 
 Source: specs/004-effect-ledger/tasks.md:56
-ReplayGuard-ID: 004-effect-ledger-T014",High,To Do,004-effect-ledger,us2,parallel
+ReplayGuard-ID: 004-effect-ledger-T014",High,Done,004-effect-ledger,us2,parallel
 129,112,Sub-task,T015 Implement key extraction and `deduplicated` status in packages/core/src/instrument/instrument.ts,"Implement key extraction and `deduplicated` status in packages/core/src/instrument/instrument.ts
 
 Phase: Phase 4: User Story 2 - Record provider-side deduplication (Priority: P1)
 
 Source: specs/004-effect-ledger/tasks.md:57
-ReplayGuard-ID: 004-effect-ledger-T015",High,To Do,004-effect-ledger,us2,
+ReplayGuard-ID: 004-effect-ledger-T015",High,Done,004-effect-ledger,us2,
 130,112,Sub-task,"T016 Implement count queries (applied, deduplicated per identity) in packages/core/src/ledger/queries.ts with tests in packages/core/test/queries.test.ts","Implement count queries (applied, deduplicated per identity) in packages/core/src/ledger/queries.ts with tests in packages/core/test/queries.test.ts
 
 Phase: Phase 4: User Story 2 - Record provider-side deduplication (Priority: P1)
 
 Source: specs/004-effect-ledger/tasks.md:58
-ReplayGuard-ID: 004-effect-ledger-T016",High,To Do,004-effect-ledger,us2,
+ReplayGuard-ID: 004-effect-ledger-T016",High,Done,004-effect-ledger,us2,
 131,113,Sub-task,"T017 Write failing tests for `recordFault`, in-flight flagging, `markRunDead`/`isRunDead` (dead run throws `CrashSignal` before start), late completion until `finalize()` in packages/core/test/ledger.faults.test.ts","Write failing tests for `recordFault`, in-flight flagging, `markRunDead`/`isRunDead` (dead run throws `CrashSignal` before start), late completion until `finalize()` in packages/core/test/ledger.faults.test.ts
 
 Phase: Phase 5: User Story 3 - Observe in-flight effects at the moment of a fault (Priority: P1)
 
 Source: specs/004-effect-ledger/tasks.md:68
-ReplayGuard-ID: 004-effect-ledger-T017",High,To Do,004-effect-ledger,us3,parallel
+ReplayGuard-ID: 004-effect-ledger-T017",High,Done,004-effect-ledger,us3,parallel
 132,113,Sub-task,"T018 Write failing overlap query tests incl. property (symmetry, zero-length intervals excluded) in packages/core/test/queries.overlap.test.ts","Write failing overlap query tests incl. property (symmetry, zero-length intervals excluded) in packages/core/test/queries.overlap.test.ts
 
 Phase: Phase 5: User Story 3 - Observe in-flight effects at the moment of a fault (Priority: P1)
 
 Source: specs/004-effect-ledger/tasks.md:69
-ReplayGuard-ID: 004-effect-ledger-T018",High,To Do,004-effect-ledger,us3,parallel
+ReplayGuard-ID: 004-effect-ledger-T018",High,Done,004-effect-ledger,us3,parallel
 133,113,Sub-task,"T019 Implement fault recording, dead runs and finalize in packages/core/src/ledger/ledger.ts","Implement fault recording, dead runs and finalize in packages/core/src/ledger/ledger.ts
 
 Phase: Phase 5: User Story 3 - Observe in-flight effects at the moment of a fault (Priority: P1)
 
 Source: specs/004-effect-ledger/tasks.md:70
-ReplayGuard-ID: 004-effect-ledger-T019",High,To Do,004-effect-ledger,us3,
+ReplayGuard-ID: 004-effect-ledger-T019",High,Done,004-effect-ledger,us3,
 134,113,Sub-task,T020 Implement `overlapping(identity)` in packages/core/src/ledger/queries.ts,"Implement `overlapping(identity)` in packages/core/src/ledger/queries.ts
 
 Phase: Phase 5: User Story 3 - Observe in-flight effects at the moment of a fault (Priority: P1)
 
 Source: specs/004-effect-ledger/tasks.md:71
-ReplayGuard-ID: 004-effect-ledger-T020",High,To Do,004-effect-ledger,us3,
+ReplayGuard-ID: 004-effect-ledger-T020",High,Done,004-effect-ledger,us3,
 135,114,Sub-task,T021 Write failing tests for `subscribe` ordering/unsubscribe and observer error isolation in packages/core/test/ledger.subscribe.test.ts,"Write failing tests for `subscribe` ordering/unsubscribe and observer error isolation in packages/core/test/ledger.subscribe.test.ts
 
 Phase: Phase 6: User Story 4 - Subscribe to effects as they happen (Priority: P2)
 
 Source: specs/004-effect-ledger/tasks.md:81
-ReplayGuard-ID: 004-effect-ledger-T021",Medium,To Do,004-effect-ledger,us4,parallel
+ReplayGuard-ID: 004-effect-ledger-T021",Medium,Done,004-effect-ledger,us4,parallel
 136,114,Sub-task,"T022 Write failing tests for `addHooks` (`beforeStart` throw prevents start, `inFlight` await delays, `afterSettle` throw propagates after attempt recorded, async `afterSettle` awaited) in packages/core/test/ledger.hooks.test.ts","Write failing tests for `addHooks` (`beforeStart` throw prevents start, `inFlight` await delays, `afterSettle` throw propagates after attempt recorded, async `afterSettle` awaited) in packages/core/test/ledger.hooks.test.ts
 
 Phase: Phase 6: User Story 4 - Subscribe to effects as they happen (Priority: P2)
 
 Source: specs/004-effect-ledger/tasks.md:82
-ReplayGuard-ID: 004-effect-ledger-T022",Medium,To Do,004-effect-ledger,us4,parallel
+ReplayGuard-ID: 004-effect-ledger-T022",Medium,Done,004-effect-ledger,us4,parallel
 137,114,Sub-task,T023 Implement observers and hooks in packages/core/src/ledger/ledger.ts and wire into packages/core/src/instrument/instrument.ts,"Implement observers and hooks in packages/core/src/ledger/ledger.ts and wire into packages/core/src/instrument/instrument.ts
 
 Phase: Phase 6: User Story 4 - Subscribe to effects as they happen (Priority: P2)
 
 Source: specs/004-effect-ledger/tasks.md:83
-ReplayGuard-ID: 004-effect-ledger-T023",Medium,To Do,004-effect-ledger,us4,
+ReplayGuard-ID: 004-effect-ledger-T023",Medium,Done,004-effect-ledger,us4,
 138,110,Task,T024 Implement opt-in `preview` option (no raw args stored by default) with tests in packages/core/src/instrument/instrument.ts and packages/core/test/instrument.preview.test.ts,"Implement opt-in `preview` option (no raw args stored by default) with tests in packages/core/src/instrument/instrument.ts and packages/core/test/instrument.preview.test.ts
 
 Phase: Phase 7: Polish & Cross-Cutting Concerns
 
 Source: specs/004-effect-ledger/tasks.md:89
-ReplayGuard-ID: 004-effect-ledger-T024",Medium,To Do,004-effect-ledger,polish,parallel
+ReplayGuard-ID: 004-effect-ledger-T024",Medium,Done,004-effect-ledger,polish,parallel
 139,110,Task,T025 Add overhead benchmark (< 1 ms per call) in packages/core/test/instrument.bench.test.ts,"Add overhead benchmark (< 1 ms per call) in packages/core/test/instrument.bench.test.ts
 
 Phase: Phase 7: Polish & Cross-Cutting Concerns
 
 Source: specs/004-effect-ledger/tasks.md:90
-ReplayGuard-ID: 004-effect-ledger-T025",Medium,To Do,004-effect-ledger,polish,parallel
+ReplayGuard-ID: 004-effect-ledger-T025",Medium,Done,004-effect-ledger,polish,parallel
 140,110,Task,T026 TSDoc with `@example` for all exports and concept guide in docs/concepts/effects.md,"TSDoc with `@example` for all exports and concept guide in docs/concepts/effects.md
 
 Phase: Phase 7: Polish & Cross-Cutting Concerns
 
 Source: specs/004-effect-ledger/tasks.md:91
-ReplayGuard-ID: 004-effect-ledger-T026",Medium,To Do,004-effect-ledger,polish,parallel
+ReplayGuard-ID: 004-effect-ledger-T026",Medium,Done,004-effect-ledger,polish,parallel
 141,110,Task,T027 Author diagrams covering T001–T028 in specs/004-effect-ledger/diagram.yaml,"Author diagrams covering T001–T028 in specs/004-effect-ledger/diagram.yaml
 
 Phase: Phase 7: Polish & Cross-Cutting Concerns
 
 Source: specs/004-effect-ledger/tasks.md:92
-ReplayGuard-ID: 004-effect-ledger-T027",Medium,To Do,004-effect-ledger,polish,
+ReplayGuard-ID: 004-effect-ledger-T027",Medium,Done,004-effect-ledger,polish,
 142,110,Task,T028 Validate quickstart scenarios in specs/004-effect-ledger/quickstart.md,"Validate quickstart scenarios in specs/004-effect-ledger/quickstart.md
 
 Phase: Phase 7: Polish & Cross-Cutting Concerns
 
 Source: specs/004-effect-ledger/tasks.md:93
-ReplayGuard-ID: 004-effect-ledger-T028",Medium,To Do,004-effect-ledger,polish,
+ReplayGuard-ID: 004-effect-ledger-T028",Medium,Done,004-effect-ledger,polish,
 143,,Epic,005 Fault Injection Strategies,"Fault Injection Strategies (005-fault-injection).
 
 Source: specs/005-fault-injection/spec.md:1
