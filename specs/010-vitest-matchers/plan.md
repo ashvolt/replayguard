@@ -15,7 +15,7 @@ core), compute violations, and format messages listing case/effect/outcome/expla
 
 **Language/Version**: TypeScript ~6.0
 
-**Primary Dependencies**: `@replayguard/core`; peer `vitest >=4 <6`
+**Primary Dependencies**: `@replayguard/core`; peer `vitest >=3.2 <5`
 
 **Storage**: N/A
 

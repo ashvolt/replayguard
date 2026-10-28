@@ -82,7 +82,7 @@
       "type": "diamond",
       "x": 740,
       "y": 227,
-      "width": 213,
+      "width": 232,
       "height": 60,
       "angle": 0,
       "strokeColor": "#1e1e1e",
@@ -122,7 +122,7 @@
       "type": "text",
       "x": 760,
       "y": 247,
-      "width": 173,
+      "width": 192,
       "height": 20,
       "angle": 0,
       "strokeColor": "#1e1e1e",
@@ -143,8 +143,8 @@
       "updated": 1,
       "link": null,
       "locked": false,
-      "text": "peer vitest >=4 <6",
-      "originalText": "peer vitest >=4 <6",
+      "text": "peer vitest >=3.2 <5",
+      "originalText": "peer vitest >=3.2 <5",
       "fontSize": 16,
       "fontFamily": 5,
       "textAlign": "center",
@@ -307,7 +307,7 @@
       "x": 258,
       "y": 197,
       "width": 482,
-      "height": 49,
+      "height": 48,
       "angle": 0,
       "strokeColor": "#1e1e1e",
       "backgroundColor": "transparent",
@@ -334,7 +334,7 @@
         ],
         [
           482,
-          49
+          48
         ]
       ],
       "lastCommittedPoint": null,

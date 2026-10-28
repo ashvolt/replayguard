@@ -5674,7 +5674,7 @@
     {
       "sourceId": "010-vitest-matchers",
       "parentSourceId": null,
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Epic"
@@ -5692,7 +5692,7 @@
     {
       "sourceId": "010-vitest-matchers-US1",
       "parentSourceId": "010-vitest-matchers",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Story"
@@ -5711,7 +5711,7 @@
     {
       "sourceId": "010-vitest-matchers-US2",
       "parentSourceId": "010-vitest-matchers",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Story"
@@ -5730,7 +5730,7 @@
     {
       "sourceId": "010-vitest-matchers-US3",
       "parentSourceId": "010-vitest-matchers",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Story"
@@ -5749,13 +5749,13 @@
     {
       "sourceId": "010-vitest-matchers-T001",
       "parentSourceId": "010-vitest-matchers",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Task"
         },
-        "summary": "T001 Configure exports (`.`, `./setup`), core dependency and `vitest >=4 <6` peer in packages/vitest/package.json",
-        "description": "Configure exports (`.`, `./setup`), core dependency and `vitest >=4 <6` peer in packages/vitest/package.json\n\nPhase: Phase 1: Setup (Shared Infrastructure)\n\nSource: specs/010-vitest-matchers/tasks.md:18",
+        "summary": "T001 Configure exports (`.`, `./setup`), core dependency and `vitest >=3.2 <5` peer in packages/vitest/package.json",
+        "description": "Configure exports (`.`, `./setup`), core dependency and `vitest >=3.2 <5` peer in packages/vitest/package.json\n\nPhase: Phase 1: Setup (Shared Infrastructure)\n\nSource: specs/010-vitest-matchers/tasks.md:18",
         "priority": {
           "name": "Medium"
         },
@@ -5768,7 +5768,7 @@
     {
       "sourceId": "010-vitest-matchers-T002",
       "parentSourceId": "010-vitest-matchers",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Task"
@@ -5788,7 +5788,7 @@
     {
       "sourceId": "010-vitest-matchers-T003",
       "parentSourceId": "010-vitest-matchers",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Task"
@@ -5807,7 +5807,7 @@
     {
       "sourceId": "010-vitest-matchers-T004",
       "parentSourceId": "010-vitest-matchers",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Task"
@@ -5827,7 +5827,7 @@
     {
       "sourceId": "010-vitest-matchers-T005",
       "parentSourceId": "010-vitest-matchers",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Task"
@@ -5846,7 +5846,7 @@
     {
       "sourceId": "010-vitest-matchers-T006",
       "parentSourceId": "010-vitest-matchers-US1",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Sub-task"
@@ -5866,7 +5866,7 @@
     {
       "sourceId": "010-vitest-matchers-T007",
       "parentSourceId": "010-vitest-matchers-US1",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Sub-task"
@@ -5885,7 +5885,7 @@
     {
       "sourceId": "010-vitest-matchers-T008",
       "parentSourceId": "010-vitest-matchers-US1",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Sub-task"
@@ -5904,7 +5904,7 @@
     {
       "sourceId": "010-vitest-matchers-T009",
       "parentSourceId": "010-vitest-matchers-US2",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Sub-task"
@@ -5924,7 +5924,7 @@
     {
       "sourceId": "010-vitest-matchers-T010",
       "parentSourceId": "010-vitest-matchers-US2",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Sub-task"
@@ -5943,7 +5943,7 @@
     {
       "sourceId": "010-vitest-matchers-T011",
       "parentSourceId": "010-vitest-matchers-US3",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Sub-task"
@@ -5963,7 +5963,7 @@
     {
       "sourceId": "010-vitest-matchers-T012",
       "parentSourceId": "010-vitest-matchers-US3",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Sub-task"
@@ -5982,7 +5982,7 @@
     {
       "sourceId": "010-vitest-matchers-T013",
       "parentSourceId": "010-vitest-matchers",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Task"
@@ -6002,7 +6002,7 @@
     {
       "sourceId": "010-vitest-matchers-T014",
       "parentSourceId": "010-vitest-matchers",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Task"
@@ -6022,7 +6022,7 @@
     {
       "sourceId": "010-vitest-matchers-T015",
       "parentSourceId": "010-vitest-matchers",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Task"
@@ -6041,7 +6041,7 @@
     {
       "sourceId": "010-vitest-matchers-T016",
       "parentSourceId": "010-vitest-matchers",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Task"

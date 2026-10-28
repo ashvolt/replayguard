@@ -4271,7 +4271,7 @@
         "010-vitest-matchers",
         "epic"
       ],
-      "status": "To Do"
+      "status": "Done"
     },
     {
       "sourceId": "010-vitest-matchers-US1",
@@ -4285,7 +4285,7 @@
         "us1",
         "story"
       ],
-      "status": "To Do"
+      "status": "Done"
     },
     {
       "sourceId": "010-vitest-matchers-US2",
@@ -4299,7 +4299,7 @@
         "us2",
         "story"
       ],
-      "status": "To Do"
+      "status": "Done"
     },
     {
       "sourceId": "010-vitest-matchers-US3",
@@ -4313,21 +4313,21 @@
         "us3",
         "story"
       ],
-      "status": "To Do"
+      "status": "Done"
     },
     {
       "sourceId": "010-vitest-matchers-T001",
       "parentSourceId": "010-vitest-matchers",
       "type": "Task",
       "milestone": "010 Vitest Matchers",
-      "title": "T001 Configure exports (`.`, `./setup`), core dependency and `vitest >=4 <6` peer in packages/vitest/package.json",
-      "body": "Configure exports (`.`, `./setup`), core dependency and `vitest >=4 <6` peer in packages/vitest/package.json\n\nPhase: Phase 1: Setup (Shared Infrastructure)\n\nSource: specs/010-vitest-matchers/tasks.md:18\n\n<!-- rg-source: 010-vitest-matchers-T001 -->",
+      "title": "T001 Configure exports (`.`, `./setup`), core dependency and `vitest >=3.2 <5` peer in packages/vitest/package.json",
+      "body": "Configure exports (`.`, `./setup`), core dependency and `vitest >=3.2 <5` peer in packages/vitest/package.json\n\nPhase: Phase 1: Setup (Shared Infrastructure)\n\nSource: specs/010-vitest-matchers/tasks.md:18\n\n<!-- rg-source: 010-vitest-matchers-T001 -->",
       "labels": [
         "010-vitest-matchers",
         "setup",
         "task"
       ],
-      "status": "To Do"
+      "status": "Done"
     },
     {
       "sourceId": "010-vitest-matchers-T002",
@@ -4342,7 +4342,7 @@
         "parallel",
         "task"
       ],
-      "status": "To Do"
+      "status": "Done"
     },
     {
       "sourceId": "010-vitest-matchers-T003",
@@ -4356,7 +4356,7 @@
         "foundational",
         "task"
       ],
-      "status": "To Do"
+      "status": "Done"
     },
     {
       "sourceId": "010-vitest-matchers-T004",
@@ -4371,7 +4371,7 @@
         "parallel",
         "task"
       ],
-      "status": "To Do"
+      "status": "Done"
     },
     {
       "sourceId": "010-vitest-matchers-T005",
@@ -4385,7 +4385,7 @@
         "foundational",
         "task"
       ],
-      "status": "To Do"
+      "status": "Done"
     },
     {
       "sourceId": "010-vitest-matchers-T006",
@@ -4400,7 +4400,7 @@
         "parallel",
         "sub-task"
       ],
-      "status": "To Do"
+      "status": "Done"
     },
     {
       "sourceId": "010-vitest-matchers-T007",
@@ -4414,7 +4414,7 @@
         "us1",
         "sub-task"
       ],
-      "status": "To Do"
+      "status": "Done"
     },
     {
       "sourceId": "010-vitest-matchers-T008",
@@ -4428,7 +4428,7 @@
         "us1",
         "sub-task"
       ],
-      "status": "To Do"
+      "status": "Done"
     },
     {
       "sourceId": "010-vitest-matchers-T009",
@@ -4443,7 +4443,7 @@
         "parallel",
         "sub-task"
       ],
-      "status": "To Do"
+      "status": "Done"
     },
     {
       "sourceId": "010-vitest-matchers-T010",
@@ -4457,7 +4457,7 @@
         "us2",
         "sub-task"
       ],
-      "status": "To Do"
+      "status": "Done"
     },
     {
       "sourceId": "010-vitest-matchers-T011",
@@ -4472,7 +4472,7 @@
         "parallel",
         "sub-task"
       ],
-      "status": "To Do"
+      "status": "Done"
     },
     {
       "sourceId": "010-vitest-matchers-T012",
@@ -4486,7 +4486,7 @@
         "us3",
         "sub-task"
       ],
-      "status": "To Do"
+      "status": "Done"
     },
     {
       "sourceId": "010-vitest-matchers-T013",
@@ -4501,7 +4501,7 @@
         "parallel",
         "task"
       ],
-      "status": "To Do"
+      "status": "Done"
     },
     {
       "sourceId": "010-vitest-matchers-T014",
@@ -4516,7 +4516,7 @@
         "parallel",
         "task"
       ],
-      "status": "To Do"
+      "status": "Done"
     },
     {
       "sourceId": "010-vitest-matchers-T015",
@@ -4530,7 +4530,7 @@
         "polish",
         "task"
       ],
-      "status": "To Do"
+      "status": "Done"
     },
     {
       "sourceId": "010-vitest-matchers-T016",
@@ -4544,7 +4544,7 @@
         "polish",
         "task"
       ],
-      "status": "To Do"
+      "status": "Done"
     },
     {
       "sourceId": "011-idempotency-helper",

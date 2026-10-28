@@ -1374,96 +1374,96 @@ Phase: Phase 6: Polish & Cross-Cutting Concerns
 Source: specs/009-reporters/tasks.md:80",009-reporters;polish,Medium,Done,009-reporters
 010-vitest-matchers,,Epic,010 Vitest Matchers,"Vitest Matchers (010-vitest-matchers).
 
-Source: specs/010-vitest-matchers/spec.md:1",010-vitest-matchers,High,To Do,010-vitest-matchers
+Source: specs/010-vitest-matchers/spec.md:1",010-vitest-matchers,High,Done,010-vitest-matchers
 010-vitest-matchers-US1,010-vitest-matchers,Story,US1: Assert the policy passes,"User story 1 (P1) of 010-vitest-matchers.
 
-Source: specs/010-vitest-matchers/spec.md:13",010-vitest-matchers;us1,High,To Do,010-vitest-matchers
+Source: specs/010-vitest-matchers/spec.md:13",010-vitest-matchers;us1,High,Done,010-vitest-matchers
 010-vitest-matchers-US2,010-vitest-matchers,Story,US2: Targeted matchers,"User story 2 (P1) of 010-vitest-matchers.
 
-Source: specs/010-vitest-matchers/spec.md:34",010-vitest-matchers;us2,High,To Do,010-vitest-matchers
+Source: specs/010-vitest-matchers/spec.md:34",010-vitest-matchers;us2,High,Done,010-vitest-matchers
 010-vitest-matchers-US3,010-vitest-matchers,Story,US3: Type-safe setup,"User story 3 (P2) of 010-vitest-matchers.
 
-Source: specs/010-vitest-matchers/spec.md:55",010-vitest-matchers;us3,Medium,To Do,010-vitest-matchers
-010-vitest-matchers-T001,010-vitest-matchers,Task,"T001 Configure exports (`.`, `./setup`), core dependency and `vitest >=4 <6` peer in packages/vitest/package.json","Configure exports (`.`, `./setup`), core dependency and `vitest >=4 <6` peer in packages/vitest/package.json
+Source: specs/010-vitest-matchers/spec.md:55",010-vitest-matchers;us3,Medium,Done,010-vitest-matchers
+010-vitest-matchers-T001,010-vitest-matchers,Task,"T001 Configure exports (`.`, `./setup`), core dependency and `vitest >=3.2 <5` peer in packages/vitest/package.json","Configure exports (`.`, `./setup`), core dependency and `vitest >=3.2 <5` peer in packages/vitest/package.json
 
 Phase: Phase 1: Setup (Shared Infrastructure)
 
-Source: specs/010-vitest-matchers/tasks.md:18",010-vitest-matchers;setup,Medium,To Do,010-vitest-matchers
+Source: specs/010-vitest-matchers/tasks.md:18",010-vitest-matchers;setup,Medium,Done,010-vitest-matchers
 010-vitest-matchers-T002,010-vitest-matchers,Task,"T002 Write failing normalize tests (ClassifiedResult → Report, Report passthrough, invalid input message) in packages/vitest/test/normalize.test.ts","Write failing normalize tests (ClassifiedResult → Report, Report passthrough, invalid input message) in packages/vitest/test/normalize.test.ts
 
 Phase: Phase 2: Foundational (Blocking Prerequisites)
 
-Source: specs/010-vitest-matchers/tasks.md:24",010-vitest-matchers;foundational;parallel,Medium,To Do,010-vitest-matchers
+Source: specs/010-vitest-matchers/tasks.md:24",010-vitest-matchers;foundational;parallel,Medium,Done,010-vitest-matchers
 010-vitest-matchers-T003,010-vitest-matchers,Task,T003 Implement `toReport` adapter in packages/vitest/src/normalize.ts,"Implement `toReport` adapter in packages/vitest/src/normalize.ts
 
 Phase: Phase 2: Foundational (Blocking Prerequisites)
 
-Source: specs/010-vitest-matchers/tasks.md:25",010-vitest-matchers;foundational,Medium,To Do,010-vitest-matchers
+Source: specs/010-vitest-matchers/tasks.md:25",010-vitest-matchers;foundational,Medium,Done,010-vitest-matchers
 010-vitest-matchers-T004,010-vitest-matchers,Task,"T004 Write failing violation formatting tests (selector by kind/prefix/predicate, first 20 + ""…and N more"") in packages/vitest/test/violations.test.ts","Write failing violation formatting tests (selector by kind/prefix/predicate, first 20 + ""…and N more"") in packages/vitest/test/violations.test.ts
 
 Phase: Phase 2: Foundational (Blocking Prerequisites)
 
-Source: specs/010-vitest-matchers/tasks.md:26",010-vitest-matchers;foundational;parallel,Medium,To Do,010-vitest-matchers
+Source: specs/010-vitest-matchers/tasks.md:26",010-vitest-matchers;foundational;parallel,Medium,Done,010-vitest-matchers
 010-vitest-matchers-T005,010-vitest-matchers,Task,"T005 Implement selectors, violation collection, message formatting in packages/vitest/src/violations.ts","Implement selectors, violation collection, message formatting in packages/vitest/src/violations.ts
 
 Phase: Phase 2: Foundational (Blocking Prerequisites)
 
-Source: specs/010-vitest-matchers/tasks.md:27",010-vitest-matchers;foundational,Medium,To Do,010-vitest-matchers
+Source: specs/010-vitest-matchers/tasks.md:27",010-vitest-matchers;foundational,Medium,Done,010-vitest-matchers
 010-vitest-matchers-T006,010-vitest-matchers-US1,Sub-task,"T006 Write failing tests for `toPassSideEffectPolicy` (pass, fail, negation, custom policy re-classification) in packages/vitest/test/policy-matcher.test.ts","Write failing tests for `toPassSideEffectPolicy` (pass, fail, negation, custom policy re-classification) in packages/vitest/test/policy-matcher.test.ts
 
 Phase: Phase 3: User Story 1 - Assert the policy passes (Priority: P1) 🎯 MVP
 
-Source: specs/010-vitest-matchers/tasks.md:37",010-vitest-matchers;us1;parallel,High,To Do,010-vitest-matchers
+Source: specs/010-vitest-matchers/tasks.md:37",010-vitest-matchers;us1;parallel,High,Done,010-vitest-matchers
 010-vitest-matchers-T007,010-vitest-matchers-US1,Sub-task,T007 Implement `toPassSideEffectPolicy` via `createMatcher` template in packages/vitest/src/matchers.ts,"Implement `toPassSideEffectPolicy` via `createMatcher` template in packages/vitest/src/matchers.ts
 
 Phase: Phase 3: User Story 1 - Assert the policy passes (Priority: P1) 🎯 MVP
 
-Source: specs/010-vitest-matchers/tasks.md:38",010-vitest-matchers;us1,High,To Do,010-vitest-matchers
+Source: specs/010-vitest-matchers/tasks.md:38",010-vitest-matchers;us1,High,Done,010-vitest-matchers
 010-vitest-matchers-T008,010-vitest-matchers-US1,Sub-task,T008 Implement `setup.ts` registering matchers with `expect.extend` in packages/vitest/src/setup.ts,"Implement `setup.ts` registering matchers with `expect.extend` in packages/vitest/src/setup.ts
 
 Phase: Phase 3: User Story 1 - Assert the policy passes (Priority: P1) 🎯 MVP
 
-Source: specs/010-vitest-matchers/tasks.md:39",010-vitest-matchers;us1,High,To Do,010-vitest-matchers
+Source: specs/010-vitest-matchers/tasks.md:39",010-vitest-matchers;us1,High,Done,010-vitest-matchers
 010-vitest-matchers-T009,010-vitest-matchers-US2,Sub-task,"T009 Write failing tests for `toHaveNoDuplicateEffects`, `toHaveNoOrphanedEffects`, `toBeEffectivelyOnce`, `toHaveOutcome` in packages/vitest/test/matchers.test.ts","Write failing tests for `toHaveNoDuplicateEffects`, `toHaveNoOrphanedEffects`, `toBeEffectivelyOnce`, `toHaveOutcome` in packages/vitest/test/matchers.test.ts
 
 Phase: Phase 4: User Story 2 - Targeted matchers (Priority: P1)
 
-Source: specs/010-vitest-matchers/tasks.md:49",010-vitest-matchers;us2;parallel,High,To Do,010-vitest-matchers
+Source: specs/010-vitest-matchers/tasks.md:49",010-vitest-matchers;us2;parallel,High,Done,010-vitest-matchers
 010-vitest-matchers-T010,010-vitest-matchers-US2,Sub-task,T010 Implement the four matchers in packages/vitest/src/matchers.ts,"Implement the four matchers in packages/vitest/src/matchers.ts
 
 Phase: Phase 4: User Story 2 - Targeted matchers (Priority: P1)
 
-Source: specs/010-vitest-matchers/tasks.md:50",010-vitest-matchers;us2,High,To Do,010-vitest-matchers
+Source: specs/010-vitest-matchers/tasks.md:50",010-vitest-matchers;us2,High,Done,010-vitest-matchers
 010-vitest-matchers-T011,010-vitest-matchers-US3,Sub-task,T011 Write type tests with `expectTypeOf` and `@ts-expect-error` in packages/vitest/test/types.test-d.ts,"Write type tests with `expectTypeOf` and `@ts-expect-error` in packages/vitest/test/types.test-d.ts
 
 Phase: Phase 5: User Story 3 - Type-safe setup (Priority: P2)
 
-Source: specs/010-vitest-matchers/tasks.md:60",010-vitest-matchers;us3;parallel,Medium,To Do,010-vitest-matchers
+Source: specs/010-vitest-matchers/tasks.md:60",010-vitest-matchers;us3;parallel,Medium,Done,010-vitest-matchers
 010-vitest-matchers-T012,010-vitest-matchers-US3,Sub-task,T012 Implement Vitest module augmentation in packages/vitest/src/types.d.ts,"Implement Vitest module augmentation in packages/vitest/src/types.d.ts
 
 Phase: Phase 5: User Story 3 - Type-safe setup (Priority: P2)
 
-Source: specs/010-vitest-matchers/tasks.md:61",010-vitest-matchers;us3,Medium,To Do,010-vitest-matchers
+Source: specs/010-vitest-matchers/tasks.md:61",010-vitest-matchers;us3,Medium,Done,010-vitest-matchers
 010-vitest-matchers-T013,010-vitest-matchers,Task,T013 CI job testing against previous Vitest major in .github/workflows/ci.yml,"CI job testing against previous Vitest major in .github/workflows/ci.yml
 
 Phase: Phase 6: Polish & Cross-Cutting Concerns
 
-Source: specs/010-vitest-matchers/tasks.md:67",010-vitest-matchers;polish;parallel,Medium,To Do,010-vitest-matchers
+Source: specs/010-vitest-matchers/tasks.md:67",010-vitest-matchers;polish;parallel,Medium,Done,010-vitest-matchers
 010-vitest-matchers-T014,010-vitest-matchers,Task,T014 Matcher reference docs in docs/vitest/README.md,"Matcher reference docs in docs/vitest/README.md
 
 Phase: Phase 6: Polish & Cross-Cutting Concerns
 
-Source: specs/010-vitest-matchers/tasks.md:68",010-vitest-matchers;polish;parallel,Medium,To Do,010-vitest-matchers
+Source: specs/010-vitest-matchers/tasks.md:68",010-vitest-matchers;polish;parallel,Medium,Done,010-vitest-matchers
 010-vitest-matchers-T015,010-vitest-matchers,Task,T015 Author diagrams covering T001–T016 in specs/010-vitest-matchers/diagram.yaml,"Author diagrams covering T001–T016 in specs/010-vitest-matchers/diagram.yaml
 
 Phase: Phase 6: Polish & Cross-Cutting Concerns
 
-Source: specs/010-vitest-matchers/tasks.md:69",010-vitest-matchers;polish,Medium,To Do,010-vitest-matchers
+Source: specs/010-vitest-matchers/tasks.md:69",010-vitest-matchers;polish,Medium,Done,010-vitest-matchers
 010-vitest-matchers-T016,010-vitest-matchers,Task,T016 Validate quickstart scenarios in specs/010-vitest-matchers/quickstart.md,"Validate quickstart scenarios in specs/010-vitest-matchers/quickstart.md
 
 Phase: Phase 6: Polish & Cross-Cutting Concerns
 
-Source: specs/010-vitest-matchers/tasks.md:70",010-vitest-matchers;polish,Medium,To Do,010-vitest-matchers
+Source: specs/010-vitest-matchers/tasks.md:70",010-vitest-matchers;polish,Medium,Done,010-vitest-matchers
 011-idempotency-helper,,Epic,011 Idempotency Key Helper & Fix Hints,"Idempotency Key Helper & Fix Hints (011-idempotency-helper).
 
 Source: specs/011-idempotency-helper/spec.md:1",011-idempotency-helper,High,Done,011-idempotency-helper

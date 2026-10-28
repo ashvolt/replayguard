@@ -48,7 +48,7 @@ diagrams:
     layout: flow
     nodes:
       - { id: ci, label: "CI job: previous Vitest major", tasks: [T013] }
-      - { id: peer, label: "peer vitest >=4 <6", shape: diamond }
+      - { id: peer, label: "peer vitest >=3.2 <5", shape: diamond }
       - { id: docs, label: docs/vitest/README.md, shape: package, tasks: [T014] }
       - { id: yaml, label: "diagram.yaml + quickstart", shape: package, tasks: [T015, T016] }
     edges:
