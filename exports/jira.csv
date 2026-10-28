@@ -1496,175 +1496,175 @@ ReplayGuard-ID: 008-fake-services-T017",Medium,Done,008-fake-services,polish,
 264,,Epic,"009 Reports (Structured, Console, HTML Timeline)","Reports (Structured, Console, HTML Timeline) (009-reporters).
 
 Source: specs/009-reporters/spec.md:1
-ReplayGuard-ID: 009-reporters",High,To Do,009-reporters,,
+ReplayGuard-ID: 009-reporters",High,Done,009-reporters,,
 265,264,Story,US1: Structured report object,"User story 1 (P1) of 009-reporters.
 
 Source: specs/009-reporters/spec.md:13
-ReplayGuard-ID: 009-reporters-US1",High,To Do,009-reporters,us1,
+ReplayGuard-ID: 009-reporters-US1",High,Done,009-reporters,us1,
 266,264,Story,US2: Console table,"User story 2 (P1) of 009-reporters.
 
 Source: specs/009-reporters/spec.md:32
-ReplayGuard-ID: 009-reporters-US2",High,To Do,009-reporters,us2,
+ReplayGuard-ID: 009-reporters-US2",High,Done,009-reporters,us2,
 267,264,Story,US3: HTML timeline report,"User story 3 (P2) of 009-reporters.
 
 Source: specs/009-reporters/spec.md:53
-ReplayGuard-ID: 009-reporters-US3",Medium,To Do,009-reporters,us3,
+ReplayGuard-ID: 009-reporters-US3",Medium,Done,009-reporters,us3,
 268,264,Task,T001 Create `report/` module and exports in packages/core/src/report/index.ts,"Create `report/` module and exports in packages/core/src/report/index.ts
 
 Phase: Phase 1: Setup (Shared Infrastructure)
 
 Source: specs/009-reporters/tasks.md:18
-ReplayGuard-ID: 009-reporters-T001",Medium,To Do,009-reporters,setup,
+ReplayGuard-ID: 009-reporters-T001",Medium,Done,009-reporters,setup,
 269,264,Task,T002 Add core dependency and exports in packages/reporter-console/package.json and packages/reporter-html/package.json,"Add core dependency and exports in packages/reporter-console/package.json and packages/reporter-html/package.json
 
 Phase: Phase 1: Setup (Shared Infrastructure)
 
 Source: specs/009-reporters/tasks.md:19
-ReplayGuard-ID: 009-reporters-T002",Medium,To Do,009-reporters,setup,parallel
+ReplayGuard-ID: 009-reporters-T002",Medium,Done,009-reporters,setup,parallel
 270,264,Task,"T003 Define Report v1 Valibot schema and inferred types (Report, CaseReport, EffectReport, TimelineEvent) in packages/core/src/report/model.ts","Define Report v1 Valibot schema and inferred types (Report, CaseReport, EffectReport, TimelineEvent) in packages/core/src/report/model.ts
 
 Phase: Phase 2: Foundational (Blocking Prerequisites)
 
 Source: specs/009-reporters/tasks.md:25
-ReplayGuard-ID: 009-reporters-T003",Medium,To Do,009-reporters,foundational,
+ReplayGuard-ID: 009-reporters-T003",Medium,Done,009-reporters,foundational,
 271,264,Task,T004 Write failing visitor traversal tests (order: report → cases → effects → timeline) in packages/core/test/report/visitor.test.ts,"Write failing visitor traversal tests (order: report → cases → effects → timeline) in packages/core/test/report/visitor.test.ts
 
 Phase: Phase 2: Foundational (Blocking Prerequisites)
 
 Source: specs/009-reporters/tasks.md:26
-ReplayGuard-ID: 009-reporters-T004",Medium,To Do,009-reporters,foundational,parallel
+ReplayGuard-ID: 009-reporters-T004",Medium,Done,009-reporters,foundational,parallel
 272,264,Task,"T005 Implement `ReportVisitor`, `walkReport`, `Reporter` port in packages/core/src/report/visitor.ts","Implement `ReportVisitor`, `walkReport`, `Reporter` port in packages/core/src/report/visitor.ts
 
 Phase: Phase 2: Foundational (Blocking Prerequisites)
 
 Source: specs/009-reporters/tasks.md:27
-ReplayGuard-ID: 009-reporters-T005",Medium,To Do,009-reporters,foundational,
+ReplayGuard-ID: 009-reporters-T005",Medium,Done,009-reporters,foundational,
 273,265,Sub-task,"T006 Write failing buildReport tests (summary counts, relative timeline times, fault labels, hints carried) in packages/core/test/report/build.test.ts","Write failing buildReport tests (summary counts, relative timeline times, fault labels, hints carried) in packages/core/test/report/build.test.ts
 
 Phase: Phase 3: User Story 1 - Structured report object (Priority: P1) 🎯 MVP
 
 Source: specs/009-reporters/tasks.md:37
-ReplayGuard-ID: 009-reporters-T006",High,To Do,009-reporters,us1,parallel
+ReplayGuard-ID: 009-reporters-T006",High,Done,009-reporters,us1,parallel
 274,265,Sub-task,T007 Write failing JSON round-trip property test and version rejection (`RG_SCHEMA_VERSION`) in packages/core/test/report/json.test.ts,"Write failing JSON round-trip property test and version rejection (`RG_SCHEMA_VERSION`) in packages/core/test/report/json.test.ts
 
 Phase: Phase 3: User Story 1 - Structured report object (Priority: P1) 🎯 MVP
 
 Source: specs/009-reporters/tasks.md:38
-ReplayGuard-ID: 009-reporters-T007",High,To Do,009-reporters,us1,parallel
+ReplayGuard-ID: 009-reporters-T007",High,Done,009-reporters,us1,parallel
 275,265,Sub-task,T008 Implement `buildReport` in packages/core/src/report/build.ts,"Implement `buildReport` in packages/core/src/report/build.ts
 
 Phase: Phase 3: User Story 1 - Structured report object (Priority: P1) 🎯 MVP
 
 Source: specs/009-reporters/tasks.md:39
-ReplayGuard-ID: 009-reporters-T008",High,To Do,009-reporters,us1,
+ReplayGuard-ID: 009-reporters-T008",High,Done,009-reporters,us1,
 276,265,Sub-task,T009 Implement `reportToJson` and `parseReport` in packages/core/src/report/json.ts,"Implement `reportToJson` and `parseReport` in packages/core/src/report/json.ts
 
 Phase: Phase 3: User Story 1 - Structured report object (Priority: P1) 🎯 MVP
 
 Source: specs/009-reporters/tasks.md:40
-ReplayGuard-ID: 009-reporters-T009",High,To Do,009-reporters,us1,
+ReplayGuard-ID: 009-reporters-T009",High,Done,009-reporters,us1,
 277,266,Sub-task,"T010 Write failing table layout tests (widths, max 40, truncation `…`, ascii fallback) in packages/reporter-console/test/table.test.ts","Write failing table layout tests (widths, max 40, truncation `…`, ascii fallback) in packages/reporter-console/test/table.test.ts
 
 Phase: Phase 4: User Story 2 - Console table (Priority: P1)
 
 Source: specs/009-reporters/tasks.md:50
-ReplayGuard-ID: 009-reporters-T010",High,To Do,009-reporters,us2,parallel
+ReplayGuard-ID: 009-reporters-T010",High,Done,009-reporters,us2,parallel
 278,266,Sub-task,"T011 Write failing color policy tests (`NO_COLOR`, `FORCE_COLOR`, non-TTY) in packages/reporter-console/test/color.test.ts","Write failing color policy tests (`NO_COLOR`, `FORCE_COLOR`, non-TTY) in packages/reporter-console/test/color.test.ts
 
 Phase: Phase 4: User Story 2 - Console table (Priority: P1)
 
 Source: specs/009-reporters/tasks.md:51
-ReplayGuard-ID: 009-reporters-T011",High,To Do,009-reporters,us2,parallel
+ReplayGuard-ID: 009-reporters-T011",High,Done,009-reporters,us2,parallel
 279,266,Sub-task,T012 Write failing golden output tests (concise vs verbose) in packages/reporter-console/test/render.test.ts,"Write failing golden output tests (concise vs verbose) in packages/reporter-console/test/render.test.ts
 
 Phase: Phase 4: User Story 2 - Console table (Priority: P1)
 
 Source: specs/009-reporters/tasks.md:52
-ReplayGuard-ID: 009-reporters-T012",High,To Do,009-reporters,us2,parallel
+ReplayGuard-ID: 009-reporters-T012",High,Done,009-reporters,us2,parallel
 280,266,Sub-task,T013 Implement table layout in packages/reporter-console/src/table.ts,"Implement table layout in packages/reporter-console/src/table.ts
 
 Phase: Phase 4: User Story 2 - Console table (Priority: P1)
 
 Source: specs/009-reporters/tasks.md:53
-ReplayGuard-ID: 009-reporters-T013",High,To Do,009-reporters,us2,
+ReplayGuard-ID: 009-reporters-T013",High,Done,009-reporters,us2,
 281,266,Sub-task,T014 Implement color handling in packages/reporter-console/src/color.ts,"Implement color handling in packages/reporter-console/src/color.ts
 
 Phase: Phase 4: User Story 2 - Console table (Priority: P1)
 
 Source: specs/009-reporters/tasks.md:54
-ReplayGuard-ID: 009-reporters-T014",High,To Do,009-reporters,us2,
+ReplayGuard-ID: 009-reporters-T014",High,Done,009-reporters,us2,
 282,266,Sub-task,T015 Implement `renderConsole` and `consoleReporter` as ReportVisitor in packages/reporter-console/src/index.ts,"Implement `renderConsole` and `consoleReporter` as ReportVisitor in packages/reporter-console/src/index.ts
 
 Phase: Phase 4: User Story 2 - Console table (Priority: P1)
 
 Source: specs/009-reporters/tasks.md:55
-ReplayGuard-ID: 009-reporters-T015",High,To Do,009-reporters,us2,
+ReplayGuard-ID: 009-reporters-T015",High,Done,009-reporters,us2,
 283,267,Sub-task,"T016 Write failing escaping tests for `html` tagged template (corpus: `<script>`, `</script>`, quotes, `javascript:`, U+2028) in packages/reporter-html/test/html.test.ts","Write failing escaping tests for `html` tagged template (corpus: `<script>`, `</script>`, quotes, `javascript:`, U+2028) in packages/reporter-html/test/html.test.ts
 
 Phase: Phase 5: User Story 3 - HTML timeline report (Priority: P2)
 
 Source: specs/009-reporters/tasks.md:65
-ReplayGuard-ID: 009-reporters-T016",Medium,To Do,009-reporters,us3,parallel
+ReplayGuard-ID: 009-reporters-T016",Medium,Done,009-reporters,us3,parallel
 284,267,Sub-task,"T017 Write failing timeline SVG tests (lanes per run, bar status patterns, fault markers, min width, `<title>` labels) in packages/reporter-html/test/timeline.test.ts","Write failing timeline SVG tests (lanes per run, bar status patterns, fault markers, min width, `<title>` labels) in packages/reporter-html/test/timeline.test.ts
 
 Phase: Phase 5: User Story 3 - HTML timeline report (Priority: P2)
 
 Source: specs/009-reporters/tasks.md:66
-ReplayGuard-ID: 009-reporters-T017",Medium,To Do,009-reporters,us3,parallel
+ReplayGuard-ID: 009-reporters-T017",Medium,Done,009-reporters,us3,parallel
 285,267,Sub-task,"T018 Write failing document tests (no external URLs, CSP meta with matching sha256 hashes, JSON data block escaped, filters keyboard-operable, color-scheme) in packages/reporter-html/test/render.test.ts","Write failing document tests (no external URLs, CSP meta with matching sha256 hashes, JSON data block escaped, filters keyboard-operable, color-scheme) in packages/reporter-html/test/render.test.ts
 
 Phase: Phase 5: User Story 3 - HTML timeline report (Priority: P2)
 
 Source: specs/009-reporters/tasks.md:67
-ReplayGuard-ID: 009-reporters-T018",Medium,To Do,009-reporters,us3,parallel
+ReplayGuard-ID: 009-reporters-T018",Medium,Done,009-reporters,us3,parallel
 286,267,Sub-task,T019 Implement escaping template in packages/reporter-html/src/html.ts,"Implement escaping template in packages/reporter-html/src/html.ts
 
 Phase: Phase 5: User Story 3 - HTML timeline report (Priority: P2)
 
 Source: specs/009-reporters/tasks.md:68
-ReplayGuard-ID: 009-reporters-T019",Medium,To Do,009-reporters,us3,
+ReplayGuard-ID: 009-reporters-T019",Medium,Done,009-reporters,us3,
 287,267,Sub-task,T020 Implement timeline renderer in packages/reporter-html/src/timeline.ts,"Implement timeline renderer in packages/reporter-html/src/timeline.ts
 
 Phase: Phase 5: User Story 3 - HTML timeline report (Priority: P2)
 
 Source: specs/009-reporters/tasks.md:69
-ReplayGuard-ID: 009-reporters-T020",Medium,To Do,009-reporters,us3,
+ReplayGuard-ID: 009-reporters-T020",Medium,Done,009-reporters,us3,
 288,267,Sub-task,T021 Implement CSS/filter script assets and CSP hashing in packages/reporter-html/src/assets.ts and packages/reporter-html/src/csp.ts,"Implement CSS/filter script assets and CSP hashing in packages/reporter-html/src/assets.ts and packages/reporter-html/src/csp.ts
 
 Phase: Phase 5: User Story 3 - HTML timeline report (Priority: P2)
 
 Source: specs/009-reporters/tasks.md:70
-ReplayGuard-ID: 009-reporters-T021",Medium,To Do,009-reporters,us3,
+ReplayGuard-ID: 009-reporters-T021",Medium,Done,009-reporters,us3,
 289,267,Sub-task,T022 Implement `renderHtml` and `writeHtmlReport` in packages/reporter-html/src/index.ts,"Implement `renderHtml` and `writeHtmlReport` in packages/reporter-html/src/index.ts
 
 Phase: Phase 5: User Story 3 - HTML timeline report (Priority: P2)
 
 Source: specs/009-reporters/tasks.md:71
-ReplayGuard-ID: 009-reporters-T022",Medium,To Do,009-reporters,us3,
+ReplayGuard-ID: 009-reporters-T022",Medium,Done,009-reporters,us3,
 290,264,Task,"T023 Size/perf test: 100-case HTML < 1 MB, render < 200 ms in packages/reporter-html/test/perf.test.ts","Size/perf test: 100-case HTML < 1 MB, render < 200 ms in packages/reporter-html/test/perf.test.ts
 
 Phase: Phase 6: Polish & Cross-Cutting Concerns
 
 Source: specs/009-reporters/tasks.md:77
-ReplayGuard-ID: 009-reporters-T023",Medium,To Do,009-reporters,polish,parallel
+ReplayGuard-ID: 009-reporters-T023",Medium,Done,009-reporters,polish,parallel
 291,264,Task,T024 Reporter docs with example output in docs/reporters/README.md,"Reporter docs with example output in docs/reporters/README.md
 
 Phase: Phase 6: Polish & Cross-Cutting Concerns
 
 Source: specs/009-reporters/tasks.md:78
-ReplayGuard-ID: 009-reporters-T024",Medium,To Do,009-reporters,polish,parallel
+ReplayGuard-ID: 009-reporters-T024",Medium,Done,009-reporters,polish,parallel
 292,264,Task,T025 Author diagrams covering T001–T026 in specs/009-reporters/diagram.yaml,"Author diagrams covering T001–T026 in specs/009-reporters/diagram.yaml
 
 Phase: Phase 6: Polish & Cross-Cutting Concerns
 
 Source: specs/009-reporters/tasks.md:79
-ReplayGuard-ID: 009-reporters-T025",Medium,To Do,009-reporters,polish,
+ReplayGuard-ID: 009-reporters-T025",Medium,Done,009-reporters,polish,
 293,264,Task,T026 Validate quickstart scenarios in specs/009-reporters/quickstart.md,"Validate quickstart scenarios in specs/009-reporters/quickstart.md
 
 Phase: Phase 6: Polish & Cross-Cutting Concerns
 
 Source: specs/009-reporters/tasks.md:80
-ReplayGuard-ID: 009-reporters-T026",Medium,To Do,009-reporters,polish,
+ReplayGuard-ID: 009-reporters-T026",Medium,Done,009-reporters,polish,
 294,,Epic,010 Vitest Matchers,"Vitest Matchers (010-vitest-matchers).
 
 Source: specs/010-vitest-matchers/spec.md:1

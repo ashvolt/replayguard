@@ -94,6 +94,7 @@ export type {
 export { type Clock, type ManualClock, manualClock, systemClock } from "./ports/clock.js";
 export type { PersistenceControl } from "./ports/persistence.js";
 export { type ManualSleeper, manualSleeper, type Sleeper, systemSleeper } from "./ports/sleeper.js";
+export * from "./report/index.js";
 export type {
 	CompletedOutcome,
 	CrashedOutcome,

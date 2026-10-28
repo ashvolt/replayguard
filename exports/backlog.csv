@@ -1232,146 +1232,146 @@ Phase: Phase 7: Polish & Cross-Cutting Concerns
 Source: specs/008-fake-services/tasks.md:80",008-fake-services;polish,Medium,Done,008-fake-services
 009-reporters,,Epic,"009 Reports (Structured, Console, HTML Timeline)","Reports (Structured, Console, HTML Timeline) (009-reporters).
 
-Source: specs/009-reporters/spec.md:1",009-reporters,High,To Do,009-reporters
+Source: specs/009-reporters/spec.md:1",009-reporters,High,Done,009-reporters
 009-reporters-US1,009-reporters,Story,US1: Structured report object,"User story 1 (P1) of 009-reporters.
 
-Source: specs/009-reporters/spec.md:13",009-reporters;us1,High,To Do,009-reporters
+Source: specs/009-reporters/spec.md:13",009-reporters;us1,High,Done,009-reporters
 009-reporters-US2,009-reporters,Story,US2: Console table,"User story 2 (P1) of 009-reporters.
 
-Source: specs/009-reporters/spec.md:32",009-reporters;us2,High,To Do,009-reporters
+Source: specs/009-reporters/spec.md:32",009-reporters;us2,High,Done,009-reporters
 009-reporters-US3,009-reporters,Story,US3: HTML timeline report,"User story 3 (P2) of 009-reporters.
 
-Source: specs/009-reporters/spec.md:53",009-reporters;us3,Medium,To Do,009-reporters
+Source: specs/009-reporters/spec.md:53",009-reporters;us3,Medium,Done,009-reporters
 009-reporters-T001,009-reporters,Task,T001 Create `report/` module and exports in packages/core/src/report/index.ts,"Create `report/` module and exports in packages/core/src/report/index.ts
 
 Phase: Phase 1: Setup (Shared Infrastructure)
 
-Source: specs/009-reporters/tasks.md:18",009-reporters;setup,Medium,To Do,009-reporters
+Source: specs/009-reporters/tasks.md:18",009-reporters;setup,Medium,Done,009-reporters
 009-reporters-T002,009-reporters,Task,T002 Add core dependency and exports in packages/reporter-console/package.json and packages/reporter-html/package.json,"Add core dependency and exports in packages/reporter-console/package.json and packages/reporter-html/package.json
 
 Phase: Phase 1: Setup (Shared Infrastructure)
 
-Source: specs/009-reporters/tasks.md:19",009-reporters;setup;parallel,Medium,To Do,009-reporters
+Source: specs/009-reporters/tasks.md:19",009-reporters;setup;parallel,Medium,Done,009-reporters
 009-reporters-T003,009-reporters,Task,"T003 Define Report v1 Valibot schema and inferred types (Report, CaseReport, EffectReport, TimelineEvent) in packages/core/src/report/model.ts","Define Report v1 Valibot schema and inferred types (Report, CaseReport, EffectReport, TimelineEvent) in packages/core/src/report/model.ts
 
 Phase: Phase 2: Foundational (Blocking Prerequisites)
 
-Source: specs/009-reporters/tasks.md:25",009-reporters;foundational,Medium,To Do,009-reporters
+Source: specs/009-reporters/tasks.md:25",009-reporters;foundational,Medium,Done,009-reporters
 009-reporters-T004,009-reporters,Task,T004 Write failing visitor traversal tests (order: report → cases → effects → timeline) in packages/core/test/report/visitor.test.ts,"Write failing visitor traversal tests (order: report → cases → effects → timeline) in packages/core/test/report/visitor.test.ts
 
 Phase: Phase 2: Foundational (Blocking Prerequisites)
 
-Source: specs/009-reporters/tasks.md:26",009-reporters;foundational;parallel,Medium,To Do,009-reporters
+Source: specs/009-reporters/tasks.md:26",009-reporters;foundational;parallel,Medium,Done,009-reporters
 009-reporters-T005,009-reporters,Task,"T005 Implement `ReportVisitor`, `walkReport`, `Reporter` port in packages/core/src/report/visitor.ts","Implement `ReportVisitor`, `walkReport`, `Reporter` port in packages/core/src/report/visitor.ts
 
 Phase: Phase 2: Foundational (Blocking Prerequisites)
 
-Source: specs/009-reporters/tasks.md:27",009-reporters;foundational,Medium,To Do,009-reporters
+Source: specs/009-reporters/tasks.md:27",009-reporters;foundational,Medium,Done,009-reporters
 009-reporters-T006,009-reporters-US1,Sub-task,"T006 Write failing buildReport tests (summary counts, relative timeline times, fault labels, hints carried) in packages/core/test/report/build.test.ts","Write failing buildReport tests (summary counts, relative timeline times, fault labels, hints carried) in packages/core/test/report/build.test.ts
 
 Phase: Phase 3: User Story 1 - Structured report object (Priority: P1) 🎯 MVP
 
-Source: specs/009-reporters/tasks.md:37",009-reporters;us1;parallel,High,To Do,009-reporters
+Source: specs/009-reporters/tasks.md:37",009-reporters;us1;parallel,High,Done,009-reporters
 009-reporters-T007,009-reporters-US1,Sub-task,T007 Write failing JSON round-trip property test and version rejection (`RG_SCHEMA_VERSION`) in packages/core/test/report/json.test.ts,"Write failing JSON round-trip property test and version rejection (`RG_SCHEMA_VERSION`) in packages/core/test/report/json.test.ts
 
 Phase: Phase 3: User Story 1 - Structured report object (Priority: P1) 🎯 MVP
 
-Source: specs/009-reporters/tasks.md:38",009-reporters;us1;parallel,High,To Do,009-reporters
+Source: specs/009-reporters/tasks.md:38",009-reporters;us1;parallel,High,Done,009-reporters
 009-reporters-T008,009-reporters-US1,Sub-task,T008 Implement `buildReport` in packages/core/src/report/build.ts,"Implement `buildReport` in packages/core/src/report/build.ts
 
 Phase: Phase 3: User Story 1 - Structured report object (Priority: P1) 🎯 MVP
 
-Source: specs/009-reporters/tasks.md:39",009-reporters;us1,High,To Do,009-reporters
+Source: specs/009-reporters/tasks.md:39",009-reporters;us1,High,Done,009-reporters
 009-reporters-T009,009-reporters-US1,Sub-task,T009 Implement `reportToJson` and `parseReport` in packages/core/src/report/json.ts,"Implement `reportToJson` and `parseReport` in packages/core/src/report/json.ts
 
 Phase: Phase 3: User Story 1 - Structured report object (Priority: P1) 🎯 MVP
 
-Source: specs/009-reporters/tasks.md:40",009-reporters;us1,High,To Do,009-reporters
+Source: specs/009-reporters/tasks.md:40",009-reporters;us1,High,Done,009-reporters
 009-reporters-T010,009-reporters-US2,Sub-task,"T010 Write failing table layout tests (widths, max 40, truncation `…`, ascii fallback) in packages/reporter-console/test/table.test.ts","Write failing table layout tests (widths, max 40, truncation `…`, ascii fallback) in packages/reporter-console/test/table.test.ts
 
 Phase: Phase 4: User Story 2 - Console table (Priority: P1)
 
-Source: specs/009-reporters/tasks.md:50",009-reporters;us2;parallel,High,To Do,009-reporters
+Source: specs/009-reporters/tasks.md:50",009-reporters;us2;parallel,High,Done,009-reporters
 009-reporters-T011,009-reporters-US2,Sub-task,"T011 Write failing color policy tests (`NO_COLOR`, `FORCE_COLOR`, non-TTY) in packages/reporter-console/test/color.test.ts","Write failing color policy tests (`NO_COLOR`, `FORCE_COLOR`, non-TTY) in packages/reporter-console/test/color.test.ts
 
 Phase: Phase 4: User Story 2 - Console table (Priority: P1)
 
-Source: specs/009-reporters/tasks.md:51",009-reporters;us2;parallel,High,To Do,009-reporters
+Source: specs/009-reporters/tasks.md:51",009-reporters;us2;parallel,High,Done,009-reporters
 009-reporters-T012,009-reporters-US2,Sub-task,T012 Write failing golden output tests (concise vs verbose) in packages/reporter-console/test/render.test.ts,"Write failing golden output tests (concise vs verbose) in packages/reporter-console/test/render.test.ts
 
 Phase: Phase 4: User Story 2 - Console table (Priority: P1)
 
-Source: specs/009-reporters/tasks.md:52",009-reporters;us2;parallel,High,To Do,009-reporters
+Source: specs/009-reporters/tasks.md:52",009-reporters;us2;parallel,High,Done,009-reporters
 009-reporters-T013,009-reporters-US2,Sub-task,T013 Implement table layout in packages/reporter-console/src/table.ts,"Implement table layout in packages/reporter-console/src/table.ts
 
 Phase: Phase 4: User Story 2 - Console table (Priority: P1)
 
-Source: specs/009-reporters/tasks.md:53",009-reporters;us2,High,To Do,009-reporters
+Source: specs/009-reporters/tasks.md:53",009-reporters;us2,High,Done,009-reporters
 009-reporters-T014,009-reporters-US2,Sub-task,T014 Implement color handling in packages/reporter-console/src/color.ts,"Implement color handling in packages/reporter-console/src/color.ts
 
 Phase: Phase 4: User Story 2 - Console table (Priority: P1)
 
-Source: specs/009-reporters/tasks.md:54",009-reporters;us2,High,To Do,009-reporters
+Source: specs/009-reporters/tasks.md:54",009-reporters;us2,High,Done,009-reporters
 009-reporters-T015,009-reporters-US2,Sub-task,T015 Implement `renderConsole` and `consoleReporter` as ReportVisitor in packages/reporter-console/src/index.ts,"Implement `renderConsole` and `consoleReporter` as ReportVisitor in packages/reporter-console/src/index.ts
 
 Phase: Phase 4: User Story 2 - Console table (Priority: P1)
 
-Source: specs/009-reporters/tasks.md:55",009-reporters;us2,High,To Do,009-reporters
+Source: specs/009-reporters/tasks.md:55",009-reporters;us2,High,Done,009-reporters
 009-reporters-T016,009-reporters-US3,Sub-task,"T016 Write failing escaping tests for `html` tagged template (corpus: `<script>`, `</script>`, quotes, `javascript:`, U+2028) in packages/reporter-html/test/html.test.ts","Write failing escaping tests for `html` tagged template (corpus: `<script>`, `</script>`, quotes, `javascript:`, U+2028) in packages/reporter-html/test/html.test.ts
 
 Phase: Phase 5: User Story 3 - HTML timeline report (Priority: P2)
 
-Source: specs/009-reporters/tasks.md:65",009-reporters;us3;parallel,Medium,To Do,009-reporters
+Source: specs/009-reporters/tasks.md:65",009-reporters;us3;parallel,Medium,Done,009-reporters
 009-reporters-T017,009-reporters-US3,Sub-task,"T017 Write failing timeline SVG tests (lanes per run, bar status patterns, fault markers, min width, `<title>` labels) in packages/reporter-html/test/timeline.test.ts","Write failing timeline SVG tests (lanes per run, bar status patterns, fault markers, min width, `<title>` labels) in packages/reporter-html/test/timeline.test.ts
 
 Phase: Phase 5: User Story 3 - HTML timeline report (Priority: P2)
 
-Source: specs/009-reporters/tasks.md:66",009-reporters;us3;parallel,Medium,To Do,009-reporters
+Source: specs/009-reporters/tasks.md:66",009-reporters;us3;parallel,Medium,Done,009-reporters
 009-reporters-T018,009-reporters-US3,Sub-task,"T018 Write failing document tests (no external URLs, CSP meta with matching sha256 hashes, JSON data block escaped, filters keyboard-operable, color-scheme) in packages/reporter-html/test/render.test.ts","Write failing document tests (no external URLs, CSP meta with matching sha256 hashes, JSON data block escaped, filters keyboard-operable, color-scheme) in packages/reporter-html/test/render.test.ts
 
 Phase: Phase 5: User Story 3 - HTML timeline report (Priority: P2)
 
-Source: specs/009-reporters/tasks.md:67",009-reporters;us3;parallel,Medium,To Do,009-reporters
+Source: specs/009-reporters/tasks.md:67",009-reporters;us3;parallel,Medium,Done,009-reporters
 009-reporters-T019,009-reporters-US3,Sub-task,T019 Implement escaping template in packages/reporter-html/src/html.ts,"Implement escaping template in packages/reporter-html/src/html.ts
 
 Phase: Phase 5: User Story 3 - HTML timeline report (Priority: P2)
 
-Source: specs/009-reporters/tasks.md:68",009-reporters;us3,Medium,To Do,009-reporters
+Source: specs/009-reporters/tasks.md:68",009-reporters;us3,Medium,Done,009-reporters
 009-reporters-T020,009-reporters-US3,Sub-task,T020 Implement timeline renderer in packages/reporter-html/src/timeline.ts,"Implement timeline renderer in packages/reporter-html/src/timeline.ts
 
 Phase: Phase 5: User Story 3 - HTML timeline report (Priority: P2)
 
-Source: specs/009-reporters/tasks.md:69",009-reporters;us3,Medium,To Do,009-reporters
+Source: specs/009-reporters/tasks.md:69",009-reporters;us3,Medium,Done,009-reporters
 009-reporters-T021,009-reporters-US3,Sub-task,T021 Implement CSS/filter script assets and CSP hashing in packages/reporter-html/src/assets.ts and packages/reporter-html/src/csp.ts,"Implement CSS/filter script assets and CSP hashing in packages/reporter-html/src/assets.ts and packages/reporter-html/src/csp.ts
 
 Phase: Phase 5: User Story 3 - HTML timeline report (Priority: P2)
 
-Source: specs/009-reporters/tasks.md:70",009-reporters;us3,Medium,To Do,009-reporters
+Source: specs/009-reporters/tasks.md:70",009-reporters;us3,Medium,Done,009-reporters
 009-reporters-T022,009-reporters-US3,Sub-task,T022 Implement `renderHtml` and `writeHtmlReport` in packages/reporter-html/src/index.ts,"Implement `renderHtml` and `writeHtmlReport` in packages/reporter-html/src/index.ts
 
 Phase: Phase 5: User Story 3 - HTML timeline report (Priority: P2)
 
-Source: specs/009-reporters/tasks.md:71",009-reporters;us3,Medium,To Do,009-reporters
+Source: specs/009-reporters/tasks.md:71",009-reporters;us3,Medium,Done,009-reporters
 009-reporters-T023,009-reporters,Task,"T023 Size/perf test: 100-case HTML < 1 MB, render < 200 ms in packages/reporter-html/test/perf.test.ts","Size/perf test: 100-case HTML < 1 MB, render < 200 ms in packages/reporter-html/test/perf.test.ts
 
 Phase: Phase 6: Polish & Cross-Cutting Concerns
 
-Source: specs/009-reporters/tasks.md:77",009-reporters;polish;parallel,Medium,To Do,009-reporters
+Source: specs/009-reporters/tasks.md:77",009-reporters;polish;parallel,Medium,Done,009-reporters
 009-reporters-T024,009-reporters,Task,T024 Reporter docs with example output in docs/reporters/README.md,"Reporter docs with example output in docs/reporters/README.md
 
 Phase: Phase 6: Polish & Cross-Cutting Concerns
 
-Source: specs/009-reporters/tasks.md:78",009-reporters;polish;parallel,Medium,To Do,009-reporters
+Source: specs/009-reporters/tasks.md:78",009-reporters;polish;parallel,Medium,Done,009-reporters
 009-reporters-T025,009-reporters,Task,T025 Author diagrams covering T001–T026 in specs/009-reporters/diagram.yaml,"Author diagrams covering T001–T026 in specs/009-reporters/diagram.yaml
 
 Phase: Phase 6: Polish & Cross-Cutting Concerns
 
-Source: specs/009-reporters/tasks.md:79",009-reporters;polish,Medium,To Do,009-reporters
+Source: specs/009-reporters/tasks.md:79",009-reporters;polish,Medium,Done,009-reporters
 009-reporters-T026,009-reporters,Task,T026 Validate quickstart scenarios in specs/009-reporters/quickstart.md,"Validate quickstart scenarios in specs/009-reporters/quickstart.md
 
 Phase: Phase 6: Polish & Cross-Cutting Concerns
 
-Source: specs/009-reporters/tasks.md:80",009-reporters;polish,Medium,To Do,009-reporters
+Source: specs/009-reporters/tasks.md:80",009-reporters;polish,Medium,Done,009-reporters
 010-vitest-matchers,,Epic,010 Vitest Matchers,"Vitest Matchers (010-vitest-matchers).
 
 Source: specs/010-vitest-matchers/spec.md:1",010-vitest-matchers,High,To Do,010-vitest-matchers

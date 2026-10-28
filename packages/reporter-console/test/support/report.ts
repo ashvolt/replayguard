@@ -1,0 +1,278 @@
+import type { CaseReport, EffectReport, Report } from "@replayguard/core";
+
+const effect = (over: Partial<EffectReport>): EffectReport => ({
+	identity: "payment.charge::o-1",
+	kind: "payment.charge",
+	subject: "o-1",
+	outcome: "exactly-once",
+	verdict: "pass",
+	applied: 1,
+	deduplicated: 0,
+	failed: 0,
+	expected: 1,
+	explanation: "payment.charge applied once.",
+	hints: [],
+	...over,
+});
+
+const base = (over: Partial<CaseReport>): CaseReport => ({
+	index: 0,
+	name: "baseline",
+	origin: "baseline",
+	faults: [],
+	status: "settled",
+	finalState: "completed",
+	runs: 1,
+	restarts: 0,
+	durationMs: 12,
+	verdict: "pass",
+	effects: [
+		effect({}),
+		effect({
+			identity: "email.send::a@example.com|receipt",
+			kind: "email.send",
+			subject: "a@example.com|receipt",
+			explanation: "email.send applied once.",
+		}),
+	],
+	timeline: [
+		{ type: "run", runIndex: 0, start: 0, end: 12, endReason: "completed" },
+		{
+			type: "attempt",
+			seq: 1,
+			runIndex: 0,
+			kind: "payment.charge",
+			subject: "o-1",
+			start: 1,
+			end: 4,
+			status: "applied",
+		},
+		{
+			type: "attempt",
+			seq: 2,
+			runIndex: 0,
+			kind: "email.send",
+			subject: "a@example.com|receipt",
+			start: 5,
+			end: 5,
+			status: "applied",
+		},
+	],
+	warnings: [],
+	...over,
+});
+
+/** A checkout report: baseline, a duplicated crash, a dedup, a concurrent warn, a harness error. */
+export function checkoutReport(): Report {
+	return {
+		version: 1,
+		generatedAt: "2026-10-28T12:00:00.000Z",
+		scenario: { name: "checkout", runtime: "workflows", workflowId: "replayguard-wf", seed: 1 },
+		summary: {
+			cases: 4,
+			verdict: "fail",
+			outcomes: {
+				"exactly-once": 2,
+				deduplicated: 1,
+				duplicated: 1,
+				"concurrent-duplicate": 1,
+				orphaned: 0,
+				skipped: 0,
+			},
+			verdicts: { pass: 1, warn: 1, fail: 2 },
+			skippedCandidates: 2,
+		},
+		baselineAnomalies: [],
+		cases: [
+			base({}),
+			base({
+				index: 1,
+				name: "crash after payment",
+				origin: "explicit",
+				faults: ["crash after payment.charge#1"],
+				runs: 2,
+				restarts: 1,
+				durationMs: 30,
+				verdict: "fail",
+				effects: [
+					effect({
+						outcome: "duplicated",
+						verdict: "fail",
+						applied: 2,
+						explanation:
+							"payment.charge applied 2× (expected 1). Fault F1 (crash after payment.charge#1) stopped run 0 after the effect applied but before the step result was saved; run 1 re-executed the step.",
+						hints: [
+							{
+								id: "add-idempotency-key",
+								title: "Send a stable idempotency key with the call",
+								explanation: "payment.charge was sent without an idempotency key.",
+								example:
+									'await ctx.step("charge", () => pay({ key: idempotencyKey(ctx, "charge") }));',
+							},
+						],
+					}),
+					effect({
+						identity: "email.send::a@example.com|receipt",
+						kind: "email.send",
+						subject: "a@example.com|receipt",
+						explanation: "email.send applied once.",
+					}),
+				],
+				timeline: [
+					{ type: "run", runIndex: 0, start: 0, end: 6, endReason: "crashed" },
+					{ type: "run", runIndex: 1, start: 8, end: 30, endReason: "completed" },
+					{
+						type: "attempt",
+						seq: 1,
+						runIndex: 0,
+						kind: "payment.charge",
+						subject: "o-1",
+						start: 1,
+						end: 5,
+						status: "applied",
+					},
+					{
+						type: "attempt",
+						seq: 2,
+						runIndex: 1,
+						kind: "payment.charge",
+						subject: "o-1",
+						start: 9,
+						end: 12,
+						status: "applied",
+					},
+					{
+						type: "attempt",
+						seq: 3,
+						runIndex: 1,
+						kind: "email.send",
+						subject: "a@example.com|receipt",
+						start: 14,
+						end: 15,
+						status: "applied",
+					},
+					{
+						type: "fault",
+						id: "F1",
+						runIndex: 0,
+						at: 6,
+						label: "crash after payment.charge#1",
+					},
+				],
+			}),
+			base({
+				index: 2,
+				name: "lost response",
+				origin: "explored",
+				faults: ["lost response after payment.charge#1"],
+				effects: [
+					effect({
+						outcome: "deduplicated",
+						deduplicated: 1,
+						explanation:
+							'payment.charge was attempted 2× and the provider deduplicated 1 replay(s) (idempotency key "k"); applied once.',
+					}),
+				],
+				timeline: [
+					{ type: "run", runIndex: 0, start: 0, end: 10, endReason: "completed" },
+					{
+						type: "attempt",
+						seq: 1,
+						runIndex: 0,
+						kind: "payment.charge",
+						subject: "o-1",
+						start: 1,
+						end: 2,
+						status: "applied",
+					},
+					{
+						type: "attempt",
+						seq: 2,
+						runIndex: 0,
+						kind: "payment.charge",
+						subject: "o-1",
+						start: 4,
+						end: 5,
+						status: "deduplicated",
+					},
+					{
+						type: "fault",
+						id: "F1",
+						runIndex: 0,
+						at: 2,
+						label: "throwAfter after payment.charge#1",
+					},
+				],
+			}),
+			base({
+				index: 3,
+				name: "slow provider",
+				origin: "explicit",
+				faults: ["delay 80ms in payment.charge#1"],
+				verdict: "warn",
+				effects: [
+					effect({
+						outcome: "concurrent-duplicate",
+						verdict: "warn",
+						applied: 2,
+						explanation:
+							"payment.charge applied 2× with overlapping calls: attempt #1 was still in flight when attempt #2 started.",
+						hints: [
+							{
+								id: "timeout-retry-concurrency",
+								title: "Do not retry a timed-out call without a key",
+								explanation: "The step timed out while the call was still running.",
+								example: "ctx.step({ timeout: 5_000, retryOnTimeout: true, run })",
+							},
+						],
+					}),
+				],
+				timeline: [
+					{ type: "run", runIndex: 0, start: 0, end: 120, endReason: "completed" },
+					{
+						type: "attempt",
+						seq: 1,
+						runIndex: 0,
+						kind: "payment.charge",
+						subject: "o-1",
+						start: 0,
+						end: 80,
+						status: "applied",
+					},
+					{
+						type: "attempt",
+						seq: 2,
+						runIndex: 0,
+						kind: "payment.charge",
+						subject: "o-1",
+						start: 21,
+						end: 22,
+						status: "applied",
+					},
+					{
+						type: "fault",
+						id: "F1",
+						runIndex: 0,
+						at: 0,
+						label: "delay payment.charge#1",
+					},
+				],
+				warnings: [
+					"attempt #3 (email.send::a@example.com|receipt) was still in flight when the case ended",
+				],
+			}),
+			base({
+				index: 4,
+				name: "broken harness",
+				origin: "explicit",
+				faults: ["process kill after payment.charge#1"],
+				status: "harness-error",
+				finalState: "unsettled",
+				verdict: "fail",
+				effects: [],
+				timeline: [],
+				warnings: ["harness error: child process exited before ready"],
+			}),
+		],
+	};
+}

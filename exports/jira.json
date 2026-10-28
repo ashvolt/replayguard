@@ -5093,7 +5093,7 @@
     {
       "sourceId": "009-reporters",
       "parentSourceId": null,
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Epic"
@@ -5111,7 +5111,7 @@
     {
       "sourceId": "009-reporters-US1",
       "parentSourceId": "009-reporters",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Story"
@@ -5130,7 +5130,7 @@
     {
       "sourceId": "009-reporters-US2",
       "parentSourceId": "009-reporters",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Story"
@@ -5149,7 +5149,7 @@
     {
       "sourceId": "009-reporters-US3",
       "parentSourceId": "009-reporters",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Story"
@@ -5168,7 +5168,7 @@
     {
       "sourceId": "009-reporters-T001",
       "parentSourceId": "009-reporters",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Task"
@@ -5187,7 +5187,7 @@
     {
       "sourceId": "009-reporters-T002",
       "parentSourceId": "009-reporters",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Task"
@@ -5207,7 +5207,7 @@
     {
       "sourceId": "009-reporters-T003",
       "parentSourceId": "009-reporters",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Task"
@@ -5226,7 +5226,7 @@
     {
       "sourceId": "009-reporters-T004",
       "parentSourceId": "009-reporters",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Task"
@@ -5246,7 +5246,7 @@
     {
       "sourceId": "009-reporters-T005",
       "parentSourceId": "009-reporters",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Task"
@@ -5265,7 +5265,7 @@
     {
       "sourceId": "009-reporters-T006",
       "parentSourceId": "009-reporters-US1",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Sub-task"
@@ -5285,7 +5285,7 @@
     {
       "sourceId": "009-reporters-T007",
       "parentSourceId": "009-reporters-US1",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Sub-task"
@@ -5305,7 +5305,7 @@
     {
       "sourceId": "009-reporters-T008",
       "parentSourceId": "009-reporters-US1",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Sub-task"
@@ -5324,7 +5324,7 @@
     {
       "sourceId": "009-reporters-T009",
       "parentSourceId": "009-reporters-US1",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Sub-task"
@@ -5343,7 +5343,7 @@
     {
       "sourceId": "009-reporters-T010",
       "parentSourceId": "009-reporters-US2",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Sub-task"
@@ -5363,7 +5363,7 @@
     {
       "sourceId": "009-reporters-T011",
       "parentSourceId": "009-reporters-US2",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Sub-task"
@@ -5383,7 +5383,7 @@
     {
       "sourceId": "009-reporters-T012",
       "parentSourceId": "009-reporters-US2",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Sub-task"
@@ -5403,7 +5403,7 @@
     {
       "sourceId": "009-reporters-T013",
       "parentSourceId": "009-reporters-US2",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Sub-task"
@@ -5422,7 +5422,7 @@
     {
       "sourceId": "009-reporters-T014",
       "parentSourceId": "009-reporters-US2",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Sub-task"
@@ -5441,7 +5441,7 @@
     {
       "sourceId": "009-reporters-T015",
       "parentSourceId": "009-reporters-US2",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Sub-task"
@@ -5460,7 +5460,7 @@
     {
       "sourceId": "009-reporters-T016",
       "parentSourceId": "009-reporters-US3",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Sub-task"
@@ -5480,7 +5480,7 @@
     {
       "sourceId": "009-reporters-T017",
       "parentSourceId": "009-reporters-US3",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Sub-task"
@@ -5500,7 +5500,7 @@
     {
       "sourceId": "009-reporters-T018",
       "parentSourceId": "009-reporters-US3",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Sub-task"
@@ -5520,7 +5520,7 @@
     {
       "sourceId": "009-reporters-T019",
       "parentSourceId": "009-reporters-US3",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Sub-task"
@@ -5539,7 +5539,7 @@
     {
       "sourceId": "009-reporters-T020",
       "parentSourceId": "009-reporters-US3",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Sub-task"
@@ -5558,7 +5558,7 @@
     {
       "sourceId": "009-reporters-T021",
       "parentSourceId": "009-reporters-US3",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Sub-task"
@@ -5577,7 +5577,7 @@
     {
       "sourceId": "009-reporters-T022",
       "parentSourceId": "009-reporters-US3",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Sub-task"
@@ -5596,7 +5596,7 @@
     {
       "sourceId": "009-reporters-T023",
       "parentSourceId": "009-reporters",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Task"
@@ -5616,7 +5616,7 @@
     {
       "sourceId": "009-reporters-T024",
       "parentSourceId": "009-reporters",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Task"
@@ -5636,7 +5636,7 @@
     {
       "sourceId": "009-reporters-T025",
       "parentSourceId": "009-reporters",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Task"
@@ -5655,7 +5655,7 @@
     {
       "sourceId": "009-reporters-T026",
       "parentSourceId": "009-reporters",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Task"

@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta http-equiv="Content-Security-Policy" content="default-src &#39;none&#39;; style-src &#39;sha256-vVXZgfFLTsmkpDp0g2onTe3iVMklZdbd7EkRyXVKZ38=&#39;; script-src &#39;sha256-OEqTi6+Z25F9afXvL7jtrKMD3+I4db8p22GxxyKhw2Y=&#39;; img-src data:; base-uri &#39;none&#39;; form-action &#39;none&#39;">
+<title>ReplayGuard: checkout - FAIL</title>
+<style>:root{color-scheme:light dark;--bg:#fff;--fg:#1d1d1f;--muted:#5f6368;--line:#d0d4da;--panel:#f5f6f8;--pass:#1a7f37;--warn:#9a6700;--fail:#cf222e;--bar:#3b6fd8;--run:#e8edf6}
+@media (prefers-color-scheme:dark){:root{--bg:#0f1115;--fg:#e6e6e6;--muted:#9aa0a6;--line:#30363d;--panel:#161b22;--pass:#3fb950;--warn:#d29922;--fail:#f85149;--bar:#6e9cf5;--run:#1c2433}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif}
+header,main{max-width:1100px;margin:0 auto;padding:16px}h1{font-size:1.5rem;margin:0 0 4px}h2{font-size:1.15rem;margin:0 0 8px}h4{margin:8px 0 4px}
+.rg-muted,.rg-meta{color:var(--muted)}section{border:1px solid var(--line);border-radius:8px;padding:12px 16px;margin:12px 0;background:var(--panel)}
+.rg-badge{display:inline-block;border:1px solid currentColor;border-radius:4px;padding:0 6px;font-size:.8rem;font-weight:600;white-space:nowrap}
+.rg-v-pass,.rg-o-exactly-once,.rg-o-deduplicated{color:var(--pass)}.rg-v-warn{color:var(--warn)}.rg-v-fail,.rg-o-duplicated,.rg-o-concurrent-duplicate,.rg-o-orphaned,.rg-o-skipped{color:var(--fail)}
+.rg-o-deduplicated,.rg-o-concurrent-duplicate{border-style:dashed}.rg-o-orphaned,.rg-o-skipped{border-style:dotted}
+.rg-scroll{overflow-x:auto}table{border-collapse:collapse;width:100%}th,td{text-align:left;padding:4px 8px;border-bottom:1px solid var(--line);vertical-align:top}
+pre{background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:8px;overflow-x:auto}code{font:13px/1.4 ui-monospace,Consolas,monospace}
+details{margin:6px 0}summary{cursor:pointer}summary:focus-visible,select:focus-visible{outline:2px solid var(--bar);outline-offset:2px}
+.rg-filters{display:flex;flex-wrap:wrap;gap:12px;align-items:center}select{font:inherit;padding:2px 6px}
+.rg-timeline{width:100%;height:auto;display:block;margin-top:8px}.rg-lane-label,.rg-fault-label{font-size:11px;fill:var(--muted)}.rg-lane-sep{stroke:var(--line)}
+.rg-run{fill:var(--run)}.rg-bar{fill:var(--bar);stroke:var(--bar);stroke-width:1.5}.rg-pat-bg{fill:var(--run)}.rg-pat-fg{fill:var(--bar)}.rg-pat-line{stroke:var(--bar);stroke-width:1.5}
+.rg-fault{stroke:var(--fail);stroke-width:2;stroke-dasharray:3 2}dl{display:grid;grid-template-columns:max-content 1fr;gap:2px 12px;margin:0}dt{color:var(--muted)}dd{margin:0}
+.rg-legend{display:flex;flex-wrap:wrap;gap:8px 16px;list-style:none;padding:0;margin:0}.rg-warnings{color:var(--warn)}</style>
+</head>
+<body>
+<header><h1>ReplayGuard report: checkout</h1><p><span class="rg-badge rg-v-fail">FAIL</span> <span class="rg-meta">workflows runtime · workflow replayguard-wf · seed 1 · generated 2026-10-28T12:00:00.000Z</span></p></header><main><section aria-labelledby="rg-summary"><h2 id="rg-summary">Summary</h2><dl><dt>Fault cases</dt><dd>4 (2 fail, 1 warn, 1 pass)</dd><dt>Outcomes</dt><dd><span class="rg-badge rg-o-exactly-once">exactly-once</span> 2, <span class="rg-badge rg-o-deduplicated">deduplicated</span> 1, <span class="rg-badge rg-o-duplicated">duplicated</span> 1, <span class="rg-badge rg-o-concurrent-duplicate">concurrent-duplicate</span> 1</dd><dt>Not run</dt><dd>2 candidate(s) not run (budget)</dd></dl></section><section aria-labelledby="rg-legend"><h2 id="rg-legend">Legend</h2><ul class="rg-legend"><li><span class="rg-badge rg-o-exactly-once">exactly-once</span> applied as often as in the baseline</li><li><span class="rg-badge rg-o-deduplicated">deduplicated</span> repeated, but the provider recognized the replay</li><li><span class="rg-badge rg-o-duplicated">duplicated</span> applied more often than in the baseline</li><li><span class="rg-badge rg-o-concurrent-duplicate">concurrent-duplicate</span> applied again while an earlier call was still running</li><li><span class="rg-badge rg-o-orphaned">orphaned</span> applied, then the workflow failed</li><li><span class="rg-badge rg-o-skipped">skipped</span> expected but never applied, yet the workflow completed</li></ul><p class="rg-muted">Timeline bars: solid = applied, striped = deduplicated, outlined = failed, hatched = still in flight; dashed red lines = injected faults.</p></section><section class="rg-filters" aria-label="Filters"><label for="rg-verdict">Verdict</label><select id="rg-verdict"><option value="">All</option><option value="fail">FAIL</option><option value="warn">WARN</option><option value="pass">PASS</option></select><label for="rg-outcome">Outcome</label><select id="rg-outcome"><option value="">All</option><option value="exactly-once">exactly-once</option><option value="deduplicated">deduplicated</option><option value="duplicated">duplicated</option><option value="concurrent-duplicate">concurrent-duplicate</option><option value="orphaned">orphaned</option><option value="skipped">skipped</option></select><p id="rg-count" aria-live="polite">5 of 5 cases shown</p></section><section class="rg-case" id="case-0" data-verdict="pass" data-outcomes="exactly-once"><h2>[0] baseline <span class="rg-badge rg-v-pass">PASS</span></h2><p class="rg-meta">baseline · no faults · 1 run(s) · 0 restart(s) · 12 ms · final: completed</p><div class="rg-scroll"><table><thead><tr><th scope="col">Effect</th><th scope="col">Outcome</th><th scope="col">Verdict</th><th scope="col">Applied</th><th scope="col">Deduplicated</th><th scope="col">Failed</th><th scope="col">Expected</th></tr></thead><tbody><tr><td>payment.charge::o-1</td><td><span class="rg-badge rg-o-exactly-once">exactly-once</span></td><td><span class="rg-badge rg-v-pass">PASS</span></td><td>1</td><td>0</td><td>0</td><td>1</td></tr><tr><td>email.send::a@example.com|receipt</td><td><span class="rg-badge rg-o-exactly-once">exactly-once</span></td><td><span class="rg-badge rg-v-pass">PASS</span></td><td>1</td><td>0</td><td>0</td><td>1</td></tr></tbody></table></div><details><summary>payment.charge::o-1: <span class="rg-badge rg-o-exactly-once">exactly-once</span> <span class="rg-badge rg-v-pass">PASS</span></summary><p>payment.charge applied once.</p></details><details><summary>email.send::a@example.com|receipt: <span class="rg-badge rg-o-exactly-once">exactly-once</span> <span class="rg-badge rg-v-pass">PASS</span></summary><p>email.send applied once.</p></details><svg class="rg-timeline" viewBox="0 0 720 38" role="img" aria-labelledby="rg-tl-0"><title id="rg-tl-0">Timeline of case 0: 1 run, 2 attempts, 0 faults</title><defs><pattern id="rg-p0-dedup" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect class="rg-pat-bg" width="6" height="6"/><rect class="rg-pat-fg" width="3" height="6"/></pattern><pattern id="rg-p0-inflight" width="6" height="6" patternUnits="userSpaceOnUse"><path class="rg-pat-line" d="M0 6L6 0"/></pattern></defs><g class="rg-lane"><text class="rg-lane-label" x="4" y="23">run 0</text><line class="rg-lane-sep" x1="0" x2="720" y1="32" y2="32"/></g><rect class="rg-run" x="56" y="8" width="656" height="22"><title>run 0: 0–12 ms, completed</title></rect><rect class="rg-bar rg-bar-applied" x="110.7" y="12" width="164" height="14"><title>#1 payment.charge o-1: applied, 1–4 ms</title></rect><rect class="rg-bar rg-bar-applied" x="329.3" y="12" width="2" height="14"><title>#2 email.send a@example.com|receipt: applied, 5–5 ms</title></rect></svg></section><section class="rg-case" id="case-1" data-verdict="fail" data-outcomes="duplicated exactly-once"><h2>[1] crash after payment <span class="rg-badge rg-v-fail">FAIL</span></h2><p class="rg-meta">explicit · faults: crash after payment.charge#1 · 2 run(s) · 1 restart(s) · 30 ms · final: completed</p><div class="rg-scroll"><table><thead><tr><th scope="col">Effect</th><th scope="col">Outcome</th><th scope="col">Verdict</th><th scope="col">Applied</th><th scope="col">Deduplicated</th><th scope="col">Failed</th><th scope="col">Expected</th></tr></thead><tbody><tr><td>payment.charge::o-1</td><td><span class="rg-badge rg-o-duplicated">duplicated</span></td><td><span class="rg-badge rg-v-fail">FAIL</span></td><td>2</td><td>0</td><td>0</td><td>1</td></tr><tr><td>email.send::a@example.com|receipt</td><td><span class="rg-badge rg-o-exactly-once">exactly-once</span></td><td><span class="rg-badge rg-v-pass">PASS</span></td><td>1</td><td>0</td><td>0</td><td>1</td></tr></tbody></table></div><details open><summary>payment.charge::o-1: <span class="rg-badge rg-o-duplicated">duplicated</span> <span class="rg-badge rg-v-fail">FAIL</span></summary><p>payment.charge applied 2× (expected 1). Fault F1 (crash after payment.charge#1) stopped run 0 after the effect applied but before the step result was saved; run 1 re-executed the step.</p><h4>Send a stable idempotency key with the call</h4><p>payment.charge was sent without an idempotency key.</p><pre><code>await ctx.step(&quot;charge&quot;, () =&gt; pay({ key: idempotencyKey(ctx, &quot;charge&quot;) }));</code></pre></details><details><summary>email.send::a@example.com|receipt: <span class="rg-badge rg-o-exactly-once">exactly-once</span> <span class="rg-badge rg-v-pass">PASS</span></summary><p>email.send applied once.</p></details><svg class="rg-timeline" viewBox="0 0 720 64" role="img" aria-labelledby="rg-tl-1"><title id="rg-tl-1">Timeline of case 1: 2 runs, 3 attempts, 1 fault</title><defs><pattern id="rg-p1-dedup" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect class="rg-pat-bg" width="6" height="6"/><rect class="rg-pat-fg" width="3" height="6"/></pattern><pattern id="rg-p1-inflight" width="6" height="6" patternUnits="userSpaceOnUse"><path class="rg-pat-line" d="M0 6L6 0"/></pattern></defs><g class="rg-lane"><text class="rg-lane-label" x="4" y="23">run 0</text><line class="rg-lane-sep" x1="0" x2="720" y1="32" y2="32"/></g><g class="rg-lane"><text class="rg-lane-label" x="4" y="49">run 1</text><line class="rg-lane-sep" x1="0" x2="720" y1="58" y2="58"/></g><rect class="rg-run" x="56" y="8" width="131.2" height="22"><title>run 0: 0–6 ms, crashed</title></rect><rect class="rg-run" x="230.9" y="34" width="481.1" height="22"><title>run 1: 8–30 ms, completed</title></rect><rect class="rg-bar rg-bar-applied" x="77.9" y="12" width="87.4" height="14"><title>#1 payment.charge o-1: applied, 1–5 ms</title></rect><rect class="rg-bar rg-bar-applied" x="252.8" y="38" width="65.6" height="14"><title>#2 payment.charge o-1: applied, 9–12 ms</title></rect><rect class="rg-bar rg-bar-applied" x="362.1" y="38" width="21.9" height="14"><title>#3 email.send a@example.com|receipt: applied, 14–15 ms</title></rect><g><line class="rg-fault" x1="187.2" x2="187.2" y1="6" y2="32"><title>F1 crash after payment.charge#1 at 6 ms</title></line><text class="rg-fault-label" x="189.2" y="15">F1</text></g></svg></section><section class="rg-case" id="case-2" data-verdict="pass" data-outcomes="deduplicated"><h2>[2] lost response <span class="rg-badge rg-v-pass">PASS</span></h2><p class="rg-meta">explored · faults: lost response after payment.charge#1 · 1 run(s) · 0 restart(s) · 12 ms · final: completed</p><div class="rg-scroll"><table><thead><tr><th scope="col">Effect</th><th scope="col">Outcome</th><th scope="col">Verdict</th><th scope="col">Applied</th><th scope="col">Deduplicated</th><th scope="col">Failed</th><th scope="col">Expected</th></tr></thead><tbody><tr><td>payment.charge::o-1</td><td><span class="rg-badge rg-o-deduplicated">deduplicated</span></td><td><span class="rg-badge rg-v-pass">PASS</span></td><td>1</td><td>1</td><td>0</td><td>1</td></tr></tbody></table></div><details><summary>payment.charge::o-1: <span class="rg-badge rg-o-deduplicated">deduplicated</span> <span class="rg-badge rg-v-pass">PASS</span></summary><p>payment.charge was attempted 2× and the provider deduplicated 1 replay(s) (idempotency key &quot;k&quot;); applied once.</p></details><svg class="rg-timeline" viewBox="0 0 720 38" role="img" aria-labelledby="rg-tl-2"><title id="rg-tl-2">Timeline of case 2: 1 run, 2 attempts, 1 fault</title><defs><pattern id="rg-p2-dedup" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect class="rg-pat-bg" width="6" height="6"/><rect class="rg-pat-fg" width="3" height="6"/></pattern><pattern id="rg-p2-inflight" width="6" height="6" patternUnits="userSpaceOnUse"><path class="rg-pat-line" d="M0 6L6 0"/></pattern></defs><g class="rg-lane"><text class="rg-lane-label" x="4" y="23">run 0</text><line class="rg-lane-sep" x1="0" x2="720" y1="32" y2="32"/></g><rect class="rg-run" x="56" y="8" width="656" height="22"><title>run 0: 0–10 ms, completed</title></rect><rect class="rg-bar rg-bar-applied" x="121.6" y="12" width="65.6" height="14"><title>#1 payment.charge o-1: applied, 1–2 ms</title></rect><rect class="rg-bar rg-bar-deduplicated" fill="url(#rg-p2-dedup)" x="318.4" y="12" width="65.6" height="14"><title>#2 payment.charge o-1: deduplicated, 4–5 ms</title></rect><g><line class="rg-fault" x1="187.2" x2="187.2" y1="6" y2="32"><title>F1 throwAfter after payment.charge#1 at 2 ms</title></line><text class="rg-fault-label" x="189.2" y="15">F1</text></g></svg></section><section class="rg-case" id="case-3" data-verdict="warn" data-outcomes="concurrent-duplicate"><h2>[3] slow provider <span class="rg-badge rg-v-warn">WARN</span></h2><p class="rg-meta">explicit · faults: delay 80ms in payment.charge#1 · 1 run(s) · 0 restart(s) · 12 ms · final: completed</p><div class="rg-scroll"><table><thead><tr><th scope="col">Effect</th><th scope="col">Outcome</th><th scope="col">Verdict</th><th scope="col">Applied</th><th scope="col">Deduplicated</th><th scope="col">Failed</th><th scope="col">Expected</th></tr></thead><tbody><tr><td>payment.charge::o-1</td><td><span class="rg-badge rg-o-concurrent-duplicate">concurrent-duplicate</span></td><td><span class="rg-badge rg-v-warn">WARN</span></td><td>2</td><td>0</td><td>0</td><td>1</td></tr></tbody></table></div><details open><summary>payment.charge::o-1: <span class="rg-badge rg-o-concurrent-duplicate">concurrent-duplicate</span> <span class="rg-badge rg-v-warn">WARN</span></summary><p>payment.charge applied 2× with overlapping calls: attempt #1 was still in flight when attempt #2 started.</p><h4>Do not retry a timed-out call without a key</h4><p>The step timed out while the call was still running.</p><pre><code>ctx.step({ timeout: 5_000, retryOnTimeout: true, run })</code></pre></details><svg class="rg-timeline" viewBox="0 0 720 38" role="img" aria-labelledby="rg-tl-3"><title id="rg-tl-3">Timeline of case 3: 1 run, 2 attempts, 1 fault</title><defs><pattern id="rg-p3-dedup" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect class="rg-pat-bg" width="6" height="6"/><rect class="rg-pat-fg" width="3" height="6"/></pattern><pattern id="rg-p3-inflight" width="6" height="6" patternUnits="userSpaceOnUse"><path class="rg-pat-line" d="M0 6L6 0"/></pattern></defs><g class="rg-lane"><text class="rg-lane-label" x="4" y="23">run 0</text><line class="rg-lane-sep" x1="0" x2="720" y1="32" y2="32"/></g><rect class="rg-run" x="56" y="8" width="656" height="22"><title>run 0: 0–120 ms, completed</title></rect><rect class="rg-bar rg-bar-applied" x="56" y="12" width="437.3" height="14"><title>#1 payment.charge o-1: applied, 0–80 ms</title></rect><rect class="rg-bar rg-bar-applied" x="170.8" y="12" width="5.5" height="14"><title>#2 payment.charge o-1: applied, 21–22 ms</title></rect><g><line class="rg-fault" x1="56" x2="56" y1="6" y2="32"><title>F1 delay payment.charge#1 at 0 ms</title></line><text class="rg-fault-label" x="58" y="15">F1</text></g></svg><ul class="rg-warnings"><li>attempt #3 (email.send::a@example.com|receipt) was still in flight when the case ended</li></ul></section><section class="rg-case" id="case-4" data-verdict="fail" data-outcomes=""><h2>[4] broken harness <span class="rg-badge rg-v-fail">FAIL</span></h2><p class="rg-meta">explicit · faults: process kill after payment.charge#1 · 1 run(s) · 0 restart(s) · 12 ms · final: unsettled · harness-error</p><p class="rg-muted">No effects recorded.</p><p class="rg-muted">No timeline events.</p><ul class="rg-warnings"><li>harness error: child process exited before ready</li></ul></section></main>
+<script type="application/json" id="rg-data">{
+  "version": 1,
+  "generatedAt": "2026-10-28T12:00:00.000Z",
+  "scenario": {
+    "name": "checkout",
+    "runtime": "workflows",
+    "workflowId": "replayguard-wf",
+    "seed": 1
+  },
+  "summary": {
+    "cases": 4,
+    "verdict": "fail",
+    "outcomes": {
+      "exactly-once": 2,
+      "deduplicated": 1,
+      "duplicated": 1,
+      "concurrent-duplicate": 1,
+      "orphaned": 0,
+      "skipped": 0
+    },
+    "verdicts": {
+      "pass": 1,
+      "warn": 1,
+      "fail": 2
+    },
+    "skippedCandidates": 2
+  },
+  "baselineAnomalies": [],
+  "cases": [
+    {
+      "index": 0,
+      "name": "baseline",
+      "origin": "baseline",
+      "faults": [],
+      "status": "settled",
+      "finalState": "completed",
+      "runs": 1,
+      "restarts": 0,
+      "durationMs": 12,
+      "verdict": "pass",
+      "effects": [
+        {
+          "identity": "payment.charge::o-1",
+          "kind": "payment.charge",
+          "subject": "o-1",
+          "outcome": "exactly-once",
+          "verdict": "pass",
+          "applied": 1,
+          "deduplicated": 0,
+          "failed": 0,
+          "expected": 1,
+          "explanation": "payment.charge applied once.",
+          "hints": []
+        },
+        {
+          "identity": "email.send::a@example.com|receipt",
+          "kind": "email.send",
+          "subject": "a@example.com|receipt",
+          "outcome": "exactly-once",
+          "verdict": "pass",
+          "applied": 1,
+          "deduplicated": 0,
+          "failed": 0,
+          "expected": 1,
+          "explanation": "email.send applied once.",
+          "hints": []
+        }
+      ],
+      "timeline": [
+        {
+          "type": "run",
+          "runIndex": 0,
+          "start": 0,
+          "end": 12,
+          "endReason": "completed"
+        },
+        {
+          "type": "attempt",
+          "seq": 1,
+          "runIndex": 0,
+          "kind": "payment.charge",
+          "subject": "o-1",
+          "start": 1,
+          "end": 4,
+          "status": "applied"
+        },
+        {
+          "type": "attempt",
+          "seq": 2,
+          "runIndex": 0,
+          "kind": "email.send",
+          "subject": "a@example.com|receipt",
+          "start": 5,
+          "end": 5,
+          "status": "applied"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "index": 1,
+      "name": "crash after payment",
+      "origin": "explicit",
+      "faults": [
+        "crash after payment.charge#1"
+      ],
+      "status": "settled",
+      "finalState": "completed",
+      "runs": 2,
+      "restarts": 1,
+      "durationMs": 30,
+      "verdict": "fail",
+      "effects": [
+        {
+          "identity": "payment.charge::o-1",
+          "kind": "payment.charge",
+          "subject": "o-1",
+          "outcome": "duplicated",
+          "verdict": "fail",
+          "applied": 2,
+          "deduplicated": 0,
+          "failed": 0,
+          "expected": 1,
+          "explanation": "payment.charge applied 2× (expected 1). Fault F1 (crash after payment.charge#1) stopped run 0 after the effect applied but before the step result was saved; run 1 re-executed the step.",
+          "hints": [
+            {
+              "id": "add-idempotency-key",
+              "title": "Send a stable idempotency key with the call",
+              "explanation": "payment.charge was sent without an idempotency key.",
+              "example": "await ctx.step(\"charge\", () =\u003e pay({ key: idempotencyKey(ctx, \"charge\") }));"
+            }
+          ]
+        },
+        {
+          "identity": "email.send::a@example.com|receipt",
+          "kind": "email.send",
+          "subject": "a@example.com|receipt",
+          "outcome": "exactly-once",
+          "verdict": "pass",
+          "applied": 1,
+          "deduplicated": 0,
+          "failed": 0,
+          "expected": 1,
+          "explanation": "email.send applied once.",
+          "hints": []
+        }
+      ],
+      "timeline": [
+        {
+          "type": "run",
+          "runIndex": 0,
+          "start": 0,
+          "end": 6,
+          "endReason": "crashed"
+        },
+        {
+          "type": "run",
+          "runIndex": 1,
+          "start": 8,
+          "end": 30,
+          "endReason": "completed"
+        },
+        {
+          "type": "attempt",
+          "seq": 1,
+          "runIndex": 0,
+          "kind": "payment.charge",
+          "subject": "o-1",
+          "start": 1,
+          "end": 5,
+          "status": "applied"
+        },
+        {
+          "type": "attempt",
+          "seq": 2,
+          "runIndex": 1,
+          "kind": "payment.charge",
+          "subject": "o-1",
+          "start": 9,
+          "end": 12,
+          "status": "applied"
+        },
+        {
+          "type": "attempt",
+          "seq": 3,
+          "runIndex": 1,
+          "kind": "email.send",
+          "subject": "a@example.com|receipt",
+          "start": 14,
+          "end": 15,
+          "status": "applied"
+        },
+        {
+          "type": "fault",
+          "id": "F1",
+          "runIndex": 0,
+          "at": 6,
+          "label": "crash after payment.charge#1"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "index": 2,
+      "name": "lost response",
+      "origin": "explored",
+      "faults": [
+        "lost response after payment.charge#1"
+      ],
+      "status": "settled",
+      "finalState": "completed",
+      "runs": 1,
+      "restarts": 0,
+      "durationMs": 12,
+      "verdict": "pass",
+      "effects": [
+        {
+          "identity": "payment.charge::o-1",
+          "kind": "payment.charge",
+          "subject": "o-1",
+          "outcome": "deduplicated",
+          "verdict": "pass",
+          "applied": 1,
+          "deduplicated": 1,
+          "failed": 0,
+          "expected": 1,
+          "explanation": "payment.charge was attempted 2× and the provider deduplicated 1 replay(s) (idempotency key \"k\"); applied once.",
+          "hints": []
+        }
+      ],
+      "timeline": [
+        {
+          "type": "run",
+          "runIndex": 0,
+          "start": 0,
+          "end": 10,
+          "endReason": "completed"
+        },
+        {
+          "type": "attempt",
+          "seq": 1,
+          "runIndex": 0,
+          "kind": "payment.charge",
+          "subject": "o-1",
+          "start": 1,
+          "end": 2,
+          "status": "applied"
+        },
+        {
+          "type": "attempt",
+          "seq": 2,
+          "runIndex": 0,
+          "kind": "payment.charge",
+          "subject": "o-1",
+          "start": 4,
+          "end": 5,
+          "status": "deduplicated"
+        },
+        {
+          "type": "fault",
+          "id": "F1",
+          "runIndex": 0,
+          "at": 2,
+          "label": "throwAfter after payment.charge#1"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "index": 3,
+      "name": "slow provider",
+      "origin": "explicit",
+      "faults": [
+        "delay 80ms in payment.charge#1"
+      ],
+      "status": "settled",
+      "finalState": "completed",
+      "runs": 1,
+      "restarts": 0,
+      "durationMs": 12,
+      "verdict": "warn",
+      "effects": [
+        {
+          "identity": "payment.charge::o-1",
+          "kind": "payment.charge",
+          "subject": "o-1",
+          "outcome": "concurrent-duplicate",
+          "verdict": "warn",
+          "applied": 2,
+          "deduplicated": 0,
+          "failed": 0,
+          "expected": 1,
+          "explanation": "payment.charge applied 2× with overlapping calls: attempt #1 was still in flight when attempt #2 started.",
+          "hints": [
+            {
+              "id": "timeout-retry-concurrency",
+              "title": "Do not retry a timed-out call without a key",
+              "explanation": "The step timed out while the call was still running.",
+              "example": "ctx.step({ timeout: 5_000, retryOnTimeout: true, run })"
+            }
+          ]
+        }
+      ],
+      "timeline": [
+        {
+          "type": "run",
+          "runIndex": 0,
+          "start": 0,
+          "end": 120,
+          "endReason": "completed"
+        },
+        {
+          "type": "attempt",
+          "seq": 1,
+          "runIndex": 0,
+          "kind": "payment.charge",
+          "subject": "o-1",
+          "start": 0,
+          "end": 80,
+          "status": "applied"
+        },
+        {
+          "type": "attempt",
+          "seq": 2,
+          "runIndex": 0,
+          "kind": "payment.charge",
+          "subject": "o-1",
+          "start": 21,
+          "end": 22,
+          "status": "applied"
+        },
+        {
+          "type": "fault",
+          "id": "F1",
+          "runIndex": 0,
+          "at": 0,
+          "label": "delay payment.charge#1"
+        }
+      ],
+      "warnings": [
+        "attempt #3 (email.send::a@example.com|receipt) was still in flight when the case ended"
+      ]
+    },
+    {
+      "index": 4,
+      "name": "broken harness",
+      "origin": "explicit",
+      "faults": [
+        "process kill after payment.charge#1"
+      ],
+      "status": "harness-error",
+      "finalState": "unsettled",
+      "runs": 1,
+      "restarts": 0,
+      "durationMs": 12,
+      "verdict": "fail",
+      "effects": [],
+      "timeline": [],
+      "warnings": [
+        "harness error: child process exited before ready"
+      ]
+    }
+  ]
+}
+</script>
+<script>(()=>{const d=document,v=d.getElementById("rg-verdict"),o=d.getElementById("rg-outcome"),n=d.getElementById("rg-count"),t=JSON.parse(d.getElementById("rg-data").textContent).cases.length,s=[...d.querySelectorAll(".rg-case")];const f=()=>{let k=0;for(const e of s){const h=(v.value&&e.dataset.verdict!==v.value)||(o.value&&!e.dataset.outcomes.split(" ").includes(o.value));e.hidden=!!h;if(!h)k++}n.textContent=k+" of "+t+" cases shown"};v.addEventListener("change",f);o.addEventListener("change",f)})();</script>
+</body>
+</html>
