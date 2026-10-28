@@ -1,0 +1,2091 @@
+Issue Id,Parent Id,Issue Type,Summary,Description,Priority,Status,Labels,Labels,Labels
+1,,Epic,001 Diagrams-as-Code with Task Traceability,"Diagrams-as-Code with Task Traceability (001-diagrams-as-code).
+
+Source: specs/001-diagrams-as-code/spec.md:1
+ReplayGuard-ID: 001-diagrams-as-code",High,Done,001-diagrams-as-code,,
+2,1,Story,US1: Generate editable diagrams from a feature description file,"User story 1 (P1) of 001-diagrams-as-code.
+
+Source: specs/001-diagrams-as-code/spec.md:13
+ReplayGuard-ID: 001-diagrams-as-code-US1",High,Done,001-diagrams-as-code,us1,
+3,1,Story,US2: Fail the build when a task is missing from the diagrams,"User story 2 (P1) of 001-diagrams-as-code.
+
+Source: specs/001-diagrams-as-code/spec.md:38
+ReplayGuard-ID: 001-diagrams-as-code-US2",High,Done,001-diagrams-as-code,us2,
+4,1,Story,US3: See which diagrams cover a given task,"User story 3 (P2) of 001-diagrams-as-code.
+
+Source: specs/001-diagrams-as-code/spec.md:62
+ReplayGuard-ID: 001-diagrams-as-code-US3",Medium,Done,001-diagrams-as-code,us3,
+5,1,Story,US4: Product-level architecture overview,"User story 4 (P3) of 001-diagrams-as-code.
+
+Source: specs/001-diagrams-as-code/spec.md:78
+ReplayGuard-ID: 001-diagrams-as-code-US4",Low,Done,001-diagrams-as-code,us4,
+6,1,Task,"T001 Create private tool package `@replayguard-tools/diagrams` with bin `rg-diagrams`, deps `yaml` and `valibot`, scripts `test`/`check-types` in tools/diagrams/package.json","Create private tool package `@replayguard-tools/diagrams` with bin `rg-diagrams`, deps `yaml` and `valibot`, scripts `test`/`check-types` in tools/diagrams/package.json
+
+Phase: Phase 1: Setup (Shared Infrastructure)
+
+Source: specs/001-diagrams-as-code/tasks.md:20
+ReplayGuard-ID: 001-diagrams-as-code-T001",Medium,Done,001-diagrams-as-code,setup,
+7,1,Task,"T002 Add tsconfig with `erasableSyntaxOnly`, `allowImportingTsExtensions`, `noEmit` in tools/diagrams/tsconfig.json","Add tsconfig with `erasableSyntaxOnly`, `allowImportingTsExtensions`, `noEmit` in tools/diagrams/tsconfig.json
+
+Phase: Phase 1: Setup (Shared Infrastructure)
+
+Source: specs/001-diagrams-as-code/tasks.md:21
+ReplayGuard-ID: 001-diagrams-as-code-T002",Medium,Done,001-diagrams-as-code,setup,parallel
+8,1,Task,T003 Add Vitest config with coverage thresholds 90/90 in tools/diagrams/vitest.config.ts,"Add Vitest config with coverage thresholds 90/90 in tools/diagrams/vitest.config.ts
+
+Phase: Phase 1: Setup (Shared Infrastructure)
+
+Source: specs/001-diagrams-as-code/tasks.md:22
+ReplayGuard-ID: 001-diagrams-as-code-T003",Medium,Done,001-diagrams-as-code,setup,parallel
+9,1,Task,"T004 Add root scripts `diagrams:generate`, `diagrams:check`, `diagrams:coverage` (node --experimental-strip-types) in package.json","Add root scripts `diagrams:generate`, `diagrams:check`, `diagrams:coverage` (node --experimental-strip-types) in package.json
+
+Phase: Phase 1: Setup (Shared Infrastructure)
+
+Source: specs/001-diagrams-as-code/tasks.md:23
+ReplayGuard-ID: 001-diagrams-as-code-T004",Medium,Done,001-diagrams-as-code,setup,parallel
+10,1,Task,"T005 Write failing schema tests (valid source, duplicate node ids, unknown edge refs, `sequence` only for `workflow`, task id pattern, keyPath error messages) in tools/diagrams/test/schema.test.ts","Write failing schema tests (valid source, duplicate node ids, unknown edge refs, `sequence` only for `workflow`, task id pattern, keyPath error messages) in tools/diagrams/test/schema.test.ts
+
+Phase: Phase 2: Foundational (Blocking Prerequisites)
+
+Source: specs/001-diagrams-as-code/tasks.md:29
+ReplayGuard-ID: 001-diagrams-as-code-T005",Medium,Done,001-diagrams-as-code,foundational,parallel
+11,1,Task,"T006 Implement Valibot schema with constraints from data-model.md (""1–40 nodes"", ""label 1–80 chars"", ""tasks match ^T\d{3,}$"") and cross-reference validation in tools/diagrams/src/schema.ts","Implement Valibot schema with constraints from data-model.md (""1–40 nodes"", ""label 1–80 chars"", ""tasks match ^T\d{3,}$"") and cross-reference validation in tools/diagrams/src/schema.ts
+
+Phase: Phase 2: Foundational (Blocking Prerequisites)
+
+Source: specs/001-diagrams-as-code/tasks.md:30
+ReplayGuard-ID: 001-diagrams-as-code-T006",Medium,Done,001-diagrams-as-code,foundational,
+12,1,Task,T007 Write failing tests then implement deterministic id/seed factory (hash of feature/kind/element id) in tools/diagrams/src/ids.ts and tools/diagrams/test/ids.test.ts,"Write failing tests then implement deterministic id/seed factory (hash of feature/kind/element id) in tools/diagrams/src/ids.ts and tools/diagrams/test/ids.test.ts
+
+Phase: Phase 2: Foundational (Blocking Prerequisites)
+
+Source: specs/001-diagrams-as-code/tasks.md:31
+ReplayGuard-ID: 001-diagrams-as-code-T007",Medium,Done,001-diagrams-as-code,foundational,parallel
+13,1,Task,"T008 Write failing tests then implement label wrapping/measurement (max width 220 px, line height 1.25) in tools/diagrams/src/text.ts and tools/diagrams/test/text.test.ts","Write failing tests then implement label wrapping/measurement (max width 220 px, line height 1.25) in tools/diagrams/src/text.ts and tools/diagrams/test/text.test.ts
+
+Phase: Phase 2: Foundational (Blocking Prerequisites)
+
+Source: specs/001-diagrams-as-code/tasks.md:32
+ReplayGuard-ID: 001-diagrams-as-code-T008",Medium,Done,001-diagrams-as-code,foundational,parallel
+14,1,Task,"T009 Write failing tests then implement source discovery (`specs/*/diagram.yaml`, `docs/architecture/diagram.yaml`, repo root detection) in tools/diagrams/src/load.ts and tools/diagrams/test/load.test.ts","Write failing tests then implement source discovery (`specs/*/diagram.yaml`, `docs/architecture/diagram.yaml`, repo root detection) in tools/diagrams/src/load.ts and tools/diagrams/test/load.test.ts
+
+Phase: Phase 2: Foundational (Blocking Prerequisites)
+
+Source: specs/001-diagrams-as-code/tasks.md:33
+ReplayGuard-ID: 001-diagrams-as-code-T009",Medium,Done,001-diagrams-as-code,foundational,
+15,2,Sub-task,"T010 Write failing flow layout tests incl. fast-check properties (no node overlap, determinism, cycle termination) in tools/diagrams/test/flow.test.ts","Write failing flow layout tests incl. fast-check properties (no node overlap, determinism, cycle termination) in tools/diagrams/test/flow.test.ts
+
+Phase: Phase 3: User Story 1 - Generate editable diagrams (Priority: P1) 🎯 MVP
+
+Source: specs/001-diagrams-as-code/tasks.md:47
+ReplayGuard-ID: 001-diagrams-as-code-T010",High,Done,001-diagrams-as-code,us1,parallel
+16,2,Sub-task,"T011 Write failing sequence layout tests (actor order, message order, self-message loop, dashed replies) in tools/diagrams/test/sequence.test.ts","Write failing sequence layout tests (actor order, message order, self-message loop, dashed replies) in tools/diagrams/test/sequence.test.ts
+
+Phase: Phase 3: User Story 1 - Generate editable diagrams (Priority: P1) 🎯 MVP
+
+Source: specs/001-diagrams-as-code/tasks.md:48
+ReplayGuard-ID: 001-diagrams-as-code-T011",High,Done,001-diagrams-as-code,us1,parallel
+17,2,Sub-task,"T012 Write failing Excalidraw renderer tests (scene v2 shape, bound text `containerId`, arrow bindings, `boundElements`, task badges) in tools/diagrams/test/excalidraw.test.ts","Write failing Excalidraw renderer tests (scene v2 shape, bound text `containerId`, arrow bindings, `boundElements`, task badges) in tools/diagrams/test/excalidraw.test.ts
+
+Phase: Phase 3: User Story 1 - Generate editable diagrams (Priority: P1) 🎯 MVP
+
+Source: specs/001-diagrams-as-code/tasks.md:49
+ReplayGuard-ID: 001-diagrams-as-code-T012",High,Done,001-diagrams-as-code,us1,parallel
+18,2,Sub-task,"T013 Write failing SVG renderer tests (escaping of `<&""`, no `<script>`/external refs, task badges, dark-safe colors) in tools/diagrams/test/svg.test.ts","Write failing SVG renderer tests (escaping of `<&""`, no `<script>`/external refs, task badges, dark-safe colors) in tools/diagrams/test/svg.test.ts
+
+Phase: Phase 3: User Story 1 - Generate editable diagrams (Priority: P1) 🎯 MVP
+
+Source: specs/001-diagrams-as-code/tasks.md:50
+ReplayGuard-ID: 001-diagrams-as-code-T013",High,Done,001-diagrams-as-code,us1,parallel
+19,2,Sub-task,"T014 Implement layered flow layout (cycle breaking, longest-path ranks, barycenter ordering, group frames) in tools/diagrams/src/layout/flow.ts","Implement layered flow layout (cycle breaking, longest-path ranks, barycenter ordering, group frames) in tools/diagrams/src/layout/flow.ts
+
+Phase: Phase 3: User Story 1 - Generate editable diagrams (Priority: P1) 🎯 MVP
+
+Source: specs/001-diagrams-as-code/tasks.md:54
+ReplayGuard-ID: 001-diagrams-as-code-T014",High,Done,001-diagrams-as-code,us1,
+20,2,Sub-task,T015 Implement sequence layout in tools/diagrams/src/layout/sequence.ts,"Implement sequence layout in tools/diagrams/src/layout/sequence.ts
+
+Phase: Phase 3: User Story 1 - Generate editable diagrams (Priority: P1) 🎯 MVP
+
+Source: specs/001-diagrams-as-code/tasks.md:55
+ReplayGuard-ID: 001-diagrams-as-code-T015",High,Done,001-diagrams-as-code,us1,
+21,2,Sub-task,T016 Implement Excalidraw scene renderer from `LaidOutDiagram` in tools/diagrams/src/render/excalidraw.ts,"Implement Excalidraw scene renderer from `LaidOutDiagram` in tools/diagrams/src/render/excalidraw.ts
+
+Phase: Phase 3: User Story 1 - Generate editable diagrams (Priority: P1) 🎯 MVP
+
+Source: specs/001-diagrams-as-code/tasks.md:56
+ReplayGuard-ID: 001-diagrams-as-code-T016",High,Done,001-diagrams-as-code,us1,
+22,2,Sub-task,T017 Implement SVG renderer from `LaidOutDiagram` in tools/diagrams/src/render/svg.ts,"Implement SVG renderer from `LaidOutDiagram` in tools/diagrams/src/render/svg.ts
+
+Phase: Phase 3: User Story 1 - Generate editable diagrams (Priority: P1) 🎯 MVP
+
+Source: specs/001-diagrams-as-code/tasks.md:57
+ReplayGuard-ID: 001-diagrams-as-code-T017",High,Done,001-diagrams-as-code,us1,
+23,2,Sub-task,T018 Implement `generate [--feature]` command writing `diagrams/<kind>.excalidraw|svg` with LF endings in tools/diagrams/src/cli.ts and tools/diagrams/test/cli.test.ts,"Implement `generate [--feature]` command writing `diagrams/<kind>.excalidraw|svg` with LF endings in tools/diagrams/src/cli.ts and tools/diagrams/test/cli.test.ts
+
+Phase: Phase 3: User Story 1 - Generate editable diagrams (Priority: P1) 🎯 MVP
+
+Source: specs/001-diagrams-as-code/tasks.md:58
+ReplayGuard-ID: 001-diagrams-as-code-T018",High,Done,001-diagrams-as-code,us1,
+24,3,Sub-task,"T019 Write failing traceability tests (task line parsing, untraced, unknown, missing source, spec-only skip) in tools/diagrams/test/trace.test.ts","Write failing traceability tests (task line parsing, untraced, unknown, missing source, spec-only skip) in tools/diagrams/test/trace.test.ts
+
+Phase: Phase 4: User Story 2 - Fail the build when a task is missing (Priority: P1)
+
+Source: specs/001-diagrams-as-code/tasks.md:72
+ReplayGuard-ID: 001-diagrams-as-code-T019",High,Done,001-diagrams-as-code,us2,parallel
+25,3,Sub-task,T020 Write failing staleness tests (edited YAML without regeneration → stale files listed) in tools/diagrams/test/stale.test.ts,"Write failing staleness tests (edited YAML without regeneration → stale files listed) in tools/diagrams/test/stale.test.ts
+
+Phase: Phase 4: User Story 2 - Fail the build when a task is missing (Priority: P1)
+
+Source: specs/001-diagrams-as-code/tasks.md:73
+ReplayGuard-ID: 001-diagrams-as-code-T020",High,Done,001-diagrams-as-code,us2,parallel
+26,3,Sub-task,T021 Implement task extraction and coverage comparison in tools/diagrams/src/trace.ts,"Implement task extraction and coverage comparison in tools/diagrams/src/trace.ts
+
+Phase: Phase 4: User Story 2 - Fail the build when a task is missing (Priority: P1)
+
+Source: specs/001-diagrams-as-code/tasks.md:77
+ReplayGuard-ID: 001-diagrams-as-code-T021",High,Done,001-diagrams-as-code,us2,
+27,3,Sub-task,T022 Implement in-memory regeneration and byte comparison in tools/diagrams/src/stale.ts,"Implement in-memory regeneration and byte comparison in tools/diagrams/src/stale.ts
+
+Phase: Phase 4: User Story 2 - Fail the build when a task is missing (Priority: P1)
+
+Source: specs/001-diagrams-as-code/tasks.md:78
+ReplayGuard-ID: 001-diagrams-as-code-T022",High,Done,001-diagrams-as-code,us2,
+28,3,Sub-task,T023 Implement `check [--feature]` command with output format and exit codes from contracts/cli.md in tools/diagrams/src/cli.ts,"Implement `check [--feature]` command with output format and exit codes from contracts/cli.md in tools/diagrams/src/cli.ts
+
+Phase: Phase 4: User Story 2 - Fail the build when a task is missing (Priority: P1)
+
+Source: specs/001-diagrams-as-code/tasks.md:79
+ReplayGuard-ID: 001-diagrams-as-code-T023",High,Done,001-diagrams-as-code,us2,
+29,4,Sub-task,T024 Write failing tests for traceability table rendering in tools/diagrams/test/coverage.test.ts,"Write failing tests for traceability table rendering in tools/diagrams/test/coverage.test.ts
+
+Phase: Phase 5: User Story 3 - See which diagrams cover a task (Priority: P2)
+
+Source: specs/001-diagrams-as-code/tasks.md:91
+ReplayGuard-ID: 001-diagrams-as-code-T024",Medium,Done,001-diagrams-as-code,us3,parallel
+30,4,Sub-task,T025 Implement `TRACEABILITY.md` writer and `coverage` command in tools/diagrams/src/coverage.ts and tools/diagrams/src/cli.ts,"Implement `TRACEABILITY.md` writer and `coverage` command in tools/diagrams/src/coverage.ts and tools/diagrams/src/cli.ts
+
+Phase: Phase 5: User Story 3 - See which diagrams cover a task (Priority: P2)
+
+Source: specs/001-diagrams-as-code/tasks.md:92
+ReplayGuard-ID: 001-diagrams-as-code-T025",Medium,Done,001-diagrams-as-code,us3,
+31,5,Sub-task,T026 Exempt `architecture` sources from task checks in tools/diagrams/src/trace.ts with test in tools/diagrams/test/trace.test.ts,"Exempt `architecture` sources from task checks in tools/diagrams/src/trace.ts with test in tools/diagrams/test/trace.test.ts
+
+Phase: Phase 6: User Story 4 - Product-level architecture overview (Priority: P3)
+
+Source: specs/001-diagrams-as-code/tasks.md:102
+ReplayGuard-ID: 001-diagrams-as-code-T026",Low,Done,001-diagrams-as-code,us4,
+32,5,Sub-task,T027 Author product HLD and package-dependency diagrams in docs/architecture/diagram.yaml,"Author product HLD and package-dependency diagrams in docs/architecture/diagram.yaml
+
+Phase: Phase 6: User Story 4 - Product-level architecture overview (Priority: P3)
+
+Source: specs/001-diagrams-as-code/tasks.md:103
+ReplayGuard-ID: 001-diagrams-as-code-T027",Low,Done,001-diagrams-as-code,us4,
+33,1,Task,T028 Document YAML format and CLI in tools/diagrams/README.md,"Document YAML format and CLI in tools/diagrams/README.md
+
+Phase: Phase 7: Polish & Cross-Cutting Concerns
+
+Source: specs/001-diagrams-as-code/tasks.md:109
+ReplayGuard-ID: 001-diagrams-as-code-T028",Medium,Done,001-diagrams-as-code,polish,parallel
+34,1,Task,T029 Add performance test (all sources generate in < 10 s) and no-network guard (fetch stubbed to throw) in tools/diagrams/test/perf.test.ts,"Add performance test (all sources generate in < 10 s) and no-network guard (fetch stubbed to throw) in tools/diagrams/test/perf.test.ts
+
+Phase: Phase 7: Polish & Cross-Cutting Concerns
+
+Source: specs/001-diagrams-as-code/tasks.md:110
+ReplayGuard-ID: 001-diagrams-as-code-T029",Medium,Done,001-diagrams-as-code,polish,parallel
+35,1,Task,"T030 Author this feature's diagrams (HLD, LLD, workflow, architecture) covering T001–T031 in specs/001-diagrams-as-code/diagram.yaml","Author this feature's diagrams (HLD, LLD, workflow, architecture) covering T001–T031 in specs/001-diagrams-as-code/diagram.yaml
+
+Phase: Phase 7: Polish & Cross-Cutting Concerns
+
+Source: specs/001-diagrams-as-code/tasks.md:111
+ReplayGuard-ID: 001-diagrams-as-code-T030",Medium,Done,001-diagrams-as-code,polish,
+36,1,Task,"T031 Generate outputs for all features, validate each `.excalidraw` against the scene structure (SC-004) and verify quickstart scenarios in specs/001-diagrams-as-code/quickstart.md","Generate outputs for all features, validate each `.excalidraw` against the scene structure (SC-004) and verify quickstart scenarios in specs/001-diagrams-as-code/quickstart.md
+
+Phase: Phase 7: Polish & Cross-Cutting Concerns
+
+Source: specs/001-diagrams-as-code/tasks.md:112
+ReplayGuard-ID: 001-diagrams-as-code-T031",Medium,Done,001-diagrams-as-code,polish,
+37,,Epic,002 Task Export to Issue Trackers,"Task Export to Issue Trackers (002-task-export).
+
+Source: specs/002-task-export/spec.md:1
+ReplayGuard-ID: 002-task-export",High,Done,002-task-export,,
+38,37,Story,US1: Import the whole backlog into Jira via CSV,"User story 1 (P1) of 002-task-export.
+
+Source: specs/002-task-export/spec.md:23
+ReplayGuard-ID: 002-task-export-US1",High,Done,002-task-export,us1,
+39,37,Story,US2: Create issues through the Jira REST API,"User story 2 (P2) of 002-task-export.
+
+Source: specs/002-task-export/spec.md:46
+ReplayGuard-ID: 002-task-export-US2",Medium,Done,002-task-export,us2,
+40,37,Story,US3: Create GitHub Issues,"User story 3 (P2) of 002-task-export.
+
+Source: specs/002-task-export/spec.md:68
+ReplayGuard-ID: 002-task-export-US3",Medium,Done,002-task-export,us3,
+41,37,Story,US4: Generic CSV for other trackers,"User story 4 (P3) of 002-task-export.
+
+Source: specs/002-task-export/spec.md:85
+ReplayGuard-ID: 002-task-export-US4",Low,Done,002-task-export,us4,
+42,37,Task,T001 Create private tool package `@replayguard-tools/export` with bin `rg-export` in tools/export/package.json,"Create private tool package `@replayguard-tools/export` with bin `rg-export` in tools/export/package.json
+
+Phase: Phase 1: Setup (Shared Infrastructure)
+
+Source: specs/002-task-export/tasks.md:18
+ReplayGuard-ID: 002-task-export-T001",Medium,Done,002-task-export,setup,
+43,37,Task,"T002 Add tsconfig (erasable syntax, `.ts` imports) in tools/export/tsconfig.json","Add tsconfig (erasable syntax, `.ts` imports) in tools/export/tsconfig.json
+
+Phase: Phase 1: Setup (Shared Infrastructure)
+
+Source: specs/002-task-export/tasks.md:19
+ReplayGuard-ID: 002-task-export-T002",Medium,Done,002-task-export,setup,parallel
+44,37,Task,T003 Add Vitest config with 90/90 thresholds in tools/export/vitest.config.ts,"Add Vitest config with 90/90 thresholds in tools/export/vitest.config.ts
+
+Phase: Phase 1: Setup (Shared Infrastructure)
+
+Source: specs/002-task-export/tasks.md:20
+ReplayGuard-ID: 002-task-export-T003",Medium,Done,002-task-export,setup,parallel
+45,37,Task,"T004 Add root scripts `export:generate`, `export:check`, `export:import-jira`, `export:import-github` in package.json; add `.export-state/` to .gitignore","Add root scripts `export:generate`, `export:check`, `export:import-jira`, `export:import-github` in package.json; add `.export-state/` to .gitignore
+
+Phase: Phase 1: Setup (Shared Infrastructure)
+
+Source: specs/002-task-export/tasks.md:21
+ReplayGuard-ID: 002-task-export-T004",Medium,Done,002-task-export,setup,parallel
+46,37,Task,"T005 Write failing spec parser tests (feature title, `### User Story N - Title (Priority: PN)`) in tools/export/test/parse-spec.test.ts","Write failing spec parser tests (feature title, `### User Story N - Title (Priority: PN)`) in tools/export/test/parse-spec.test.ts
+
+Phase: Phase 2: Foundational (Blocking Prerequisites)
+
+Source: specs/002-task-export/tasks.md:27
+ReplayGuard-ID: 002-task-export-T005",Medium,Done,002-task-export,foundational,parallel
+47,37,Task,"T006 Write failing tasks parser tests (checklist regex, `[P]`, `[USn]`, `[x]` done, phase detection, malformed line error with file:line) in tools/export/test/parse-tasks.test.ts","Write failing tasks parser tests (checklist regex, `[P]`, `[USn]`, `[x]` done, phase detection, malformed line error with file:line) in tools/export/test/parse-tasks.test.ts
+
+Phase: Phase 2: Foundational (Blocking Prerequisites)
+
+Source: specs/002-task-export/tasks.md:28
+ReplayGuard-ID: 002-task-export-T006",Medium,Done,002-task-export,foundational,parallel
+48,37,Task,T007 Implement spec parser in tools/export/src/parse/spec.ts,"Implement spec parser in tools/export/src/parse/spec.ts
+
+Phase: Phase 2: Foundational (Blocking Prerequisites)
+
+Source: specs/002-task-export/tasks.md:29
+ReplayGuard-ID: 002-task-export-T007",Medium,Done,002-task-export,foundational,
+49,37,Task,T008 Implement tasks parser in tools/export/src/parse/tasks.ts,"Implement tasks parser in tools/export/src/parse/tasks.ts
+
+Phase: Phase 2: Foundational (Blocking Prerequisites)
+
+Source: specs/002-task-export/tasks.md:30
+ReplayGuard-ID: 002-task-export-T008",Medium,Done,002-task-export,foundational,
+50,37,Task,"T009 Write failing tests then implement Backlog builder (source IDs, types, parent order, labels, priority P1→High/P2→Medium/P3+→Low, title ≤ 255 chars, description ends with ""Source: specs/<feature>/<file>:<line>"") in tools/export/src/model.ts and tools…","Write failing tests then implement Backlog builder (source IDs, types, parent order, labels, priority P1→High/P2→Medium/P3+→Low, title ≤ 255 chars, description ends with ""Source: specs/<feature>/<file>:<line>"") in tools/export/src/model.ts and tools/export/test/model.test.ts
+
+Phase: Phase 2: Foundational (Blocking Prerequisites)
+
+Source: specs/002-task-export/tasks.md:31
+ReplayGuard-ID: 002-task-export-T009",Medium,Done,002-task-export,foundational,
+51,37,Task,"T010 Write failing tests then implement RFC 4180 CSV writer (CRLF, quoting, UTF-8) incl. fast-check round-trip in tools/export/src/render/csv.ts and tools/export/test/csv.test.ts","Write failing tests then implement RFC 4180 CSV writer (CRLF, quoting, UTF-8) incl. fast-check round-trip in tools/export/src/render/csv.ts and tools/export/test/csv.test.ts
+
+Phase: Phase 2: Foundational (Blocking Prerequisites)
+
+Source: specs/002-task-export/tasks.md:32
+ReplayGuard-ID: 002-task-export-T010",Medium,Done,002-task-export,foundational,parallel
+52,38,Sub-task,T011 Write failing Jira CSV golden test in tools/export/test/jira-csv.test.ts,"Write failing Jira CSV golden test in tools/export/test/jira-csv.test.ts
+
+Phase: Phase 3: User Story 1 - Import backlog into Jira via CSV (Priority: P1) 🎯 MVP
+
+Source: specs/002-task-export/tasks.md:44
+ReplayGuard-ID: 002-task-export-T011",High,Done,002-task-export,us1,parallel
+53,38,Sub-task,"T012 Implement Jira CSV renderer (Issue Id, Parent Id, Issue Type, Summary, Description, Priority, Status, repeated Labels) in tools/export/src/render/jira-csv.ts","Implement Jira CSV renderer (Issue Id, Parent Id, Issue Type, Summary, Description, Priority, Status, repeated Labels) in tools/export/src/render/jira-csv.ts
+
+Phase: Phase 3: User Story 1 - Import backlog into Jira via CSV (Priority: P1) 🎯 MVP
+
+Source: specs/002-task-export/tasks.md:45
+ReplayGuard-ID: 002-task-export-T012",High,Done,002-task-export,us1,
+54,38,Sub-task,T013 Implement `generate` and `check` commands writing/validating exports/ in tools/export/src/cli.ts with tests in tools/export/test/cli.test.ts,"Implement `generate` and `check` commands writing/validating exports/ in tools/export/src/cli.ts with tests in tools/export/test/cli.test.ts
+
+Phase: Phase 3: User Story 1 - Import backlog into Jira via CSV (Priority: P1) 🎯 MVP
+
+Source: specs/002-task-export/tasks.md:46
+ReplayGuard-ID: 002-task-export-T013",High,Done,002-task-export,us1,
+55,38,Sub-task,T014 Add property test: every task in every tasks.md appears exactly once per format in tools/export/test/completeness.property.test.ts,"Add property test: every task in every tasks.md appears exactly once per format in tools/export/test/completeness.property.test.ts
+
+Phase: Phase 3: User Story 1 - Import backlog into Jira via CSV (Priority: P1) 🎯 MVP
+
+Source: specs/002-task-export/tasks.md:47
+ReplayGuard-ID: 002-task-export-T014",High,Done,002-task-export,us1,
+56,39,Sub-task,T015 Write failing Jira JSON renderer golden test in tools/export/test/jira-json.test.ts,"Write failing Jira JSON renderer golden test in tools/export/test/jira-json.test.ts
+
+Phase: Phase 4: User Story 2 - Create issues through Jira REST (Priority: P2)
+
+Source: specs/002-task-export/tasks.md:57
+ReplayGuard-ID: 002-task-export-T015",Medium,Done,002-task-export,us2,parallel
+57,39,Sub-task,"T016 Write failing importer template tests (plan, skip existing, parent-first, state persistence, retry 429/5xx, stop on 4xx, secrets never logged) in tools/export/test/importer.test.ts","Write failing importer template tests (plan, skip existing, parent-first, state persistence, retry 429/5xx, stop on 4xx, secrets never logged) in tools/export/test/importer.test.ts
+
+Phase: Phase 4: User Story 2 - Create issues through Jira REST (Priority: P2)
+
+Source: specs/002-task-export/tasks.md:58
+ReplayGuard-ID: 002-task-export-T016",Medium,Done,002-task-export,us2,parallel
+58,39,Sub-task,T017 Implement Jira JSON renderer in tools/export/src/render/jira-json.ts,"Implement Jira JSON renderer in tools/export/src/render/jira-json.ts
+
+Phase: Phase 4: User Story 2 - Create issues through Jira REST (Priority: P2)
+
+Source: specs/002-task-export/tasks.md:59
+ReplayGuard-ID: 002-task-export-T017",Medium,Done,002-task-export,us2,
+59,39,Sub-task,T018 Implement Importer template method and ImportState in tools/export/src/import/importer.ts and tools/export/src/import/state.ts,"Implement Importer template method and ImportState in tools/export/src/import/importer.ts and tools/export/src/import/state.ts
+
+Phase: Phase 4: User Story 2 - Create issues through Jira REST (Priority: P2)
+
+Source: specs/002-task-export/tasks.md:60
+ReplayGuard-ID: 002-task-export-T018",Medium,Done,002-task-export,us2,
+60,39,Sub-task,"T019 Implement Jira importer over `HttpPort` (env `JIRA_BASE_URL`, `JIRA_EMAIL`, `JIRA_API_TOKEN`, `JIRA_PROJECT_KEY`) in tools/export/src/import/jira.ts","Implement Jira importer over `HttpPort` (env `JIRA_BASE_URL`, `JIRA_EMAIL`, `JIRA_API_TOKEN`, `JIRA_PROJECT_KEY`) in tools/export/src/import/jira.ts
+
+Phase: Phase 4: User Story 2 - Create issues through Jira REST (Priority: P2)
+
+Source: specs/002-task-export/tasks.md:61
+ReplayGuard-ID: 002-task-export-T019",Medium,Done,002-task-export,us2,
+61,39,Sub-task,T020 Wire `import-jira [--apply] [--include-done]` in tools/export/src/cli.ts,"Wire `import-jira [--apply] [--include-done]` in tools/export/src/cli.ts
+
+Phase: Phase 4: User Story 2 - Create issues through Jira REST (Priority: P2)
+
+Source: specs/002-task-export/tasks.md:62
+ReplayGuard-ID: 002-task-export-T020",Medium,Done,002-task-export,us2,
+62,40,Sub-task,T021 Write failing GitHub plan renderer + importer tests in tools/export/test/github.test.ts,"Write failing GitHub plan renderer + importer tests in tools/export/test/github.test.ts
+
+Phase: Phase 5: User Story 3 - Create GitHub Issues (Priority: P2)
+
+Source: specs/002-task-export/tasks.md:72
+ReplayGuard-ID: 002-task-export-T021",Medium,Done,002-task-export,us3,parallel
+63,40,Sub-task,T022 Implement GitHub issues plan renderer in tools/export/src/render/github.ts,"Implement GitHub issues plan renderer in tools/export/src/render/github.ts
+
+Phase: Phase 5: User Story 3 - Create GitHub Issues (Priority: P2)
+
+Source: specs/002-task-export/tasks.md:73
+ReplayGuard-ID: 002-task-export-T022",Medium,Done,002-task-export,us3,
+64,40,Sub-task,"T023 Implement GitHub importer via `CommandPort` (`execFile(""gh"", args)`, no shell) in tools/export/src/import/github.ts","Implement GitHub importer via `CommandPort` (`execFile(""gh"", args)`, no shell) in tools/export/src/import/github.ts
+
+Phase: Phase 5: User Story 3 - Create GitHub Issues (Priority: P2)
+
+Source: specs/002-task-export/tasks.md:74
+ReplayGuard-ID: 002-task-export-T023",Medium,Done,002-task-export,us3,
+65,40,Sub-task,T024 Wire `import-github [--apply] [--repo]` in tools/export/src/cli.ts,"Wire `import-github [--apply] [--repo]` in tools/export/src/cli.ts
+
+Phase: Phase 5: User Story 3 - Create GitHub Issues (Priority: P2)
+
+Source: specs/002-task-export/tasks.md:75
+ReplayGuard-ID: 002-task-export-T024",Medium,Done,002-task-export,us3,
+66,41,Sub-task,T025 Write failing generic CSV test in tools/export/test/generic-csv.test.ts,"Write failing generic CSV test in tools/export/test/generic-csv.test.ts
+
+Phase: Phase 6: User Story 4 - Generic CSV (Priority: P3)
+
+Source: specs/002-task-export/tasks.md:85
+ReplayGuard-ID: 002-task-export-T025",Low,Done,002-task-export,us4,parallel
+67,41,Sub-task,T026 Implement generic CSV renderer in tools/export/src/render/generic-csv.ts,"Implement generic CSV renderer in tools/export/src/render/generic-csv.ts
+
+Phase: Phase 6: User Story 4 - Generic CSV (Priority: P3)
+
+Source: specs/002-task-export/tasks.md:86
+ReplayGuard-ID: 002-task-export-T026",Low,Done,002-task-export,us4,
+68,37,Task,T027 Write import guides per tracker in tools/export/README.md,"Write import guides per tracker in tools/export/README.md
+
+Phase: Phase 7: Polish & Cross-Cutting Concerns
+
+Source: specs/002-task-export/tasks.md:92
+ReplayGuard-ID: 002-task-export-T027",Medium,Done,002-task-export,polish,parallel
+69,37,Task,T028 Add performance test (< 5 s for all features) in tools/export/test/perf.test.ts,"Add performance test (< 5 s for all features) in tools/export/test/perf.test.ts
+
+Phase: Phase 7: Polish & Cross-Cutting Concerns
+
+Source: specs/002-task-export/tasks.md:93
+ReplayGuard-ID: 002-task-export-T028",Medium,Done,002-task-export,polish,parallel
+70,37,Task,T029 Author diagrams covering T001–T030 in specs/002-task-export/diagram.yaml,"Author diagrams covering T001–T030 in specs/002-task-export/diagram.yaml
+
+Phase: Phase 7: Polish & Cross-Cutting Concerns
+
+Source: specs/002-task-export/tasks.md:94
+ReplayGuard-ID: 002-task-export-T029",Medium,Done,002-task-export,polish,
+71,37,Task,T030 Generate exports/ for all features and validate quickstart in specs/002-task-export/quickstart.md,"Generate exports/ for all features and validate quickstart in specs/002-task-export/quickstart.md
+
+Phase: Phase 7: Polish & Cross-Cutting Concerns
+
+Source: specs/002-task-export/tasks.md:95
+ReplayGuard-ID: 002-task-export-T030",Medium,Done,002-task-export,polish,
+72,,Epic,"003 Quality, Security & Release Pipeline","Quality, Security & Release Pipeline (003-quality-pipeline).
+
+Source: specs/003-quality-pipeline/spec.md:1
+ReplayGuard-ID: 003-quality-pipeline",High,To Do,003-quality-pipeline,,
+73,72,Story,US1: Every pull request is gated on quality,"User story 1 (P1) of 003-quality-pipeline.
+
+Source: specs/003-quality-pipeline/spec.md:13
+ReplayGuard-ID: 003-quality-pipeline-US1",High,To Do,003-quality-pipeline,us1,
+74,72,Story,US2: Security scanning on every change,"User story 2 (P1) of 003-quality-pipeline.
+
+Source: specs/003-quality-pipeline/spec.md:38
+ReplayGuard-ID: 003-quality-pipeline-US2",High,To Do,003-quality-pipeline,us2,
+75,72,Story,US3: Mutation testing proves tests catch bugs,"User story 3 (P2) of 003-quality-pipeline.
+
+Source: specs/003-quality-pipeline/spec.md:61
+ReplayGuard-ID: 003-quality-pipeline-US3",Medium,To Do,003-quality-pipeline,us3,
+76,72,Story,US4: Trustworthy releases,"User story 4 (P2) of 003-quality-pipeline.
+
+Source: specs/003-quality-pipeline/spec.md:77
+ReplayGuard-ID: 003-quality-pipeline-US4",Medium,To Do,003-quality-pipeline,us4,
+77,72,Story,US5: Generated API documentation,"User story 5 (P3) of 003-quality-pipeline.
+
+Source: specs/003-quality-pipeline/spec.md:95
+ReplayGuard-ID: 003-quality-pipeline-US5",Low,To Do,003-quality-pipeline,us5,
+78,72,Task,"T001 Create shared config factories `defineTsupConfig`, `defineVitestConfig` (coverage 90/90/90/90) in config/tsup.base.ts and config/vitest.base.ts","Create shared config factories `defineTsupConfig`, `defineVitestConfig` (coverage 90/90/90/90) in config/tsup.base.ts and config/vitest.base.ts
+
+Phase: Phase 1: Setup (Shared Infrastructure)
+
+Source: specs/003-quality-pipeline/tasks.md:18
+ReplayGuard-ID: 003-quality-pipeline-T001",Medium,To Do,003-quality-pipeline,setup,
+79,72,Task,"T002 Create Stryker base config (vitest runner, `break: 75`) in config/stryker.base.json","Create Stryker base config (vitest runner, `break: 75`) in config/stryker.base.json
+
+Phase: Phase 1: Setup (Shared Infrastructure)
+
+Source: specs/003-quality-pipeline/tasks.md:19
+ReplayGuard-ID: 003-quality-pipeline-T002",Medium,To Do,003-quality-pipeline,setup,parallel
+80,72,Task,"T003 Scaffold `@replayguard/core` (package.json exports ESM/CJS/types, tsconfig, tsup, vitest, src/index.ts) in packages/core/","Scaffold `@replayguard/core` (package.json exports ESM/CJS/types, tsconfig, tsup, vitest, src/index.ts) in packages/core/
+
+Phase: Phase 1: Setup (Shared Infrastructure)
+
+Source: specs/003-quality-pipeline/tasks.md:20
+ReplayGuard-ID: 003-quality-pipeline-T003",Medium,To Do,003-quality-pipeline,setup,
+81,72,Task,T004 Scaffold `@replayguard/fakes` in packages/fakes/,"Scaffold `@replayguard/fakes` in packages/fakes/
+
+Phase: Phase 1: Setup (Shared Infrastructure)
+
+Source: specs/003-quality-pipeline/tasks.md:21
+ReplayGuard-ID: 003-quality-pipeline-T004",Medium,To Do,003-quality-pipeline,setup,parallel
+82,72,Task,T005 Scaffold `@replayguard/adapter-workflows` (peer `@rivet-dev/workflows ^1.0.0`) in packages/adapter-workflows/,"Scaffold `@replayguard/adapter-workflows` (peer `@rivet-dev/workflows ^1.0.0`) in packages/adapter-workflows/
+
+Phase: Phase 1: Setup (Shared Infrastructure)
+
+Source: specs/003-quality-pipeline/tasks.md:22
+ReplayGuard-ID: 003-quality-pipeline-T005",Medium,To Do,003-quality-pipeline,setup,parallel
+83,72,Task,T006 Scaffold `@replayguard/reporter-console` in packages/reporter-console/,"Scaffold `@replayguard/reporter-console` in packages/reporter-console/
+
+Phase: Phase 1: Setup (Shared Infrastructure)
+
+Source: specs/003-quality-pipeline/tasks.md:23
+ReplayGuard-ID: 003-quality-pipeline-T006",Medium,To Do,003-quality-pipeline,setup,parallel
+84,72,Task,T007 Scaffold `@replayguard/reporter-html` in packages/reporter-html/,"Scaffold `@replayguard/reporter-html` in packages/reporter-html/
+
+Phase: Phase 1: Setup (Shared Infrastructure)
+
+Source: specs/003-quality-pipeline/tasks.md:24
+ReplayGuard-ID: 003-quality-pipeline-T007",Medium,To Do,003-quality-pipeline,setup,parallel
+85,72,Task,T008 Scaffold `@replayguard/vitest` (peer `vitest >=4 <6`) in packages/vitest/,"Scaffold `@replayguard/vitest` (peer `vitest >=4 <6`) in packages/vitest/
+
+Phase: Phase 1: Setup (Shared Infrastructure)
+
+Source: specs/003-quality-pipeline/tasks.md:25
+ReplayGuard-ID: 003-quality-pipeline-T008",Medium,To Do,003-quality-pipeline,setup,parallel
+86,72,Task,"T009 Scaffold `@replayguard/adapter-rivetkit` (peers rivetkit, workflows) in packages/adapter-rivetkit/","Scaffold `@replayguard/adapter-rivetkit` (peers rivetkit, workflows) in packages/adapter-rivetkit/
+
+Phase: Phase 1: Setup (Shared Infrastructure)
+
+Source: specs/003-quality-pipeline/tasks.md:26
+ReplayGuard-ID: 003-quality-pipeline-T009",Medium,To Do,003-quality-pipeline,setup,parallel
+87,72,Task,T010 Scaffold facade `replayguard` in packages/replayguard/,"Scaffold facade `replayguard` in packages/replayguard/
+
+Phase: Phase 1: Setup (Shared Infrastructure)
+
+Source: specs/003-quality-pipeline/tasks.md:27
+ReplayGuard-ID: 003-quality-pipeline-T010",Medium,To Do,003-quality-pipeline,setup,parallel
+88,72,Task,"T011 Install root dev dependencies (tsup, vitest, coverage-v8, fast-check, stryker, dependency-cruiser, lefthook, typedoc, changesets) and `valibot` as runtime dependency of core, respecting 7-day release age, in package.json and packages/core/package.js…","Install root dev dependencies (tsup, vitest, coverage-v8, fast-check, stryker, dependency-cruiser, lefthook, typedoc, changesets) and `valibot` as runtime dependency of core, respecting 7-day release age, in package.json and packages/core/package.json
+
+Phase: Phase 1: Setup (Shared Infrastructure)
+
+Source: specs/003-quality-pipeline/tasks.md:28
+ReplayGuard-ID: 003-quality-pipeline-T011",Medium,To Do,003-quality-pipeline,setup,
+89,72,Task,"T012 Add `pnpm verify` facade script and per-task Turbo pipeline (lint, boundaries, check-types, test, diagrams:check, export:check, docs) in package.json and turbo.json","Add `pnpm verify` facade script and per-task Turbo pipeline (lint, boundaries, check-types, test, diagrams:check, export:check, docs) in package.json and turbo.json
+
+Phase: Phase 2: Foundational (Blocking Prerequisites)
+
+Source: specs/003-quality-pipeline/tasks.md:34
+ReplayGuard-ID: 003-quality-pipeline-T012",Medium,To Do,003-quality-pipeline,foundational,
+90,72,Task,"T013 Add CONTRIBUTING.md (Spec Kit flow, gates, commit convention) and SECURITY.md (reporting policy) at repository root","Add CONTRIBUTING.md (Spec Kit flow, gates, commit convention) and SECURITY.md (reporting policy) at repository root
+
+Phase: Phase 2: Foundational (Blocking Prerequisites)
+
+Source: specs/003-quality-pipeline/tasks.md:35
+ReplayGuard-ID: 003-quality-pipeline-T013",Medium,To Do,003-quality-pipeline,foundational,
+91,73,Sub-task,T014 Write failing boundary tests with fixture violations for each forbidden edge in tools/quality/test/boundaries.test.ts,"Write failing boundary tests with fixture violations for each forbidden edge in tools/quality/test/boundaries.test.ts
+
+Phase: Phase 3: User Story 1 - Every pull request is gated on quality (Priority: P1) 🎯 MVP
+
+Source: specs/003-quality-pipeline/tasks.md:47
+ReplayGuard-ID: 003-quality-pipeline-T014",High,To Do,003-quality-pipeline,us1,parallel
+92,73,Sub-task,T015 Implement dependency-cruiser rules encoding constitution edges in tools/quality/.dependency-cruiser.cjs and tools/quality/package.json,"Implement dependency-cruiser rules encoding constitution edges in tools/quality/.dependency-cruiser.cjs and tools/quality/package.json
+
+Phase: Phase 3: User Story 1 - Every pull request is gated on quality (Priority: P1) 🎯 MVP
+
+Source: specs/003-quality-pipeline/tasks.md:48
+ReplayGuard-ID: 003-quality-pipeline-T015",High,To Do,003-quality-pipeline,us1,
+93,73,Sub-task,"T016 Create CI workflow (ubuntu/windows/macos × Node 22/24, fail-fast false, SHA-pinned actions, `permissions: contents: read`) in .github/workflows/ci.yml","Create CI workflow (ubuntu/windows/macos × Node 22/24, fail-fast false, SHA-pinned actions, `permissions: contents: read`) in .github/workflows/ci.yml
+
+Phase: Phase 3: User Story 1 - Every pull request is gated on quality (Priority: P1) 🎯 MVP
+
+Source: specs/003-quality-pipeline/tasks.md:49
+ReplayGuard-ID: 003-quality-pipeline-T016",High,To Do,003-quality-pipeline,us1,
+94,73,Sub-task,T017 Add actionlint job validating workflows in .github/workflows/ci.yml,"Add actionlint job validating workflows in .github/workflows/ci.yml
+
+Phase: Phase 3: User Story 1 - Every pull request is gated on quality (Priority: P1) 🎯 MVP
+
+Source: specs/003-quality-pipeline/tasks.md:50
+ReplayGuard-ID: 003-quality-pipeline-T017",High,To Do,003-quality-pipeline,us1,parallel
+95,73,Sub-task,T018 Add lefthook config (pre-commit Biome staged + gitleaks protect; commit-msg Conventional Commits) in lefthook.yml,"Add lefthook config (pre-commit Biome staged + gitleaks protect; commit-msg Conventional Commits) in lefthook.yml
+
+Phase: Phase 3: User Story 1 - Every pull request is gated on quality (Priority: P1) 🎯 MVP
+
+Source: specs/003-quality-pipeline/tasks.md:51
+ReplayGuard-ID: 003-quality-pipeline-T018",High,To Do,003-quality-pipeline,us1,parallel
+96,74,Sub-task,T019 Create security workflow (CodeQL security-extended; OSV-Scanner fail on high/critical; gitleaks full history) in .github/workflows/security.yml,"Create security workflow (CodeQL security-extended; OSV-Scanner fail on high/critical; gitleaks full history) in .github/workflows/security.yml
+
+Phase: Phase 4: User Story 2 - Security scanning on every change (Priority: P1)
+
+Source: specs/003-quality-pipeline/tasks.md:61
+ReplayGuard-ID: 003-quality-pipeline-T019",High,To Do,003-quality-pipeline,us2,
+97,74,Sub-task,T020 Add gitleaks config with allowlist for test fixtures in .gitleaks.toml,"Add gitleaks config with allowlist for test fixtures in .gitleaks.toml
+
+Phase: Phase 4: User Story 2 - Security scanning on every change (Priority: P1)
+
+Source: specs/003-quality-pipeline/tasks.md:62
+ReplayGuard-ID: 003-quality-pipeline-T020",High,To Do,003-quality-pipeline,us2,parallel
+98,74,Sub-task,"T021 Add Renovate config (`minimumReleaseAge: ""7 days""`, grouped updates, `helpers:pinGitHubActionDigests`) in renovate.json","Add Renovate config (`minimumReleaseAge: ""7 days""`, grouped updates, `helpers:pinGitHubActionDigests`) in renovate.json
+
+Phase: Phase 4: User Story 2 - Security scanning on every change (Priority: P1)
+
+Source: specs/003-quality-pipeline/tasks.md:63
+ReplayGuard-ID: 003-quality-pipeline-T021",High,To Do,003-quality-pipeline,us2,parallel
+99,74,Sub-task,T022 Add CODEOWNERS for workflows and security-sensitive paths in .github/CODEOWNERS,"Add CODEOWNERS for workflows and security-sensitive paths in .github/CODEOWNERS
+
+Phase: Phase 4: User Story 2 - Security scanning on every change (Priority: P1)
+
+Source: specs/003-quality-pipeline/tasks.md:64
+ReplayGuard-ID: 003-quality-pipeline-T022",High,To Do,003-quality-pipeline,us2,parallel
+100,75,Sub-task,T023 Add per-package Stryker configs extending base (core: separate 85% config for faults/ and classifier/) in packages/core/stryker.config.json,"Add per-package Stryker configs extending base (core: separate 85% config for faults/ and classifier/) in packages/core/stryker.config.json
+
+Phase: Phase 5: User Story 3 - Mutation testing (Priority: P2)
+
+Source: specs/003-quality-pipeline/tasks.md:74
+ReplayGuard-ID: 003-quality-pipeline-T023",Medium,To Do,003-quality-pipeline,us3,
+101,75,Sub-task,"T024 Create mutation workflow (weekly + PR paths packages/core/**, incremental cache, upload HTML report) in .github/workflows/mutation.yml","Create mutation workflow (weekly + PR paths packages/core/**, incremental cache, upload HTML report) in .github/workflows/mutation.yml
+
+Phase: Phase 5: User Story 3 - Mutation testing (Priority: P2)
+
+Source: specs/003-quality-pipeline/tasks.md:75
+ReplayGuard-ID: 003-quality-pipeline-T024",Medium,To Do,003-quality-pipeline,us3,
+102,76,Sub-task,"T025 Initialize Changesets (`access: public`, linked `@replayguard/*`) in .changeset/config.json","Initialize Changesets (`access: public`, linked `@replayguard/*`) in .changeset/config.json
+
+Phase: Phase 6: User Story 4 - Trustworthy releases (Priority: P2)
+
+Source: specs/003-quality-pipeline/tasks.md:85
+ReplayGuard-ID: 003-quality-pipeline-T025",Medium,To Do,003-quality-pipeline,us4,
+103,76,Sub-task,"T026 Create release workflow (changesets/action, `id-token: write`, `pnpm -r publish --provenance`, anchore/sbom-action per tarball, `gh release create` with SBOMs, `git tag -v` verification) in .github/workflows/release.yml","Create release workflow (changesets/action, `id-token: write`, `pnpm -r publish --provenance`, anchore/sbom-action per tarball, `gh release create` with SBOMs, `git tag -v` verification) in .github/workflows/release.yml
+
+Phase: Phase 6: User Story 4 - Trustworthy releases (Priority: P2)
+
+Source: specs/003-quality-pipeline/tasks.md:86
+ReplayGuard-ID: 003-quality-pipeline-T026",Medium,To Do,003-quality-pipeline,us4,
+104,76,Sub-task,"T027 Document maintainer release steps (signed tags, trusted publishing setup) in docs/maintainers/releasing.md","Document maintainer release steps (signed tags, trusted publishing setup) in docs/maintainers/releasing.md
+
+Phase: Phase 6: User Story 4 - Trustworthy releases (Priority: P2)
+
+Source: specs/003-quality-pipeline/tasks.md:87
+ReplayGuard-ID: 003-quality-pipeline-T027",Medium,To Do,003-quality-pipeline,us4,parallel
+105,77,Sub-task,"T028 Add TypeDoc config (`entryPointStrategy: packages`, `treatWarningsAsErrors`, `validation.notDocumented`) in typedoc.json","Add TypeDoc config (`entryPointStrategy: packages`, `treatWarningsAsErrors`, `validation.notDocumented`) in typedoc.json
+
+Phase: Phase 7: User Story 5 - Generated API documentation (Priority: P3)
+
+Source: specs/003-quality-pipeline/tasks.md:97
+ReplayGuard-ID: 003-quality-pipeline-T028",Low,To Do,003-quality-pipeline,us5,
+106,77,Sub-task,T029 Create docs workflow in .github/workflows/docs.yml,"Create docs workflow in .github/workflows/docs.yml
+
+Phase: Phase 7: User Story 5 - Generated API documentation (Priority: P3)
+
+Source: specs/003-quality-pipeline/tasks.md:98
+ReplayGuard-ID: 003-quality-pipeline-T029",Low,To Do,003-quality-pipeline,us5,
+107,72,Task,"T030 Add README with badges, install, quick example in README.md","Add README with badges, install, quick example in README.md
+
+Phase: Phase 8: Polish & Cross-Cutting Concerns
+
+Source: specs/003-quality-pipeline/tasks.md:104
+ReplayGuard-ID: 003-quality-pipeline-T030",Medium,To Do,003-quality-pipeline,polish,parallel
+108,72,Task,T031 Author diagrams covering T001–T032 in specs/003-quality-pipeline/diagram.yaml,"Author diagrams covering T001–T032 in specs/003-quality-pipeline/diagram.yaml
+
+Phase: Phase 8: Polish & Cross-Cutting Concerns
+
+Source: specs/003-quality-pipeline/tasks.md:105
+ReplayGuard-ID: 003-quality-pipeline-T031",Medium,To Do,003-quality-pipeline,polish,
+109,72,Task,"T032 Run `pnpm verify` end-to-end, record CI duration against the 15-minute target (SC-002) and validate quickstart in specs/003-quality-pipeline/quickstart.md","Run `pnpm verify` end-to-end, record CI duration against the 15-minute target (SC-002) and validate quickstart in specs/003-quality-pipeline/quickstart.md
+
+Phase: Phase 8: Polish & Cross-Cutting Concerns
+
+Source: specs/003-quality-pipeline/tasks.md:106
+ReplayGuard-ID: 003-quality-pipeline-T032",Medium,To Do,003-quality-pipeline,polish,
+110,,Epic,004 Effect Ledger & Instrumentation,"Effect Ledger & Instrumentation (004-effect-ledger).
+
+Source: specs/004-effect-ledger/spec.md:1
+ReplayGuard-ID: 004-effect-ledger",High,To Do,004-effect-ledger,,
+111,110,Story,US1: Instrument my own side-effect function,"User story 1 (P1) of 004-effect-ledger.
+
+Source: specs/004-effect-ledger/spec.md:23
+ReplayGuard-ID: 004-effect-ledger-US1",High,To Do,004-effect-ledger,us1,
+112,110,Story,US2: Record provider-side deduplication,"User story 2 (P1) of 004-effect-ledger.
+
+Source: specs/004-effect-ledger/spec.md:48
+ReplayGuard-ID: 004-effect-ledger-US2",High,To Do,004-effect-ledger,us2,
+113,110,Story,US3: Observe in-flight effects at the moment of a fault,"User story 3 (P1) of 004-effect-ledger.
+
+Source: specs/004-effect-ledger/spec.md:69
+ReplayGuard-ID: 004-effect-ledger-US3",High,To Do,004-effect-ledger,us3,
+114,110,Story,US4: Subscribe to effects as they happen,"User story 4 (P2) of 004-effect-ledger.
+
+Source: specs/004-effect-ledger/spec.md:91
+ReplayGuard-ID: 004-effect-ledger-US4",Medium,To Do,004-effect-ledger,us4,
+115,110,Task,"T001 Create module folders `ports/`, `ledger/`, `instrument/` and barrel exports in packages/core/src/index.ts","Create module folders `ports/`, `ledger/`, `instrument/` and barrel exports in packages/core/src/index.ts
+
+Phase: Phase 1: Setup (Shared Infrastructure)
+
+Source: specs/004-effect-ledger/tasks.md:18
+ReplayGuard-ID: 004-effect-ledger-T001",Medium,To Do,004-effect-ledger,setup,
+116,110,Task,"T002 Write failing tests for error hierarchy (`ReplayGuardError` with stable `code`, `ConfigError`, `CrashSignal`, `HarnessError`, `BudgetExceededError`, `SchemaError`) in packages/core/test/errors.test.ts","Write failing tests for error hierarchy (`ReplayGuardError` with stable `code`, `ConfigError`, `CrashSignal`, `HarnessError`, `BudgetExceededError`, `SchemaError`) in packages/core/test/errors.test.ts
+
+Phase: Phase 2: Foundational (Blocking Prerequisites)
+
+Source: specs/004-effect-ledger/tasks.md:24
+ReplayGuard-ID: 004-effect-ledger-T002",Medium,To Do,004-effect-ledger,foundational,parallel
+117,110,Task,T003 Implement error hierarchy in packages/core/src/errors.ts,"Implement error hierarchy in packages/core/src/errors.ts
+
+Phase: Phase 2: Foundational (Blocking Prerequisites)
+
+Source: specs/004-effect-ledger/tasks.md:25
+ReplayGuard-ID: 004-effect-ledger-T003",Medium,To Do,004-effect-ledger,foundational,
+118,110,Task,T004 Write failing tests for `systemClock` monotonicity and `manualClock` advance/set in packages/core/test/clock.test.ts,"Write failing tests for `systemClock` monotonicity and `manualClock` advance/set in packages/core/test/clock.test.ts
+
+Phase: Phase 2: Foundational (Blocking Prerequisites)
+
+Source: specs/004-effect-ledger/tasks.md:26
+ReplayGuard-ID: 004-effect-ledger-T004",Medium,To Do,004-effect-ledger,foundational,parallel
+119,110,Task,"T005 Implement `Clock`, `systemClock`, `manualClock` in packages/core/src/ports/clock.ts","Implement `Clock`, `systemClock`, `manualClock` in packages/core/src/ports/clock.ts
+
+Phase: Phase 2: Foundational (Blocking Prerequisites)
+
+Source: specs/004-effect-ledger/tasks.md:27
+ReplayGuard-ID: 004-effect-ledger-T005",Medium,To Do,004-effect-ledger,foundational,
+120,110,Task,"T006 Write failing canonical serialization + FNV-1a-64 tests incl. fast-check (key-order independence, Date/Map/Set handling, unhashable → `RG_CONFIG_UNHASHABLE`) in packages/core/test/canonical.test.ts","Write failing canonical serialization + FNV-1a-64 tests incl. fast-check (key-order independence, Date/Map/Set handling, unhashable → `RG_CONFIG_UNHASHABLE`) in packages/core/test/canonical.test.ts
+
+Phase: Phase 2: Foundational (Blocking Prerequisites)
+
+Source: specs/004-effect-ledger/tasks.md:28
+ReplayGuard-ID: 004-effect-ledger-T006",Medium,To Do,004-effect-ledger,foundational,parallel
+121,110,Task,T007 Implement `canonicalize` and `canonicalHash` in packages/core/src/ledger/canonical.ts,"Implement `canonicalize` and `canonicalHash` in packages/core/src/ledger/canonical.ts
+
+Phase: Phase 2: Foundational (Blocking Prerequisites)
+
+Source: specs/004-effect-ledger/tasks.md:29
+ReplayGuard-ID: 004-effect-ledger-T007",Medium,To Do,004-effect-ledger,foundational,
+122,110,Task,"T008 Define ledger types (EffectAttempt status machine ""started → applied | deduplicated | failed"", RunRecord, FaultEvent, LedgerEvent, LedgerSnapshot version 1, PendingCall) in packages/core/src/ledger/types.ts","Define ledger types (EffectAttempt status machine ""started → applied | deduplicated | failed"", RunRecord, FaultEvent, LedgerEvent, LedgerSnapshot version 1, PendingCall) in packages/core/src/ledger/types.ts
+
+Phase: Phase 2: Foundational (Blocking Prerequisites)
+
+Source: specs/004-effect-ledger/tasks.md:30
+ReplayGuard-ID: 004-effect-ledger-T008",Medium,To Do,004-effect-ledger,foundational,
+123,111,Sub-task,"T009 Write failing ledger core tests (beginRun/endRun, startAttempt/settleAttempt transitions, seq monotonic, kind/identity occurrences, snapshot deep-frozen) in packages/core/test/ledger.test.ts","Write failing ledger core tests (beginRun/endRun, startAttempt/settleAttempt transitions, seq monotonic, kind/identity occurrences, snapshot deep-frozen) in packages/core/test/ledger.test.ts
+
+Phase: Phase 3: User Story 1 - Instrument my own side-effect function (Priority: P1) 🎯 MVP
+
+Source: specs/004-effect-ledger/tasks.md:42
+ReplayGuard-ID: 004-effect-ledger-T009",High,To Do,004-effect-ledger,us1,parallel
+124,111,Sub-task,"T010 Write failing instrument tests (return passthrough, error rethrow unchanged, identity default/custom subject, sync return values, kind validation ""1–64 chars"") in packages/core/test/instrument.test.ts","Write failing instrument tests (return passthrough, error rethrow unchanged, identity default/custom subject, sync return values, kind validation ""1–64 chars"") in packages/core/test/instrument.test.ts
+
+Phase: Phase 3: User Story 1 - Instrument my own side-effect function (Priority: P1) 🎯 MVP
+
+Source: specs/004-effect-ledger/tasks.md:43
+ReplayGuard-ID: 004-effect-ledger-T010",High,To Do,004-effect-ledger,us1,parallel
+125,111,Sub-task,T011 Implement `EffectLedger` attempt/run recording and snapshot in packages/core/src/ledger/ledger.ts,"Implement `EffectLedger` attempt/run recording and snapshot in packages/core/src/ledger/ledger.ts
+
+Phase: Phase 3: User Story 1 - Instrument my own side-effect function (Priority: P1) 🎯 MVP
+
+Source: specs/004-effect-ledger/tasks.md:44
+ReplayGuard-ID: 004-effect-ledger-T011",High,To Do,004-effect-ledger,us1,
+126,111,Sub-task,T012 Implement `instrument()` call sequence (contracts/ledger-api.md steps 1–7) in packages/core/src/instrument/instrument.ts,"Implement `instrument()` call sequence (contracts/ledger-api.md steps 1–7) in packages/core/src/instrument/instrument.ts
+
+Phase: Phase 3: User Story 1 - Instrument my own side-effect function (Priority: P1) 🎯 MVP
+
+Source: specs/004-effect-ledger/tasks.md:45
+ReplayGuard-ID: 004-effect-ledger-T012",High,To Do,004-effect-ledger,us1,
+127,111,Sub-task,T013 Add fast-check property: every call yields exactly one settled attempt with matching status in packages/core/test/instrument.property.test.ts,"Add fast-check property: every call yields exactly one settled attempt with matching status in packages/core/test/instrument.property.test.ts
+
+Phase: Phase 3: User Story 1 - Instrument my own side-effect function (Priority: P1) 🎯 MVP
+
+Source: specs/004-effect-ledger/tasks.md:46
+ReplayGuard-ID: 004-effect-ledger-T013",High,To Do,004-effect-ledger,us1,
+128,112,Sub-task,"T014 Write failing tests for idempotency key extraction (""≤ 255 chars"") and dedup detection in packages/core/test/instrument.dedup.test.ts","Write failing tests for idempotency key extraction (""≤ 255 chars"") and dedup detection in packages/core/test/instrument.dedup.test.ts
+
+Phase: Phase 4: User Story 2 - Record provider-side deduplication (Priority: P1)
+
+Source: specs/004-effect-ledger/tasks.md:56
+ReplayGuard-ID: 004-effect-ledger-T014",High,To Do,004-effect-ledger,us2,parallel
+129,112,Sub-task,T015 Implement key extraction and `deduplicated` status in packages/core/src/instrument/instrument.ts,"Implement key extraction and `deduplicated` status in packages/core/src/instrument/instrument.ts
+
+Phase: Phase 4: User Story 2 - Record provider-side deduplication (Priority: P1)
+
+Source: specs/004-effect-ledger/tasks.md:57
+ReplayGuard-ID: 004-effect-ledger-T015",High,To Do,004-effect-ledger,us2,
+130,112,Sub-task,"T016 Implement count queries (applied, deduplicated per identity) in packages/core/src/ledger/queries.ts with tests in packages/core/test/queries.test.ts","Implement count queries (applied, deduplicated per identity) in packages/core/src/ledger/queries.ts with tests in packages/core/test/queries.test.ts
+
+Phase: Phase 4: User Story 2 - Record provider-side deduplication (Priority: P1)
+
+Source: specs/004-effect-ledger/tasks.md:58
+ReplayGuard-ID: 004-effect-ledger-T016",High,To Do,004-effect-ledger,us2,
+131,113,Sub-task,"T017 Write failing tests for `recordFault`, in-flight flagging, `markRunDead`/`isRunDead` (dead run throws `CrashSignal` before start), late completion until `finalize()` in packages/core/test/ledger.faults.test.ts","Write failing tests for `recordFault`, in-flight flagging, `markRunDead`/`isRunDead` (dead run throws `CrashSignal` before start), late completion until `finalize()` in packages/core/test/ledger.faults.test.ts
+
+Phase: Phase 5: User Story 3 - Observe in-flight effects at the moment of a fault (Priority: P1)
+
+Source: specs/004-effect-ledger/tasks.md:68
+ReplayGuard-ID: 004-effect-ledger-T017",High,To Do,004-effect-ledger,us3,parallel
+132,113,Sub-task,"T018 Write failing overlap query tests incl. property (symmetry, zero-length intervals excluded) in packages/core/test/queries.overlap.test.ts","Write failing overlap query tests incl. property (symmetry, zero-length intervals excluded) in packages/core/test/queries.overlap.test.ts
+
+Phase: Phase 5: User Story 3 - Observe in-flight effects at the moment of a fault (Priority: P1)
+
+Source: specs/004-effect-ledger/tasks.md:69
+ReplayGuard-ID: 004-effect-ledger-T018",High,To Do,004-effect-ledger,us3,parallel
+133,113,Sub-task,"T019 Implement fault recording, dead runs and finalize in packages/core/src/ledger/ledger.ts","Implement fault recording, dead runs and finalize in packages/core/src/ledger/ledger.ts
+
+Phase: Phase 5: User Story 3 - Observe in-flight effects at the moment of a fault (Priority: P1)
+
+Source: specs/004-effect-ledger/tasks.md:70
+ReplayGuard-ID: 004-effect-ledger-T019",High,To Do,004-effect-ledger,us3,
+134,113,Sub-task,T020 Implement `overlapping(identity)` in packages/core/src/ledger/queries.ts,"Implement `overlapping(identity)` in packages/core/src/ledger/queries.ts
+
+Phase: Phase 5: User Story 3 - Observe in-flight effects at the moment of a fault (Priority: P1)
+
+Source: specs/004-effect-ledger/tasks.md:71
+ReplayGuard-ID: 004-effect-ledger-T020",High,To Do,004-effect-ledger,us3,
+135,114,Sub-task,T021 Write failing tests for `subscribe` ordering/unsubscribe and observer error isolation in packages/core/test/ledger.subscribe.test.ts,"Write failing tests for `subscribe` ordering/unsubscribe and observer error isolation in packages/core/test/ledger.subscribe.test.ts
+
+Phase: Phase 6: User Story 4 - Subscribe to effects as they happen (Priority: P2)
+
+Source: specs/004-effect-ledger/tasks.md:81
+ReplayGuard-ID: 004-effect-ledger-T021",Medium,To Do,004-effect-ledger,us4,parallel
+136,114,Sub-task,"T022 Write failing tests for `addHooks` (`beforeStart` throw prevents start, `inFlight` await delays, `afterSettle` throw propagates after attempt recorded, async `afterSettle` awaited) in packages/core/test/ledger.hooks.test.ts","Write failing tests for `addHooks` (`beforeStart` throw prevents start, `inFlight` await delays, `afterSettle` throw propagates after attempt recorded, async `afterSettle` awaited) in packages/core/test/ledger.hooks.test.ts
+
+Phase: Phase 6: User Story 4 - Subscribe to effects as they happen (Priority: P2)
+
+Source: specs/004-effect-ledger/tasks.md:82
+ReplayGuard-ID: 004-effect-ledger-T022",Medium,To Do,004-effect-ledger,us4,parallel
+137,114,Sub-task,T023 Implement observers and hooks in packages/core/src/ledger/ledger.ts and wire into packages/core/src/instrument/instrument.ts,"Implement observers and hooks in packages/core/src/ledger/ledger.ts and wire into packages/core/src/instrument/instrument.ts
+
+Phase: Phase 6: User Story 4 - Subscribe to effects as they happen (Priority: P2)
+
+Source: specs/004-effect-ledger/tasks.md:83
+ReplayGuard-ID: 004-effect-ledger-T023",Medium,To Do,004-effect-ledger,us4,
+138,110,Task,T024 Implement opt-in `preview` option (no raw args stored by default) with tests in packages/core/src/instrument/instrument.ts and packages/core/test/instrument.preview.test.ts,"Implement opt-in `preview` option (no raw args stored by default) with tests in packages/core/src/instrument/instrument.ts and packages/core/test/instrument.preview.test.ts
+
+Phase: Phase 7: Polish & Cross-Cutting Concerns
+
+Source: specs/004-effect-ledger/tasks.md:89
+ReplayGuard-ID: 004-effect-ledger-T024",Medium,To Do,004-effect-ledger,polish,parallel
+139,110,Task,T025 Add overhead benchmark (< 1 ms per call) in packages/core/test/instrument.bench.test.ts,"Add overhead benchmark (< 1 ms per call) in packages/core/test/instrument.bench.test.ts
+
+Phase: Phase 7: Polish & Cross-Cutting Concerns
+
+Source: specs/004-effect-ledger/tasks.md:90
+ReplayGuard-ID: 004-effect-ledger-T025",Medium,To Do,004-effect-ledger,polish,parallel
+140,110,Task,T026 TSDoc with `@example` for all exports and concept guide in docs/concepts/effects.md,"TSDoc with `@example` for all exports and concept guide in docs/concepts/effects.md
+
+Phase: Phase 7: Polish & Cross-Cutting Concerns
+
+Source: specs/004-effect-ledger/tasks.md:91
+ReplayGuard-ID: 004-effect-ledger-T026",Medium,To Do,004-effect-ledger,polish,parallel
+141,110,Task,T027 Author diagrams covering T001–T028 in specs/004-effect-ledger/diagram.yaml,"Author diagrams covering T001–T028 in specs/004-effect-ledger/diagram.yaml
+
+Phase: Phase 7: Polish & Cross-Cutting Concerns
+
+Source: specs/004-effect-ledger/tasks.md:92
+ReplayGuard-ID: 004-effect-ledger-T027",Medium,To Do,004-effect-ledger,polish,
+142,110,Task,T028 Validate quickstart scenarios in specs/004-effect-ledger/quickstart.md,"Validate quickstart scenarios in specs/004-effect-ledger/quickstart.md
+
+Phase: Phase 7: Polish & Cross-Cutting Concerns
+
+Source: specs/004-effect-ledger/tasks.md:93
+ReplayGuard-ID: 004-effect-ledger-T028",Medium,To Do,004-effect-ledger,polish,
+143,,Epic,005 Fault Injection Strategies,"Fault Injection Strategies (005-fault-injection).
+
+Source: specs/005-fault-injection/spec.md:1
+ReplayGuard-ID: 005-fault-injection",High,To Do,005-fault-injection,,
+144,143,Story,US1: Crash right after the provider succeeded,"User story 1 (P1) of 005-fault-injection.
+
+Source: specs/005-fault-injection/spec.md:22
+ReplayGuard-ID: 005-fault-injection-US1",High,To Do,005-fault-injection,us1,
+145,143,Story,US2: Lose the provider's response,"User story 2 (P1) of 005-fault-injection.
+
+Source: specs/005-fault-injection/spec.md:45
+ReplayGuard-ID: 005-fault-injection-US2",High,To Do,005-fault-injection,us2,
+146,143,Story,US3: Provider hangs past the step timeout,"User story 3 (P1) of 005-fault-injection.
+
+Source: specs/005-fault-injection/spec.md:64
+ReplayGuard-ID: 005-fault-injection-US3",High,To Do,005-fault-injection,us3,
+147,143,Story,US4: Kill the real process,"User story 4 (P2) of 005-fault-injection.
+
+Source: specs/005-fault-injection/spec.md:83
+ReplayGuard-ID: 005-fault-injection-US4",Medium,To Do,005-fault-injection,us4,
+148,143,Story,US5: No-fault baseline,"User story 5 (P2) of 005-fault-injection.
+
+Source: specs/005-fault-injection/spec.md:105
+ReplayGuard-ID: 005-fault-injection-US5",Medium,To Do,005-fault-injection,us5,
+149,143,Task,T001 Create `faults/` module and barrel exports in packages/core/src/faults/index.ts,"Create `faults/` module and barrel exports in packages/core/src/faults/index.ts
+
+Phase: Phase 1: Setup (Shared Infrastructure)
+
+Source: specs/005-fault-injection/tasks.md:18
+ReplayGuard-ID: 005-fault-injection-T001",Medium,To Do,005-fault-injection,setup,
+150,143,Task,T002 Add `@rivet-dev/workflows` peer + dev dependency (1.x) and `/testing` usage in packages/adapter-workflows/package.json,"Add `@rivet-dev/workflows` peer + dev dependency (1.x) and `/testing` usage in packages/adapter-workflows/package.json
+
+Phase: Phase 1: Setup (Shared Infrastructure)
+
+Source: specs/005-fault-injection/tasks.md:19
+ReplayGuard-ID: 005-fault-injection-T002",Medium,To Do,005-fault-injection,setup,parallel
+151,143,Task,T003 Write failing tests for `Sleeper` port (system + manual) in packages/core/test/sleeper.test.ts,"Write failing tests for `Sleeper` port (system + manual) in packages/core/test/sleeper.test.ts
+
+Phase: Phase 2: Foundational (Blocking Prerequisites)
+
+Source: specs/005-fault-injection/tasks.md:25
+ReplayGuard-ID: 005-fault-injection-T003",Medium,To Do,005-fault-injection,foundational,parallel
+152,143,Task,"T004 Implement `Sleeper`, `systemSleeper`, `manualSleeper` in packages/core/src/ports/sleeper.ts","Implement `Sleeper`, `systemSleeper`, `manualSleeper` in packages/core/src/ports/sleeper.ts
+
+Phase: Phase 2: Foundational (Blocking Prerequisites)
+
+Source: specs/005-fault-injection/tasks.md:26
+ReplayGuard-ID: 005-fault-injection-T004",Medium,To Do,005-fault-injection,foundational,
+153,143,Task,"T005 Define `PersistenceControl` port (""crash(), restart(), crashed, writeCount, onBeforeWrite"") in packages/core/src/ports/persistence.ts","Define `PersistenceControl` port (""crash(), restart(), crashed, writeCount, onBeforeWrite"") in packages/core/src/ports/persistence.ts
+
+Phase: Phase 2: Foundational (Blocking Prerequisites)
+
+Source: specs/005-fault-injection/tasks.md:27
+ReplayGuard-ID: 005-fault-injection-T005",Medium,To Do,005-fault-injection,foundational,
+154,143,Task,T006 Write failing tests for FaultSpec validation (exactly one of kind/identity; occurrence ≥ 1; `throwAfter` requires `after`; `delayMs` 1–600000; write anchors only for crash/processKill) and `fault.*` helpers in packages/core/test/faults/spec.test.ts,"Write failing tests for FaultSpec validation (exactly one of kind/identity; occurrence ≥ 1; `throwAfter` requires `after`; `delayMs` 1–600000; write anchors only for crash/processKill) and `fault.*` helpers in packages/core/test/faults/spec.test.ts
+
+Phase: Phase 2: Foundational (Blocking Prerequisites)
+
+Source: specs/005-fault-injection/tasks.md:28
+ReplayGuard-ID: 005-fault-injection-T006",Medium,To Do,005-fault-injection,foundational,parallel
+155,143,Task,"T007 Implement FaultSpec types, Valibot validation and helpers in packages/core/src/faults/types.ts","Implement FaultSpec types, Valibot validation and helpers in packages/core/src/faults/types.ts
+
+Phase: Phase 2: Foundational (Blocking Prerequisites)
+
+Source: specs/005-fault-injection/tasks.md:29
+ReplayGuard-ID: 005-fault-injection-T007",Medium,To Do,005-fault-injection,foundational,
+156,143,Task,"T008 Write failing FaultController tests with a fake PersistenceControl (arms on ledger hooks, fires once, outcome triggered/not-triggered, dispose unregisters) in packages/core/test/faults/controller.test.ts","Write failing FaultController tests with a fake PersistenceControl (arms on ledger hooks, fires once, outcome triggered/not-triggered, dispose unregisters) in packages/core/test/faults/controller.test.ts
+
+Phase: Phase 2: Foundational (Blocking Prerequisites)
+
+Source: specs/005-fault-injection/tasks.md:30
+ReplayGuard-ID: 005-fault-injection-T008",Medium,To Do,005-fault-injection,foundational,parallel
+157,143,Task,T009 Implement `FaultStrategy`/`ArmedFault` interfaces and `FaultController` in packages/core/src/faults/strategy.ts and packages/core/src/faults/controller.ts,"Implement `FaultStrategy`/`ArmedFault` interfaces and `FaultController` in packages/core/src/faults/strategy.ts and packages/core/src/faults/controller.ts
+
+Phase: Phase 2: Foundational (Blocking Prerequisites)
+
+Source: specs/005-fault-injection/tasks.md:31
+ReplayGuard-ID: 005-fault-injection-T009",Medium,To Do,005-fault-injection,foundational,
+158,143,Task,T010 Write failing driver conformance suite (get/set/delete/deletePrefix/deleteRange/list ordering/batch/alarms) runnable against any EngineDriver in packages/adapter-workflows/test/driver-conformance.ts,"Write failing driver conformance suite (get/set/delete/deletePrefix/deleteRange/list ordering/batch/alarms) runnable against any EngineDriver in packages/adapter-workflows/test/driver-conformance.ts
+
+Phase: Phase 2: Foundational (Blocking Prerequisites)
+
+Source: specs/005-fault-injection/tasks.md:32
+ReplayGuard-ID: 005-fault-injection-T010",Medium,To Do,005-fault-injection,foundational,parallel
+159,143,Task,"T011 Write failing FaultyDriver tests (passthrough reads, write counting across 7 write ops, crash rejects writes with CrashSignal, restart clears, onBeforeWrite index) in packages/adapter-workflows/test/faulty-driver.test.ts","Write failing FaultyDriver tests (passthrough reads, write counting across 7 write ops, crash rejects writes with CrashSignal, restart clears, onBeforeWrite index) in packages/adapter-workflows/test/faulty-driver.test.ts
+
+Phase: Phase 2: Foundational (Blocking Prerequisites)
+
+Source: specs/005-fault-injection/tasks.md:33
+ReplayGuard-ID: 005-fault-injection-T011",Medium,To Do,005-fault-injection,foundational,parallel
+160,143,Task,T012 Implement `FaultyDriver` decorator implementing `EngineDriver` and `PersistenceControl` in packages/adapter-workflows/src/faulty-driver.ts,"Implement `FaultyDriver` decorator implementing `EngineDriver` and `PersistenceControl` in packages/adapter-workflows/src/faulty-driver.ts
+
+Phase: Phase 2: Foundational (Blocking Prerequisites)
+
+Source: specs/005-fault-injection/tasks.md:34
+ReplayGuard-ID: 005-fault-injection-T012",Medium,To Do,005-fault-injection,foundational,
+161,144,Sub-task,"T013 Write failing crash strategy unit tests (records fault, persistence.crash, markRunDead, throws CrashSignal; before vs after; write anchor) in packages/core/test/faults/crash.test.ts","Write failing crash strategy unit tests (records fault, persistence.crash, markRunDead, throws CrashSignal; before vs after; write anchor) in packages/core/test/faults/crash.test.ts
+
+Phase: Phase 3: User Story 1 - Crash right after the provider succeeded (Priority: P1) 🎯 MVP
+
+Source: specs/005-fault-injection/tasks.md:46
+ReplayGuard-ID: 005-fault-injection-T013",High,To Do,005-fault-injection,us1,parallel
+162,144,Sub-task,"T014 Port spike H1, H2, H4 as failing acceptance tests using FaultyDriver + crash strategy in packages/adapter-workflows/test/spike-parity.test.ts","Port spike H1, H2, H4 as failing acceptance tests using FaultyDriver + crash strategy in packages/adapter-workflows/test/spike-parity.test.ts
+
+Phase: Phase 3: User Story 1 - Crash right after the provider succeeded (Priority: P1) 🎯 MVP
+
+Source: specs/005-fault-injection/tasks.md:47
+ReplayGuard-ID: 005-fault-injection-T014",High,To Do,005-fault-injection,us1,parallel
+163,144,Sub-task,T015 Implement `crash` strategy in packages/core/src/faults/strategies/crash.ts,"Implement `crash` strategy in packages/core/src/faults/strategies/crash.ts
+
+Phase: Phase 3: User Story 1 - Crash right after the provider succeeded (Priority: P1) 🎯 MVP
+
+Source: specs/005-fault-injection/tasks.md:48
+ReplayGuard-ID: 005-fault-injection-T015",High,To Do,005-fault-injection,us1,
+164,144,Sub-task,T016 Implement `none` strategy (Null Object) in packages/core/src/faults/strategies/none.ts,"Implement `none` strategy (Null Object) in packages/core/src/faults/strategies/none.ts
+
+Phase: Phase 3: User Story 1 - Crash right after the provider succeeded (Priority: P1) 🎯 MVP
+
+Source: specs/005-fault-injection/tasks.md:49
+ReplayGuard-ID: 005-fault-injection-T016",High,To Do,005-fault-injection,us1,
+165,145,Sub-task,"T017 Write failing throwAfter tests (default SimulatedNetworkError, custom error factory, attempt stays applied) in packages/core/test/faults/throw-after.test.ts","Write failing throwAfter tests (default SimulatedNetworkError, custom error factory, attempt stays applied) in packages/core/test/faults/throw-after.test.ts
+
+Phase: Phase 4: User Story 2 - Lose the provider's response (Priority: P1)
+
+Source: specs/005-fault-injection/tasks.md:59
+ReplayGuard-ID: 005-fault-injection-T017",High,To Do,005-fault-injection,us2,parallel
+166,145,Sub-task,T018 Implement `SimulatedNetworkError` and `throwAfter` strategy in packages/core/src/faults/errors.ts and packages/core/src/faults/strategies/throw-after.ts,"Implement `SimulatedNetworkError` and `throwAfter` strategy in packages/core/src/faults/errors.ts and packages/core/src/faults/strategies/throw-after.ts
+
+Phase: Phase 4: User Story 2 - Lose the provider's response (Priority: P1)
+
+Source: specs/005-fault-injection/tasks.md:60
+ReplayGuard-ID: 005-fault-injection-T018",High,To Do,005-fault-injection,us2,
+167,145,Sub-task,T019 Add H0 acceptance test in packages/adapter-workflows/test/spike-parity.test.ts,"Add H0 acceptance test in packages/adapter-workflows/test/spike-parity.test.ts
+
+Phase: Phase 4: User Story 2 - Lose the provider's response (Priority: P1)
+
+Source: specs/005-fault-injection/tasks.md:61
+ReplayGuard-ID: 005-fault-injection-T019",High,To Do,005-fault-injection,us2,
+168,146,Sub-task,"T020 Write failing delay tests with manual sleeper (only targeted occurrence, attempt started before delay) in packages/core/test/faults/delay.test.ts","Write failing delay tests with manual sleeper (only targeted occurrence, attempt started before delay) in packages/core/test/faults/delay.test.ts
+
+Phase: Phase 5: User Story 3 - Provider hangs past the step timeout (Priority: P1)
+
+Source: specs/005-fault-injection/tasks.md:71
+ReplayGuard-ID: 005-fault-injection-T020",High,To Do,005-fault-injection,us3,parallel
+169,146,Sub-task,T021 Implement `delay` strategy in packages/core/src/faults/strategies/delay.ts,"Implement `delay` strategy in packages/core/src/faults/strategies/delay.ts
+
+Phase: Phase 5: User Story 3 - Provider hangs past the step timeout (Priority: P1)
+
+Source: specs/005-fault-injection/tasks.md:72
+ReplayGuard-ID: 005-fault-injection-T021",High,To Do,005-fault-injection,us3,
+170,146,Sub-task,T022 Add H3a and H3b acceptance tests in packages/adapter-workflows/test/spike-parity.test.ts,"Add H3a and H3b acceptance tests in packages/adapter-workflows/test/spike-parity.test.ts
+
+Phase: Phase 5: User Story 3 - Provider hangs past the step timeout (Priority: P1)
+
+Source: specs/005-fault-injection/tasks.md:73
+ReplayGuard-ID: 005-fault-injection-T022",High,To Do,005-fault-injection,us3,
+171,147,Sub-task,T023 Write failing FileDriver tests: conformance suite + reopen persistence + atomic write (temp + rename) in packages/adapter-workflows/test/file-driver.test.ts,"Write failing FileDriver tests: conformance suite + reopen persistence + atomic write (temp + rename) in packages/adapter-workflows/test/file-driver.test.ts
+
+Phase: Phase 6: User Story 4 - Kill the real process (Priority: P2)
+
+Source: specs/005-fault-injection/tasks.md:83
+ReplayGuard-ID: 005-fault-injection-T023",Medium,To Do,005-fault-injection,us4,parallel
+172,147,Sub-task,"T024 Implement `FileDriver` (extends InMemoryDriver, `<dir>/kv.json`, latency 0) in packages/adapter-workflows/src/file-driver.ts","Implement `FileDriver` (extends InMemoryDriver, `<dir>/kv.json`, latency 0) in packages/adapter-workflows/src/file-driver.ts
+
+Phase: Phase 6: User Story 4 - Kill the real process (Priority: P2)
+
+Source: specs/005-fault-injection/tasks.md:84
+ReplayGuard-ID: 005-fault-injection-T024",Medium,To Do,005-fault-injection,us4,
+173,147,Sub-task,"T025 Write failing IPC protocol schema tests (valid/invalid messages, no functions) in packages/adapter-workflows/test/process/protocol.test.ts","Write failing IPC protocol schema tests (valid/invalid messages, no functions) in packages/adapter-workflows/test/process/protocol.test.ts
+
+Phase: Phase 6: User Story 4 - Kill the real process (Priority: P2)
+
+Source: specs/005-fault-injection/tasks.md:85
+ReplayGuard-ID: 005-fault-injection-T025",Medium,To Do,005-fault-injection,us4,parallel
+174,147,Sub-task,T026 Implement IPC message schemas in packages/adapter-workflows/src/process/protocol.ts,"Implement IPC message schemas in packages/adapter-workflows/src/process/protocol.ts
+
+Phase: Phase 6: User Story 4 - Kill the real process (Priority: P2)
+
+Source: specs/005-fault-injection/tasks.md:86
+ReplayGuard-ID: 005-fault-injection-T026",Medium,To Do,005-fault-injection,us4,
+175,147,Sub-task,"T027 Implement child host (load scenario module inside project root, build effects, relay ledger events, await `continue` after each settle) in packages/adapter-workflows/src/process/child-host.ts and packages/adapter-workflows/src/process/child-entry.ts","Implement child host (load scenario module inside project root, build effects, relay ledger events, await `continue` after each settle) in packages/adapter-workflows/src/process/child-host.ts and packages/adapter-workflows/src/process/child-entry.ts
+
+Phase: Phase 6: User Story 4 - Kill the real process (Priority: P2)
+
+Source: specs/005-fault-injection/tasks.md:87
+ReplayGuard-ID: 005-fault-injection-T027",Medium,To Do,005-fault-injection,us4,
+176,147,Sub-task,"T028 Implement `processKill` strategy and parent controller (fork without shell, kill at anchor, harness timeout) in packages/adapter-workflows/src/process/process-kill.ts","Implement `processKill` strategy and parent controller (fork without shell, kill at anchor, harness timeout) in packages/adapter-workflows/src/process/process-kill.ts
+
+Phase: Phase 6: User Story 4 - Kill the real process (Priority: P2)
+
+Source: specs/005-fault-injection/tasks.md:88
+ReplayGuard-ID: 005-fault-injection-T028",Medium,To Do,005-fault-injection,us4,
+177,147,Sub-task,"T029 Write process-kill integration tests on all OSes (kill after anchor, not-triggered, hang → harness timeout, ledger parity with in-process crash for H1 per SC-002) in packages/adapter-workflows/test/process/process-kill.integration.test.ts","Write process-kill integration tests on all OSes (kill after anchor, not-triggered, hang → harness timeout, ledger parity with in-process crash for H1 per SC-002) in packages/adapter-workflows/test/process/process-kill.integration.test.ts
+
+Phase: Phase 6: User Story 4 - Kill the real process (Priority: P2)
+
+Source: specs/005-fault-injection/tasks.md:89
+ReplayGuard-ID: 005-fault-injection-T029",Medium,To Do,005-fault-injection,us4,
+178,148,Sub-task,T030 Write baseline equivalence test (instrumented vs plain engine run outputs) in packages/adapter-workflows/test/baseline.test.ts,"Write baseline equivalence test (instrumented vs plain engine run outputs) in packages/adapter-workflows/test/baseline.test.ts
+
+Phase: Phase 7: User Story 5 - No-fault baseline (Priority: P2)
+
+Source: specs/005-fault-injection/tasks.md:99
+ReplayGuard-ID: 005-fault-injection-T030",Medium,To Do,005-fault-injection,us5,
+179,143,Task,T031 Docs page per strategy with spike evidence in docs/faults/strategies.md,"Docs page per strategy with spike evidence in docs/faults/strategies.md
+
+Phase: Phase 8: Polish & Cross-Cutting Concerns
+
+Source: specs/005-fault-injection/tasks.md:105
+ReplayGuard-ID: 005-fault-injection-T031",Medium,To Do,005-fault-injection,polish,parallel
+180,143,Task,T032 Add Stryker 85% config coverage for packages/core/src/faults in packages/core/stryker.config.json,"Add Stryker 85% config coverage for packages/core/src/faults in packages/core/stryker.config.json
+
+Phase: Phase 8: Polish & Cross-Cutting Concerns
+
+Source: specs/005-fault-injection/tasks.md:106
+ReplayGuard-ID: 005-fault-injection-T032",Medium,To Do,005-fault-injection,polish,parallel
+181,143,Task,T033 Author diagrams covering T001–T034 in specs/005-fault-injection/diagram.yaml,"Author diagrams covering T001–T034 in specs/005-fault-injection/diagram.yaml
+
+Phase: Phase 8: Polish & Cross-Cutting Concerns
+
+Source: specs/005-fault-injection/tasks.md:107
+ReplayGuard-ID: 005-fault-injection-T033",Medium,To Do,005-fault-injection,polish,
+182,143,Task,T034 Validate quickstart spike-parity table in specs/005-fault-injection/quickstart.md,"Validate quickstart spike-parity table in specs/005-fault-injection/quickstart.md
+
+Phase: Phase 8: Polish & Cross-Cutting Concerns
+
+Source: specs/005-fault-injection/tasks.md:108
+ReplayGuard-ID: 005-fault-injection-T034",Medium,To Do,005-fault-injection,polish,
+183,,Epic,006 Scenario Runner & Fault Matrix,"Scenario Runner & Fault Matrix (006-scenario-runner).
+
+Source: specs/006-scenario-runner/spec.md:1
+ReplayGuard-ID: 006-scenario-runner",High,To Do,006-scenario-runner,,
+184,183,Story,US1: Run one explicit fault scenario,"User story 1 (P1) of 006-scenario-runner.
+
+Source: specs/006-scenario-runner/spec.md:22
+ReplayGuard-ID: 006-scenario-runner-US1",High,To Do,006-scenario-runner,us1,
+185,183,Story,US2: Automatically explore all fault points,"User story 2 (P1) of 006-scenario-runner.
+
+Source: specs/006-scenario-runner/spec.md:45
+ReplayGuard-ID: 006-scenario-runner-US2",High,To Do,006-scenario-runner,us2,
+186,183,Story,"US3: Fluent, validated scenario definition","User story 3 (P2) of 006-scenario-runner.
+
+Source: specs/006-scenario-runner/spec.md:69
+ReplayGuard-ID: 006-scenario-runner-US3",Medium,To Do,006-scenario-runner,us3,
+187,183,Story,"US4: Isolated, repeatable cases","User story 4 (P2) of 006-scenario-runner.
+
+Source: specs/006-scenario-runner/spec.md:88
+ReplayGuard-ID: 006-scenario-runner-US4",Medium,To Do,006-scenario-runner,us4,
+188,183,Task,T001 Create `runtime/` and `scenario/` modules with barrel exports in packages/core/src/index.ts,"Create `runtime/` and `scenario/` modules with barrel exports in packages/core/src/index.ts
+
+Phase: Phase 1: Setup (Shared Infrastructure)
+
+Source: specs/006-scenario-runner/tasks.md:18
+ReplayGuard-ID: 006-scenario-runner-T001",Medium,To Do,006-scenario-runner,setup,
+189,183,Task,"T002 Define `WorkflowRuntime`, `RuntimeCase`, `RunOutcome` port types in packages/core/src/runtime/port.ts","Define `WorkflowRuntime`, `RuntimeCase`, `RunOutcome` port types in packages/core/src/runtime/port.ts
+
+Phase: Phase 2: Foundational (Blocking Prerequisites)
+
+Source: specs/006-scenario-runner/tasks.md:24
+ReplayGuard-ID: 006-scenario-runner-T002",Medium,To Do,006-scenario-runner,foundational,
+190,183,Task,"T003 Implement an in-memory fake runtime for unit tests (scripted outcomes, crash on demand) in packages/core/test/support/fake-runtime.ts","Implement an in-memory fake runtime for unit tests (scripted outcomes, crash on demand) in packages/core/test/support/fake-runtime.ts
+
+Phase: Phase 2: Foundational (Blocking Prerequisites)
+
+Source: specs/006-scenario-runner/tasks.md:25
+ReplayGuard-ID: 006-scenario-runner-T003",Medium,To Do,006-scenario-runner,foundational,parallel
+191,183,Task,"T004 Define ScenarioDefinition, EffectContext, Budget (""maxRuns 1–1000 = 20, caseTimeoutMs 1–600000 = 10000, graceMs 0–10000 = 25""), ExploreOptions (""maxCases 1–500 = 50""), CaseResult, ScenarioResult types in packages/core/src/scenario/types.ts and packa…","Define ScenarioDefinition, EffectContext, Budget (""maxRuns 1–1000 = 20, caseTimeoutMs 1–600000 = 10000, graceMs 0–10000 = 25""), ExploreOptions (""maxCases 1–500 = 50""), CaseResult, ScenarioResult types in packages/core/src/scenario/types.ts and packages/core/src/scenario/result.ts
+
+Phase: Phase 2: Foundational (Blocking Prerequisites)
+
+Source: specs/006-scenario-runner/tasks.md:26
+ReplayGuard-ID: 006-scenario-runner-T004",Medium,To Do,006-scenario-runner,foundational,
+192,184,Sub-task,"T005 Write failing runner lifecycle tests with fake runtime (baseline first, crash → restart, sleeping → wait until wakeAt, waiting → settle, budget-exceeded on maxRuns and timeout, grace period captures late completion, harness error isolation) in packa…","Write failing runner lifecycle tests with fake runtime (baseline first, crash → restart, sleeping → wait until wakeAt, waiting → settle, budget-exceeded on maxRuns and timeout, grace period captures late completion, harness error isolation) in packages/core/test/scenario/runner.test.ts
+
+Phase: Phase 3: User Story 1 - Run one explicit fault scenario (Priority: P1) 🎯 MVP
+
+Source: specs/006-scenario-runner/tasks.md:38
+ReplayGuard-ID: 006-scenario-runner-T005",High,To Do,006-scenario-runner,us1,parallel
+193,184,Sub-task,T006 Implement `ScenarioRunner.runCase` template method and `run()` in packages/core/src/scenario/runner.ts,"Implement `ScenarioRunner.runCase` template method and `run()` in packages/core/src/scenario/runner.ts
+
+Phase: Phase 3: User Story 1 - Run one explicit fault scenario (Priority: P1) 🎯 MVP
+
+Source: specs/006-scenario-runner/tasks.md:39
+ReplayGuard-ID: 006-scenario-runner-T006",High,To Do,006-scenario-runner,us1,
+194,184,Sub-task,"T007 Implement `EffectContext` creation (bound instrument, ledger, clock, sleeper, caseIndex) in packages/core/src/scenario/context.ts","Implement `EffectContext` creation (bound instrument, ledger, clock, sleeper, caseIndex) in packages/core/src/scenario/context.ts
+
+Phase: Phase 3: User Story 1 - Run one explicit fault scenario (Priority: P1) 🎯 MVP
+
+Source: specs/006-scenario-runner/tasks.md:40
+ReplayGuard-ID: 006-scenario-runner-T007",High,To Do,006-scenario-runner,us1,
+195,184,Sub-task,"T008 Write failing engine runtime tests (yield-mode mapping completed/sleeping/waiting/crashed/failed, fresh InMemoryDriver per case wrapped in FaultyDriver, fixed workflowId) in packages/adapter-workflows/test/runtime.test.ts","Write failing engine runtime tests (yield-mode mapping completed/sleeping/waiting/crashed/failed, fresh InMemoryDriver per case wrapped in FaultyDriver, fixed workflowId) in packages/adapter-workflows/test/runtime.test.ts
+
+Phase: Phase 3: User Story 1 - Run one explicit fault scenario (Priority: P1) 🎯 MVP
+
+Source: specs/006-scenario-runner/tasks.md:41
+ReplayGuard-ID: 006-scenario-runner-T008",High,To Do,006-scenario-runner,us1,parallel
+196,184,Sub-task,T009 Implement `workflowsRuntime()` in packages/adapter-workflows/src/runtime.ts,"Implement `workflowsRuntime()` in packages/adapter-workflows/src/runtime.ts
+
+Phase: Phase 3: User Story 1 - Run one explicit fault scenario (Priority: P1) 🎯 MVP
+
+Source: specs/006-scenario-runner/tasks.md:42
+ReplayGuard-ID: 006-scenario-runner-T009",High,To Do,006-scenario-runner,us1,
+197,184,Sub-task,T010 Implement `workflowsProcessRuntime()` spawning per run via 005 child host in packages/adapter-workflows/src/process/process-runtime.ts,"Implement `workflowsProcessRuntime()` spawning per run via 005 child host in packages/adapter-workflows/src/process/process-runtime.ts
+
+Phase: Phase 3: User Story 1 - Run one explicit fault scenario (Priority: P1) 🎯 MVP
+
+Source: specs/006-scenario-runner/tasks.md:43
+ReplayGuard-ID: 006-scenario-runner-T010",High,To Do,006-scenario-runner,us1,
+198,184,Sub-task,T011 Write end-to-end test: explicit crash case with real engine in packages/adapter-workflows/test/scenario.e2e.test.ts,"Write end-to-end test: explicit crash case with real engine in packages/adapter-workflows/test/scenario.e2e.test.ts
+
+Phase: Phase 3: User Story 1 - Run one explicit fault scenario (Priority: P1) 🎯 MVP
+
+Source: specs/006-scenario-runner/tasks.md:44
+ReplayGuard-ID: 006-scenario-runner-T011",High,To Do,006-scenario-runner,us1,
+199,185,Sub-task,"T012 Write failing discovery tests (occurrences from baseline in seq order, parallel branches ordering) in packages/core/test/scenario/discovery.test.ts","Write failing discovery tests (occurrences from baseline in seq order, parallel branches ordering) in packages/core/test/scenario/discovery.test.ts
+
+Phase: Phase 4: User Story 2 - Automatically explore all fault points (Priority: P1)
+
+Source: specs/006-scenario-runner/tasks.md:54
+ReplayGuard-ID: 006-scenario-runner-T012",High,To Do,006-scenario-runner,us2,parallel
+200,185,Sub-task,"T013 Write failing matrix tests incl. fast-check (count, ordering after→before then strategy order, dedupe vs explicit, budget truncation reports skipped, delay only with delayMs, processKill only with process runtime) in packages/core/test/scenario/matr…","Write failing matrix tests incl. fast-check (count, ordering after→before then strategy order, dedupe vs explicit, budget truncation reports skipped, delay only with delayMs, processKill only with process runtime) in packages/core/test/scenario/matrix.test.ts
+
+Phase: Phase 4: User Story 2 - Automatically explore all fault points (Priority: P1)
+
+Source: specs/006-scenario-runner/tasks.md:55
+ReplayGuard-ID: 006-scenario-runner-T013",High,To Do,006-scenario-runner,us2,parallel
+201,185,Sub-task,T014 Implement discovery in packages/core/src/scenario/discovery.ts,"Implement discovery in packages/core/src/scenario/discovery.ts
+
+Phase: Phase 4: User Story 2 - Automatically explore all fault points (Priority: P1)
+
+Source: specs/006-scenario-runner/tasks.md:56
+ReplayGuard-ID: 006-scenario-runner-T014",High,To Do,006-scenario-runner,us2,
+202,185,Sub-task,T015 Implement matrix generation in packages/core/src/scenario/matrix.ts,"Implement matrix generation in packages/core/src/scenario/matrix.ts
+
+Phase: Phase 4: User Story 2 - Automatically explore all fault points (Priority: P1)
+
+Source: specs/006-scenario-runner/tasks.md:57
+ReplayGuard-ID: 006-scenario-runner-T015",High,To Do,006-scenario-runner,us2,
+203,185,Sub-task,"T016 Integrate exploration into runner, generated case names (`crash@after:payment.charge#1`) and `baselineClean: false` flag when the baseline failed in packages/core/src/scenario/runner.ts","Integrate exploration into runner, generated case names (`crash@after:payment.charge#1`) and `baselineClean: false` flag when the baseline failed in packages/core/src/scenario/runner.ts
+
+Phase: Phase 4: User Story 2 - Automatically explore all fault points (Priority: P1)
+
+Source: specs/006-scenario-runner/tasks.md:58
+ReplayGuard-ID: 006-scenario-runner-T016",High,To Do,006-scenario-runner,us2,
+204,186,Sub-task,"T017 Write failing builder tests (required fields, duplicate case names, processKill without process runtime, generics inference via expectTypeOf) in packages/core/test/scenario/builder.test.ts","Write failing builder tests (required fields, duplicate case names, processKill without process runtime, generics inference via expectTypeOf) in packages/core/test/scenario/builder.test.ts
+
+Phase: Phase 5: User Story 3 - Fluent, validated scenario definition (Priority: P2)
+
+Source: specs/006-scenario-runner/tasks.md:68
+ReplayGuard-ID: 006-scenario-runner-T017",Medium,To Do,006-scenario-runner,us3,parallel
+205,186,Sub-task,T018 Implement Valibot option schema in packages/core/src/scenario/schema.ts,"Implement Valibot option schema in packages/core/src/scenario/schema.ts
+
+Phase: Phase 5: User Story 3 - Fluent, validated scenario definition (Priority: P2)
+
+Source: specs/006-scenario-runner/tasks.md:69
+ReplayGuard-ID: 006-scenario-runner-T018",Medium,To Do,006-scenario-runner,us3,
+206,186,Sub-task,T019 Implement `scenario()` builder and `Scenario.run()` in packages/core/src/scenario/builder.ts,"Implement `scenario()` builder and `Scenario.run()` in packages/core/src/scenario/builder.ts
+
+Phase: Phase 5: User Story 3 - Fluent, validated scenario definition (Priority: P2)
+
+Source: specs/006-scenario-runner/tasks.md:70
+ReplayGuard-ID: 006-scenario-runner-T019",Medium,To Do,006-scenario-runner,us3,
+207,187,Sub-task,"T020 Write failing isolation tests (factories called per case, no shared fake state) in packages/core/test/scenario/isolation.test.ts","Write failing isolation tests (factories called per case, no shared fake state) in packages/core/test/scenario/isolation.test.ts
+
+Phase: Phase 6: User Story 4 - Isolated, repeatable cases (Priority: P2)
+
+Source: specs/006-scenario-runner/tasks.md:80
+ReplayGuard-ID: 006-scenario-runner-T020",Medium,To Do,006-scenario-runner,us4,parallel
+208,187,Sub-task,T021 Write repeatability test (100 runs same seed → identical case order and statuses) in packages/adapter-workflows/test/repeatability.test.ts,"Write repeatability test (100 runs same seed → identical case order and statuses) in packages/adapter-workflows/test/repeatability.test.ts
+
+Phase: Phase 6: User Story 4 - Isolated, repeatable cases (Priority: P2)
+
+Source: specs/006-scenario-runner/tasks.md:81
+ReplayGuard-ID: 006-scenario-runner-T021",Medium,To Do,006-scenario-runner,us4,parallel
+209,187,Sub-task,T022 Implement seeded ordering utility (mulberry32) used for sampling ties in packages/core/src/scenario/seed.ts,"Implement seeded ordering utility (mulberry32) used for sampling ties in packages/core/src/scenario/seed.ts
+
+Phase: Phase 6: User Story 4 - Isolated, repeatable cases (Priority: P2)
+
+Source: specs/006-scenario-runner/tasks.md:82
+ReplayGuard-ID: 006-scenario-runner-T022",Medium,To Do,006-scenario-runner,us4,
+210,183,Task,"T023 Scripted message delivery (`deliver(name, body, afterRun)`) with tests in packages/core/src/scenario/runner.ts and packages/core/test/scenario/messages.test.ts","Scripted message delivery (`deliver(name, body, afterRun)`) with tests in packages/core/src/scenario/runner.ts and packages/core/test/scenario/messages.test.ts
+
+Phase: Phase 7: Polish & Cross-Cutting Concerns
+
+Source: specs/006-scenario-runner/tasks.md:88
+ReplayGuard-ID: 006-scenario-runner-T023",Medium,To Do,006-scenario-runner,polish,parallel
+211,183,Task,T024 Performance test: 20 in-process cases < 5 s in packages/adapter-workflows/test/perf.test.ts,"Performance test: 20 in-process cases < 5 s in packages/adapter-workflows/test/perf.test.ts
+
+Phase: Phase 7: Polish & Cross-Cutting Concerns
+
+Source: specs/006-scenario-runner/tasks.md:89
+ReplayGuard-ID: 006-scenario-runner-T024",Medium,To Do,006-scenario-runner,polish,parallel
+212,183,Task,"T025 Guide ""Writing scenarios"" in docs/guides/scenarios.md","Guide ""Writing scenarios"" in docs/guides/scenarios.md
+
+Phase: Phase 7: Polish & Cross-Cutting Concerns
+
+Source: specs/006-scenario-runner/tasks.md:90
+ReplayGuard-ID: 006-scenario-runner-T025",Medium,To Do,006-scenario-runner,polish,parallel
+213,183,Task,T026 Author diagrams covering T001–T027 in specs/006-scenario-runner/diagram.yaml,"Author diagrams covering T001–T027 in specs/006-scenario-runner/diagram.yaml
+
+Phase: Phase 7: Polish & Cross-Cutting Concerns
+
+Source: specs/006-scenario-runner/tasks.md:91
+ReplayGuard-ID: 006-scenario-runner-T026",Medium,To Do,006-scenario-runner,polish,
+214,183,Task,T027 Validate quickstart scenarios in specs/006-scenario-runner/quickstart.md,"Validate quickstart scenarios in specs/006-scenario-runner/quickstart.md
+
+Phase: Phase 7: Polish & Cross-Cutting Concerns
+
+Source: specs/006-scenario-runner/tasks.md:92
+ReplayGuard-ID: 006-scenario-runner-T027",Medium,To Do,006-scenario-runner,polish,
+215,,Epic,007 Outcome Classifier & Verdict Policy,"Outcome Classifier & Verdict Policy (007-outcome-classifier).
+
+Source: specs/007-outcome-classifier/spec.md:1
+ReplayGuard-ID: 007-outcome-classifier",High,To Do,007-outcome-classifier,,
+216,215,Story,US1: Classify every effect in every case,"User story 1 (P1) of 007-outcome-classifier.
+
+Source: specs/007-outcome-classifier/spec.md:21
+ReplayGuard-ID: 007-outcome-classifier-US1",High,To Do,007-outcome-classifier,us1,
+217,215,Story,US2: Pass/fail verdicts with a strict default,"User story 2 (P1) of 007-outcome-classifier.
+
+Source: specs/007-outcome-classifier/spec.md:49
+ReplayGuard-ID: 007-outcome-classifier-US2",High,To Do,007-outcome-classifier,us2,
+218,215,Story,US3: Override the policy per effect,"User story 3 (P2) of 007-outcome-classifier.
+
+Source: specs/007-outcome-classifier/spec.md:69
+ReplayGuard-ID: 007-outcome-classifier-US3",Medium,To Do,007-outcome-classifier,us3,
+219,215,Story,US4: Explain why,"User story 4 (P2) of 007-outcome-classifier.
+
+Source: specs/007-outcome-classifier/spec.md:87
+ReplayGuard-ID: 007-outcome-classifier-US4",Medium,To Do,007-outcome-classifier,us4,
+220,215,Task,T001 Create `classifier/` module and exports in packages/core/src/classifier/index.ts,"Create `classifier/` module and exports in packages/core/src/classifier/index.ts
+
+Phase: Phase 1: Setup (Shared Infrastructure)
+
+Source: specs/007-outcome-classifier/tasks.md:18
+ReplayGuard-ID: 007-outcome-classifier-T001",Medium,To Do,007-outcome-classifier,setup,
+221,215,Task,T002 Create fast-check arbitraries for ledger snapshots and case results in packages/core/test/classifier/arbitraries.ts,"Create fast-check arbitraries for ledger snapshots and case results in packages/core/test/classifier/arbitraries.ts
+
+Phase: Phase 1: Setup (Shared Infrastructure)
+
+Source: specs/007-outcome-classifier/tasks.md:19
+ReplayGuard-ID: 007-outcome-classifier-T002",Medium,To Do,007-outcome-classifier,setup,parallel
+222,215,Task,"T003 Define Outcome, VerdictLevel, Evidence, EffectClassification, CaseClassification, ClassifiedResult types in packages/core/src/classifier/types.ts","Define Outcome, VerdictLevel, Evidence, EffectClassification, CaseClassification, ClassifiedResult types in packages/core/src/classifier/types.ts
+
+Phase: Phase 2: Foundational (Blocking Prerequisites)
+
+Source: specs/007-outcome-classifier/tasks.md:25
+ReplayGuard-ID: 007-outcome-classifier-T003",Medium,To Do,007-outcome-classifier,foundational,
+223,215,Task,"T004 Write failing evidence builder tests (applied/dedup/failed counts, expected from baseline, overlaps with positive length, keys, unsettled, workflowState mapping) in packages/core/test/classifier/evidence.test.ts","Write failing evidence builder tests (applied/dedup/failed counts, expected from baseline, overlaps with positive length, keys, unsettled, workflowState mapping) in packages/core/test/classifier/evidence.test.ts
+
+Phase: Phase 2: Foundational (Blocking Prerequisites)
+
+Source: specs/007-outcome-classifier/tasks.md:26
+ReplayGuard-ID: 007-outcome-classifier-T004",Medium,To Do,007-outcome-classifier,foundational,parallel
+224,215,Task,T005 Implement evidence builder in packages/core/src/classifier/evidence.ts,"Implement evidence builder in packages/core/src/classifier/evidence.ts
+
+Phase: Phase 2: Foundational (Blocking Prerequisites)
+
+Source: specs/007-outcome-classifier/tasks.md:27
+ReplayGuard-ID: 007-outcome-classifier-T005",Medium,To Do,007-outcome-classifier,foundational,
+225,216,Sub-task,"T006 Write failing rule tests, one table per rule incl. boundaries (expected 0/1/N) in packages/core/test/classifier/rules.test.ts","Write failing rule tests, one table per rule incl. boundaries (expected 0/1/N) in packages/core/test/classifier/rules.test.ts
+
+Phase: Phase 3: User Story 1 - Classify every effect in every case (Priority: P1) 🎯 MVP
+
+Source: specs/007-outcome-classifier/tasks.md:37
+ReplayGuard-ID: 007-outcome-classifier-T006",High,To Do,007-outcome-classifier,us1,parallel
+226,216,Sub-task,"T007 Write failing spike classification tests (H1 duplicated, H1b deduplicated, H3a concurrent-duplicate, H3b orphaned, skipped synthetic) in packages/core/test/classifier/classify.spike.test.ts","Write failing spike classification tests (H1 duplicated, H1b deduplicated, H3a concurrent-duplicate, H3b orphaned, skipped synthetic) in packages/core/test/classifier/classify.spike.test.ts
+
+Phase: Phase 3: User Story 1 - Classify every effect in every case (Priority: P1) 🎯 MVP
+
+Source: specs/007-outcome-classifier/tasks.md:38
+ReplayGuard-ID: 007-outcome-classifier-T007",High,To Do,007-outcome-classifier,us1,parallel
+227,216,Sub-task,T008 Write failing property tests (exactly one outcome per identity; applied > expected without dedup never exactly-once/deduplicated) in packages/core/test/classifier/classify.property.test.ts,"Write failing property tests (exactly one outcome per identity; applied > expected without dedup never exactly-once/deduplicated) in packages/core/test/classifier/classify.property.test.ts
+
+Phase: Phase 3: User Story 1 - Classify every effect in every case (Priority: P1) 🎯 MVP
+
+Source: specs/007-outcome-classifier/tasks.md:39
+ReplayGuard-ID: 007-outcome-classifier-T008",High,To Do,007-outcome-classifier,us1,parallel
+228,216,Sub-task,T009 Implement OutcomeRule specifications and severity order in packages/core/src/classifier/rules.ts,"Implement OutcomeRule specifications and severity order in packages/core/src/classifier/rules.ts
+
+Phase: Phase 3: User Story 1 - Classify every effect in every case (Priority: P1) 🎯 MVP
+
+Source: specs/007-outcome-classifier/tasks.md:40
+ReplayGuard-ID: 007-outcome-classifier-T009",High,To Do,007-outcome-classifier,us1,
+229,216,Sub-task,T010 Implement `classify()` producing CaseClassification per case in packages/core/src/classifier/classify.ts,"Implement `classify()` producing CaseClassification per case in packages/core/src/classifier/classify.ts
+
+Phase: Phase 3: User Story 1 - Classify every effect in every case (Priority: P1) 🎯 MVP
+
+Source: specs/007-outcome-classifier/tasks.md:41
+ReplayGuard-ID: 007-outcome-classifier-T010",High,To Do,007-outcome-classifier,us1,
+230,217,Sub-task,"T011 Write failing verdict aggregation tests (worst wins, harness-error case fails, warn does not fail scenario) in packages/core/test/classifier/verdict.test.ts","Write failing verdict aggregation tests (worst wins, harness-error case fails, warn does not fail scenario) in packages/core/test/classifier/verdict.test.ts
+
+Phase: Phase 4: User Story 2 - Pass/fail verdicts with a strict default (Priority: P1)
+
+Source: specs/007-outcome-classifier/tasks.md:51
+ReplayGuard-ID: 007-outcome-classifier-T011",High,To Do,007-outcome-classifier,us2,parallel
+231,217,Sub-task,T012 Implement DEFAULT_POLICY and verdict aggregation in packages/core/src/classifier/policy.ts and packages/core/src/classifier/classify.ts,"Implement DEFAULT_POLICY and verdict aggregation in packages/core/src/classifier/policy.ts and packages/core/src/classifier/classify.ts
+
+Phase: Phase 4: User Story 2 - Pass/fail verdicts with a strict default (Priority: P1)
+
+Source: specs/007-outcome-classifier/tasks.md:52
+ReplayGuard-ID: 007-outcome-classifier-T012",High,To Do,007-outcome-classifier,us2,
+232,218,Sub-task,"T013 Write failing policy tests (identity > kind > default precedence, Valibot validation of unknown outcomes) in packages/core/test/classifier/policy.test.ts","Write failing policy tests (identity > kind > default precedence, Valibot validation of unknown outcomes) in packages/core/test/classifier/policy.test.ts
+
+Phase: Phase 5: User Story 3 - Override the policy per effect (Priority: P2)
+
+Source: specs/007-outcome-classifier/tasks.md:62
+ReplayGuard-ID: 007-outcome-classifier-T013",Medium,To Do,007-outcome-classifier,us3,parallel
+233,218,Sub-task,T014 Implement policy schema and `resolveVerdict` chain in packages/core/src/classifier/policy.ts,"Implement policy schema and `resolveVerdict` chain in packages/core/src/classifier/policy.ts
+
+Phase: Phase 5: User Story 3 - Override the policy per effect (Priority: P2)
+
+Source: specs/007-outcome-classifier/tasks.md:63
+ReplayGuard-ID: 007-outcome-classifier-T014",Medium,To Do,007-outcome-classifier,us3,
+234,219,Sub-task,T015 Write failing explanation tests per outcome in packages/core/test/classifier/explain.test.ts,"Write failing explanation tests per outcome in packages/core/test/classifier/explain.test.ts
+
+Phase: Phase 6: User Story 4 - Explain why (Priority: P2)
+
+Source: specs/007-outcome-classifier/tasks.md:73
+ReplayGuard-ID: 007-outcome-classifier-T015",Medium,To Do,007-outcome-classifier,us4,parallel
+235,219,Sub-task,T016 Implement explanation templates in packages/core/src/classifier/explain.ts,"Implement explanation templates in packages/core/src/classifier/explain.ts
+
+Phase: Phase 6: User Story 4 - Explain why (Priority: P2)
+
+Source: specs/007-outcome-classifier/tasks.md:74
+ReplayGuard-ID: 007-outcome-classifier-T016",Medium,To Do,007-outcome-classifier,us4,
+236,215,Task,T017 Baseline anomaly reporting and in-flight-at-end warnings with tests in packages/core/src/classifier/classify.ts and packages/core/test/classifier/anomalies.test.ts,"Baseline anomaly reporting and in-flight-at-end warnings with tests in packages/core/src/classifier/classify.ts and packages/core/test/classifier/anomalies.test.ts
+
+Phase: Phase 7: Polish & Cross-Cutting Concerns
+
+Source: specs/007-outcome-classifier/tasks.md:80
+ReplayGuard-ID: 007-outcome-classifier-T017",Medium,To Do,007-outcome-classifier,polish,parallel
+237,215,Task,T018 Performance test: 100 cases < 100 ms in packages/core/test/classifier/perf.test.ts,"Performance test: 100 cases < 100 ms in packages/core/test/classifier/perf.test.ts
+
+Phase: Phase 7: Polish & Cross-Cutting Concerns
+
+Source: specs/007-outcome-classifier/tasks.md:81
+ReplayGuard-ID: 007-outcome-classifier-T018",Medium,To Do,007-outcome-classifier,polish,parallel
+238,215,Task,T019 Outcome reference docs in docs/concepts/outcomes.md,"Outcome reference docs in docs/concepts/outcomes.md
+
+Phase: Phase 7: Polish & Cross-Cutting Concerns
+
+Source: specs/007-outcome-classifier/tasks.md:82
+ReplayGuard-ID: 007-outcome-classifier-T019",Medium,To Do,007-outcome-classifier,polish,parallel
+239,215,Task,"T020 Add `run({ classify: true, policy })` convenience in packages/core/src/scenario/builder.ts with test in packages/core/test/scenario/builder.classify.test.ts","Add `run({ classify: true, policy })` convenience in packages/core/src/scenario/builder.ts with test in packages/core/test/scenario/builder.classify.test.ts
+
+Phase: Phase 7: Polish & Cross-Cutting Concerns
+
+Source: specs/007-outcome-classifier/tasks.md:83
+ReplayGuard-ID: 007-outcome-classifier-T020",Medium,To Do,007-outcome-classifier,polish,
+240,215,Task,T021 Author diagrams covering T001–T022 in specs/007-outcome-classifier/diagram.yaml,"Author diagrams covering T001–T022 in specs/007-outcome-classifier/diagram.yaml
+
+Phase: Phase 7: Polish & Cross-Cutting Concerns
+
+Source: specs/007-outcome-classifier/tasks.md:84
+ReplayGuard-ID: 007-outcome-classifier-T021",Medium,To Do,007-outcome-classifier,polish,
+241,215,Task,T022 Validate quickstart table in specs/007-outcome-classifier/quickstart.md,"Validate quickstart table in specs/007-outcome-classifier/quickstart.md
+
+Phase: Phase 7: Polish & Cross-Cutting Concerns
+
+Source: specs/007-outcome-classifier/tasks.md:85
+ReplayGuard-ID: 007-outcome-classifier-T022",Medium,To Do,007-outcome-classifier,polish,
+242,,Epic,008 Fake External Services,"Fake External Services (008-fake-services).
+
+Source: specs/008-fake-services/spec.md:1
+ReplayGuard-ID: 008-fake-services",High,To Do,008-fake-services,,
+243,242,Story,US1: Fake payment provider,"User story 1 (P1) of 008-fake-services.
+
+Source: specs/008-fake-services/spec.md:13
+ReplayGuard-ID: 008-fake-services-US1",High,To Do,008-fake-services,us1,
+244,242,Story,US2: Fake email sender,"User story 2 (P1) of 008-fake-services.
+
+Source: specs/008-fake-services/spec.md:35
+ReplayGuard-ID: 008-fake-services-US2",High,To Do,008-fake-services,us2,
+245,242,Story,US3: Generic HTTP/API fake,"User story 3 (P2) of 008-fake-services.
+
+Source: specs/008-fake-services/spec.md:53
+ReplayGuard-ID: 008-fake-services-US3",Medium,To Do,008-fake-services,us3,
+246,242,Story,US4: Webhook delivery and receiving endpoint,"User story 4 (P3) of 008-fake-services.
+
+Source: specs/008-fake-services/spec.md:74
+ReplayGuard-ID: 008-fake-services-US4",Low,To Do,008-fake-services,us4,
+247,242,Task,T001 Add `@replayguard/core` workspace dependency and exports map in packages/fakes/package.json,"Add `@replayguard/core` workspace dependency and exports map in packages/fakes/package.json
+
+Phase: Phase 1: Setup (Shared Infrastructure)
+
+Source: specs/008-fake-services/tasks.md:18
+ReplayGuard-ID: 008-fake-services-T001",Medium,To Do,008-fake-services,setup,
+248,242,Task,"T002 Write failing IdempotencyStore tests (replay same fingerprint, conflict on different fingerprint, in-flight conflict vs wait) incl. fast-check (N same-key calls ⇒ 1 execution) in packages/fakes/test/idempotency-store.test.ts","Write failing IdempotencyStore tests (replay same fingerprint, conflict on different fingerprint, in-flight conflict vs wait) incl. fast-check (N same-key calls ⇒ 1 execution) in packages/fakes/test/idempotency-store.test.ts
+
+Phase: Phase 2: Foundational (Blocking Prerequisites)
+
+Source: specs/008-fake-services/tasks.md:24
+ReplayGuard-ID: 008-fake-services-T002",Medium,To Do,008-fake-services,foundational,parallel
+249,242,Task,"T003 Implement IdempotencyStore and errors (`RG_FAKE_IDEMPOTENCY_CONFLICT`, `RG_FAKE_IDEMPOTENCY_IN_FLIGHT`) in packages/fakes/src/idempotency-store.ts","Implement IdempotencyStore and errors (`RG_FAKE_IDEMPOTENCY_CONFLICT`, `RG_FAKE_IDEMPOTENCY_IN_FLIGHT`) in packages/fakes/src/idempotency-store.ts
+
+Phase: Phase 2: Foundational (Blocking Prerequisites)
+
+Source: specs/008-fake-services/tasks.md:25
+ReplayGuard-ID: 008-fake-services-T003",Medium,To Do,008-fake-services,foundational,
+250,242,Task,"T004 Write failing `recordable()` tests (uses ctx.instrument when ctx given, plain call otherwise, latency via sleeper inside the recorded call, failure script first N calls) in packages/fakes/test/recordable.test.ts","Write failing `recordable()` tests (uses ctx.instrument when ctx given, plain call otherwise, latency via sleeper inside the recorded call, failure script first N calls) in packages/fakes/test/recordable.test.ts
+
+Phase: Phase 2: Foundational (Blocking Prerequisites)
+
+Source: specs/008-fake-services/tasks.md:26
+ReplayGuard-ID: 008-fake-services-T004",Medium,To Do,008-fake-services,foundational,parallel
+251,242,Task,T005 Implement `recordable()` and FailureScript handling in packages/fakes/src/recordable.ts,"Implement `recordable()` and FailureScript handling in packages/fakes/src/recordable.ts
+
+Phase: Phase 2: Foundational (Blocking Prerequisites)
+
+Source: specs/008-fake-services/tasks.md:27
+ReplayGuard-ID: 008-fake-services-T005",Medium,To Do,008-fake-services,foundational,
+252,243,Sub-task,"T006 Write failing payment tests (""amount integer > 0"", currency default ""usd"", sequential ids ""ch_000001"", idempotency on/off, key reuse conflict, refund, read-only `charges`) in packages/fakes/test/payment.test.ts","Write failing payment tests (""amount integer > 0"", currency default ""usd"", sequential ids ""ch_000001"", idempotency on/off, key reuse conflict, refund, read-only `charges`) in packages/fakes/test/payment.test.ts
+
+Phase: Phase 3: User Story 1 - Fake payment provider (Priority: P1) 🎯 MVP
+
+Source: specs/008-fake-services/tasks.md:37
+ReplayGuard-ID: 008-fake-services-T006",High,To Do,008-fake-services,us1,parallel
+253,243,Sub-task,"T007 Implement `createFakePayment` (kinds `payment.charge`, `payment.refund`) in packages/fakes/src/payment.ts","Implement `createFakePayment` (kinds `payment.charge`, `payment.refund`) in packages/fakes/src/payment.ts
+
+Phase: Phase 3: User Story 1 - Fake payment provider (Priority: P1) 🎯 MVP
+
+Source: specs/008-fake-services/tasks.md:38
+ReplayGuard-ID: 008-fake-services-T007",High,To Do,008-fake-services,us1,
+254,244,Sub-task,"T008 Write failing email tests (outbox, no dedup, custom subject) in packages/fakes/test/email.test.ts","Write failing email tests (outbox, no dedup, custom subject) in packages/fakes/test/email.test.ts
+
+Phase: Phase 4: User Story 2 - Fake email sender (Priority: P1)
+
+Source: specs/008-fake-services/tasks.md:48
+ReplayGuard-ID: 008-fake-services-T008",High,To Do,008-fake-services,us2,parallel
+255,244,Sub-task,T009 Implement `createFakeEmail` (kind `email.send`) in packages/fakes/src/email.ts,"Implement `createFakeEmail` (kind `email.send`) in packages/fakes/src/email.ts
+
+Phase: Phase 4: User Story 2 - Fake email sender (Priority: P1)
+
+Source: specs/008-fake-services/tasks.md:49
+ReplayGuard-ID: 008-fake-services-T009",High,To Do,008-fake-services,us2,
+256,245,Sub-task,T010 Write failing HTTP fake tests in packages/fakes/test/http.test.ts,"Write failing HTTP fake tests in packages/fakes/test/http.test.ts
+
+Phase: Phase 5: User Story 3 - Generic HTTP/API fake (Priority: P2)
+
+Source: specs/008-fake-services/tasks.md:59
+ReplayGuard-ID: 008-fake-services-T010",Medium,To Do,008-fake-services,us3,parallel
+257,245,Sub-task,T011 Implement `createFakeHttp` (kind `http:<METHOD> <path>`) in packages/fakes/src/http.ts,"Implement `createFakeHttp` (kind `http:<METHOD> <path>`) in packages/fakes/src/http.ts
+
+Phase: Phase 5: User Story 3 - Generic HTTP/API fake (Priority: P2)
+
+Source: specs/008-fake-services/tasks.md:60
+ReplayGuard-ID: 008-fake-services-T011",Medium,To Do,008-fake-services,us3,
+258,246,Sub-task,T012 Write failing webhook receiver tests in packages/fakes/test/webhook.test.ts,"Write failing webhook receiver tests in packages/fakes/test/webhook.test.ts
+
+Phase: Phase 6: User Story 4 - Webhook receiver (Priority: P3)
+
+Source: specs/008-fake-services/tasks.md:70
+ReplayGuard-ID: 008-fake-services-T012",Low,To Do,008-fake-services,us4,parallel
+259,246,Sub-task,T013 Implement `createFakeWebhookReceiver` (kind `webhook.deliver`) in packages/fakes/src/webhook.ts,"Implement `createFakeWebhookReceiver` (kind `webhook.deliver`) in packages/fakes/src/webhook.ts
+
+Phase: Phase 6: User Story 4 - Webhook receiver (Priority: P3)
+
+Source: specs/008-fake-services/tasks.md:71
+ReplayGuard-ID: 008-fake-services-T013",Low,To Do,008-fake-services,us4,
+260,242,Task,T014 Write example scenarios reproducing every outcome class with the fakes in packages/fakes/test/outcomes.examples.test.ts,"Write example scenarios reproducing every outcome class with the fakes in packages/fakes/test/outcomes.examples.test.ts
+
+Phase: Phase 7: Polish & Cross-Cutting Concerns
+
+Source: specs/008-fake-services/tasks.md:77
+ReplayGuard-ID: 008-fake-services-T014",Medium,To Do,008-fake-services,polish,
+261,242,Task,T015 Docs page per fake in docs/fakes/README.md,"Docs page per fake in docs/fakes/README.md
+
+Phase: Phase 7: Polish & Cross-Cutting Concerns
+
+Source: specs/008-fake-services/tasks.md:78
+ReplayGuard-ID: 008-fake-services-T015",Medium,To Do,008-fake-services,polish,parallel
+262,242,Task,T016 Author diagrams covering T001–T017 in specs/008-fake-services/diagram.yaml,"Author diagrams covering T001–T017 in specs/008-fake-services/diagram.yaml
+
+Phase: Phase 7: Polish & Cross-Cutting Concerns
+
+Source: specs/008-fake-services/tasks.md:79
+ReplayGuard-ID: 008-fake-services-T016",Medium,To Do,008-fake-services,polish,
+263,242,Task,T017 Validate quickstart scenarios in specs/008-fake-services/quickstart.md,"Validate quickstart scenarios in specs/008-fake-services/quickstart.md
+
+Phase: Phase 7: Polish & Cross-Cutting Concerns
+
+Source: specs/008-fake-services/tasks.md:80
+ReplayGuard-ID: 008-fake-services-T017",Medium,To Do,008-fake-services,polish,
+264,,Epic,"009 Reports (Structured, Console, HTML Timeline)","Reports (Structured, Console, HTML Timeline) (009-reporters).
+
+Source: specs/009-reporters/spec.md:1
+ReplayGuard-ID: 009-reporters",High,To Do,009-reporters,,
+265,264,Story,US1: Structured report object,"User story 1 (P1) of 009-reporters.
+
+Source: specs/009-reporters/spec.md:13
+ReplayGuard-ID: 009-reporters-US1",High,To Do,009-reporters,us1,
+266,264,Story,US2: Console table,"User story 2 (P1) of 009-reporters.
+
+Source: specs/009-reporters/spec.md:32
+ReplayGuard-ID: 009-reporters-US2",High,To Do,009-reporters,us2,
+267,264,Story,US3: HTML timeline report,"User story 3 (P2) of 009-reporters.
+
+Source: specs/009-reporters/spec.md:53
+ReplayGuard-ID: 009-reporters-US3",Medium,To Do,009-reporters,us3,
+268,264,Task,T001 Create `report/` module and exports in packages/core/src/report/index.ts,"Create `report/` module and exports in packages/core/src/report/index.ts
+
+Phase: Phase 1: Setup (Shared Infrastructure)
+
+Source: specs/009-reporters/tasks.md:18
+ReplayGuard-ID: 009-reporters-T001",Medium,To Do,009-reporters,setup,
+269,264,Task,T002 Add core dependency and exports in packages/reporter-console/package.json and packages/reporter-html/package.json,"Add core dependency and exports in packages/reporter-console/package.json and packages/reporter-html/package.json
+
+Phase: Phase 1: Setup (Shared Infrastructure)
+
+Source: specs/009-reporters/tasks.md:19
+ReplayGuard-ID: 009-reporters-T002",Medium,To Do,009-reporters,setup,parallel
+270,264,Task,"T003 Define Report v1 Valibot schema and inferred types (Report, CaseReport, EffectReport, TimelineEvent) in packages/core/src/report/model.ts","Define Report v1 Valibot schema and inferred types (Report, CaseReport, EffectReport, TimelineEvent) in packages/core/src/report/model.ts
+
+Phase: Phase 2: Foundational (Blocking Prerequisites)
+
+Source: specs/009-reporters/tasks.md:25
+ReplayGuard-ID: 009-reporters-T003",Medium,To Do,009-reporters,foundational,
+271,264,Task,T004 Write failing visitor traversal tests (order: report → cases → effects → timeline) in packages/core/test/report/visitor.test.ts,"Write failing visitor traversal tests (order: report → cases → effects → timeline) in packages/core/test/report/visitor.test.ts
+
+Phase: Phase 2: Foundational (Blocking Prerequisites)
+
+Source: specs/009-reporters/tasks.md:26
+ReplayGuard-ID: 009-reporters-T004",Medium,To Do,009-reporters,foundational,parallel
+272,264,Task,"T005 Implement `ReportVisitor`, `walkReport`, `Reporter` port in packages/core/src/report/visitor.ts","Implement `ReportVisitor`, `walkReport`, `Reporter` port in packages/core/src/report/visitor.ts
+
+Phase: Phase 2: Foundational (Blocking Prerequisites)
+
+Source: specs/009-reporters/tasks.md:27
+ReplayGuard-ID: 009-reporters-T005",Medium,To Do,009-reporters,foundational,
+273,265,Sub-task,"T006 Write failing buildReport tests (summary counts, relative timeline times, fault labels, hints carried) in packages/core/test/report/build.test.ts","Write failing buildReport tests (summary counts, relative timeline times, fault labels, hints carried) in packages/core/test/report/build.test.ts
+
+Phase: Phase 3: User Story 1 - Structured report object (Priority: P1) 🎯 MVP
+
+Source: specs/009-reporters/tasks.md:37
+ReplayGuard-ID: 009-reporters-T006",High,To Do,009-reporters,us1,parallel
+274,265,Sub-task,T007 Write failing JSON round-trip property test and version rejection (`RG_SCHEMA_VERSION`) in packages/core/test/report/json.test.ts,"Write failing JSON round-trip property test and version rejection (`RG_SCHEMA_VERSION`) in packages/core/test/report/json.test.ts
+
+Phase: Phase 3: User Story 1 - Structured report object (Priority: P1) 🎯 MVP
+
+Source: specs/009-reporters/tasks.md:38
+ReplayGuard-ID: 009-reporters-T007",High,To Do,009-reporters,us1,parallel
+275,265,Sub-task,T008 Implement `buildReport` in packages/core/src/report/build.ts,"Implement `buildReport` in packages/core/src/report/build.ts
+
+Phase: Phase 3: User Story 1 - Structured report object (Priority: P1) 🎯 MVP
+
+Source: specs/009-reporters/tasks.md:39
+ReplayGuard-ID: 009-reporters-T008",High,To Do,009-reporters,us1,
+276,265,Sub-task,T009 Implement `reportToJson` and `parseReport` in packages/core/src/report/json.ts,"Implement `reportToJson` and `parseReport` in packages/core/src/report/json.ts
+
+Phase: Phase 3: User Story 1 - Structured report object (Priority: P1) 🎯 MVP
+
+Source: specs/009-reporters/tasks.md:40
+ReplayGuard-ID: 009-reporters-T009",High,To Do,009-reporters,us1,
+277,266,Sub-task,"T010 Write failing table layout tests (widths, max 40, truncation `…`, ascii fallback) in packages/reporter-console/test/table.test.ts","Write failing table layout tests (widths, max 40, truncation `…`, ascii fallback) in packages/reporter-console/test/table.test.ts
+
+Phase: Phase 4: User Story 2 - Console table (Priority: P1)
+
+Source: specs/009-reporters/tasks.md:50
+ReplayGuard-ID: 009-reporters-T010",High,To Do,009-reporters,us2,parallel
+278,266,Sub-task,"T011 Write failing color policy tests (`NO_COLOR`, `FORCE_COLOR`, non-TTY) in packages/reporter-console/test/color.test.ts","Write failing color policy tests (`NO_COLOR`, `FORCE_COLOR`, non-TTY) in packages/reporter-console/test/color.test.ts
+
+Phase: Phase 4: User Story 2 - Console table (Priority: P1)
+
+Source: specs/009-reporters/tasks.md:51
+ReplayGuard-ID: 009-reporters-T011",High,To Do,009-reporters,us2,parallel
+279,266,Sub-task,T012 Write failing golden output tests (concise vs verbose) in packages/reporter-console/test/render.test.ts,"Write failing golden output tests (concise vs verbose) in packages/reporter-console/test/render.test.ts
+
+Phase: Phase 4: User Story 2 - Console table (Priority: P1)
+
+Source: specs/009-reporters/tasks.md:52
+ReplayGuard-ID: 009-reporters-T012",High,To Do,009-reporters,us2,parallel
+280,266,Sub-task,T013 Implement table layout in packages/reporter-console/src/table.ts,"Implement table layout in packages/reporter-console/src/table.ts
+
+Phase: Phase 4: User Story 2 - Console table (Priority: P1)
+
+Source: specs/009-reporters/tasks.md:53
+ReplayGuard-ID: 009-reporters-T013",High,To Do,009-reporters,us2,
+281,266,Sub-task,T014 Implement color handling in packages/reporter-console/src/color.ts,"Implement color handling in packages/reporter-console/src/color.ts
+
+Phase: Phase 4: User Story 2 - Console table (Priority: P1)
+
+Source: specs/009-reporters/tasks.md:54
+ReplayGuard-ID: 009-reporters-T014",High,To Do,009-reporters,us2,
+282,266,Sub-task,T015 Implement `renderConsole` and `consoleReporter` as ReportVisitor in packages/reporter-console/src/index.ts,"Implement `renderConsole` and `consoleReporter` as ReportVisitor in packages/reporter-console/src/index.ts
+
+Phase: Phase 4: User Story 2 - Console table (Priority: P1)
+
+Source: specs/009-reporters/tasks.md:55
+ReplayGuard-ID: 009-reporters-T015",High,To Do,009-reporters,us2,
+283,267,Sub-task,"T016 Write failing escaping tests for `html` tagged template (corpus: `<script>`, `</script>`, quotes, `javascript:`, U+2028) in packages/reporter-html/test/html.test.ts","Write failing escaping tests for `html` tagged template (corpus: `<script>`, `</script>`, quotes, `javascript:`, U+2028) in packages/reporter-html/test/html.test.ts
+
+Phase: Phase 5: User Story 3 - HTML timeline report (Priority: P2)
+
+Source: specs/009-reporters/tasks.md:65
+ReplayGuard-ID: 009-reporters-T016",Medium,To Do,009-reporters,us3,parallel
+284,267,Sub-task,"T017 Write failing timeline SVG tests (lanes per run, bar status patterns, fault markers, min width, `<title>` labels) in packages/reporter-html/test/timeline.test.ts","Write failing timeline SVG tests (lanes per run, bar status patterns, fault markers, min width, `<title>` labels) in packages/reporter-html/test/timeline.test.ts
+
+Phase: Phase 5: User Story 3 - HTML timeline report (Priority: P2)
+
+Source: specs/009-reporters/tasks.md:66
+ReplayGuard-ID: 009-reporters-T017",Medium,To Do,009-reporters,us3,parallel
+285,267,Sub-task,"T018 Write failing document tests (no external URLs, CSP meta with matching sha256 hashes, JSON data block escaped, filters keyboard-operable, color-scheme) in packages/reporter-html/test/render.test.ts","Write failing document tests (no external URLs, CSP meta with matching sha256 hashes, JSON data block escaped, filters keyboard-operable, color-scheme) in packages/reporter-html/test/render.test.ts
+
+Phase: Phase 5: User Story 3 - HTML timeline report (Priority: P2)
+
+Source: specs/009-reporters/tasks.md:67
+ReplayGuard-ID: 009-reporters-T018",Medium,To Do,009-reporters,us3,parallel
+286,267,Sub-task,T019 Implement escaping template in packages/reporter-html/src/html.ts,"Implement escaping template in packages/reporter-html/src/html.ts
+
+Phase: Phase 5: User Story 3 - HTML timeline report (Priority: P2)
+
+Source: specs/009-reporters/tasks.md:68
+ReplayGuard-ID: 009-reporters-T019",Medium,To Do,009-reporters,us3,
+287,267,Sub-task,T020 Implement timeline renderer in packages/reporter-html/src/timeline.ts,"Implement timeline renderer in packages/reporter-html/src/timeline.ts
+
+Phase: Phase 5: User Story 3 - HTML timeline report (Priority: P2)
+
+Source: specs/009-reporters/tasks.md:69
+ReplayGuard-ID: 009-reporters-T020",Medium,To Do,009-reporters,us3,
+288,267,Sub-task,T021 Implement CSS/filter script assets and CSP hashing in packages/reporter-html/src/assets.ts and packages/reporter-html/src/csp.ts,"Implement CSS/filter script assets and CSP hashing in packages/reporter-html/src/assets.ts and packages/reporter-html/src/csp.ts
+
+Phase: Phase 5: User Story 3 - HTML timeline report (Priority: P2)
+
+Source: specs/009-reporters/tasks.md:70
+ReplayGuard-ID: 009-reporters-T021",Medium,To Do,009-reporters,us3,
+289,267,Sub-task,T022 Implement `renderHtml` and `writeHtmlReport` in packages/reporter-html/src/index.ts,"Implement `renderHtml` and `writeHtmlReport` in packages/reporter-html/src/index.ts
+
+Phase: Phase 5: User Story 3 - HTML timeline report (Priority: P2)
+
+Source: specs/009-reporters/tasks.md:71
+ReplayGuard-ID: 009-reporters-T022",Medium,To Do,009-reporters,us3,
+290,264,Task,"T023 Size/perf test: 100-case HTML < 1 MB, render < 200 ms in packages/reporter-html/test/perf.test.ts","Size/perf test: 100-case HTML < 1 MB, render < 200 ms in packages/reporter-html/test/perf.test.ts
+
+Phase: Phase 6: Polish & Cross-Cutting Concerns
+
+Source: specs/009-reporters/tasks.md:77
+ReplayGuard-ID: 009-reporters-T023",Medium,To Do,009-reporters,polish,parallel
+291,264,Task,T024 Reporter docs with example output in docs/reporters/README.md,"Reporter docs with example output in docs/reporters/README.md
+
+Phase: Phase 6: Polish & Cross-Cutting Concerns
+
+Source: specs/009-reporters/tasks.md:78
+ReplayGuard-ID: 009-reporters-T024",Medium,To Do,009-reporters,polish,parallel
+292,264,Task,T025 Author diagrams covering T001–T026 in specs/009-reporters/diagram.yaml,"Author diagrams covering T001–T026 in specs/009-reporters/diagram.yaml
+
+Phase: Phase 6: Polish & Cross-Cutting Concerns
+
+Source: specs/009-reporters/tasks.md:79
+ReplayGuard-ID: 009-reporters-T025",Medium,To Do,009-reporters,polish,
+293,264,Task,T026 Validate quickstart scenarios in specs/009-reporters/quickstart.md,"Validate quickstart scenarios in specs/009-reporters/quickstart.md
+
+Phase: Phase 6: Polish & Cross-Cutting Concerns
+
+Source: specs/009-reporters/tasks.md:80
+ReplayGuard-ID: 009-reporters-T026",Medium,To Do,009-reporters,polish,
+294,,Epic,010 Vitest Matchers,"Vitest Matchers (010-vitest-matchers).
+
+Source: specs/010-vitest-matchers/spec.md:1
+ReplayGuard-ID: 010-vitest-matchers",High,To Do,010-vitest-matchers,,
+295,294,Story,US1: Assert the policy passes,"User story 1 (P1) of 010-vitest-matchers.
+
+Source: specs/010-vitest-matchers/spec.md:13
+ReplayGuard-ID: 010-vitest-matchers-US1",High,To Do,010-vitest-matchers,us1,
+296,294,Story,US2: Targeted matchers,"User story 2 (P1) of 010-vitest-matchers.
+
+Source: specs/010-vitest-matchers/spec.md:34
+ReplayGuard-ID: 010-vitest-matchers-US2",High,To Do,010-vitest-matchers,us2,
+297,294,Story,US3: Type-safe setup,"User story 3 (P2) of 010-vitest-matchers.
+
+Source: specs/010-vitest-matchers/spec.md:55
+ReplayGuard-ID: 010-vitest-matchers-US3",Medium,To Do,010-vitest-matchers,us3,
+298,294,Task,"T001 Configure exports (`.`, `./setup`), core dependency and `vitest >=4 <6` peer in packages/vitest/package.json","Configure exports (`.`, `./setup`), core dependency and `vitest >=4 <6` peer in packages/vitest/package.json
+
+Phase: Phase 1: Setup (Shared Infrastructure)
+
+Source: specs/010-vitest-matchers/tasks.md:18
+ReplayGuard-ID: 010-vitest-matchers-T001",Medium,To Do,010-vitest-matchers,setup,
+299,294,Task,"T002 Write failing normalize tests (ClassifiedResult → Report, Report passthrough, invalid input message) in packages/vitest/test/normalize.test.ts","Write failing normalize tests (ClassifiedResult → Report, Report passthrough, invalid input message) in packages/vitest/test/normalize.test.ts
+
+Phase: Phase 2: Foundational (Blocking Prerequisites)
+
+Source: specs/010-vitest-matchers/tasks.md:24
+ReplayGuard-ID: 010-vitest-matchers-T002",Medium,To Do,010-vitest-matchers,foundational,parallel
+300,294,Task,T003 Implement `toReport` adapter in packages/vitest/src/normalize.ts,"Implement `toReport` adapter in packages/vitest/src/normalize.ts
+
+Phase: Phase 2: Foundational (Blocking Prerequisites)
+
+Source: specs/010-vitest-matchers/tasks.md:25
+ReplayGuard-ID: 010-vitest-matchers-T003",Medium,To Do,010-vitest-matchers,foundational,
+301,294,Task,"T004 Write failing violation formatting tests (selector by kind/prefix/predicate, first 20 + ""…and N more"") in packages/vitest/test/violations.test.ts","Write failing violation formatting tests (selector by kind/prefix/predicate, first 20 + ""…and N more"") in packages/vitest/test/violations.test.ts
+
+Phase: Phase 2: Foundational (Blocking Prerequisites)
+
+Source: specs/010-vitest-matchers/tasks.md:26
+ReplayGuard-ID: 010-vitest-matchers-T004",Medium,To Do,010-vitest-matchers,foundational,parallel
+302,294,Task,"T005 Implement selectors, violation collection, message formatting in packages/vitest/src/violations.ts","Implement selectors, violation collection, message formatting in packages/vitest/src/violations.ts
+
+Phase: Phase 2: Foundational (Blocking Prerequisites)
+
+Source: specs/010-vitest-matchers/tasks.md:27
+ReplayGuard-ID: 010-vitest-matchers-T005",Medium,To Do,010-vitest-matchers,foundational,
+303,295,Sub-task,"T006 Write failing tests for `toPassSideEffectPolicy` (pass, fail, negation, custom policy re-classification) in packages/vitest/test/policy-matcher.test.ts","Write failing tests for `toPassSideEffectPolicy` (pass, fail, negation, custom policy re-classification) in packages/vitest/test/policy-matcher.test.ts
+
+Phase: Phase 3: User Story 1 - Assert the policy passes (Priority: P1) 🎯 MVP
+
+Source: specs/010-vitest-matchers/tasks.md:37
+ReplayGuard-ID: 010-vitest-matchers-T006",High,To Do,010-vitest-matchers,us1,parallel
+304,295,Sub-task,T007 Implement `toPassSideEffectPolicy` via `createMatcher` template in packages/vitest/src/matchers.ts,"Implement `toPassSideEffectPolicy` via `createMatcher` template in packages/vitest/src/matchers.ts
+
+Phase: Phase 3: User Story 1 - Assert the policy passes (Priority: P1) 🎯 MVP
+
+Source: specs/010-vitest-matchers/tasks.md:38
+ReplayGuard-ID: 010-vitest-matchers-T007",High,To Do,010-vitest-matchers,us1,
+305,295,Sub-task,T008 Implement `setup.ts` registering matchers with `expect.extend` in packages/vitest/src/setup.ts,"Implement `setup.ts` registering matchers with `expect.extend` in packages/vitest/src/setup.ts
+
+Phase: Phase 3: User Story 1 - Assert the policy passes (Priority: P1) 🎯 MVP
+
+Source: specs/010-vitest-matchers/tasks.md:39
+ReplayGuard-ID: 010-vitest-matchers-T008",High,To Do,010-vitest-matchers,us1,
+306,296,Sub-task,"T009 Write failing tests for `toHaveNoDuplicateEffects`, `toHaveNoOrphanedEffects`, `toBeEffectivelyOnce`, `toHaveOutcome` in packages/vitest/test/matchers.test.ts","Write failing tests for `toHaveNoDuplicateEffects`, `toHaveNoOrphanedEffects`, `toBeEffectivelyOnce`, `toHaveOutcome` in packages/vitest/test/matchers.test.ts
+
+Phase: Phase 4: User Story 2 - Targeted matchers (Priority: P1)
+
+Source: specs/010-vitest-matchers/tasks.md:49
+ReplayGuard-ID: 010-vitest-matchers-T009",High,To Do,010-vitest-matchers,us2,parallel
+307,296,Sub-task,T010 Implement the four matchers in packages/vitest/src/matchers.ts,"Implement the four matchers in packages/vitest/src/matchers.ts
+
+Phase: Phase 4: User Story 2 - Targeted matchers (Priority: P1)
+
+Source: specs/010-vitest-matchers/tasks.md:50
+ReplayGuard-ID: 010-vitest-matchers-T010",High,To Do,010-vitest-matchers,us2,
+308,297,Sub-task,T011 Write type tests with `expectTypeOf` and `@ts-expect-error` in packages/vitest/test/types.test-d.ts,"Write type tests with `expectTypeOf` and `@ts-expect-error` in packages/vitest/test/types.test-d.ts
+
+Phase: Phase 5: User Story 3 - Type-safe setup (Priority: P2)
+
+Source: specs/010-vitest-matchers/tasks.md:60
+ReplayGuard-ID: 010-vitest-matchers-T011",Medium,To Do,010-vitest-matchers,us3,parallel
+309,297,Sub-task,T012 Implement Vitest module augmentation in packages/vitest/src/types.d.ts,"Implement Vitest module augmentation in packages/vitest/src/types.d.ts
+
+Phase: Phase 5: User Story 3 - Type-safe setup (Priority: P2)
+
+Source: specs/010-vitest-matchers/tasks.md:61
+ReplayGuard-ID: 010-vitest-matchers-T012",Medium,To Do,010-vitest-matchers,us3,
+310,294,Task,T013 CI job testing against previous Vitest major in .github/workflows/ci.yml,"CI job testing against previous Vitest major in .github/workflows/ci.yml
+
+Phase: Phase 6: Polish & Cross-Cutting Concerns
+
+Source: specs/010-vitest-matchers/tasks.md:67
+ReplayGuard-ID: 010-vitest-matchers-T013",Medium,To Do,010-vitest-matchers,polish,parallel
+311,294,Task,T014 Matcher reference docs in docs/vitest/README.md,"Matcher reference docs in docs/vitest/README.md
+
+Phase: Phase 6: Polish & Cross-Cutting Concerns
+
+Source: specs/010-vitest-matchers/tasks.md:68
+ReplayGuard-ID: 010-vitest-matchers-T014",Medium,To Do,010-vitest-matchers,polish,parallel
+312,294,Task,T015 Author diagrams covering T001–T016 in specs/010-vitest-matchers/diagram.yaml,"Author diagrams covering T001–T016 in specs/010-vitest-matchers/diagram.yaml
+
+Phase: Phase 6: Polish & Cross-Cutting Concerns
+
+Source: specs/010-vitest-matchers/tasks.md:69
+ReplayGuard-ID: 010-vitest-matchers-T015",Medium,To Do,010-vitest-matchers,polish,
+313,294,Task,T016 Validate quickstart scenarios in specs/010-vitest-matchers/quickstart.md,"Validate quickstart scenarios in specs/010-vitest-matchers/quickstart.md
+
+Phase: Phase 6: Polish & Cross-Cutting Concerns
+
+Source: specs/010-vitest-matchers/tasks.md:70
+ReplayGuard-ID: 010-vitest-matchers-T016",Medium,To Do,010-vitest-matchers,polish,
+314,,Epic,011 Idempotency Key Helper & Fix Hints,"Idempotency Key Helper & Fix Hints (011-idempotency-helper).
+
+Source: specs/011-idempotency-helper/spec.md:1
+ReplayGuard-ID: 011-idempotency-helper",High,To Do,011-idempotency-helper,,
+315,314,Story,US1: Stable idempotency key for a step,"User story 1 (P1) of 011-idempotency-helper.
+
+Source: specs/011-idempotency-helper/spec.md:13
+ReplayGuard-ID: 011-idempotency-helper-US1",High,To Do,011-idempotency-helper,us1,
+316,314,Story,US2: Fix hints in reports,"User story 2 (P1) of 011-idempotency-helper.
+
+Source: specs/011-idempotency-helper/spec.md:36
+ReplayGuard-ID: 011-idempotency-helper-US2",High,To Do,011-idempotency-helper,us2,
+317,314,Story,US3: Detect unstable keys,"User story 3 (P2) of 011-idempotency-helper.
+
+Source: specs/011-idempotency-helper/spec.md:63
+ReplayGuard-ID: 011-idempotency-helper-US3",Medium,To Do,011-idempotency-helper,us3,
+318,314,Task,T001 Create `idempotency/` and `hints/` modules with exports in packages/core/src/index.ts,"Create `idempotency/` and `hints/` modules with exports in packages/core/src/index.ts
+
+Phase: Phase 1: Setup (Shared Infrastructure)
+
+Source: specs/011-idempotency-helper/tasks.md:18
+ReplayGuard-ID: 011-idempotency-helper-T001",Medium,To Do,011-idempotency-helper,setup,
+319,314,Task,"T002 Define FixHint, HintRule, HintContext types (""title ≤ 80 chars"") in packages/core/src/hints/types.ts","Define FixHint, HintRule, HintContext types (""title ≤ 80 chars"") in packages/core/src/hints/types.ts
+
+Phase: Phase 2: Foundational (Blocking Prerequisites)
+
+Source: specs/011-idempotency-helper/tasks.md:24
+ReplayGuard-ID: 011-idempotency-helper-T002",Medium,To Do,011-idempotency-helper,foundational,
+320,315,Sub-task,"T003 Write failing key tests (format, escaping `%`/`:`, iteration, namespace ""1–64"", parts, empty workflowId/step → ConfigError, > 255 → prefix + hash) in packages/core/test/idempotency/key.test.ts","Write failing key tests (format, escaping `%`/`:`, iteration, namespace ""1–64"", parts, empty workflowId/step → ConfigError, > 255 → prefix + hash) in packages/core/test/idempotency/key.test.ts
+
+Phase: Phase 3: User Story 1 - Stable idempotency key for a step (Priority: P1) 🎯 MVP
+
+Source: specs/011-idempotency-helper/tasks.md:34
+ReplayGuard-ID: 011-idempotency-helper-T003",High,To Do,011-idempotency-helper,us1,parallel
+321,315,Sub-task,"T004 Write failing property tests (stability, injectivity on escaped components, length ≤ 255) in packages/core/test/idempotency/key.property.test.ts","Write failing property tests (stability, injectivity on escaped components, length ≤ 255) in packages/core/test/idempotency/key.property.test.ts
+
+Phase: Phase 3: User Story 1 - Stable idempotency key for a step (Priority: P1) 🎯 MVP
+
+Source: specs/011-idempotency-helper/tasks.md:35
+ReplayGuard-ID: 011-idempotency-helper-T004",High,To Do,011-idempotency-helper,us1,parallel
+322,315,Sub-task,T005 Implement `idempotencyKey` in packages/core/src/idempotency/key.ts,"Implement `idempotencyKey` in packages/core/src/idempotency/key.ts
+
+Phase: Phase 3: User Story 1 - Stable idempotency key for a step (Priority: P1) 🎯 MVP
+
+Source: specs/011-idempotency-helper/tasks.md:36
+ReplayGuard-ID: 011-idempotency-helper-T005",High,To Do,011-idempotency-helper,us1,
+323,316,Sub-task,"T006 Write failing catalog tests, one per rule (matches + rendered example) in packages/core/test/hints/catalog.test.ts","Write failing catalog tests, one per rule (matches + rendered example) in packages/core/test/hints/catalog.test.ts
+
+Phase: Phase 4: User Story 2 - Fix hints in reports (Priority: P1)
+
+Source: specs/011-idempotency-helper/tasks.md:46
+ReplayGuard-ID: 011-idempotency-helper-T006",High,To Do,011-idempotency-helper,us2,parallel
+324,316,Sub-task,"T007 Write failing attach tests (fallback `investigate`, passing outcomes get no hints, invariant property) in packages/core/test/hints/attach.test.ts","Write failing attach tests (fallback `investigate`, passing outcomes get no hints, invariant property) in packages/core/test/hints/attach.test.ts
+
+Phase: Phase 4: User Story 2 - Fix hints in reports (Priority: P1)
+
+Source: specs/011-idempotency-helper/tasks.md:47
+ReplayGuard-ID: 011-idempotency-helper-T007",High,To Do,011-idempotency-helper,us2,parallel
+325,316,Sub-task,"T008 Implement hint catalog (add-idempotency-key, provider-ignores-key, timeout-retry-concurrency, orphan-compensate, crash-loop-retries, skipped-ephemeral, allow-by-policy, investigate) in packages/core/src/hints/catalog.ts","Implement hint catalog (add-idempotency-key, provider-ignores-key, timeout-retry-concurrency, orphan-compensate, crash-loop-retries, skipped-ephemeral, allow-by-policy, investigate) in packages/core/src/hints/catalog.ts
+
+Phase: Phase 4: User Story 2 - Fix hints in reports (Priority: P1)
+
+Source: specs/011-idempotency-helper/tasks.md:48
+ReplayGuard-ID: 011-idempotency-helper-T008",High,To Do,011-idempotency-helper,us2,
+326,316,Sub-task,T009 Implement `attachHints` and call it at the end of `classify()` in packages/core/src/hints/attach.ts and packages/core/src/classifier/classify.ts,"Implement `attachHints` and call it at the end of `classify()` in packages/core/src/hints/attach.ts and packages/core/src/classifier/classify.ts
+
+Phase: Phase 4: User Story 2 - Fix hints in reports (Priority: P1)
+
+Source: specs/011-idempotency-helper/tasks.md:49
+ReplayGuard-ID: 011-idempotency-helper-T009",High,To Do,011-idempotency-helper,us2,
+327,316,Sub-task,"T010 Write end-to-end fix test: H1 scenario fails without key, passes with `idempotencyKey` in packages/adapter-workflows/test/fix-with-key.e2e.test.ts","Write end-to-end fix test: H1 scenario fails without key, passes with `idempotencyKey` in packages/adapter-workflows/test/fix-with-key.e2e.test.ts
+
+Phase: Phase 4: User Story 2 - Fix hints in reports (Priority: P1)
+
+Source: specs/011-idempotency-helper/tasks.md:50
+ReplayGuard-ID: 011-idempotency-helper-T010",High,To Do,011-idempotency-helper,us2,
+328,317,Sub-task,T011 Write failing unstable-key rule tests in packages/core/test/hints/unstable-key.test.ts,"Write failing unstable-key rule tests in packages/core/test/hints/unstable-key.test.ts
+
+Phase: Phase 5: User Story 3 - Detect unstable keys (Priority: P2)
+
+Source: specs/011-idempotency-helper/tasks.md:60
+ReplayGuard-ID: 011-idempotency-helper-T011",Medium,To Do,011-idempotency-helper,us3,parallel
+329,317,Sub-task,T012 Implement `unstable-idempotency-key` rule in packages/core/src/hints/catalog.ts,"Implement `unstable-idempotency-key` rule in packages/core/src/hints/catalog.ts
+
+Phase: Phase 5: User Story 3 - Detect unstable keys (Priority: P2)
+
+Source: specs/011-idempotency-helper/tasks.md:61
+ReplayGuard-ID: 011-idempotency-helper-T012",Medium,To Do,011-idempotency-helper,us3,
+330,314,Task,"T013 Guide ""Fixing duplicate side effects"" in docs/guides/fixing-duplicates.md","Guide ""Fixing duplicate side effects"" in docs/guides/fixing-duplicates.md
+
+Phase: Phase 6: Polish & Cross-Cutting Concerns
+
+Source: specs/011-idempotency-helper/tasks.md:67
+ReplayGuard-ID: 011-idempotency-helper-T013",Medium,To Do,011-idempotency-helper,polish,parallel
+331,314,Task,T014 Author diagrams covering T001–T015 in specs/011-idempotency-helper/diagram.yaml,"Author diagrams covering T001–T015 in specs/011-idempotency-helper/diagram.yaml
+
+Phase: Phase 6: Polish & Cross-Cutting Concerns
+
+Source: specs/011-idempotency-helper/tasks.md:68
+ReplayGuard-ID: 011-idempotency-helper-T014",Medium,To Do,011-idempotency-helper,polish,
+332,314,Task,T015 Validate quickstart scenarios in specs/011-idempotency-helper/quickstart.md,"Validate quickstart scenarios in specs/011-idempotency-helper/quickstart.md
+
+Phase: Phase 6: Polish & Cross-Cutting Concerns
+
+Source: specs/011-idempotency-helper/tasks.md:69
+ReplayGuard-ID: 011-idempotency-helper-T015",Medium,To Do,011-idempotency-helper,polish,
+333,,Epic,012 RivetKit Actor Adapter,"RivetKit Actor Adapter (012-rivetkit-adapter).
+
+Source: specs/012-rivetkit-adapter/spec.md:1
+ReplayGuard-ID: 012-rivetkit-adapter",High,To Do,012-rivetkit-adapter,,
+334,333,Story,US1: Run a scenario against a workflow actor,"User story 1 (P1) of 012-rivetkit-adapter.
+
+Source: specs/012-rivetkit-adapter/spec.md:13
+ReplayGuard-ID: 012-rivetkit-adapter-US1",High,To Do,012-rivetkit-adapter,us1,
+335,333,Story,US2: Actor crash and restart,"User story 2 (P1) of 012-rivetkit-adapter.
+
+Source: specs/012-rivetkit-adapter/spec.md:33
+ReplayGuard-ID: 012-rivetkit-adapter-US2",High,To Do,012-rivetkit-adapter,us2,
+336,333,Story,US3: Version compatibility,"User story 3 (P2) of 012-rivetkit-adapter.
+
+Source: specs/012-rivetkit-adapter/spec.md:52
+ReplayGuard-ID: 012-rivetkit-adapter-US3",Medium,To Do,012-rivetkit-adapter,us3,
+337,333,Task,"T001 Configure dependencies (core, adapter-workflows) and peers (`rivetkit >=2.3.11 <2.4.0`, `@rivet-dev/workflows ^1.0.0`) in packages/adapter-rivetkit/package.json","Configure dependencies (core, adapter-workflows) and peers (`rivetkit >=2.3.11 <2.4.0`, `@rivet-dev/workflows ^1.0.0`) in packages/adapter-rivetkit/package.json
+
+Phase: Phase 1: Setup (Shared Infrastructure)
+
+Source: specs/012-rivetkit-adapter/tasks.md:18
+ReplayGuard-ID: 012-rivetkit-adapter-T001",Medium,To Do,012-rivetkit-adapter,setup,
+338,333,Task,T002 Spike: validate actor host kill + restart resumes workflow from persisted history; record decision (parent-owned engine vs restart both) in spikes/actor-restart/FINDINGS.md,"Spike: validate actor host kill + restart resumes workflow from persisted history; record decision (parent-owned engine vs restart both) in spikes/actor-restart/FINDINGS.md
+
+Phase: Phase 1: Setup (Shared Infrastructure)
+
+Source: specs/012-rivetkit-adapter/tasks.md:19
+ReplayGuard-ID: 012-rivetkit-adapter-T002",Medium,To Do,012-rivetkit-adapter,setup,
+339,333,Task,"T003 Extract shared runtime conformance suite (H0, H1, H1b, H3a, H3b, H4, clean baseline) parameterized by runtime factory in packages/adapter-workflows/test-support/conformance.ts","Extract shared runtime conformance suite (H0, H1, H1b, H3a, H3b, H4, clean baseline) parameterized by runtime factory in packages/adapter-workflows/test-support/conformance.ts
+
+Phase: Phase 2: Foundational (Blocking Prerequisites)
+
+Source: specs/012-rivetkit-adapter/tasks.md:25
+ReplayGuard-ID: 012-rivetkit-adapter-T003",Medium,To Do,012-rivetkit-adapter,foundational,
+340,333,Task,T004 Run conformance suite against `workflowsRuntime()` in packages/adapter-workflows/test/conformance.engine.test.ts,"Run conformance suite against `workflowsRuntime()` in packages/adapter-workflows/test/conformance.engine.test.ts
+
+Phase: Phase 2: Foundational (Blocking Prerequisites)
+
+Source: specs/012-rivetkit-adapter/tasks.md:26
+ReplayGuard-ID: 012-rivetkit-adapter-T004",Medium,To Do,012-rivetkit-adapter,foundational,
+341,334,Sub-task,"T005 Write failing ActorHost lifecycle tests (start on free port + temp storage, ready detection, dispose cleans processes/dirs) in packages/adapter-rivetkit/test/host.actor.test.ts","Write failing ActorHost lifecycle tests (start on free port + temp storage, ready detection, dispose cleans processes/dirs) in packages/adapter-rivetkit/test/host.actor.test.ts
+
+Phase: Phase 3: User Story 1 - Run a scenario against a workflow actor (Priority: P1) 🎯 MVP
+
+Source: specs/012-rivetkit-adapter/tasks.md:36
+ReplayGuard-ID: 012-rivetkit-adapter-T005",High,To Do,012-rivetkit-adapter,us1,parallel
+342,334,Sub-task,"T006 Implement child host entry (registry with workflow actor, relay ledger events via 005 protocol) in packages/adapter-rivetkit/src/host/host-entry.ts","Implement child host entry (registry with workflow actor, relay ledger events via 005 protocol) in packages/adapter-rivetkit/src/host/host-entry.ts
+
+Phase: Phase 3: User Story 1 - Run a scenario against a workflow actor (Priority: P1) 🎯 MVP
+
+Source: specs/012-rivetkit-adapter/tasks.md:37
+ReplayGuard-ID: 012-rivetkit-adapter-T006",High,To Do,012-rivetkit-adapter,us1,
+343,334,Sub-task,"T007 Implement ActorHost resource (state machine ""idle → starting → ready → killed|stopped → disposed"") in packages/adapter-rivetkit/src/host/actor-host.ts","Implement ActorHost resource (state machine ""idle → starting → ready → killed|stopped → disposed"") in packages/adapter-rivetkit/src/host/actor-host.ts
+
+Phase: Phase 3: User Story 1 - Run a scenario against a workflow actor (Priority: P1) 🎯 MVP
+
+Source: specs/012-rivetkit-adapter/tasks.md:38
+ReplayGuard-ID: 012-rivetkit-adapter-T007",High,To Do,012-rivetkit-adapter,us1,
+344,334,Sub-task,T008 Implement `rivetkitRuntime()` WorkflowRuntime in packages/adapter-rivetkit/src/runtime.ts,"Implement `rivetkitRuntime()` WorkflowRuntime in packages/adapter-rivetkit/src/runtime.ts
+
+Phase: Phase 3: User Story 1 - Run a scenario against a workflow actor (Priority: P1) 🎯 MVP
+
+Source: specs/012-rivetkit-adapter/tasks.md:39
+ReplayGuard-ID: 012-rivetkit-adapter-T008",High,To Do,012-rivetkit-adapter,us1,
+345,334,Sub-task,T009 Run conformance suite against actor runtime in packages/adapter-rivetkit/test/conformance.actor.test.ts,"Run conformance suite against actor runtime in packages/adapter-rivetkit/test/conformance.actor.test.ts
+
+Phase: Phase 3: User Story 1 - Run a scenario against a workflow actor (Priority: P1) 🎯 MVP
+
+Source: specs/012-rivetkit-adapter/tasks.md:40
+ReplayGuard-ID: 012-rivetkit-adapter-T009",High,To Do,012-rivetkit-adapter,us1,
+346,335,Sub-task,T010 Write failing crash/restart and sleep/wake tests in packages/adapter-rivetkit/test/restart.actor.test.ts,"Write failing crash/restart and sleep/wake tests in packages/adapter-rivetkit/test/restart.actor.test.ts
+
+Phase: Phase 4: User Story 2 - Actor crash and restart (Priority: P1)
+
+Source: specs/012-rivetkit-adapter/tasks.md:50
+ReplayGuard-ID: 012-rivetkit-adapter-T010",High,To Do,012-rivetkit-adapter,us2,parallel
+347,335,Sub-task,T011 Implement kill/restart per T002 decision in packages/adapter-rivetkit/src/host/actor-host.ts,"Implement kill/restart per T002 decision in packages/adapter-rivetkit/src/host/actor-host.ts
+
+Phase: Phase 4: User Story 2 - Actor crash and restart (Priority: P1)
+
+Source: specs/012-rivetkit-adapter/tasks.md:51
+ReplayGuard-ID: 012-rivetkit-adapter-T011",High,To Do,012-rivetkit-adapter,us2,
+348,336,Sub-task,"T012 Add RivetKit version matrix job (2.3.11, latest 2.3.x) with explicit skip message when engine binary unavailable in .github/workflows/ci.yml","Add RivetKit version matrix job (2.3.11, latest 2.3.x) with explicit skip message when engine binary unavailable in .github/workflows/ci.yml
+
+Phase: Phase 5: User Story 3 - Version compatibility (Priority: P2)
+
+Source: specs/012-rivetkit-adapter/tasks.md:61
+ReplayGuard-ID: 012-rivetkit-adapter-T012",Medium,To Do,012-rivetkit-adapter,us3,
+349,333,Task,T013 Leak check (no engine processes/temp dirs after suite) in packages/adapter-rivetkit/test/leaks.actor.test.ts,"Leak check (no engine processes/temp dirs after suite) in packages/adapter-rivetkit/test/leaks.actor.test.ts
+
+Phase: Phase 6: Polish & Cross-Cutting Concerns
+
+Source: specs/012-rivetkit-adapter/tasks.md:67
+ReplayGuard-ID: 012-rivetkit-adapter-T013",Medium,To Do,012-rivetkit-adapter,polish,parallel
+350,333,Task,T014 Actor guide in docs/guides/rivetkit-actors.md,"Actor guide in docs/guides/rivetkit-actors.md
+
+Phase: Phase 6: Polish & Cross-Cutting Concerns
+
+Source: specs/012-rivetkit-adapter/tasks.md:68
+ReplayGuard-ID: 012-rivetkit-adapter-T014",Medium,To Do,012-rivetkit-adapter,polish,parallel
+351,333,Task,T015 Author diagrams covering T001–T016 in specs/012-rivetkit-adapter/diagram.yaml,"Author diagrams covering T001–T016 in specs/012-rivetkit-adapter/diagram.yaml
+
+Phase: Phase 6: Polish & Cross-Cutting Concerns
+
+Source: specs/012-rivetkit-adapter/tasks.md:69
+ReplayGuard-ID: 012-rivetkit-adapter-T015",Medium,To Do,012-rivetkit-adapter,polish,
+352,333,Task,T016 Validate quickstart scenarios in specs/012-rivetkit-adapter/quickstart.md,"Validate quickstart scenarios in specs/012-rivetkit-adapter/quickstart.md
+
+Phase: Phase 6: Polish & Cross-Cutting Concerns
+
+Source: specs/012-rivetkit-adapter/tasks.md:70
+ReplayGuard-ID: 012-rivetkit-adapter-T016",Medium,To Do,012-rivetkit-adapter,polish,
+353,,Epic,013 Upstream Proposal to Rivet,"Upstream Proposal to Rivet (013-upstream-proposal).
+
+Source: specs/013-upstream-proposal/spec.md:1
+ReplayGuard-ID: 013-upstream-proposal",High,To Do,013-upstream-proposal,,
+354,353,Story,US1: Minimal reproductions,"User story 1 (P1) of 013-upstream-proposal.
+
+Source: specs/013-upstream-proposal/spec.md:20
+ReplayGuard-ID: 013-upstream-proposal-US1",High,To Do,013-upstream-proposal,us1,
+355,353,Story,US2: Issue drafts with design proposals,"User story 2 (P1) of 013-upstream-proposal.
+
+Source: specs/013-upstream-proposal/spec.md:41
+ReplayGuard-ID: 013-upstream-proposal-US2",High,To Do,013-upstream-proposal,us2,
+356,353,Story,US3: Track responses,"User story 3 (P3) of 013-upstream-proposal.
+
+Source: specs/013-upstream-proposal/spec.md:62
+ReplayGuard-ID: 013-upstream-proposal-US3",Low,To Do,013-upstream-proposal,us3,
+357,353,Task,T001 Add `upstream/*` to workspace packages in pnpm-workspace.yaml and create upstream/README.md with tracker table,"Add `upstream/*` to workspace packages in pnpm-workspace.yaml and create upstream/README.md with tracker table
+
+Phase: Phase 1: Setup (Shared Infrastructure)
+
+Source: specs/013-upstream-proposal/tasks.md:18
+ReplayGuard-ID: 013-upstream-proposal-T001",Medium,To Do,013-upstream-proposal,setup,
+358,353,Task,T002 Record latest published `@rivet-dev/workflows` version and confirm gaps still reproduce in upstream/README.md,"Record latest published `@rivet-dev/workflows` version and confirm gaps still reproduce in upstream/README.md
+
+Phase: Phase 2: Foundational (Blocking Prerequisites)
+
+Source: specs/013-upstream-proposal/tasks.md:24
+ReplayGuard-ID: 013-upstream-proposal-T002",Medium,To Do,013-upstream-proposal,foundational,
+359,354,Sub-task,T003 Create crash-loop retries repro (H2) in upstream/repro-crash-loop-retries/test/repro.test.ts,"Create crash-loop retries repro (H2) in upstream/repro-crash-loop-retries/test/repro.test.ts
+
+Phase: Phase 3: User Story 1 - Minimal reproductions (Priority: P1) 🎯 MVP
+
+Source: specs/013-upstream-proposal/tasks.md:34
+ReplayGuard-ID: 013-upstream-proposal-T003",High,To Do,013-upstream-proposal,us1,parallel
+360,354,Sub-task,T004 Create timeout continuation repro (H3) in upstream/repro-timeout-continuation/test/repro.test.ts,"Create timeout continuation repro (H3) in upstream/repro-timeout-continuation/test/repro.test.ts
+
+Phase: Phase 3: User Story 1 - Minimal reproductions (Priority: P1) 🎯 MVP
+
+Source: specs/013-upstream-proposal/tasks.md:35
+ReplayGuard-ID: 013-upstream-proposal-T004",High,To Do,013-upstream-proposal,us1,parallel
+361,354,Sub-task,T005 Create stable step identity repro in upstream/repro-stable-step-identity/test/repro.test.ts,"Create stable step identity repro in upstream/repro-stable-step-identity/test/repro.test.ts
+
+Phase: Phase 3: User Story 1 - Minimal reproductions (Priority: P1) 🎯 MVP
+
+Source: specs/013-upstream-proposal/tasks.md:36
+ReplayGuard-ID: 013-upstream-proposal-T005",High,To Do,013-upstream-proposal,us1,parallel
+362,354,Sub-task,T006 Add CI job running repros with `EXPECT_GAP=1` in .github/workflows/ci.yml,"Add CI job running repros with `EXPECT_GAP=1` in .github/workflows/ci.yml
+
+Phase: Phase 3: User Story 1 - Minimal reproductions (Priority: P1) 🎯 MVP
+
+Source: specs/013-upstream-proposal/tasks.md:37
+ReplayGuard-ID: 013-upstream-proposal-T006",High,To Do,013-upstream-proposal,us1,
+363,355,Sub-task,T007 Draft crash-loop retries issue in upstream/drafts/01-crash-loop-retries.md,"Draft crash-loop retries issue in upstream/drafts/01-crash-loop-retries.md
+
+Phase: Phase 4: User Story 2 - Issue drafts with design proposals (Priority: P1)
+
+Source: specs/013-upstream-proposal/tasks.md:47
+ReplayGuard-ID: 013-upstream-proposal-T007",High,To Do,013-upstream-proposal,us2,parallel
+364,355,Sub-task,T008 Draft timeout continuation issue in upstream/drafts/02-timeout-continuation.md,"Draft timeout continuation issue in upstream/drafts/02-timeout-continuation.md
+
+Phase: Phase 4: User Story 2 - Issue drafts with design proposals (Priority: P1)
+
+Source: specs/013-upstream-proposal/tasks.md:48
+ReplayGuard-ID: 013-upstream-proposal-T008",High,To Do,013-upstream-proposal,us2,parallel
+365,355,Sub-task,T009 Draft stable step identity issue in upstream/drafts/03-stable-step-identity.md,"Draft stable step identity issue in upstream/drafts/03-stable-step-identity.md
+
+Phase: Phase 4: User Story 2 - Issue drafts with design proposals (Priority: P1)
+
+Source: specs/013-upstream-proposal/tasks.md:49
+ReplayGuard-ID: 013-upstream-proposal-T009",High,To Do,013-upstream-proposal,us2,parallel
+366,356,Sub-task,"T010 Request maintainer approval, file approved issues, update tracker in upstream/README.md","Request maintainer approval, file approved issues, update tracker in upstream/README.md
+
+Phase: Phase 5: User Story 3 - Track responses (Priority: P3)
+
+Source: specs/013-upstream-proposal/tasks.md:59
+ReplayGuard-ID: 013-upstream-proposal-T010",Low,To Do,013-upstream-proposal,us3,
+367,353,Task,T011 Link repro evidence from user docs in docs/faults/strategies.md,"Link repro evidence from user docs in docs/faults/strategies.md
+
+Phase: Phase 6: Polish & Cross-Cutting Concerns
+
+Source: specs/013-upstream-proposal/tasks.md:65
+ReplayGuard-ID: 013-upstream-proposal-T011",Medium,To Do,013-upstream-proposal,polish,
+368,353,Task,T012 Author diagrams covering T001–T013 in specs/013-upstream-proposal/diagram.yaml,"Author diagrams covering T001–T013 in specs/013-upstream-proposal/diagram.yaml
+
+Phase: Phase 6: Polish & Cross-Cutting Concerns
+
+Source: specs/013-upstream-proposal/tasks.md:66
+ReplayGuard-ID: 013-upstream-proposal-T012",Medium,To Do,013-upstream-proposal,polish,
+369,353,Task,T013 Validate quickstart in specs/013-upstream-proposal/quickstart.md,"Validate quickstart in specs/013-upstream-proposal/quickstart.md
+
+Phase: Phase 6: Polish & Cross-Cutting Concerns
+
+Source: specs/013-upstream-proposal/tasks.md:67
+ReplayGuard-ID: 013-upstream-proposal-T013",Medium,To Do,013-upstream-proposal,polish,

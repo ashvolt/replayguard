@@ -16,7 +16,11 @@
 		"spike": "pnpm --filter @replayguard/spike-engine-assumptions test",
 		"diagrams:generate": "node --experimental-strip-types --no-warnings tools/diagrams/src/cli.ts generate",
 		"diagrams:check": "node --experimental-strip-types --no-warnings tools/diagrams/src/cli.ts check",
-		"diagrams:coverage": "node --experimental-strip-types --no-warnings tools/diagrams/src/cli.ts coverage"
+		"diagrams:coverage": "node --experimental-strip-types --no-warnings tools/diagrams/src/cli.ts coverage",
+		"export:generate": "node --experimental-strip-types --no-warnings tools/export/src/cli.ts generate",
+		"export:check": "node --experimental-strip-types --no-warnings tools/export/src/cli.ts check",
+		"export:import-jira": "node --experimental-strip-types --no-warnings tools/export/src/cli.ts import-jira",
+		"export:import-github": "node --experimental-strip-types --no-warnings tools/export/src/cli.ts import-github"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "2.5.15",

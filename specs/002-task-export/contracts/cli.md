@@ -9,7 +9,9 @@
 
 ## Jira CSV columns
 
-`Issue Id,Parent Id,Issue Type,Summary,Description,Priority,Status,Labels,Labels,Labels,Labels`
+`Issue Id,Parent Id,Issue Type,Summary,Description,Priority,Status,Labels,…` — `Issue Id`/`Parent Id`
+are sequential integers (Jira's importer links rows by number); the stable source ID
+(`004-effect-ledger-T012`) is the last line of every description. One `Labels` column per label.
 
 ## Generic CSV columns
 

@@ -22,7 +22,8 @@
 ## R3 — GitHub Issues
 
 - **Decision**: Milestone per feature, issue per Story/Task/Sub-task with labels; hierarchy via a
-  task list in the Story body and a `Parent: #N` line in children; idempotency marker
+  `Parent: #N` line in every child (GitHub renders the cross-reference on the parent); labels are
+  created with `gh label create --force` before issues; idempotency marker
   `<!-- rg-source: 004-T012 -->` in bodies plus local state file.
 - **Alternatives**: GitHub sub-issues API — still evolving; task lists render everywhere.
 

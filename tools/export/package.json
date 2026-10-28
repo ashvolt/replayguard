@@ -1,0 +1,20 @@
+{
+	"name": "@replayguard-tools/export",
+	"private": true,
+	"type": "module",
+	"description": "Export Spec Kit tasks to Jira (CSV/REST), GitHub Issues and generic CSV.",
+	"bin": {
+		"rg-export": "./src/cli.ts"
+	},
+	"scripts": {
+		"test": "vitest run --coverage",
+		"check-types": "tsc --noEmit"
+	},
+	"devDependencies": {
+		"@types/node": "22.20.5",
+		"@vitest/coverage-v8": "5.0.5",
+		"fast-check": "4.10.2",
+		"typescript": "~6.0.3",
+		"vitest": "5.0.5"
+	}
+}
