@@ -1222,155 +1222,155 @@ ReplayGuard-ID: 006-scenario-runner-T027",Medium,Done,006-scenario-runner,polish
 215,,Epic,007 Outcome Classifier & Verdict Policy,"Outcome Classifier & Verdict Policy (007-outcome-classifier).
 
 Source: specs/007-outcome-classifier/spec.md:1
-ReplayGuard-ID: 007-outcome-classifier",High,To Do,007-outcome-classifier,,
+ReplayGuard-ID: 007-outcome-classifier",High,Done,007-outcome-classifier,,
 216,215,Story,US1: Classify every effect in every case,"User story 1 (P1) of 007-outcome-classifier.
 
 Source: specs/007-outcome-classifier/spec.md:21
-ReplayGuard-ID: 007-outcome-classifier-US1",High,To Do,007-outcome-classifier,us1,
+ReplayGuard-ID: 007-outcome-classifier-US1",High,Done,007-outcome-classifier,us1,
 217,215,Story,US2: Pass/fail verdicts with a strict default,"User story 2 (P1) of 007-outcome-classifier.
 
 Source: specs/007-outcome-classifier/spec.md:49
-ReplayGuard-ID: 007-outcome-classifier-US2",High,To Do,007-outcome-classifier,us2,
+ReplayGuard-ID: 007-outcome-classifier-US2",High,Done,007-outcome-classifier,us2,
 218,215,Story,US3: Override the policy per effect,"User story 3 (P2) of 007-outcome-classifier.
 
 Source: specs/007-outcome-classifier/spec.md:69
-ReplayGuard-ID: 007-outcome-classifier-US3",Medium,To Do,007-outcome-classifier,us3,
+ReplayGuard-ID: 007-outcome-classifier-US3",Medium,Done,007-outcome-classifier,us3,
 219,215,Story,US4: Explain why,"User story 4 (P2) of 007-outcome-classifier.
 
 Source: specs/007-outcome-classifier/spec.md:87
-ReplayGuard-ID: 007-outcome-classifier-US4",Medium,To Do,007-outcome-classifier,us4,
+ReplayGuard-ID: 007-outcome-classifier-US4",Medium,Done,007-outcome-classifier,us4,
 220,215,Task,T001 Create `classifier/` module and exports in packages/core/src/classifier/index.ts,"Create `classifier/` module and exports in packages/core/src/classifier/index.ts
 
 Phase: Phase 1: Setup (Shared Infrastructure)
 
 Source: specs/007-outcome-classifier/tasks.md:18
-ReplayGuard-ID: 007-outcome-classifier-T001",Medium,To Do,007-outcome-classifier,setup,
+ReplayGuard-ID: 007-outcome-classifier-T001",Medium,Done,007-outcome-classifier,setup,
 221,215,Task,T002 Create fast-check arbitraries for ledger snapshots and case results in packages/core/test/classifier/arbitraries.ts,"Create fast-check arbitraries for ledger snapshots and case results in packages/core/test/classifier/arbitraries.ts
 
 Phase: Phase 1: Setup (Shared Infrastructure)
 
 Source: specs/007-outcome-classifier/tasks.md:19
-ReplayGuard-ID: 007-outcome-classifier-T002",Medium,To Do,007-outcome-classifier,setup,parallel
+ReplayGuard-ID: 007-outcome-classifier-T002",Medium,Done,007-outcome-classifier,setup,parallel
 222,215,Task,"T003 Define Outcome, VerdictLevel, Evidence, EffectClassification, CaseClassification, ClassifiedResult types in packages/core/src/classifier/types.ts","Define Outcome, VerdictLevel, Evidence, EffectClassification, CaseClassification, ClassifiedResult types in packages/core/src/classifier/types.ts
 
 Phase: Phase 2: Foundational (Blocking Prerequisites)
 
 Source: specs/007-outcome-classifier/tasks.md:25
-ReplayGuard-ID: 007-outcome-classifier-T003",Medium,To Do,007-outcome-classifier,foundational,
+ReplayGuard-ID: 007-outcome-classifier-T003",Medium,Done,007-outcome-classifier,foundational,
 223,215,Task,"T004 Write failing evidence builder tests (applied/dedup/failed counts, expected from baseline, overlaps with positive length, keys, unsettled, workflowState mapping) in packages/core/test/classifier/evidence.test.ts","Write failing evidence builder tests (applied/dedup/failed counts, expected from baseline, overlaps with positive length, keys, unsettled, workflowState mapping) in packages/core/test/classifier/evidence.test.ts
 
 Phase: Phase 2: Foundational (Blocking Prerequisites)
 
 Source: specs/007-outcome-classifier/tasks.md:26
-ReplayGuard-ID: 007-outcome-classifier-T004",Medium,To Do,007-outcome-classifier,foundational,parallel
+ReplayGuard-ID: 007-outcome-classifier-T004",Medium,Done,007-outcome-classifier,foundational,parallel
 224,215,Task,T005 Implement evidence builder in packages/core/src/classifier/evidence.ts,"Implement evidence builder in packages/core/src/classifier/evidence.ts
 
 Phase: Phase 2: Foundational (Blocking Prerequisites)
 
 Source: specs/007-outcome-classifier/tasks.md:27
-ReplayGuard-ID: 007-outcome-classifier-T005",Medium,To Do,007-outcome-classifier,foundational,
+ReplayGuard-ID: 007-outcome-classifier-T005",Medium,Done,007-outcome-classifier,foundational,
 225,216,Sub-task,"T006 Write failing rule tests, one table per rule incl. boundaries (expected 0/1/N) in packages/core/test/classifier/rules.test.ts","Write failing rule tests, one table per rule incl. boundaries (expected 0/1/N) in packages/core/test/classifier/rules.test.ts
 
 Phase: Phase 3: User Story 1 - Classify every effect in every case (Priority: P1) 🎯 MVP
 
 Source: specs/007-outcome-classifier/tasks.md:37
-ReplayGuard-ID: 007-outcome-classifier-T006",High,To Do,007-outcome-classifier,us1,parallel
+ReplayGuard-ID: 007-outcome-classifier-T006",High,Done,007-outcome-classifier,us1,parallel
 226,216,Sub-task,"T007 Write failing spike classification tests (H1 duplicated, H1b deduplicated, H3a concurrent-duplicate, H3b orphaned, skipped synthetic) in packages/core/test/classifier/classify.spike.test.ts","Write failing spike classification tests (H1 duplicated, H1b deduplicated, H3a concurrent-duplicate, H3b orphaned, skipped synthetic) in packages/core/test/classifier/classify.spike.test.ts
 
 Phase: Phase 3: User Story 1 - Classify every effect in every case (Priority: P1) 🎯 MVP
 
 Source: specs/007-outcome-classifier/tasks.md:38
-ReplayGuard-ID: 007-outcome-classifier-T007",High,To Do,007-outcome-classifier,us1,parallel
+ReplayGuard-ID: 007-outcome-classifier-T007",High,Done,007-outcome-classifier,us1,parallel
 227,216,Sub-task,T008 Write failing property tests (exactly one outcome per identity; applied > expected without dedup never exactly-once/deduplicated) in packages/core/test/classifier/classify.property.test.ts,"Write failing property tests (exactly one outcome per identity; applied > expected without dedup never exactly-once/deduplicated) in packages/core/test/classifier/classify.property.test.ts
 
 Phase: Phase 3: User Story 1 - Classify every effect in every case (Priority: P1) 🎯 MVP
 
 Source: specs/007-outcome-classifier/tasks.md:39
-ReplayGuard-ID: 007-outcome-classifier-T008",High,To Do,007-outcome-classifier,us1,parallel
+ReplayGuard-ID: 007-outcome-classifier-T008",High,Done,007-outcome-classifier,us1,parallel
 228,216,Sub-task,T009 Implement OutcomeRule specifications and severity order in packages/core/src/classifier/rules.ts,"Implement OutcomeRule specifications and severity order in packages/core/src/classifier/rules.ts
 
 Phase: Phase 3: User Story 1 - Classify every effect in every case (Priority: P1) 🎯 MVP
 
 Source: specs/007-outcome-classifier/tasks.md:40
-ReplayGuard-ID: 007-outcome-classifier-T009",High,To Do,007-outcome-classifier,us1,
+ReplayGuard-ID: 007-outcome-classifier-T009",High,Done,007-outcome-classifier,us1,
 229,216,Sub-task,T010 Implement `classify()` producing CaseClassification per case in packages/core/src/classifier/classify.ts,"Implement `classify()` producing CaseClassification per case in packages/core/src/classifier/classify.ts
 
 Phase: Phase 3: User Story 1 - Classify every effect in every case (Priority: P1) 🎯 MVP
 
 Source: specs/007-outcome-classifier/tasks.md:41
-ReplayGuard-ID: 007-outcome-classifier-T010",High,To Do,007-outcome-classifier,us1,
+ReplayGuard-ID: 007-outcome-classifier-T010",High,Done,007-outcome-classifier,us1,
 230,217,Sub-task,"T011 Write failing verdict aggregation tests (worst wins, harness-error case fails, warn does not fail scenario) in packages/core/test/classifier/verdict.test.ts","Write failing verdict aggregation tests (worst wins, harness-error case fails, warn does not fail scenario) in packages/core/test/classifier/verdict.test.ts
 
 Phase: Phase 4: User Story 2 - Pass/fail verdicts with a strict default (Priority: P1)
 
 Source: specs/007-outcome-classifier/tasks.md:51
-ReplayGuard-ID: 007-outcome-classifier-T011",High,To Do,007-outcome-classifier,us2,parallel
+ReplayGuard-ID: 007-outcome-classifier-T011",High,Done,007-outcome-classifier,us2,parallel
 231,217,Sub-task,T012 Implement DEFAULT_POLICY and verdict aggregation in packages/core/src/classifier/policy.ts and packages/core/src/classifier/classify.ts,"Implement DEFAULT_POLICY and verdict aggregation in packages/core/src/classifier/policy.ts and packages/core/src/classifier/classify.ts
 
 Phase: Phase 4: User Story 2 - Pass/fail verdicts with a strict default (Priority: P1)
 
 Source: specs/007-outcome-classifier/tasks.md:52
-ReplayGuard-ID: 007-outcome-classifier-T012",High,To Do,007-outcome-classifier,us2,
+ReplayGuard-ID: 007-outcome-classifier-T012",High,Done,007-outcome-classifier,us2,
 232,218,Sub-task,"T013 Write failing policy tests (identity > kind > default precedence, Valibot validation of unknown outcomes) in packages/core/test/classifier/policy.test.ts","Write failing policy tests (identity > kind > default precedence, Valibot validation of unknown outcomes) in packages/core/test/classifier/policy.test.ts
 
 Phase: Phase 5: User Story 3 - Override the policy per effect (Priority: P2)
 
 Source: specs/007-outcome-classifier/tasks.md:62
-ReplayGuard-ID: 007-outcome-classifier-T013",Medium,To Do,007-outcome-classifier,us3,parallel
+ReplayGuard-ID: 007-outcome-classifier-T013",Medium,Done,007-outcome-classifier,us3,parallel
 233,218,Sub-task,T014 Implement policy schema and `resolveVerdict` chain in packages/core/src/classifier/policy.ts,"Implement policy schema and `resolveVerdict` chain in packages/core/src/classifier/policy.ts
 
 Phase: Phase 5: User Story 3 - Override the policy per effect (Priority: P2)
 
 Source: specs/007-outcome-classifier/tasks.md:63
-ReplayGuard-ID: 007-outcome-classifier-T014",Medium,To Do,007-outcome-classifier,us3,
+ReplayGuard-ID: 007-outcome-classifier-T014",Medium,Done,007-outcome-classifier,us3,
 234,219,Sub-task,T015 Write failing explanation tests per outcome in packages/core/test/classifier/explain.test.ts,"Write failing explanation tests per outcome in packages/core/test/classifier/explain.test.ts
 
 Phase: Phase 6: User Story 4 - Explain why (Priority: P2)
 
 Source: specs/007-outcome-classifier/tasks.md:73
-ReplayGuard-ID: 007-outcome-classifier-T015",Medium,To Do,007-outcome-classifier,us4,parallel
+ReplayGuard-ID: 007-outcome-classifier-T015",Medium,Done,007-outcome-classifier,us4,parallel
 235,219,Sub-task,T016 Implement explanation templates in packages/core/src/classifier/explain.ts,"Implement explanation templates in packages/core/src/classifier/explain.ts
 
 Phase: Phase 6: User Story 4 - Explain why (Priority: P2)
 
 Source: specs/007-outcome-classifier/tasks.md:74
-ReplayGuard-ID: 007-outcome-classifier-T016",Medium,To Do,007-outcome-classifier,us4,
+ReplayGuard-ID: 007-outcome-classifier-T016",Medium,Done,007-outcome-classifier,us4,
 236,215,Task,T017 Baseline anomaly reporting and in-flight-at-end warnings with tests in packages/core/src/classifier/classify.ts and packages/core/test/classifier/anomalies.test.ts,"Baseline anomaly reporting and in-flight-at-end warnings with tests in packages/core/src/classifier/classify.ts and packages/core/test/classifier/anomalies.test.ts
 
 Phase: Phase 7: Polish & Cross-Cutting Concerns
 
 Source: specs/007-outcome-classifier/tasks.md:80
-ReplayGuard-ID: 007-outcome-classifier-T017",Medium,To Do,007-outcome-classifier,polish,parallel
+ReplayGuard-ID: 007-outcome-classifier-T017",Medium,Done,007-outcome-classifier,polish,parallel
 237,215,Task,T018 Performance test: 100 cases < 100 ms in packages/core/test/classifier/perf.test.ts,"Performance test: 100 cases < 100 ms in packages/core/test/classifier/perf.test.ts
 
 Phase: Phase 7: Polish & Cross-Cutting Concerns
 
 Source: specs/007-outcome-classifier/tasks.md:81
-ReplayGuard-ID: 007-outcome-classifier-T018",Medium,To Do,007-outcome-classifier,polish,parallel
+ReplayGuard-ID: 007-outcome-classifier-T018",Medium,Done,007-outcome-classifier,polish,parallel
 238,215,Task,T019 Outcome reference docs in docs/concepts/outcomes.md,"Outcome reference docs in docs/concepts/outcomes.md
 
 Phase: Phase 7: Polish & Cross-Cutting Concerns
 
 Source: specs/007-outcome-classifier/tasks.md:82
-ReplayGuard-ID: 007-outcome-classifier-T019",Medium,To Do,007-outcome-classifier,polish,parallel
+ReplayGuard-ID: 007-outcome-classifier-T019",Medium,Done,007-outcome-classifier,polish,parallel
 239,215,Task,"T020 Add `run({ classify: true, policy })` convenience in packages/core/src/scenario/builder.ts with test in packages/core/test/scenario/builder.classify.test.ts","Add `run({ classify: true, policy })` convenience in packages/core/src/scenario/builder.ts with test in packages/core/test/scenario/builder.classify.test.ts
 
 Phase: Phase 7: Polish & Cross-Cutting Concerns
 
 Source: specs/007-outcome-classifier/tasks.md:83
-ReplayGuard-ID: 007-outcome-classifier-T020",Medium,To Do,007-outcome-classifier,polish,
+ReplayGuard-ID: 007-outcome-classifier-T020",Medium,Done,007-outcome-classifier,polish,
 240,215,Task,T021 Author diagrams covering T001–T022 in specs/007-outcome-classifier/diagram.yaml,"Author diagrams covering T001–T022 in specs/007-outcome-classifier/diagram.yaml
 
 Phase: Phase 7: Polish & Cross-Cutting Concerns
 
 Source: specs/007-outcome-classifier/tasks.md:84
-ReplayGuard-ID: 007-outcome-classifier-T021",Medium,To Do,007-outcome-classifier,polish,
+ReplayGuard-ID: 007-outcome-classifier-T021",Medium,Done,007-outcome-classifier,polish,
 241,215,Task,T022 Validate quickstart table in specs/007-outcome-classifier/quickstart.md,"Validate quickstart table in specs/007-outcome-classifier/quickstart.md
 
 Phase: Phase 7: Polish & Cross-Cutting Concerns
 
 Source: specs/007-outcome-classifier/tasks.md:85
-ReplayGuard-ID: 007-outcome-classifier-T022",Medium,To Do,007-outcome-classifier,polish,
+ReplayGuard-ID: 007-outcome-classifier-T022",Medium,Done,007-outcome-classifier,polish,
 242,,Epic,008 Fake External Services,"Fake External Services (008-fake-services).
 
 Source: specs/008-fake-services/spec.md:1

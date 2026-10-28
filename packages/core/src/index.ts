@@ -1,3 +1,29 @@
+export { classify } from "./classifier/classify.js";
+export { buildEvidence, expectedCounts } from "./classifier/evidence.js";
+export { explain } from "./classifier/explain.js";
+export {
+	DEFAULT_POLICY,
+	resolveVerdict,
+	validatePolicy,
+	worstVerdict,
+} from "./classifier/policy.js";
+export {
+	classifyEvidence,
+	OUTCOME_RULES,
+	OUTCOME_SEVERITY,
+	type OutcomeRule,
+} from "./classifier/rules.js";
+export type {
+	CaseClassification,
+	ClassifiedResult,
+	EffectClassification,
+	Evidence,
+	Outcome,
+	OutcomeVerdicts,
+	Policy,
+	VerdictLevel,
+	WorkflowStateForEvidence,
+} from "./classifier/types.js";
 export {
 	BudgetExceededError,
 	ConfigError,
@@ -41,6 +67,7 @@ export {
 	validateFaultSpec,
 	type WriteAnchor,
 } from "./faults/types.js";
+export type { FixHint } from "./hints/types.js";
 export { type InstrumentOptions, instrument } from "./instrument/instrument.js";
 export { canonicalHash, canonicalize, fnv1a64 } from "./ledger/canonical.js";
 export { EffectLedger } from "./ledger/ledger.js";
@@ -75,7 +102,12 @@ export type {
 	WaitingOutcome,
 	WorkflowRuntime,
 } from "./runtime/port.js";
-export { type Scenario, ScenarioBuilder, scenario } from "./scenario/builder.js";
+export {
+	type ClassifyRunOptions,
+	type Scenario,
+	ScenarioBuilder,
+	scenario,
+} from "./scenario/builder.js";
 export { createEffectContext } from "./scenario/context.js";
 export { discoverOccurrences, type Occurrence } from "./scenario/discovery.js";
 export type { MatrixResult } from "./scenario/matrix.js";

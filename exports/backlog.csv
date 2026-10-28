@@ -1007,129 +1007,129 @@ Phase: Phase 7: Polish & Cross-Cutting Concerns
 Source: specs/006-scenario-runner/tasks.md:92",006-scenario-runner;polish,Medium,Done,006-scenario-runner
 007-outcome-classifier,,Epic,007 Outcome Classifier & Verdict Policy,"Outcome Classifier & Verdict Policy (007-outcome-classifier).
 
-Source: specs/007-outcome-classifier/spec.md:1",007-outcome-classifier,High,To Do,007-outcome-classifier
+Source: specs/007-outcome-classifier/spec.md:1",007-outcome-classifier,High,Done,007-outcome-classifier
 007-outcome-classifier-US1,007-outcome-classifier,Story,US1: Classify every effect in every case,"User story 1 (P1) of 007-outcome-classifier.
 
-Source: specs/007-outcome-classifier/spec.md:21",007-outcome-classifier;us1,High,To Do,007-outcome-classifier
+Source: specs/007-outcome-classifier/spec.md:21",007-outcome-classifier;us1,High,Done,007-outcome-classifier
 007-outcome-classifier-US2,007-outcome-classifier,Story,US2: Pass/fail verdicts with a strict default,"User story 2 (P1) of 007-outcome-classifier.
 
-Source: specs/007-outcome-classifier/spec.md:49",007-outcome-classifier;us2,High,To Do,007-outcome-classifier
+Source: specs/007-outcome-classifier/spec.md:49",007-outcome-classifier;us2,High,Done,007-outcome-classifier
 007-outcome-classifier-US3,007-outcome-classifier,Story,US3: Override the policy per effect,"User story 3 (P2) of 007-outcome-classifier.
 
-Source: specs/007-outcome-classifier/spec.md:69",007-outcome-classifier;us3,Medium,To Do,007-outcome-classifier
+Source: specs/007-outcome-classifier/spec.md:69",007-outcome-classifier;us3,Medium,Done,007-outcome-classifier
 007-outcome-classifier-US4,007-outcome-classifier,Story,US4: Explain why,"User story 4 (P2) of 007-outcome-classifier.
 
-Source: specs/007-outcome-classifier/spec.md:87",007-outcome-classifier;us4,Medium,To Do,007-outcome-classifier
+Source: specs/007-outcome-classifier/spec.md:87",007-outcome-classifier;us4,Medium,Done,007-outcome-classifier
 007-outcome-classifier-T001,007-outcome-classifier,Task,T001 Create `classifier/` module and exports in packages/core/src/classifier/index.ts,"Create `classifier/` module and exports in packages/core/src/classifier/index.ts
 
 Phase: Phase 1: Setup (Shared Infrastructure)
 
-Source: specs/007-outcome-classifier/tasks.md:18",007-outcome-classifier;setup,Medium,To Do,007-outcome-classifier
+Source: specs/007-outcome-classifier/tasks.md:18",007-outcome-classifier;setup,Medium,Done,007-outcome-classifier
 007-outcome-classifier-T002,007-outcome-classifier,Task,T002 Create fast-check arbitraries for ledger snapshots and case results in packages/core/test/classifier/arbitraries.ts,"Create fast-check arbitraries for ledger snapshots and case results in packages/core/test/classifier/arbitraries.ts
 
 Phase: Phase 1: Setup (Shared Infrastructure)
 
-Source: specs/007-outcome-classifier/tasks.md:19",007-outcome-classifier;setup;parallel,Medium,To Do,007-outcome-classifier
+Source: specs/007-outcome-classifier/tasks.md:19",007-outcome-classifier;setup;parallel,Medium,Done,007-outcome-classifier
 007-outcome-classifier-T003,007-outcome-classifier,Task,"T003 Define Outcome, VerdictLevel, Evidence, EffectClassification, CaseClassification, ClassifiedResult types in packages/core/src/classifier/types.ts","Define Outcome, VerdictLevel, Evidence, EffectClassification, CaseClassification, ClassifiedResult types in packages/core/src/classifier/types.ts
 
 Phase: Phase 2: Foundational (Blocking Prerequisites)
 
-Source: specs/007-outcome-classifier/tasks.md:25",007-outcome-classifier;foundational,Medium,To Do,007-outcome-classifier
+Source: specs/007-outcome-classifier/tasks.md:25",007-outcome-classifier;foundational,Medium,Done,007-outcome-classifier
 007-outcome-classifier-T004,007-outcome-classifier,Task,"T004 Write failing evidence builder tests (applied/dedup/failed counts, expected from baseline, overlaps with positive length, keys, unsettled, workflowState mapping) in packages/core/test/classifier/evidence.test.ts","Write failing evidence builder tests (applied/dedup/failed counts, expected from baseline, overlaps with positive length, keys, unsettled, workflowState mapping) in packages/core/test/classifier/evidence.test.ts
 
 Phase: Phase 2: Foundational (Blocking Prerequisites)
 
-Source: specs/007-outcome-classifier/tasks.md:26",007-outcome-classifier;foundational;parallel,Medium,To Do,007-outcome-classifier
+Source: specs/007-outcome-classifier/tasks.md:26",007-outcome-classifier;foundational;parallel,Medium,Done,007-outcome-classifier
 007-outcome-classifier-T005,007-outcome-classifier,Task,T005 Implement evidence builder in packages/core/src/classifier/evidence.ts,"Implement evidence builder in packages/core/src/classifier/evidence.ts
 
 Phase: Phase 2: Foundational (Blocking Prerequisites)
 
-Source: specs/007-outcome-classifier/tasks.md:27",007-outcome-classifier;foundational,Medium,To Do,007-outcome-classifier
+Source: specs/007-outcome-classifier/tasks.md:27",007-outcome-classifier;foundational,Medium,Done,007-outcome-classifier
 007-outcome-classifier-T006,007-outcome-classifier-US1,Sub-task,"T006 Write failing rule tests, one table per rule incl. boundaries (expected 0/1/N) in packages/core/test/classifier/rules.test.ts","Write failing rule tests, one table per rule incl. boundaries (expected 0/1/N) in packages/core/test/classifier/rules.test.ts
 
 Phase: Phase 3: User Story 1 - Classify every effect in every case (Priority: P1) 🎯 MVP
 
-Source: specs/007-outcome-classifier/tasks.md:37",007-outcome-classifier;us1;parallel,High,To Do,007-outcome-classifier
+Source: specs/007-outcome-classifier/tasks.md:37",007-outcome-classifier;us1;parallel,High,Done,007-outcome-classifier
 007-outcome-classifier-T007,007-outcome-classifier-US1,Sub-task,"T007 Write failing spike classification tests (H1 duplicated, H1b deduplicated, H3a concurrent-duplicate, H3b orphaned, skipped synthetic) in packages/core/test/classifier/classify.spike.test.ts","Write failing spike classification tests (H1 duplicated, H1b deduplicated, H3a concurrent-duplicate, H3b orphaned, skipped synthetic) in packages/core/test/classifier/classify.spike.test.ts
 
 Phase: Phase 3: User Story 1 - Classify every effect in every case (Priority: P1) 🎯 MVP
 
-Source: specs/007-outcome-classifier/tasks.md:38",007-outcome-classifier;us1;parallel,High,To Do,007-outcome-classifier
+Source: specs/007-outcome-classifier/tasks.md:38",007-outcome-classifier;us1;parallel,High,Done,007-outcome-classifier
 007-outcome-classifier-T008,007-outcome-classifier-US1,Sub-task,T008 Write failing property tests (exactly one outcome per identity; applied > expected without dedup never exactly-once/deduplicated) in packages/core/test/classifier/classify.property.test.ts,"Write failing property tests (exactly one outcome per identity; applied > expected without dedup never exactly-once/deduplicated) in packages/core/test/classifier/classify.property.test.ts
 
 Phase: Phase 3: User Story 1 - Classify every effect in every case (Priority: P1) 🎯 MVP
 
-Source: specs/007-outcome-classifier/tasks.md:39",007-outcome-classifier;us1;parallel,High,To Do,007-outcome-classifier
+Source: specs/007-outcome-classifier/tasks.md:39",007-outcome-classifier;us1;parallel,High,Done,007-outcome-classifier
 007-outcome-classifier-T009,007-outcome-classifier-US1,Sub-task,T009 Implement OutcomeRule specifications and severity order in packages/core/src/classifier/rules.ts,"Implement OutcomeRule specifications and severity order in packages/core/src/classifier/rules.ts
 
 Phase: Phase 3: User Story 1 - Classify every effect in every case (Priority: P1) 🎯 MVP
 
-Source: specs/007-outcome-classifier/tasks.md:40",007-outcome-classifier;us1,High,To Do,007-outcome-classifier
+Source: specs/007-outcome-classifier/tasks.md:40",007-outcome-classifier;us1,High,Done,007-outcome-classifier
 007-outcome-classifier-T010,007-outcome-classifier-US1,Sub-task,T010 Implement `classify()` producing CaseClassification per case in packages/core/src/classifier/classify.ts,"Implement `classify()` producing CaseClassification per case in packages/core/src/classifier/classify.ts
 
 Phase: Phase 3: User Story 1 - Classify every effect in every case (Priority: P1) 🎯 MVP
 
-Source: specs/007-outcome-classifier/tasks.md:41",007-outcome-classifier;us1,High,To Do,007-outcome-classifier
+Source: specs/007-outcome-classifier/tasks.md:41",007-outcome-classifier;us1,High,Done,007-outcome-classifier
 007-outcome-classifier-T011,007-outcome-classifier-US2,Sub-task,"T011 Write failing verdict aggregation tests (worst wins, harness-error case fails, warn does not fail scenario) in packages/core/test/classifier/verdict.test.ts","Write failing verdict aggregation tests (worst wins, harness-error case fails, warn does not fail scenario) in packages/core/test/classifier/verdict.test.ts
 
 Phase: Phase 4: User Story 2 - Pass/fail verdicts with a strict default (Priority: P1)
 
-Source: specs/007-outcome-classifier/tasks.md:51",007-outcome-classifier;us2;parallel,High,To Do,007-outcome-classifier
+Source: specs/007-outcome-classifier/tasks.md:51",007-outcome-classifier;us2;parallel,High,Done,007-outcome-classifier
 007-outcome-classifier-T012,007-outcome-classifier-US2,Sub-task,T012 Implement DEFAULT_POLICY and verdict aggregation in packages/core/src/classifier/policy.ts and packages/core/src/classifier/classify.ts,"Implement DEFAULT_POLICY and verdict aggregation in packages/core/src/classifier/policy.ts and packages/core/src/classifier/classify.ts
 
 Phase: Phase 4: User Story 2 - Pass/fail verdicts with a strict default (Priority: P1)
 
-Source: specs/007-outcome-classifier/tasks.md:52",007-outcome-classifier;us2,High,To Do,007-outcome-classifier
+Source: specs/007-outcome-classifier/tasks.md:52",007-outcome-classifier;us2,High,Done,007-outcome-classifier
 007-outcome-classifier-T013,007-outcome-classifier-US3,Sub-task,"T013 Write failing policy tests (identity > kind > default precedence, Valibot validation of unknown outcomes) in packages/core/test/classifier/policy.test.ts","Write failing policy tests (identity > kind > default precedence, Valibot validation of unknown outcomes) in packages/core/test/classifier/policy.test.ts
 
 Phase: Phase 5: User Story 3 - Override the policy per effect (Priority: P2)
 
-Source: specs/007-outcome-classifier/tasks.md:62",007-outcome-classifier;us3;parallel,Medium,To Do,007-outcome-classifier
+Source: specs/007-outcome-classifier/tasks.md:62",007-outcome-classifier;us3;parallel,Medium,Done,007-outcome-classifier
 007-outcome-classifier-T014,007-outcome-classifier-US3,Sub-task,T014 Implement policy schema and `resolveVerdict` chain in packages/core/src/classifier/policy.ts,"Implement policy schema and `resolveVerdict` chain in packages/core/src/classifier/policy.ts
 
 Phase: Phase 5: User Story 3 - Override the policy per effect (Priority: P2)
 
-Source: specs/007-outcome-classifier/tasks.md:63",007-outcome-classifier;us3,Medium,To Do,007-outcome-classifier
+Source: specs/007-outcome-classifier/tasks.md:63",007-outcome-classifier;us3,Medium,Done,007-outcome-classifier
 007-outcome-classifier-T015,007-outcome-classifier-US4,Sub-task,T015 Write failing explanation tests per outcome in packages/core/test/classifier/explain.test.ts,"Write failing explanation tests per outcome in packages/core/test/classifier/explain.test.ts
 
 Phase: Phase 6: User Story 4 - Explain why (Priority: P2)
 
-Source: specs/007-outcome-classifier/tasks.md:73",007-outcome-classifier;us4;parallel,Medium,To Do,007-outcome-classifier
+Source: specs/007-outcome-classifier/tasks.md:73",007-outcome-classifier;us4;parallel,Medium,Done,007-outcome-classifier
 007-outcome-classifier-T016,007-outcome-classifier-US4,Sub-task,T016 Implement explanation templates in packages/core/src/classifier/explain.ts,"Implement explanation templates in packages/core/src/classifier/explain.ts
 
 Phase: Phase 6: User Story 4 - Explain why (Priority: P2)
 
-Source: specs/007-outcome-classifier/tasks.md:74",007-outcome-classifier;us4,Medium,To Do,007-outcome-classifier
+Source: specs/007-outcome-classifier/tasks.md:74",007-outcome-classifier;us4,Medium,Done,007-outcome-classifier
 007-outcome-classifier-T017,007-outcome-classifier,Task,T017 Baseline anomaly reporting and in-flight-at-end warnings with tests in packages/core/src/classifier/classify.ts and packages/core/test/classifier/anomalies.test.ts,"Baseline anomaly reporting and in-flight-at-end warnings with tests in packages/core/src/classifier/classify.ts and packages/core/test/classifier/anomalies.test.ts
 
 Phase: Phase 7: Polish & Cross-Cutting Concerns
 
-Source: specs/007-outcome-classifier/tasks.md:80",007-outcome-classifier;polish;parallel,Medium,To Do,007-outcome-classifier
+Source: specs/007-outcome-classifier/tasks.md:80",007-outcome-classifier;polish;parallel,Medium,Done,007-outcome-classifier
 007-outcome-classifier-T018,007-outcome-classifier,Task,T018 Performance test: 100 cases < 100 ms in packages/core/test/classifier/perf.test.ts,"Performance test: 100 cases < 100 ms in packages/core/test/classifier/perf.test.ts
 
 Phase: Phase 7: Polish & Cross-Cutting Concerns
 
-Source: specs/007-outcome-classifier/tasks.md:81",007-outcome-classifier;polish;parallel,Medium,To Do,007-outcome-classifier
+Source: specs/007-outcome-classifier/tasks.md:81",007-outcome-classifier;polish;parallel,Medium,Done,007-outcome-classifier
 007-outcome-classifier-T019,007-outcome-classifier,Task,T019 Outcome reference docs in docs/concepts/outcomes.md,"Outcome reference docs in docs/concepts/outcomes.md
 
 Phase: Phase 7: Polish & Cross-Cutting Concerns
 
-Source: specs/007-outcome-classifier/tasks.md:82",007-outcome-classifier;polish;parallel,Medium,To Do,007-outcome-classifier
+Source: specs/007-outcome-classifier/tasks.md:82",007-outcome-classifier;polish;parallel,Medium,Done,007-outcome-classifier
 007-outcome-classifier-T020,007-outcome-classifier,Task,"T020 Add `run({ classify: true, policy })` convenience in packages/core/src/scenario/builder.ts with test in packages/core/test/scenario/builder.classify.test.ts","Add `run({ classify: true, policy })` convenience in packages/core/src/scenario/builder.ts with test in packages/core/test/scenario/builder.classify.test.ts
 
 Phase: Phase 7: Polish & Cross-Cutting Concerns
 
-Source: specs/007-outcome-classifier/tasks.md:83",007-outcome-classifier;polish,Medium,To Do,007-outcome-classifier
+Source: specs/007-outcome-classifier/tasks.md:83",007-outcome-classifier;polish,Medium,Done,007-outcome-classifier
 007-outcome-classifier-T021,007-outcome-classifier,Task,T021 Author diagrams covering T001–T022 in specs/007-outcome-classifier/diagram.yaml,"Author diagrams covering T001–T022 in specs/007-outcome-classifier/diagram.yaml
 
 Phase: Phase 7: Polish & Cross-Cutting Concerns
 
-Source: specs/007-outcome-classifier/tasks.md:84",007-outcome-classifier;polish,Medium,To Do,007-outcome-classifier
+Source: specs/007-outcome-classifier/tasks.md:84",007-outcome-classifier;polish,Medium,Done,007-outcome-classifier
 007-outcome-classifier-T022,007-outcome-classifier,Task,T022 Validate quickstart table in specs/007-outcome-classifier/quickstart.md,"Validate quickstart table in specs/007-outcome-classifier/quickstart.md
 
 Phase: Phase 7: Polish & Cross-Cutting Concerns
 
-Source: specs/007-outcome-classifier/tasks.md:85",007-outcome-classifier;polish,Medium,To Do,007-outcome-classifier
+Source: specs/007-outcome-classifier/tasks.md:85",007-outcome-classifier;polish,Medium,Done,007-outcome-classifier
 008-fake-services,,Epic,008 Fake External Services,"Fake External Services (008-fake-services).
 
 Source: specs/008-fake-services/spec.md:1",008-fake-services,High,To Do,008-fake-services

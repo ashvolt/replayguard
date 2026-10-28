@@ -1,3 +1,6 @@
+import { classify } from "../classifier/classify.js";
+import { validatePolicy } from "../classifier/policy.js";
+import type { ClassifiedResult, Policy } from "../classifier/types.js";
 import { ConfigError } from "../errors.js";
 import { type FaultSpec, validateFaultSpec } from "../faults/types.js";
 import type { WorkflowRuntime } from "../runtime/port.js";
@@ -20,7 +23,17 @@ export interface Scenario<TEffects = unknown, TWorkflow = unknown, TInput = unkn
 	/** Immutable definition. */
 	readonly definition: Readonly<ScenarioDefinition<TEffects, TWorkflow, TInput>>;
 	/** Runs baseline, explicit and explored cases. */
-	run(options?: RunOptions): Promise<ScenarioResult>;
+	run(options?: RunOptions & { classify?: false }): Promise<ScenarioResult>;
+	/** Runs and classifies with the given policy (validated before running). */
+	run(options: ClassifyRunOptions): Promise<ClassifiedResult>;
+}
+
+/** Run options that also classify the result. */
+export interface ClassifyRunOptions extends RunOptions {
+	/** Classify the result. */
+	classify: true;
+	/** Verdict policy (default: strict). */
+	policy?: Policy;
 }
 
 interface State {
@@ -197,7 +210,12 @@ export class ScenarioBuilder<TEffects = never, TWorkflow = never, TInput = undef
 		>;
 		return {
 			definition,
-			run: (options) => new ScenarioRunner(definition, options).run(),
+			run: (async (options: RunOptions & { classify?: boolean; policy?: Policy } = {}) => {
+				const { classify: wantsClassify, policy = {}, ...runOptions } = options;
+				if (wantsClassify) validatePolicy(policy);
+				const result = await new ScenarioRunner(definition, runOptions).run();
+				return wantsClassify ? classify(result, policy) : result;
+			}) as Scenario<TEffects, TWorkflow, TInput>["run"],
 		};
 	}
 }

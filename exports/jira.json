@@ -4146,7 +4146,7 @@
     {
       "sourceId": "007-outcome-classifier",
       "parentSourceId": null,
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Epic"
@@ -4164,7 +4164,7 @@
     {
       "sourceId": "007-outcome-classifier-US1",
       "parentSourceId": "007-outcome-classifier",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Story"
@@ -4183,7 +4183,7 @@
     {
       "sourceId": "007-outcome-classifier-US2",
       "parentSourceId": "007-outcome-classifier",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Story"
@@ -4202,7 +4202,7 @@
     {
       "sourceId": "007-outcome-classifier-US3",
       "parentSourceId": "007-outcome-classifier",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Story"
@@ -4221,7 +4221,7 @@
     {
       "sourceId": "007-outcome-classifier-US4",
       "parentSourceId": "007-outcome-classifier",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Story"
@@ -4240,7 +4240,7 @@
     {
       "sourceId": "007-outcome-classifier-T001",
       "parentSourceId": "007-outcome-classifier",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Task"
@@ -4259,7 +4259,7 @@
     {
       "sourceId": "007-outcome-classifier-T002",
       "parentSourceId": "007-outcome-classifier",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Task"
@@ -4279,7 +4279,7 @@
     {
       "sourceId": "007-outcome-classifier-T003",
       "parentSourceId": "007-outcome-classifier",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Task"
@@ -4298,7 +4298,7 @@
     {
       "sourceId": "007-outcome-classifier-T004",
       "parentSourceId": "007-outcome-classifier",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Task"
@@ -4318,7 +4318,7 @@
     {
       "sourceId": "007-outcome-classifier-T005",
       "parentSourceId": "007-outcome-classifier",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Task"
@@ -4337,7 +4337,7 @@
     {
       "sourceId": "007-outcome-classifier-T006",
       "parentSourceId": "007-outcome-classifier-US1",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Sub-task"
@@ -4357,7 +4357,7 @@
     {
       "sourceId": "007-outcome-classifier-T007",
       "parentSourceId": "007-outcome-classifier-US1",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Sub-task"
@@ -4377,7 +4377,7 @@
     {
       "sourceId": "007-outcome-classifier-T008",
       "parentSourceId": "007-outcome-classifier-US1",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Sub-task"
@@ -4397,7 +4397,7 @@
     {
       "sourceId": "007-outcome-classifier-T009",
       "parentSourceId": "007-outcome-classifier-US1",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Sub-task"
@@ -4416,7 +4416,7 @@
     {
       "sourceId": "007-outcome-classifier-T010",
       "parentSourceId": "007-outcome-classifier-US1",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Sub-task"
@@ -4435,7 +4435,7 @@
     {
       "sourceId": "007-outcome-classifier-T011",
       "parentSourceId": "007-outcome-classifier-US2",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Sub-task"
@@ -4455,7 +4455,7 @@
     {
       "sourceId": "007-outcome-classifier-T012",
       "parentSourceId": "007-outcome-classifier-US2",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Sub-task"
@@ -4474,7 +4474,7 @@
     {
       "sourceId": "007-outcome-classifier-T013",
       "parentSourceId": "007-outcome-classifier-US3",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Sub-task"
@@ -4494,7 +4494,7 @@
     {
       "sourceId": "007-outcome-classifier-T014",
       "parentSourceId": "007-outcome-classifier-US3",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Sub-task"
@@ -4513,7 +4513,7 @@
     {
       "sourceId": "007-outcome-classifier-T015",
       "parentSourceId": "007-outcome-classifier-US4",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Sub-task"
@@ -4533,7 +4533,7 @@
     {
       "sourceId": "007-outcome-classifier-T016",
       "parentSourceId": "007-outcome-classifier-US4",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Sub-task"
@@ -4552,7 +4552,7 @@
     {
       "sourceId": "007-outcome-classifier-T017",
       "parentSourceId": "007-outcome-classifier",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Task"
@@ -4572,7 +4572,7 @@
     {
       "sourceId": "007-outcome-classifier-T018",
       "parentSourceId": "007-outcome-classifier",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Task"
@@ -4592,7 +4592,7 @@
     {
       "sourceId": "007-outcome-classifier-T019",
       "parentSourceId": "007-outcome-classifier",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Task"
@@ -4612,7 +4612,7 @@
     {
       "sourceId": "007-outcome-classifier-T020",
       "parentSourceId": "007-outcome-classifier",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Task"
@@ -4631,7 +4631,7 @@
     {
       "sourceId": "007-outcome-classifier-T021",
       "parentSourceId": "007-outcome-classifier",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Task"
@@ -4650,7 +4650,7 @@
     {
       "sourceId": "007-outcome-classifier-T022",
       "parentSourceId": "007-outcome-classifier",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Task"
