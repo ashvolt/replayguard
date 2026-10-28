@@ -34,6 +34,7 @@ upstream fixes a gap, that job fails, and the gap row and ReplayGuard's docs nee
 | [01 Crash loops bypass maxRetries](drafts/01-crash-loop-retries.md) | repro-crash-loop-retries | draft | — | awaiting maintainer review |
 | [02 Step timeout does not cancel the call](drafts/02-timeout-continuation.md) | repro-timeout-continuation | draft | — | awaiting maintainer review |
 | [03 Stable step identity for idempotency keys](drafts/03-stable-step-identity.md) | repro-stable-step-identity | draft | — | awaiting maintainer review |
+| [04 rivetkit cannot run on Windows (packaging)](drafts/04-rivetkit-windows-packaging.md) | [spikes/actor-restart](../spikes/actor-restart/FINDINGS.md) | draft | — | awaiting maintainer review; target `rivet-dev/rivet` |
 
 Status values are `draft`, `approved`, `filed`, `answered` and `closed`.
 
