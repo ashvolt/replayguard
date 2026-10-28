@@ -1,0 +1,19 @@
+{
+	"name": "@replayguard-tools/quality",
+	"private": true,
+	"type": "module",
+	"description": "Repository quality gates: package boundary rules and commit message checks.",
+	"scripts": {
+		"test": "vitest run --coverage",
+		"check-types": "tsc --noEmit"
+	},
+	"devDependencies": {
+		"@replayguard-tools/config": "workspace:*",
+		"@types/node": "22.20.5",
+		"@vitest/coverage-v8": "5.0.5",
+		"dependency-cruiser": "18.7.0",
+		"typescript": "~6.0.3",
+		"vitest": "5.0.5",
+		"yaml": "2.9.1"
+	}
+}

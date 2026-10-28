@@ -54,15 +54,15 @@ Post-design re-check: PASS.
 
 | Problem | Pattern | Rejected alternative |
 |---|---|---|
-| 11 packages need identical build/test config with small overrides | **Factory** functions `defineTsupConfig()`, `defineVitestConfig()` in `config/` | Copy-pasted configs that drift |
+| 11 packages need identical build/test config with small overrides | **Factory** functions `defineTsupConfig()`, `defineVitestConfig()` in `@replayguard-tools/config` | Copy-pasted configs that drift |
 | CI and local checks must be identical | **Facade** script `pnpm verify` orchestrating Turbo tasks | Hand-run command lists |
 
 ## Project Structure
 
 ```text
-config/
-├── tsup.base.ts
-├── vitest.base.ts           # coverage thresholds 90/90
+tools/config/              # workspace package @replayguard-tools/config (plain JS + .d.ts)
+├── tsup.base.js
+├── vitest.base.js           # coverage thresholds 90/90
 └── stryker.base.json
 packages/
 ├── core/  fakes/  adapter-workflows/  adapter-rivetkit/
@@ -81,8 +81,10 @@ typedoc.json
 SECURITY.md  CONTRIBUTING.md
 ```
 
-**Structure Decision**: Shared config in `config/`, packages scaffolded empty-but-buildable so
-later features only add code.
+**Structure Decision**: Shared config is the workspace package `@replayguard-tools/config`, written
+in plain JavaScript with `.d.ts` types. Stryker sandboxes copy only the package folder, so relative
+`../../config` imports break there, and Node refuses to type-strip `.ts` inside `node_modules`.
+Packages are scaffolded empty-but-buildable so later features only add code.
 
 ## Complexity Tracking
 

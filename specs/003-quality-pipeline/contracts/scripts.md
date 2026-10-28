@@ -8,7 +8,7 @@
 | `pnpm check-types` | `turbo run check-types` |
 | `pnpm test` | `turbo run test` (coverage thresholds enforced) |
 | `pnpm mutation` | Stryker per package |
-| `pnpm docs` | TypeDoc → `docs/api` (git-ignored) |
+| `pnpm docs:api` | TypeDoc → `docs/api` (git-ignored) |
 | `pnpm changeset` | create a changeset |
 
 ## Workflow triggers & permissions

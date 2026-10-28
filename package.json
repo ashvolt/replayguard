@@ -20,11 +20,29 @@
 		"export:generate": "node --experimental-strip-types --no-warnings tools/export/src/cli.ts generate",
 		"export:check": "node --experimental-strip-types --no-warnings tools/export/src/cli.ts check",
 		"export:import-jira": "node --experimental-strip-types --no-warnings tools/export/src/cli.ts import-jira",
-		"export:import-github": "node --experimental-strip-types --no-warnings tools/export/src/cli.ts import-github"
+		"export:import-github": "node --experimental-strip-types --no-warnings tools/export/src/cli.ts import-github",
+		"boundaries": "depcruise packages --config tools/quality/.dependency-cruiser.cjs",
+		"mutation": "turbo run mutation",
+		"docs:api": "typedoc",
+		"changeset": "changeset",
+		"version-packages": "changeset version",
+		"verify": "pnpm lint && pnpm boundaries && pnpm check-types && pnpm test && pnpm diagrams:check && pnpm export:check && pnpm build && pnpm docs:api",
+		"prepare": "lefthook install || true"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "2.5.15",
+		"@changesets/cli": "3.0.3",
+		"@stryker-mutator/core": "10.0.0",
+		"@stryker-mutator/vitest-runner": "10.0.0",
+		"@types/node": "22.20.5",
+		"@vitest/coverage-v8": "5.0.5",
+		"dependency-cruiser": "18.7.0",
+		"fast-check": "4.10.2",
+		"lefthook": "2.2.2",
+		"tsup": "9.0.0",
 		"turbo": "2.11.9",
-		"typescript": "~6.0.3"
+		"typedoc": "0.28.20",
+		"typescript": "~6.0.3",
+		"vitest": "5.0.5"
 	}
 }

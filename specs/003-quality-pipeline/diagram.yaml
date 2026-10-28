@@ -32,11 +32,11 @@ diagrams:
     layout: flow
     direction: TB
     groups:
-      - { id: cfg, label: config/ }
+      - { id: cfg, label: "tools/config (@replayguard-tools/config)" }
       - { id: pk, label: packages/ }
     nodes:
-      - { id: tsup, label: tsup.base.ts, group: cfg, tasks: [T001] }
-      - { id: vitest, label: vitest.base.ts (90/90), group: cfg, tasks: [T001] }
+      - { id: tsup, label: tsup.base.js, group: cfg, tasks: [T001] }
+      - { id: vitest, label: vitest.base.js (90/90), group: cfg, tasks: [T001] }
       - { id: stryk, label: stryker.base.json, group: cfg, tasks: [T002] }
       - { id: core, label: core, group: pk, shape: package, tasks: [T003] }
       - { id: fakes, label: fakes, group: pk, shape: package, tasks: [T004] }

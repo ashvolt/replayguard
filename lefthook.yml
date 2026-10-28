@@ -1,0 +1,14 @@
+# Git hooks (installed by `pnpm install` via the `prepare` script).
+pre-commit:
+  parallel: true
+  commands:
+    biome:
+      glob: "*.{ts,js,mjs,cjs,json,jsonc}"
+      run: pnpm exec biome check --no-errors-on-unmatched --files-ignore-unknown=true {staged_files}
+    gitleaks:
+      run: sh tools/quality/scripts/gitleaks-staged.sh
+
+commit-msg:
+  commands:
+    conventional:
+      run: node --experimental-strip-types --no-warnings tools/quality/src/commit-msg.ts {1}

@@ -10,6 +10,8 @@ minimumReleaseAge: 10080
 allowBuilds:
   esbuild: true
   "@biomejs/biome": true
+  # Installs git hooks (pre-commit Biome + gitleaks, commit-msg check).
+  lefthook: true
   "@google/genai": false
   better-sqlite3: false
   cbor-extract: false

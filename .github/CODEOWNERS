@@ -1,0 +1,7 @@
+# Security-sensitive paths require maintainer review.
+*                     @ashvolt
+/.github/             @ashvolt
+/tools/quality/       @ashvolt
+/.specify/memory/     @ashvolt
+renovate.json         @ashvolt
+pnpm-workspace.yaml   @ashvolt

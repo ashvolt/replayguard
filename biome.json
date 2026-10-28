@@ -6,7 +6,18 @@
 		"useIgnoreFile": true
 	},
 	"files": {
-		"includes": ["**", "!**/dist", "!**/coverage", "!**/.turbo", "!.specify", "!.claude"]
+		"includes": [
+			"**",
+			"!**/dist",
+			"!**/coverage",
+			"!**/.turbo",
+			"!**/reports",
+			"!.specify",
+			"!.claude",
+			"!exports",
+			"!**/diagrams/*.excalidraw",
+			"!**/diagrams/*.svg"
+		]
 	},
 	"formatter": {
 		"enabled": true,

@@ -408,219 +408,219 @@ ReplayGuard-ID: 002-task-export-T030",Medium,Done,002-task-export,polish,
 72,,Epic,"003 Quality, Security & Release Pipeline","Quality, Security & Release Pipeline (003-quality-pipeline).
 
 Source: specs/003-quality-pipeline/spec.md:1
-ReplayGuard-ID: 003-quality-pipeline",High,To Do,003-quality-pipeline,,
+ReplayGuard-ID: 003-quality-pipeline",High,Done,003-quality-pipeline,,
 73,72,Story,US1: Every pull request is gated on quality,"User story 1 (P1) of 003-quality-pipeline.
 
 Source: specs/003-quality-pipeline/spec.md:13
-ReplayGuard-ID: 003-quality-pipeline-US1",High,To Do,003-quality-pipeline,us1,
+ReplayGuard-ID: 003-quality-pipeline-US1",High,Done,003-quality-pipeline,us1,
 74,72,Story,US2: Security scanning on every change,"User story 2 (P1) of 003-quality-pipeline.
 
 Source: specs/003-quality-pipeline/spec.md:38
-ReplayGuard-ID: 003-quality-pipeline-US2",High,To Do,003-quality-pipeline,us2,
+ReplayGuard-ID: 003-quality-pipeline-US2",High,Done,003-quality-pipeline,us2,
 75,72,Story,US3: Mutation testing proves tests catch bugs,"User story 3 (P2) of 003-quality-pipeline.
 
 Source: specs/003-quality-pipeline/spec.md:61
-ReplayGuard-ID: 003-quality-pipeline-US3",Medium,To Do,003-quality-pipeline,us3,
+ReplayGuard-ID: 003-quality-pipeline-US3",Medium,Done,003-quality-pipeline,us3,
 76,72,Story,US4: Trustworthy releases,"User story 4 (P2) of 003-quality-pipeline.
 
 Source: specs/003-quality-pipeline/spec.md:77
-ReplayGuard-ID: 003-quality-pipeline-US4",Medium,To Do,003-quality-pipeline,us4,
+ReplayGuard-ID: 003-quality-pipeline-US4",Medium,Done,003-quality-pipeline,us4,
 77,72,Story,US5: Generated API documentation,"User story 5 (P3) of 003-quality-pipeline.
 
 Source: specs/003-quality-pipeline/spec.md:95
-ReplayGuard-ID: 003-quality-pipeline-US5",Low,To Do,003-quality-pipeline,us5,
-78,72,Task,"T001 Create shared config factories `defineTsupConfig`, `defineVitestConfig` (coverage 90/90/90/90) in config/tsup.base.ts and config/vitest.base.ts","Create shared config factories `defineTsupConfig`, `defineVitestConfig` (coverage 90/90/90/90) in config/tsup.base.ts and config/vitest.base.ts
+ReplayGuard-ID: 003-quality-pipeline-US5",Low,Done,003-quality-pipeline,us5,
+78,72,Task,"T001 Create shared config factories `defineTsupConfig`, `defineVitestConfig` (coverage 90/90/90/90) as workspace package `@replayguard-tools/config` in tools/config/tsup.base.js and tools/config/vitest.base.js","Create shared config factories `defineTsupConfig`, `defineVitestConfig` (coverage 90/90/90/90) as workspace package `@replayguard-tools/config` in tools/config/tsup.base.js and tools/config/vitest.base.js
 
 Phase: Phase 1: Setup (Shared Infrastructure)
 
 Source: specs/003-quality-pipeline/tasks.md:18
-ReplayGuard-ID: 003-quality-pipeline-T001",Medium,To Do,003-quality-pipeline,setup,
-79,72,Task,"T002 Create Stryker base config (vitest runner, `break: 75`) in config/stryker.base.json","Create Stryker base config (vitest runner, `break: 75`) in config/stryker.base.json
+ReplayGuard-ID: 003-quality-pipeline-T001",Medium,Done,003-quality-pipeline,setup,
+79,72,Task,"T002 Create Stryker base config (vitest runner, `break: 75`) in tools/config/stryker.base.json","Create Stryker base config (vitest runner, `break: 75`) in tools/config/stryker.base.json
 
 Phase: Phase 1: Setup (Shared Infrastructure)
 
 Source: specs/003-quality-pipeline/tasks.md:19
-ReplayGuard-ID: 003-quality-pipeline-T002",Medium,To Do,003-quality-pipeline,setup,parallel
+ReplayGuard-ID: 003-quality-pipeline-T002",Medium,Done,003-quality-pipeline,setup,parallel
 80,72,Task,"T003 Scaffold `@replayguard/core` (package.json exports ESM/CJS/types, tsconfig, tsup, vitest, src/index.ts) in packages/core/","Scaffold `@replayguard/core` (package.json exports ESM/CJS/types, tsconfig, tsup, vitest, src/index.ts) in packages/core/
 
 Phase: Phase 1: Setup (Shared Infrastructure)
 
 Source: specs/003-quality-pipeline/tasks.md:20
-ReplayGuard-ID: 003-quality-pipeline-T003",Medium,To Do,003-quality-pipeline,setup,
+ReplayGuard-ID: 003-quality-pipeline-T003",Medium,Done,003-quality-pipeline,setup,
 81,72,Task,T004 Scaffold `@replayguard/fakes` in packages/fakes/,"Scaffold `@replayguard/fakes` in packages/fakes/
 
 Phase: Phase 1: Setup (Shared Infrastructure)
 
 Source: specs/003-quality-pipeline/tasks.md:21
-ReplayGuard-ID: 003-quality-pipeline-T004",Medium,To Do,003-quality-pipeline,setup,parallel
+ReplayGuard-ID: 003-quality-pipeline-T004",Medium,Done,003-quality-pipeline,setup,parallel
 82,72,Task,T005 Scaffold `@replayguard/adapter-workflows` (peer `@rivet-dev/workflows ^1.0.0`) in packages/adapter-workflows/,"Scaffold `@replayguard/adapter-workflows` (peer `@rivet-dev/workflows ^1.0.0`) in packages/adapter-workflows/
 
 Phase: Phase 1: Setup (Shared Infrastructure)
 
 Source: specs/003-quality-pipeline/tasks.md:22
-ReplayGuard-ID: 003-quality-pipeline-T005",Medium,To Do,003-quality-pipeline,setup,parallel
+ReplayGuard-ID: 003-quality-pipeline-T005",Medium,Done,003-quality-pipeline,setup,parallel
 83,72,Task,T006 Scaffold `@replayguard/reporter-console` in packages/reporter-console/,"Scaffold `@replayguard/reporter-console` in packages/reporter-console/
 
 Phase: Phase 1: Setup (Shared Infrastructure)
 
 Source: specs/003-quality-pipeline/tasks.md:23
-ReplayGuard-ID: 003-quality-pipeline-T006",Medium,To Do,003-quality-pipeline,setup,parallel
+ReplayGuard-ID: 003-quality-pipeline-T006",Medium,Done,003-quality-pipeline,setup,parallel
 84,72,Task,T007 Scaffold `@replayguard/reporter-html` in packages/reporter-html/,"Scaffold `@replayguard/reporter-html` in packages/reporter-html/
 
 Phase: Phase 1: Setup (Shared Infrastructure)
 
 Source: specs/003-quality-pipeline/tasks.md:24
-ReplayGuard-ID: 003-quality-pipeline-T007",Medium,To Do,003-quality-pipeline,setup,parallel
+ReplayGuard-ID: 003-quality-pipeline-T007",Medium,Done,003-quality-pipeline,setup,parallel
 85,72,Task,T008 Scaffold `@replayguard/vitest` (peer `vitest >=4 <6`) in packages/vitest/,"Scaffold `@replayguard/vitest` (peer `vitest >=4 <6`) in packages/vitest/
 
 Phase: Phase 1: Setup (Shared Infrastructure)
 
 Source: specs/003-quality-pipeline/tasks.md:25
-ReplayGuard-ID: 003-quality-pipeline-T008",Medium,To Do,003-quality-pipeline,setup,parallel
+ReplayGuard-ID: 003-quality-pipeline-T008",Medium,Done,003-quality-pipeline,setup,parallel
 86,72,Task,"T009 Scaffold `@replayguard/adapter-rivetkit` (peers rivetkit, workflows) in packages/adapter-rivetkit/","Scaffold `@replayguard/adapter-rivetkit` (peers rivetkit, workflows) in packages/adapter-rivetkit/
 
 Phase: Phase 1: Setup (Shared Infrastructure)
 
 Source: specs/003-quality-pipeline/tasks.md:26
-ReplayGuard-ID: 003-quality-pipeline-T009",Medium,To Do,003-quality-pipeline,setup,parallel
+ReplayGuard-ID: 003-quality-pipeline-T009",Medium,Done,003-quality-pipeline,setup,parallel
 87,72,Task,T010 Scaffold facade `replayguard` in packages/replayguard/,"Scaffold facade `replayguard` in packages/replayguard/
 
 Phase: Phase 1: Setup (Shared Infrastructure)
 
 Source: specs/003-quality-pipeline/tasks.md:27
-ReplayGuard-ID: 003-quality-pipeline-T010",Medium,To Do,003-quality-pipeline,setup,parallel
+ReplayGuard-ID: 003-quality-pipeline-T010",Medium,Done,003-quality-pipeline,setup,parallel
 88,72,Task,"T011 Install root dev dependencies (tsup, vitest, coverage-v8, fast-check, stryker, dependency-cruiser, lefthook, typedoc, changesets) and `valibot` as runtime dependency of core, respecting 7-day release age, in package.json and packages/core/package.js…","Install root dev dependencies (tsup, vitest, coverage-v8, fast-check, stryker, dependency-cruiser, lefthook, typedoc, changesets) and `valibot` as runtime dependency of core, respecting 7-day release age, in package.json and packages/core/package.json
 
 Phase: Phase 1: Setup (Shared Infrastructure)
 
 Source: specs/003-quality-pipeline/tasks.md:28
-ReplayGuard-ID: 003-quality-pipeline-T011",Medium,To Do,003-quality-pipeline,setup,
+ReplayGuard-ID: 003-quality-pipeline-T011",Medium,Done,003-quality-pipeline,setup,
 89,72,Task,"T012 Add `pnpm verify` facade script and per-task Turbo pipeline (lint, boundaries, check-types, test, diagrams:check, export:check, docs) in package.json and turbo.json","Add `pnpm verify` facade script and per-task Turbo pipeline (lint, boundaries, check-types, test, diagrams:check, export:check, docs) in package.json and turbo.json
 
 Phase: Phase 2: Foundational (Blocking Prerequisites)
 
 Source: specs/003-quality-pipeline/tasks.md:34
-ReplayGuard-ID: 003-quality-pipeline-T012",Medium,To Do,003-quality-pipeline,foundational,
+ReplayGuard-ID: 003-quality-pipeline-T012",Medium,Done,003-quality-pipeline,foundational,
 90,72,Task,"T013 Add CONTRIBUTING.md (Spec Kit flow, gates, commit convention) and SECURITY.md (reporting policy) at repository root","Add CONTRIBUTING.md (Spec Kit flow, gates, commit convention) and SECURITY.md (reporting policy) at repository root
 
 Phase: Phase 2: Foundational (Blocking Prerequisites)
 
 Source: specs/003-quality-pipeline/tasks.md:35
-ReplayGuard-ID: 003-quality-pipeline-T013",Medium,To Do,003-quality-pipeline,foundational,
+ReplayGuard-ID: 003-quality-pipeline-T013",Medium,Done,003-quality-pipeline,foundational,
 91,73,Sub-task,T014 Write failing boundary tests with fixture violations for each forbidden edge in tools/quality/test/boundaries.test.ts,"Write failing boundary tests with fixture violations for each forbidden edge in tools/quality/test/boundaries.test.ts
 
 Phase: Phase 3: User Story 1 - Every pull request is gated on quality (Priority: P1) 🎯 MVP
 
 Source: specs/003-quality-pipeline/tasks.md:47
-ReplayGuard-ID: 003-quality-pipeline-T014",High,To Do,003-quality-pipeline,us1,parallel
+ReplayGuard-ID: 003-quality-pipeline-T014",High,Done,003-quality-pipeline,us1,parallel
 92,73,Sub-task,T015 Implement dependency-cruiser rules encoding constitution edges in tools/quality/.dependency-cruiser.cjs and tools/quality/package.json,"Implement dependency-cruiser rules encoding constitution edges in tools/quality/.dependency-cruiser.cjs and tools/quality/package.json
 
 Phase: Phase 3: User Story 1 - Every pull request is gated on quality (Priority: P1) 🎯 MVP
 
 Source: specs/003-quality-pipeline/tasks.md:48
-ReplayGuard-ID: 003-quality-pipeline-T015",High,To Do,003-quality-pipeline,us1,
+ReplayGuard-ID: 003-quality-pipeline-T015",High,Done,003-quality-pipeline,us1,
 93,73,Sub-task,"T016 Create CI workflow (ubuntu/windows/macos × Node 22/24, fail-fast false, SHA-pinned actions, `permissions: contents: read`) in .github/workflows/ci.yml","Create CI workflow (ubuntu/windows/macos × Node 22/24, fail-fast false, SHA-pinned actions, `permissions: contents: read`) in .github/workflows/ci.yml
 
 Phase: Phase 3: User Story 1 - Every pull request is gated on quality (Priority: P1) 🎯 MVP
 
 Source: specs/003-quality-pipeline/tasks.md:49
-ReplayGuard-ID: 003-quality-pipeline-T016",High,To Do,003-quality-pipeline,us1,
+ReplayGuard-ID: 003-quality-pipeline-T016",High,Done,003-quality-pipeline,us1,
 94,73,Sub-task,T017 Add actionlint job validating workflows in .github/workflows/ci.yml,"Add actionlint job validating workflows in .github/workflows/ci.yml
 
 Phase: Phase 3: User Story 1 - Every pull request is gated on quality (Priority: P1) 🎯 MVP
 
 Source: specs/003-quality-pipeline/tasks.md:50
-ReplayGuard-ID: 003-quality-pipeline-T017",High,To Do,003-quality-pipeline,us1,parallel
+ReplayGuard-ID: 003-quality-pipeline-T017",High,Done,003-quality-pipeline,us1,parallel
 95,73,Sub-task,T018 Add lefthook config (pre-commit Biome staged + gitleaks protect; commit-msg Conventional Commits) in lefthook.yml,"Add lefthook config (pre-commit Biome staged + gitleaks protect; commit-msg Conventional Commits) in lefthook.yml
 
 Phase: Phase 3: User Story 1 - Every pull request is gated on quality (Priority: P1) 🎯 MVP
 
 Source: specs/003-quality-pipeline/tasks.md:51
-ReplayGuard-ID: 003-quality-pipeline-T018",High,To Do,003-quality-pipeline,us1,parallel
+ReplayGuard-ID: 003-quality-pipeline-T018",High,Done,003-quality-pipeline,us1,parallel
 96,74,Sub-task,T019 Create security workflow (CodeQL security-extended; OSV-Scanner fail on high/critical; gitleaks full history) in .github/workflows/security.yml,"Create security workflow (CodeQL security-extended; OSV-Scanner fail on high/critical; gitleaks full history) in .github/workflows/security.yml
 
 Phase: Phase 4: User Story 2 - Security scanning on every change (Priority: P1)
 
 Source: specs/003-quality-pipeline/tasks.md:61
-ReplayGuard-ID: 003-quality-pipeline-T019",High,To Do,003-quality-pipeline,us2,
+ReplayGuard-ID: 003-quality-pipeline-T019",High,Done,003-quality-pipeline,us2,
 97,74,Sub-task,T020 Add gitleaks config with allowlist for test fixtures in .gitleaks.toml,"Add gitleaks config with allowlist for test fixtures in .gitleaks.toml
 
 Phase: Phase 4: User Story 2 - Security scanning on every change (Priority: P1)
 
 Source: specs/003-quality-pipeline/tasks.md:62
-ReplayGuard-ID: 003-quality-pipeline-T020",High,To Do,003-quality-pipeline,us2,parallel
+ReplayGuard-ID: 003-quality-pipeline-T020",High,Done,003-quality-pipeline,us2,parallel
 98,74,Sub-task,"T021 Add Renovate config (`minimumReleaseAge: ""7 days""`, grouped updates, `helpers:pinGitHubActionDigests`) in renovate.json","Add Renovate config (`minimumReleaseAge: ""7 days""`, grouped updates, `helpers:pinGitHubActionDigests`) in renovate.json
 
 Phase: Phase 4: User Story 2 - Security scanning on every change (Priority: P1)
 
 Source: specs/003-quality-pipeline/tasks.md:63
-ReplayGuard-ID: 003-quality-pipeline-T021",High,To Do,003-quality-pipeline,us2,parallel
+ReplayGuard-ID: 003-quality-pipeline-T021",High,Done,003-quality-pipeline,us2,parallel
 99,74,Sub-task,T022 Add CODEOWNERS for workflows and security-sensitive paths in .github/CODEOWNERS,"Add CODEOWNERS for workflows and security-sensitive paths in .github/CODEOWNERS
 
 Phase: Phase 4: User Story 2 - Security scanning on every change (Priority: P1)
 
 Source: specs/003-quality-pipeline/tasks.md:64
-ReplayGuard-ID: 003-quality-pipeline-T022",High,To Do,003-quality-pipeline,us2,parallel
+ReplayGuard-ID: 003-quality-pipeline-T022",High,Done,003-quality-pipeline,us2,parallel
 100,75,Sub-task,T023 Add per-package Stryker configs extending base (core: separate 85% config for faults/ and classifier/) in packages/core/stryker.config.json,"Add per-package Stryker configs extending base (core: separate 85% config for faults/ and classifier/) in packages/core/stryker.config.json
 
 Phase: Phase 5: User Story 3 - Mutation testing (Priority: P2)
 
 Source: specs/003-quality-pipeline/tasks.md:74
-ReplayGuard-ID: 003-quality-pipeline-T023",Medium,To Do,003-quality-pipeline,us3,
+ReplayGuard-ID: 003-quality-pipeline-T023",Medium,Done,003-quality-pipeline,us3,
 101,75,Sub-task,"T024 Create mutation workflow (weekly + PR paths packages/core/**, incremental cache, upload HTML report) in .github/workflows/mutation.yml","Create mutation workflow (weekly + PR paths packages/core/**, incremental cache, upload HTML report) in .github/workflows/mutation.yml
 
 Phase: Phase 5: User Story 3 - Mutation testing (Priority: P2)
 
 Source: specs/003-quality-pipeline/tasks.md:75
-ReplayGuard-ID: 003-quality-pipeline-T024",Medium,To Do,003-quality-pipeline,us3,
+ReplayGuard-ID: 003-quality-pipeline-T024",Medium,Done,003-quality-pipeline,us3,
 102,76,Sub-task,"T025 Initialize Changesets (`access: public`, linked `@replayguard/*`) in .changeset/config.json","Initialize Changesets (`access: public`, linked `@replayguard/*`) in .changeset/config.json
 
 Phase: Phase 6: User Story 4 - Trustworthy releases (Priority: P2)
 
 Source: specs/003-quality-pipeline/tasks.md:85
-ReplayGuard-ID: 003-quality-pipeline-T025",Medium,To Do,003-quality-pipeline,us4,
+ReplayGuard-ID: 003-quality-pipeline-T025",Medium,Done,003-quality-pipeline,us4,
 103,76,Sub-task,"T026 Create release workflow (changesets/action, `id-token: write`, `pnpm -r publish --provenance`, anchore/sbom-action per tarball, `gh release create` with SBOMs, `git tag -v` verification) in .github/workflows/release.yml","Create release workflow (changesets/action, `id-token: write`, `pnpm -r publish --provenance`, anchore/sbom-action per tarball, `gh release create` with SBOMs, `git tag -v` verification) in .github/workflows/release.yml
 
 Phase: Phase 6: User Story 4 - Trustworthy releases (Priority: P2)
 
 Source: specs/003-quality-pipeline/tasks.md:86
-ReplayGuard-ID: 003-quality-pipeline-T026",Medium,To Do,003-quality-pipeline,us4,
+ReplayGuard-ID: 003-quality-pipeline-T026",Medium,Done,003-quality-pipeline,us4,
 104,76,Sub-task,"T027 Document maintainer release steps (signed tags, trusted publishing setup) in docs/maintainers/releasing.md","Document maintainer release steps (signed tags, trusted publishing setup) in docs/maintainers/releasing.md
 
 Phase: Phase 6: User Story 4 - Trustworthy releases (Priority: P2)
 
 Source: specs/003-quality-pipeline/tasks.md:87
-ReplayGuard-ID: 003-quality-pipeline-T027",Medium,To Do,003-quality-pipeline,us4,parallel
+ReplayGuard-ID: 003-quality-pipeline-T027",Medium,Done,003-quality-pipeline,us4,parallel
 105,77,Sub-task,"T028 Add TypeDoc config (`entryPointStrategy: packages`, `treatWarningsAsErrors`, `validation.notDocumented`) in typedoc.json","Add TypeDoc config (`entryPointStrategy: packages`, `treatWarningsAsErrors`, `validation.notDocumented`) in typedoc.json
 
 Phase: Phase 7: User Story 5 - Generated API documentation (Priority: P3)
 
 Source: specs/003-quality-pipeline/tasks.md:97
-ReplayGuard-ID: 003-quality-pipeline-T028",Low,To Do,003-quality-pipeline,us5,
+ReplayGuard-ID: 003-quality-pipeline-T028",Low,Done,003-quality-pipeline,us5,
 106,77,Sub-task,T029 Create docs workflow in .github/workflows/docs.yml,"Create docs workflow in .github/workflows/docs.yml
 
 Phase: Phase 7: User Story 5 - Generated API documentation (Priority: P3)
 
 Source: specs/003-quality-pipeline/tasks.md:98
-ReplayGuard-ID: 003-quality-pipeline-T029",Low,To Do,003-quality-pipeline,us5,
+ReplayGuard-ID: 003-quality-pipeline-T029",Low,Done,003-quality-pipeline,us5,
 107,72,Task,"T030 Add README with badges, install, quick example in README.md","Add README with badges, install, quick example in README.md
 
 Phase: Phase 8: Polish & Cross-Cutting Concerns
 
 Source: specs/003-quality-pipeline/tasks.md:104
-ReplayGuard-ID: 003-quality-pipeline-T030",Medium,To Do,003-quality-pipeline,polish,parallel
+ReplayGuard-ID: 003-quality-pipeline-T030",Medium,Done,003-quality-pipeline,polish,parallel
 108,72,Task,T031 Author diagrams covering T001–T032 in specs/003-quality-pipeline/diagram.yaml,"Author diagrams covering T001–T032 in specs/003-quality-pipeline/diagram.yaml
 
 Phase: Phase 8: Polish & Cross-Cutting Concerns
 
 Source: specs/003-quality-pipeline/tasks.md:105
-ReplayGuard-ID: 003-quality-pipeline-T031",Medium,To Do,003-quality-pipeline,polish,
+ReplayGuard-ID: 003-quality-pipeline-T031",Medium,Done,003-quality-pipeline,polish,
 109,72,Task,"T032 Run `pnpm verify` end-to-end, record CI duration against the 15-minute target (SC-002) and validate quickstart in specs/003-quality-pipeline/quickstart.md","Run `pnpm verify` end-to-end, record CI duration against the 15-minute target (SC-002) and validate quickstart in specs/003-quality-pipeline/quickstart.md
 
 Phase: Phase 8: Polish & Cross-Cutting Concerns
 
 Source: specs/003-quality-pipeline/tasks.md:106
-ReplayGuard-ID: 003-quality-pipeline-T032",Medium,To Do,003-quality-pipeline,polish,
+ReplayGuard-ID: 003-quality-pipeline-T032",Medium,Done,003-quality-pipeline,polish,
 110,,Epic,004 Effect Ledger & Instrumentation,"Effect Ledger & Instrumentation (004-effect-ledger).
 
 Source: specs/004-effect-ledger/spec.md:1

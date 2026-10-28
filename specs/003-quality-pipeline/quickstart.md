@@ -9,7 +9,7 @@
 - Add `import "node:fs"` to `packages/core/src/index.ts` → `pnpm boundaries` fails.
 - Delete a test so coverage < 90% → `pnpm test` fails naming the package.
 - Stage a file containing `AKIA` + 16 uppercase chars → pre-commit gitleaks blocks the commit.
-- Export a symbol without TSDoc → `pnpm docs` fails.
+- Export a symbol without TSDoc → `pnpm docs:api` fails.
 
 ## One-time maintainer setup (outside the repo)
 

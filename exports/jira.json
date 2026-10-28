@@ -1379,7 +1379,7 @@
     {
       "sourceId": "003-quality-pipeline",
       "parentSourceId": null,
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Epic"
@@ -1397,7 +1397,7 @@
     {
       "sourceId": "003-quality-pipeline-US1",
       "parentSourceId": "003-quality-pipeline",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Story"
@@ -1416,7 +1416,7 @@
     {
       "sourceId": "003-quality-pipeline-US2",
       "parentSourceId": "003-quality-pipeline",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Story"
@@ -1435,7 +1435,7 @@
     {
       "sourceId": "003-quality-pipeline-US3",
       "parentSourceId": "003-quality-pipeline",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Story"
@@ -1454,7 +1454,7 @@
     {
       "sourceId": "003-quality-pipeline-US4",
       "parentSourceId": "003-quality-pipeline",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Story"
@@ -1473,7 +1473,7 @@
     {
       "sourceId": "003-quality-pipeline-US5",
       "parentSourceId": "003-quality-pipeline",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Story"
@@ -1492,13 +1492,13 @@
     {
       "sourceId": "003-quality-pipeline-T001",
       "parentSourceId": "003-quality-pipeline",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Task"
         },
-        "summary": "T001 Create shared config factories `defineTsupConfig`, `defineVitestConfig` (coverage 90/90/90/90) in config/tsup.base.ts and config/vitest.base.ts",
-        "description": "Create shared config factories `defineTsupConfig`, `defineVitestConfig` (coverage 90/90/90/90) in config/tsup.base.ts and config/vitest.base.ts\n\nPhase: Phase 1: Setup (Shared Infrastructure)\n\nSource: specs/003-quality-pipeline/tasks.md:18",
+        "summary": "T001 Create shared config factories `defineTsupConfig`, `defineVitestConfig` (coverage 90/90/90/90) as workspace package `@replayguard-tools/config` in tools/config/tsup.base.js and tools/config/vitest.base.js",
+        "description": "Create shared config factories `defineTsupConfig`, `defineVitestConfig` (coverage 90/90/90/90) as workspace package `@replayguard-tools/config` in tools/config/tsup.base.js and tools/config/vitest.base.js\n\nPhase: Phase 1: Setup (Shared Infrastructure)\n\nSource: specs/003-quality-pipeline/tasks.md:18",
         "priority": {
           "name": "Medium"
         },
@@ -1511,13 +1511,13 @@
     {
       "sourceId": "003-quality-pipeline-T002",
       "parentSourceId": "003-quality-pipeline",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Task"
         },
-        "summary": "T002 Create Stryker base config (vitest runner, `break: 75`) in config/stryker.base.json",
-        "description": "Create Stryker base config (vitest runner, `break: 75`) in config/stryker.base.json\n\nPhase: Phase 1: Setup (Shared Infrastructure)\n\nSource: specs/003-quality-pipeline/tasks.md:19",
+        "summary": "T002 Create Stryker base config (vitest runner, `break: 75`) in tools/config/stryker.base.json",
+        "description": "Create Stryker base config (vitest runner, `break: 75`) in tools/config/stryker.base.json\n\nPhase: Phase 1: Setup (Shared Infrastructure)\n\nSource: specs/003-quality-pipeline/tasks.md:19",
         "priority": {
           "name": "Medium"
         },
@@ -1531,7 +1531,7 @@
     {
       "sourceId": "003-quality-pipeline-T003",
       "parentSourceId": "003-quality-pipeline",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Task"
@@ -1550,7 +1550,7 @@
     {
       "sourceId": "003-quality-pipeline-T004",
       "parentSourceId": "003-quality-pipeline",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Task"
@@ -1570,7 +1570,7 @@
     {
       "sourceId": "003-quality-pipeline-T005",
       "parentSourceId": "003-quality-pipeline",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Task"
@@ -1590,7 +1590,7 @@
     {
       "sourceId": "003-quality-pipeline-T006",
       "parentSourceId": "003-quality-pipeline",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Task"
@@ -1610,7 +1610,7 @@
     {
       "sourceId": "003-quality-pipeline-T007",
       "parentSourceId": "003-quality-pipeline",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Task"
@@ -1630,7 +1630,7 @@
     {
       "sourceId": "003-quality-pipeline-T008",
       "parentSourceId": "003-quality-pipeline",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Task"
@@ -1650,7 +1650,7 @@
     {
       "sourceId": "003-quality-pipeline-T009",
       "parentSourceId": "003-quality-pipeline",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Task"
@@ -1670,7 +1670,7 @@
     {
       "sourceId": "003-quality-pipeline-T010",
       "parentSourceId": "003-quality-pipeline",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Task"
@@ -1690,7 +1690,7 @@
     {
       "sourceId": "003-quality-pipeline-T011",
       "parentSourceId": "003-quality-pipeline",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Task"
@@ -1709,7 +1709,7 @@
     {
       "sourceId": "003-quality-pipeline-T012",
       "parentSourceId": "003-quality-pipeline",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Task"
@@ -1728,7 +1728,7 @@
     {
       "sourceId": "003-quality-pipeline-T013",
       "parentSourceId": "003-quality-pipeline",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Task"
@@ -1747,7 +1747,7 @@
     {
       "sourceId": "003-quality-pipeline-T014",
       "parentSourceId": "003-quality-pipeline-US1",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Sub-task"
@@ -1767,7 +1767,7 @@
     {
       "sourceId": "003-quality-pipeline-T015",
       "parentSourceId": "003-quality-pipeline-US1",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Sub-task"
@@ -1786,7 +1786,7 @@
     {
       "sourceId": "003-quality-pipeline-T016",
       "parentSourceId": "003-quality-pipeline-US1",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Sub-task"
@@ -1805,7 +1805,7 @@
     {
       "sourceId": "003-quality-pipeline-T017",
       "parentSourceId": "003-quality-pipeline-US1",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Sub-task"
@@ -1825,7 +1825,7 @@
     {
       "sourceId": "003-quality-pipeline-T018",
       "parentSourceId": "003-quality-pipeline-US1",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Sub-task"
@@ -1845,7 +1845,7 @@
     {
       "sourceId": "003-quality-pipeline-T019",
       "parentSourceId": "003-quality-pipeline-US2",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Sub-task"
@@ -1864,7 +1864,7 @@
     {
       "sourceId": "003-quality-pipeline-T020",
       "parentSourceId": "003-quality-pipeline-US2",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Sub-task"
@@ -1884,7 +1884,7 @@
     {
       "sourceId": "003-quality-pipeline-T021",
       "parentSourceId": "003-quality-pipeline-US2",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Sub-task"
@@ -1904,7 +1904,7 @@
     {
       "sourceId": "003-quality-pipeline-T022",
       "parentSourceId": "003-quality-pipeline-US2",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Sub-task"
@@ -1924,7 +1924,7 @@
     {
       "sourceId": "003-quality-pipeline-T023",
       "parentSourceId": "003-quality-pipeline-US3",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Sub-task"
@@ -1943,7 +1943,7 @@
     {
       "sourceId": "003-quality-pipeline-T024",
       "parentSourceId": "003-quality-pipeline-US3",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Sub-task"
@@ -1962,7 +1962,7 @@
     {
       "sourceId": "003-quality-pipeline-T025",
       "parentSourceId": "003-quality-pipeline-US4",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Sub-task"
@@ -1981,7 +1981,7 @@
     {
       "sourceId": "003-quality-pipeline-T026",
       "parentSourceId": "003-quality-pipeline-US4",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Sub-task"
@@ -2000,7 +2000,7 @@
     {
       "sourceId": "003-quality-pipeline-T027",
       "parentSourceId": "003-quality-pipeline-US4",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Sub-task"
@@ -2020,7 +2020,7 @@
     {
       "sourceId": "003-quality-pipeline-T028",
       "parentSourceId": "003-quality-pipeline-US5",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Sub-task"
@@ -2039,7 +2039,7 @@
     {
       "sourceId": "003-quality-pipeline-T029",
       "parentSourceId": "003-quality-pipeline-US5",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Sub-task"
@@ -2058,7 +2058,7 @@
     {
       "sourceId": "003-quality-pipeline-T030",
       "parentSourceId": "003-quality-pipeline",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Task"
@@ -2078,7 +2078,7 @@
     {
       "sourceId": "003-quality-pipeline-T031",
       "parentSourceId": "003-quality-pipeline",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Task"
@@ -2097,7 +2097,7 @@
     {
       "sourceId": "003-quality-pipeline-T032",
       "parentSourceId": "003-quality-pipeline",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Task"

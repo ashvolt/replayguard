@@ -1,0 +1,29 @@
+{
+	"$schema": "https://typedoc.org/schema.json",
+	"name": "ReplayGuard API",
+	"entryPointStrategy": "packages",
+	"entryPoints": ["packages/*"],
+	"packageOptions": {
+		"entryPoints": ["src/index.ts"],
+		"tsconfig": "tsconfig.json",
+		"sourceLinkTemplate": "https://github.com/ashvolt/replayguard/blob/{gitRevision}/{path}#L{line}",
+		"gitRevision": "main",
+		"validation": {
+			"notExported": true,
+			"invalidLink": true,
+			"notDocumented": true
+		},
+		"excludePrivate": true,
+		"excludeInternal": true
+	},
+	"out": "docs/api",
+	"treatWarningsAsErrors": true,
+	"excludePrivate": true,
+	"excludeInternal": true,
+	"validation": {
+		"notExported": true,
+		"invalidLink": true,
+		"notDocumented": true
+	},
+	"readme": "none"
+}

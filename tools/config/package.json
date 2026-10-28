@@ -1,0 +1,17 @@
+{
+	"name": "@replayguard-tools/config",
+	"private": true,
+	"type": "module",
+	"description": "Shared build, test and mutation configuration for ReplayGuard packages.",
+	"exports": {
+		"./tsup": {
+			"types": "./tsup.base.d.ts",
+			"default": "./tsup.base.js"
+		},
+		"./vitest": {
+			"types": "./vitest.base.d.ts",
+			"default": "./vitest.base.js"
+		},
+		"./stryker": "./stryker.base.json"
+	}
+}

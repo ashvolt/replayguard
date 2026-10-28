@@ -12,3 +12,4 @@ reports/
 # Agent-local settings may hold credentials; shared skills under .claude/skills are committed.
 .claude/settings.local.json
 .export-state/
+docs/api/
