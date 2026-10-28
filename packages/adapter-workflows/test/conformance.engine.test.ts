@@ -3,6 +3,7 @@ import type { WorkflowContextInterface } from "@rivet-dev/workflows";
 import { workflowsRuntime } from "../src/runtime.js";
 import {
 	type CheckoutShape,
+	CONFORMANCE_GRACE_MS,
 	type ConformanceCase,
 	runtimeConformanceSuite,
 } from "../test-support/conformance.js";
@@ -50,7 +51,7 @@ function checkout(shape: CheckoutShape) {
 			});
 			if (!shape.ephemeralReceiptFirst) await receipt(false);
 		})
-		.budget({ graceMs: 2_000 });
+		.budget({ graceMs: CONFORMANCE_GRACE_MS });
 }
 
 runtimeConformanceSuite("workflowsRuntime (in-process engine)", (c: ConformanceCase) =>

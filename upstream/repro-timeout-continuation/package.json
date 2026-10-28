@@ -1,5 +1,6 @@
 {
 	"name": "@replayguard-upstream/repro-timeout-continuation",
+	"version": "0.0.0",
 	"private": true,
 	"type": "module",
 	"description": "Standalone reproduction for a proposal to @rivet-dev/workflows (see README).",

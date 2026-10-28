@@ -4,11 +4,12 @@ import { actorWorkflow, rivetkitRuntime } from "@replayguard/adapter-rivetkit";
 import { fault, scenario } from "@replayguard/core";
 import {
 	CONFORMANCE_CASES as CASES,
+	CONFORMANCE_GRACE_MS,
 	externalKeyStore,
 } from "../../../adapter-workflows/test-support/conformance-cases.mjs";
 
 const fast = { retryBackoffBase: 1, retryBackoffMax: 1 };
-const budget = { caseTimeoutMs: 180_000, graceMs: 3_000 };
+const budget = { caseTimeoutMs: 180_000, graceMs: CONFORMANCE_GRACE_MS };
 
 function checkoutEffects(ctx, scope) {
 	// Hosts are killed between runs, so the provider's keys live outside them.

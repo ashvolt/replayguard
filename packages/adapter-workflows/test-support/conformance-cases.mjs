@@ -29,7 +29,12 @@ export function removeKeyStores(owner) {
 
 /** Step timeout and provider hang (ms) for the timeout cases, generous enough for actors. */
 export const TIMEOUT_MS = 300;
-const HANG_MS = 1_200;
+// The hang must outlast the timeout by a wide margin, or a CPU-starved CI box starts the retry
+// after the hung call already finished (no overlap → "duplicated").
+const HANG_MS = 4_000;
+
+/** Case grace period: longer than the hang, so the timed-out call's late settle is recorded. */
+export const CONFORMANCE_GRACE_MS = 5_000;
 
 export const CONFORMANCE_CASES = [
 	{

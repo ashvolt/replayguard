@@ -1,5 +1,6 @@
 {
 	"name": "@replayguard/spike-engine-assumptions",
+	"version": "0.0.0",
 	"private": true,
 	"type": "module",
 	"description": "Throwaway spike: verifies Rivet workflow engine side-effect assumptions before ReplayGuard specs are written.",

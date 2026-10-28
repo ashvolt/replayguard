@@ -28,6 +28,7 @@ export interface ConformanceCase {
 }
 
 export declare const TIMEOUT_MS: number;
+export declare const CONFORMANCE_GRACE_MS: number;
 export declare const CONFORMANCE_CASES: readonly ConformanceCase[];
 
 /** A provider idempotency-key store that survives killed hosts. */

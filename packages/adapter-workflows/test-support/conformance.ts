@@ -10,6 +10,7 @@ import { CONFORMANCE_CASES, type ConformanceCase } from "./conformance-cases.mjs
 export {
 	type CheckoutShape,
 	CONFORMANCE_CASES,
+	CONFORMANCE_GRACE_MS,
 	type ConformanceCase,
 	TIMEOUT_MS,
 } from "./conformance-cases.mjs";

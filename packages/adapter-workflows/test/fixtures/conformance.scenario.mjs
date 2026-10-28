@@ -4,6 +4,7 @@ import { workflowsProcessRuntime } from "@replayguard/adapter-workflows";
 import { scenario } from "@replayguard/core";
 import {
 	CONFORMANCE_CASES as CASES,
+	CONFORMANCE_GRACE_MS,
 	externalKeyStore,
 } from "../../test-support/conformance-cases.mjs";
 
@@ -50,7 +51,7 @@ const build = (index) => () => {
 			});
 			if (!c.shape.ephemeralReceiptFirst) await receipt(false);
 		})
-		.budget({ graceMs: 2_000 })
+		.budget({ graceMs: CONFORMANCE_GRACE_MS })
 		.case(c.name, c.faults)
 		.build();
 };

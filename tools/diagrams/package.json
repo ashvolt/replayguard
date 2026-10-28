@@ -1,5 +1,6 @@
 {
 	"name": "@replayguard-tools/diagrams",
+	"version": "0.0.0",
 	"private": true,
 	"type": "module",
 	"description": "Diagrams-as-code: diagram.yaml -> Excalidraw + SVG with task traceability checks.",
