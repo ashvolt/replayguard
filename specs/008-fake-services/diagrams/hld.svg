@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="917" height="818" viewBox="0 0 917 818" role="img">
+<title>008 HLD — Fake external services</title>
+<defs><marker id="rg-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1e1e1e"/></marker></defs>
+<rect width="917" height="818" fill="#ffffff"/>
+<rect x="325" y="90" width="300" height="526" rx="10" fill="none" stroke="#868e96" stroke-width="1" stroke-dasharray="8 6"/>
+<text x="335" y="96" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="start" fill="#868e96"><tspan x="335" dy="14">@replayguard/fakes</tspan></text>
+<ellipse cx="146.5" cy="748" rx="82.5" ry="30" fill="#fff3bf" stroke="#1e1e1e" stroke-width="2"/>
+<text x="146.5" y="738" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="146.5" dy="16">Workflow step</tspan></text>
+<rect x="373" y="142" width="204" height="70" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="475" y="157" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="475" dy="16">createFakePayment</tspan><tspan x="475" dy="20">[T007]</tspan></text>
+<rect x="383" y="262" width="184" height="70" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="475" y="277" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="475" dy="16">createFakeEmail</tspan><tspan x="475" dy="20">[T009]</tspan></text>
+<rect x="388" y="382" width="175" height="70" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="475.5" y="397" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="475.5" dy="16">createFakeHttp</tspan><tspan x="475.5" dy="20">[T011]</tspan></text>
+<rect x="349" y="502" width="252" height="90" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="475" y="517" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="475" dy="16">createFakeWebhookRecei</tspan><tspan x="475" dy="20">ver</tspan><tspan x="475" dy="20">[T013]</tspan></text>
+<rect x="721" y="718" width="156" height="60" rx="14" fill="#d3f9d8" stroke="#1e1e1e" stroke-width="2"/><path d="M721,730 Q799,744 877,730" fill="none" stroke="#1e1e1e" stroke-width="1.5"/>
+<text x="799" y="738" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="799" dy="16">EffectLedger</tspan></text>
+<polyline points="164,718 455,212" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="168,718 450,332" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="176,718 441,452" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="196,718 401,592" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="495,212 782,718" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/><rect x="606" y="443" width="65" height="22" fill="#ffffff" opacity="0.85"/><text x="638.5" y="443" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="middle" fill="#1e1e1e"><tspan x="638.5" dy="14">records</tspan></text>
+<polyline points="500,332 777,718" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="510,452 770,718" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="548,592 751,718" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<text x="40" y="30" font-family="Helvetica, Arial, sans-serif" font-size="24" text-anchor="start" fill="#1e1e1e"><tspan x="40" dy="24">008 HLD — Fake external services</tspan></text>
+</svg>

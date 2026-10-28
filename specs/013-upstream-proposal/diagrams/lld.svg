@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1270" height="506" viewBox="0 0 1270 506" role="img">
+<title>013 LLD — upstream/ layout</title>
+<defs><marker id="rg-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1e1e1e"/></marker></defs>
+<rect width="1270" height="506" fill="#ffffff"/>
+<rect x="40" y="100" width="904" height="366" rx="10" fill="none" stroke="#868e96" stroke-width="1" stroke-dasharray="8 6"/>
+<text x="50" y="106" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="start" fill="#868e96"><tspan x="50" dy="14">upstream/</tspan></text>
+<rect x="1046" y="132" width="60" height="12" fill="#f3f0ff" stroke="#1e1e1e" stroke-width="2"/><rect x="1046" y="142" width="184" height="90" fill="#f3f0ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="1138" y="157" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="1138" dy="16">pnpm-workspace:</tspan><tspan x="1138" dy="20">upstream/*</tspan><tspan x="1138" dy="20">[T001]</tspan></text>
+<rect x="240" y="152" width="242" height="70" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="361" y="167" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="361" dy="16">engine version record</tspan><tspan x="361" dy="20">[T002]</tspan></text>
+<rect x="64" y="342" width="60" height="12" fill="#f3f0ff" stroke="#1e1e1e" stroke-width="2"/><rect x="64" y="352" width="252" height="90" fill="#f3f0ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="190" y="367" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="190" dy="16">repro-crash-loop-retri</tspan><tspan x="190" dy="20">es</tspan><tspan x="190" dy="20">[T003]</tspan></text>
+<rect x="366" y="342" width="60" height="12" fill="#f3f0ff" stroke="#1e1e1e" stroke-width="2"/><rect x="366" y="352" width="252" height="90" fill="#f3f0ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="492" y="367" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="492" dy="16">repro-timeout-continua</tspan><tspan x="492" dy="20">tion</tspan><tspan x="492" dy="20">[T004]</tspan></text>
+<rect x="668" y="342" width="60" height="12" fill="#f3f0ff" stroke="#1e1e1e" stroke-width="2"/><rect x="668" y="352" width="252" height="90" fill="#f3f0ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="794" y="367" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="794" dy="16">repro-stable-step-iden</tspan><tspan x="794" dy="20">tity</tspan><tspan x="794" dy="20">[T005]</tspan></text>
+<rect x="532" y="142" width="60" height="12" fill="#f3f0ff" stroke="#1e1e1e" stroke-width="2"/><rect x="532" y="152" width="213" height="70" fill="#f3f0ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="638.5" y="167" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="638.5" dy="16">drafts/01-03</tspan><tspan x="638.5" dy="20">[T007, T008, T009]</tspan></text>
+<polyline points="1046,207 316,369" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="1046,217 618,356" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="1064,232 868,352" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<text x="40" y="30" font-family="Helvetica, Arial, sans-serif" font-size="24" text-anchor="start" fill="#1e1e1e"><tspan x="40" dy="24">013 LLD — upstream/ layout</tspan></text>
+</svg>

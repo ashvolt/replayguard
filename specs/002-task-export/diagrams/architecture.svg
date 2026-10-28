@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1633" height="652" viewBox="0 0 1633 652" role="img">
+<title>002 Technical architecture</title>
+<defs><marker id="rg-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1e1e1e"/></marker></defs>
+<rect width="1633" height="652" fill="#ffffff"/>
+<rect x="708" y="132" width="60" height="12" fill="#f3f0ff" stroke="#1e1e1e" stroke-width="2"/><rect x="708" y="142" width="242" height="70" fill="#f3f0ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="829" y="157" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="829" dy="16">root scripts export:*</tspan><tspan x="829" dy="20">[T004]</tspan></text>
+<rect x="703" y="322" width="60" height="12" fill="#f3f0ff" stroke="#1e1e1e" stroke-width="2"/><rect x="703" y="332" width="252" height="90" fill="#f3f0ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="829" y="347" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="829" dy="16">@replayguard-tools/exp</tspan><tspan x="829" dy="20">ort (private)</tspan><tspan x="829" dy="20">[T001]</tspan></text>
+<rect x="64" y="542" width="223" height="70" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="175.5" y="557" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="175.5" dy="16">tsconfig (erasable)</tspan><tspan x="175.5" dy="20">[T002]</tspan></text>
+<rect x="337" y="542" width="223" height="70" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="448.5" y="557" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="448.5" dy="16">Vitest + fast-check</tspan><tspan x="448.5" dy="20">[T003, T028]</tspan></text>
+<polygon points="716.5,542 823,577 716.5,612 610,577" fill="#ffe3e3" stroke="#1e1e1e" stroke-width="2"/>
+<text x="716.5" y="557" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="716.5" dy="16">env: JIRA_* (never</tspan><tspan x="716.5" dy="20">logged)</tspan></text>
+<ellipse cx="989" cy="577" rx="116" ry="35" fill="#fff3bf" stroke="#1e1e1e" stroke-width="2"/>
+<text x="989" y="557" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="989" dy="16">gh CLI (execFile, no</tspan><tspan x="989" dy="20">shell)</tspan></text>
+<rect x="1155" y="532" width="60" height="12" fill="#f3f0ff" stroke="#1e1e1e" stroke-width="2"/><rect x="1155" y="542" width="232" height="70" fill="#f3f0ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="1271" y="557" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="1271" dy="16">README import guides</tspan><tspan x="1271" dy="20">[T027]</tspan></text>
+<rect x="1437" y="532" width="52" height="12" fill="#f3f0ff" stroke="#1e1e1e" stroke-width="2"/><rect x="1437" y="542" width="156" height="70" fill="#f3f0ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="1515" y="557" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="1515" dy="16">diagram.yaml</tspan><tspan x="1515" dy="20">[T029]</tspan></text>
+<polyline points="829,212 829,332" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="703,416 287,543" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="743,422 515,542" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="804,422 736,542" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)" stroke-dasharray="8 6"/>
+<polyline points="865,422 961,542" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)" stroke-dasharray="8 6"/>
+<polyline points="928,422 1194,542" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="955,414 1437,554" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<text x="40" y="30" font-family="Helvetica, Arial, sans-serif" font-size="24" text-anchor="start" fill="#1e1e1e"><tspan x="40" dy="24">002 Technical architecture</tspan></text>
+</svg>

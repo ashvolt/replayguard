@@ -1,0 +1,90 @@
+feature: 003-quality-pipeline
+diagrams:
+  - kind: hld
+    title: "003 HLD — Quality, security and release gates"
+    layout: flow
+    nodes:
+      - { id: dev, label: Contributor, shape: ellipse }
+      - { id: hooks, label: lefthook pre-commit, tasks: [T018] }
+      - { id: pr, label: Pull request, shape: ellipse }
+      - { id: ci, label: CI matrix (3 OS × Node 22/24), tasks: [T016, T017] }
+      - { id: sec, label: "Security (CodeQL, OSV, gitleaks)", tasks: [T019, T020] }
+      - { id: mut, label: Mutation (Stryker), tasks: [T023, T024] }
+      - { id: docs, label: TypeDoc, tasks: [T028, T029] }
+      - { id: merge, label: Merge gate, shape: diamond, tasks: [T032] }
+      - { id: rel, label: Release (Changesets + OIDC + SBOM), tasks: [T025, T026] }
+      - { id: npm, label: npm registry, shape: database }
+    edges:
+      - { from: dev, to: hooks }
+      - { from: hooks, to: pr }
+      - { from: pr, to: ci }
+      - { from: pr, to: sec }
+      - { from: pr, to: mut }
+      - { from: pr, to: docs }
+      - { from: ci, to: merge }
+      - { from: sec, to: merge }
+      - { from: mut, to: merge }
+      - { from: docs, to: merge }
+      - { from: merge, to: rel }
+      - { from: rel, to: npm, label: provenance }
+  - kind: lld
+    title: "003 LLD — workspace packages and shared config"
+    layout: flow
+    direction: TB
+    groups:
+      - { id: cfg, label: config/ }
+      - { id: pk, label: packages/ }
+    nodes:
+      - { id: tsup, label: tsup.base.ts, group: cfg, tasks: [T001] }
+      - { id: vitest, label: vitest.base.ts (90/90), group: cfg, tasks: [T001] }
+      - { id: stryk, label: stryker.base.json, group: cfg, tasks: [T002] }
+      - { id: core, label: core, group: pk, shape: package, tasks: [T003] }
+      - { id: fakes, label: fakes, group: pk, shape: package, tasks: [T004] }
+      - { id: aw, label: adapter-workflows, group: pk, shape: package, tasks: [T005] }
+      - { id: rc, label: reporter-console, group: pk, shape: package, tasks: [T006] }
+      - { id: rh, label: reporter-html, group: pk, shape: package, tasks: [T007] }
+      - { id: vt, label: vitest, group: pk, shape: package, tasks: [T008] }
+      - { id: rk, label: adapter-rivetkit, group: pk, shape: package, tasks: [T009] }
+      - { id: fac, label: replayguard (facade), group: pk, shape: package, tasks: [T010] }
+      - { id: deps, label: root devDependencies, shape: database, tasks: [T011] }
+      - { id: bound, label: tools/quality dependency-cruiser, shape: diamond, tasks: [T014, T015] }
+    edges:
+      - { from: tsup, to: core }
+      - { from: vitest, to: core }
+      - { from: stryk, to: core }
+      - { from: deps, to: tsup }
+      - { from: bound, to: core, style: dashed, label: enforces edges }
+  - kind: workflow
+    title: "003 User workflow — from commit to release"
+    layout: sequence
+    actors:
+      - { id: dev, label: Contributor }
+      - { id: git, label: Git hooks }
+      - { id: gha, label: GitHub Actions }
+      - { id: npm, label: npm }
+    messages:
+      - { from: dev, to: git, label: "commit (Biome + gitleaks + commit-msg)", tasks: [T018] }
+      - { from: dev, to: dev, label: "pnpm verify (same gates locally)", tasks: [T012] }
+      - { from: dev, to: gha, label: open PR, tasks: [T016] }
+      - { from: gha, to: gha, label: "lint · types · tests · boundaries · traceability", tasks: [T015, T017] }
+      - { from: gha, to: gha, label: "CodeQL · OSV · gitleaks", tasks: [T019] }
+      - { from: gha, to: dev, label: "status checks (block on failure)", style: dashed, tasks: [T022] }
+      - { from: dev, to: gha, label: "merge with changeset", tasks: [T025] }
+      - { from: gha, to: npm, label: "publish --provenance via OIDC + SBOM", tasks: [T026] }
+  - kind: architecture
+    title: "003 Technical architecture — repository governance files"
+    layout: flow
+    nodes:
+      - { id: renov, label: "renovate.json (7-day age, pinned actions)", shape: package, tasks: [T021] }
+      - { id: owners, label: CODEOWNERS, shape: package, tasks: [T022] }
+      - { id: contrib, label: "CONTRIBUTING.md + SECURITY.md", shape: package, tasks: [T013] }
+      - { id: releasing, label: docs/maintainers/releasing.md, shape: package, tasks: [T027] }
+      - { id: readme, label: README.md, shape: package, tasks: [T030] }
+      - { id: yaml, label: diagram.yaml, shape: package, tasks: [T031] }
+      - { id: wf, label: .github/workflows/*, shape: database }
+    edges:
+      - { from: renov, to: wf, label: bumps SHAs }
+      - { from: owners, to: wf, label: review }
+      - { from: contrib, to: readme }
+      - { from: releasing, to: wf }
+      - { from: yaml, to: readme, style: dashed }

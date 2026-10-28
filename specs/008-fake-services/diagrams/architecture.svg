@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1317" height="272" viewBox="0 0 1317 272" role="img">
+<title>008 Technical architecture — examples and docs</title>
+<defs><marker id="rg-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1e1e1e"/></marker></defs>
+<rect width="1317" height="272" fill="#ffffff"/>
+<rect x="711" y="142" width="242" height="90" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="832" y="157" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="832" dy="16">outcome examples (all</tspan><tspan x="832" dy="20">classes)</tspan><tspan x="832" dy="20">[T014]</tspan></text>
+<rect x="359" y="142" width="60" height="12" fill="#f3f0ff" stroke="#1e1e1e" stroke-width="2"/><rect x="359" y="152" width="232" height="70" fill="#f3f0ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="475" y="167" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="475" dy="16">docs/fakes/README.md</tspan><tspan x="475" dy="20">[T015]</tspan></text>
+<rect x="64" y="132" width="58.333333333333336" height="12" fill="#f3f0ff" stroke="#1e1e1e" stroke-width="2"/><rect x="64" y="142" width="175" height="90" fill="#f3f0ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="151.5" y="157" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="151.5" dy="16">diagram.yaml +</tspan><tspan x="151.5" dy="20">quickstart</tspan><tspan x="151.5" dy="20">[T016, T017]</tspan></text>
+<rect x="1073" y="147" width="60" height="12" fill="#f3f0ff" stroke="#1e1e1e" stroke-width="2"/><rect x="1073" y="157" width="204" height="60" fill="#f3f0ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="1175" y="177" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="1175" dy="16">@replayguard/core</tspan></text>
+<polyline points="953,187 1073,187" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="591,187 711,187" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)" stroke-dasharray="8 6"/>
+<polyline points="239,187 359,187" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)" stroke-dasharray="8 6"/>
+<text x="40" y="30" font-family="Helvetica, Arial, sans-serif" font-size="24" text-anchor="start" fill="#1e1e1e"><tspan x="40" dy="24">008 Technical architecture — examples and docs</tspan></text>
+</svg>

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1224" height="412" viewBox="0 0 1224 412" role="img">
+<title>010 LLD — modules</title>
+<defs><marker id="rg-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1e1e1e"/></marker></defs>
+<rect width="1224" height="412" fill="#ffffff"/>
+<rect x="64" y="132" width="60" height="12" fill="#f3f0ff" stroke="#1e1e1e" stroke-width="2"/><rect x="64" y="142" width="242" height="90" fill="#f3f0ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="185" y="157" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="185" dy="16">package.json (exports</tspan><tspan x="185" dy="20">. and ./setup)</tspan><tspan x="185" dy="20">[T001]</tspan></text>
+<rect x="1024" y="162" width="156" height="70" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="1102" y="177" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="1102" dy="16">normalize.ts</tspan><tspan x="1102" dy="20">[T002, T003]</tspan></text>
+<rect x="1019" y="282" width="165" height="70" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="1101.5" y="297" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="1101.5" dy="16">violations.ts</tspan><tspan x="1101.5" dy="20">[T004, T005]</tspan></text>
+<rect x="686" y="202" width="213" height="110" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="792.5" y="217" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="792.5" dy="16">matchers.ts</tspan><tspan x="792.5" dy="20">(createMatcher)</tspan><tspan x="792.5" dy="20">[T006, T007, T009,</tspan><tspan x="792.5" dy="20">T010]</tspan></text>
+<rect x="426" y="222" width="140" height="70" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="496" y="237" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="496" dy="16">setup.ts</tspan><tspan x="496" dy="20">[T008]</tspan></text>
+<rect x="107" y="282" width="156" height="90" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="185" y="297" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="185" dy="16">types.d.ts</tspan><tspan x="185" dy="20">augmentation</tspan><tspan x="185" dy="20">[T011, T012]</tspan></text>
+<polyline points="566,257 686,257" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="899,278 1019,301" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="899,236 1024,212" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="263,318 686,269" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)" stroke-dasharray="8 6"/>
+<polyline points="306,214 426,241" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)" stroke-dasharray="8 6"/>
+<text x="40" y="30" font-family="Helvetica, Arial, sans-serif" font-size="24" text-anchor="start" fill="#1e1e1e"><tspan x="40" dy="24">010 LLD — modules</tspan></text>
+</svg>

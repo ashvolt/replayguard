@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1596" height="382" viewBox="0 0 1596 382" role="img">
+<title>007 HLD — Outcome classification and verdicts</title>
+<defs><marker id="rg-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1e1e1e"/></marker></defs>
+<rect width="1596" height="382" fill="#ffffff"/>
+<rect x="103" y="142" width="175" height="60" rx="14" fill="#d3f9d8" stroke="#1e1e1e" stroke-width="2"/><path d="M103,154 Q190.5,168 278,154" fill="none" stroke="#1e1e1e" stroke-width="1.5"/>
+<text x="190.5" y="162" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="190.5" dy="16">ScenarioResult</tspan></text>
+<rect x="436" y="207" width="242" height="70" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="557" y="222" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="557" dy="16">Evidence per identity</tspan><tspan x="557" dy="20">[T005]</tspan></text>
+<rect x="798" y="197" width="184" height="90" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="890" y="212" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="890" dy="16">Outcome rules</tspan><tspan x="890" dy="20">(Specification)</tspan><tspan x="890" dy="20">[T009]</tspan></text>
+<rect x="1102" y="207" width="140" height="70" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="1172" y="222" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="1172" dy="16">classify()</tspan><tspan x="1172" dy="20">[T010]</tspan></text>
+<rect x="64" y="252" width="252" height="90" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="190" y="267" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="190" dy="16">Policy (strict default</tspan><tspan x="190" dy="20">+ overrides)</tspan><tspan x="190" dy="20">[T012, T014]</tspan></text>
+<rect x="1381" y="147" width="156" height="70" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="1459" y="162" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="1459" dy="16">Explanations</tspan><tspan x="1459" dy="20">[T016]</tspan></text>
+<rect x="1362" y="267" width="194" height="70" rx="14" fill="#d3f9d8" stroke="#1e1e1e" stroke-width="2"/><path d="M1362,279 Q1459,293 1556,279" fill="none" stroke="#1e1e1e" stroke-width="1.5"/>
+<text x="1459" y="282" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="1459" dy="16">ClassifiedResult</tspan><tspan x="1459" dy="20">[T003]</tspan></text>
+<polyline points="278,189 436,219" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="678,242 798,242" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="982,242 1102,242" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="316,290 1102,246" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="1242,227 1381,198" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="1242,257 1362,282" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<text x="40" y="30" font-family="Helvetica, Arial, sans-serif" font-size="24" text-anchor="start" fill="#1e1e1e"><tspan x="40" dy="24">007 HLD — Outcome classification and verdicts</tspan></text>
+</svg>

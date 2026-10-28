@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="728" height="608" viewBox="0 0 728 608" role="img">
+<title>011 User workflow — fixing a duplicate charge</title>
+<defs><marker id="rg-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1e1e1e"/></marker></defs>
+<rect width="728" height="608" fill="#ffffff"/>
+<polyline points="150,146 150,568" fill="none" stroke="#868e96" stroke-width="1" stroke-dasharray="8 6"/>
+<polyline points="370,146 370,568" fill="none" stroke="#868e96" stroke-width="1" stroke-dasharray="8 6"/>
+<polyline points="593,146 593,568" fill="none" stroke="#868e96" stroke-width="1" stroke-dasharray="8 6"/>
+<rect x="80" y="90" width="140" height="56" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="150" y="108" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="150" dy="16">Developer</tspan></text>
+<rect x="297" y="90" width="146" height="56" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="370" y="108" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="370" dy="16">ReplayGuard</tspan></text>
+<rect x="511" y="90" width="165" height="56" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="593.5" y="108" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="593.5" dy="16">Workflow code</tspan></text>
+<polyline points="150,219 370,219" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/><rect x="160" y="180" width="200" height="39" fill="#ffffff" opacity="0.85"/><text x="260" y="180" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="middle" fill="#1e1e1e"><tspan x="260" dy="14">run crash-after-payment</tspan><tspan x="260" dy="17.5">scenario [T010]</tspan></text>
+<polyline points="370,282 150,282" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)" stroke-dasharray="8 6"/><rect x="148" y="243" width="225" height="39" fill="#ffffff" opacity="0.85"/><text x="260.5" y="243" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="middle" fill="#1e1e1e"><tspan x="260.5" dy="14">FAIL duplicated + hint</tspan><tspan x="260.5" dy="17.5">add-idempotency-key [T008]</tspan></text>
+<polyline points="150,345 593,345" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/><rect x="268" y="306" width="208" height="39" fill="#ffffff" opacity="0.85"/><text x="372" y="306" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="middle" fill="#1e1e1e"><tspan x="372" dy="14">pass idempotencyKey(ctx,</tspan><tspan x="372" dy="17.5">&apos;charge&apos;) [T005]</tspan></text>
+<polyline points="150,391 370,391" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/><rect x="194" y="369" width="132" height="22" fill="#ffffff" opacity="0.85"/><text x="260" y="369" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="middle" fill="#1e1e1e"><tspan x="260" dy="14">re-run scenario</tspan></text>
+<polyline points="370,437 150,437" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)" stroke-dasharray="8 6"/><rect x="156" y="415" width="208" height="22" fill="#ffffff" opacity="0.85"/><text x="260" y="415" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="middle" fill="#1e1e1e"><tspan x="260" dy="14">PASS deduplicated [T010]</tspan></text>
+<polyline points="370,518 150,518" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)" stroke-dasharray="8 6"/><rect x="156" y="461" width="208" height="57" fill="#ffffff" opacity="0.85"/><text x="260" y="461" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="middle" fill="#1e1e1e"><tspan x="260" dy="14">unstable key? →</tspan><tspan x="260" dy="17.5">unstable-idempotency-key</tspan><tspan x="260" dy="17.5">[T012]</tspan></text>
+<text x="40" y="30" font-family="Helvetica, Arial, sans-serif" font-size="24" text-anchor="start" fill="#1e1e1e"><tspan x="40" dy="24">011 User workflow — fixing a duplicate charge</tspan></text>
+</svg>

@@ -1,0 +1,58 @@
+feature: 011-idempotency-helper
+diagrams:
+  - kind: hld
+    title: "011 HLD — Keys and fix hints"
+    layout: flow
+    nodes:
+      - { id: ctx, label: "Workflow ctx (workflowId)", shape: ellipse }
+      - { id: key, label: "idempotencyKey(ctx, step, opts)", tasks: [T005] }
+      - { id: provider, label: Provider (dedups by key), shape: ellipse }
+      - { id: cls, label: "classify()", tasks: [T009] }
+      - { id: catalog, label: Hint catalog (rules), shape: database, tasks: [T008, T012] }
+      - { id: hints, label: FixHint on each failing effect, tasks: [T002] }
+    edges:
+      - { from: ctx, to: key }
+      - { from: key, to: provider, label: idempotency-key }
+      - { from: cls, to: catalog }
+      - { from: catalog, to: hints }
+  - kind: lld
+    title: "011 LLD — modules"
+    layout: flow
+    groups:
+      - { id: idem, label: core/src/idempotency }
+      - { id: h, label: core/src/hints }
+    nodes:
+      - { id: barrel, label: index.ts exports, tasks: [T001] }
+      - { id: keyts, label: key.ts, group: idem, tasks: [T003, T004, T005] }
+      - { id: types, label: types.ts, group: h, tasks: [T002] }
+      - { id: cat, label: catalog.ts, group: h, tasks: [T006, T008, T011, T012] }
+      - { id: attach, label: attach.ts, group: h, tasks: [T007, T009] }
+    edges:
+      - { from: barrel, to: keyts }
+      - { from: barrel, to: attach }
+      - { from: attach, to: cat }
+      - { from: cat, to: types }
+  - kind: workflow
+    title: "011 User workflow — fixing a duplicate charge"
+    layout: sequence
+    actors:
+      - { id: dev, label: Developer }
+      - { id: rg, label: ReplayGuard }
+      - { id: wf, label: Workflow code }
+    messages:
+      - { from: dev, to: rg, label: "run crash-after-payment scenario", tasks: [T010] }
+      - { from: rg, to: dev, label: "FAIL duplicated + hint add-idempotency-key", style: dashed, tasks: [T008] }
+      - { from: dev, to: wf, label: "pass idempotencyKey(ctx, 'charge')", tasks: [T005] }
+      - { from: dev, to: rg, label: re-run scenario }
+      - { from: rg, to: dev, label: "PASS deduplicated", style: dashed, tasks: [T010] }
+      - { from: rg, to: dev, label: "unstable key? → unstable-idempotency-key", style: dashed, tasks: [T012] }
+  - kind: architecture
+    title: "011 Technical architecture — docs"
+    layout: flow
+    nodes:
+      - { id: guide, label: docs/guides/fixing-duplicates.md, shape: package, tasks: [T013] }
+      - { id: yaml, label: "diagram.yaml + quickstart", shape: package, tasks: [T014, T015] }
+      - { id: core, label: "@replayguard/core", shape: package }
+    edges:
+      - { from: guide, to: core }
+      - { from: yaml, to: guide, style: dashed }

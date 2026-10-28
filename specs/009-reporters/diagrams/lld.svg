@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1389" height="784" viewBox="0 0 1389 784" role="img">
+<title>009 LLD — reporter modules</title>
+<defs><marker id="rg-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1e1e1e"/></marker></defs>
+<rect width="1389" height="784" fill="#ffffff"/>
+<rect x="50" y="90" width="1299" height="146" rx="10" fill="none" stroke="#868e96" stroke-width="1" stroke-dasharray="8 6"/>
+<text x="60" y="96" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="start" fill="#868e96"><tspan x="60" dy="14">reporter-console</tspan></text>
+<rect x="50" y="286" width="956" height="286" rx="10" fill="none" stroke="#868e96" stroke-width="1" stroke-dasharray="8 6"/>
+<text x="60" y="292" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="start" fill="#868e96"><tspan x="60" dy="14">reporter-html</tspan></text>
+<rect x="426" y="674" width="232" height="70" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="542" y="689" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="542" dy="16">core report/index.ts</tspan><tspan x="542" dy="20">[T001]</tspan></text>
+<rect x="64" y="664" width="60" height="12" fill="#f3f0ff" stroke="#1e1e1e" stroke-width="2"/><rect x="64" y="674" width="242" height="70" fill="#f3f0ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="185" y="689" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="185" dy="16">reporter package.json</tspan><tspan x="185" dy="20">[T002]</tspan></text>
+<rect x="802" y="142" width="156" height="70" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="880" y="157" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="880" dy="16">table.ts</tspan><tspan x="880" dy="20">[T010, T013]</tspan></text>
+<rect x="1102" y="142" width="223" height="70" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="1213.5" y="157" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="1213.5" dy="16">color.ts (NO_COLOR)</tspan><tspan x="1213.5" dy="20">[T011, T014]</tspan></text>
+<rect x="74" y="142" width="223" height="70" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="185.5" y="157" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="185.5" dy="16">render golden tests</tspan><tspan x="185.5" dy="20">[T012]</tspan></text>
+<rect x="778" y="398" width="204" height="90" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="880" y="413" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="880" dy="16">html.ts (escaping</tspan><tspan x="880" dy="20">template)</tspan><tspan x="880" dy="20">[T016, T019]</tspan></text>
+<rect x="74" y="338" width="223" height="90" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="185.5" y="353" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="185.5" dy="16">timeline.ts (inline</tspan><tspan x="185.5" dy="20">SVG)</tspan><tspan x="185.5" dy="20">[T017, T020]</tspan></text>
+<rect x="436" y="398" width="213" height="90" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="542.5" y="413" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="542.5" dy="16">assets.ts + csp.ts</tspan><tspan x="542.5" dy="20">(sha256)</tspan><tspan x="542.5" dy="20">[T021]</tspan></text>
+<rect x="98" y="478" width="175" height="70" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="185.5" y="493" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="185.5" dy="16">document tests</tspan><tspan x="185.5" dy="20">[T018]</tspan></text>
+<polyline points="564,674 858,212" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="586,674 823,488" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="958,177 1102,177" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="297,177 802,177" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)" stroke-dasharray="8 6"/>
+<polyline points="297,393 778,434" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="649,443 778,443" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="273,496 436,464" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)" stroke-dasharray="8 6"/>
+<polyline points="306,709 426,709" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)" stroke-dasharray="8 6"/>
+<text x="40" y="30" font-family="Helvetica, Arial, sans-serif" font-size="24" text-anchor="start" fill="#1e1e1e"><tspan x="40" dy="24">009 LLD — reporter modules</tspan></text>
+</svg>

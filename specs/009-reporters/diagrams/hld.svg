@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1592" height="768" viewBox="0 0 1592 768" role="img">
+<title>009 HLD — Report model and reporters</title>
+<defs><marker id="rg-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1e1e1e"/></marker></defs>
+<rect width="1592" height="768" fill="#ffffff"/>
+<rect x="354" y="90" width="850" height="306" rx="10" fill="none" stroke="#868e96" stroke-width="1" stroke-dasharray="8 6"/>
+<text x="364" y="96" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="start" fill="#868e96"><tspan x="364" dy="14">@replayguard/core/report</tspan></text>
+<rect x="64" y="583" width="194" height="60" rx="14" fill="#d3f9d8" stroke="#1e1e1e" stroke-width="2"/><path d="M64,595 Q161,609 258,595" fill="none" stroke="#1e1e1e" stroke-width="1.5"/>
+<text x="161" y="603" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="161" dy="16">ClassifiedResult</tspan></text>
+<rect x="378" y="222" width="165" height="70" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="460.5" y="237" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="460.5" dy="16">buildReport()</tspan><tspan x="460.5" dy="20">[T008]</tspan></text>
+<rect x="663" y="222" width="213" height="70" rx="14" fill="#d3f9d8" stroke="#1e1e1e" stroke-width="2"/><path d="M663,234 Q769.5,248 876,234" fill="none" stroke="#1e1e1e" stroke-width="1.5"/>
+<text x="769.5" y="237" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="769.5" dy="16">Report v1 (schema)</tspan><tspan x="769.5" dy="20">[T003]</tspan></text>
+<rect x="1001" y="142" width="175" height="90" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="1088.5" y="157" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="1088.5" dy="16">reportToJson /</tspan><tspan x="1088.5" dy="20">parseReport</tspan><tspan x="1088.5" dy="20">[T009]</tspan></text>
+<rect x="996" y="282" width="184" height="90" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="1088" y="297" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="1088" dy="16">ReportVisitor +</tspan><tspan x="1088" dy="20">walkReport</tspan><tspan x="1088" dy="20">[T004, T005]</tspan></text>
+<rect x="1300" y="488" width="60" height="12" fill="#f3f0ff" stroke="#1e1e1e" stroke-width="2"/><rect x="1300" y="498" width="252" height="90" fill="#f3f0ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="1426" y="513" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="1426" dy="16">@replayguard/reporter-</tspan><tspan x="1426" dy="20">console</tspan><tspan x="1426" dy="20">[T015]</tspan></text>
+<rect x="1300" y="628" width="60" height="12" fill="#f3f0ff" stroke="#1e1e1e" stroke-width="2"/><rect x="1300" y="638" width="252" height="90" fill="#f3f0ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="1426" y="653" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="1426" dy="16">@replayguard/reporter-</tspan><tspan x="1426" dy="20">html</tspan><tspan x="1426" dy="20">[T022]</tspan></text>
+<polyline points="186,583 431,292" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="543,257 663,257" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="876,234 1001,206" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="876,280 996,307" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="1158,372 1356,498" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="1131,372 1383,638" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<text x="40" y="30" font-family="Helvetica, Arial, sans-serif" font-size="24" text-anchor="start" fill="#1e1e1e"><tspan x="40" dy="24">009 HLD — Report model and reporters</tspan></text>
+</svg>

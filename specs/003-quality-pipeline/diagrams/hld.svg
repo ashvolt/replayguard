@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2139" height="652" viewBox="0 0 2139 652" role="img">
+<title>003 HLD — Quality, security and release gates</title>
+<defs><marker id="rg-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1e1e1e"/></marker></defs>
+<rect width="2139" height="652" fill="#ffffff"/>
+<ellipse cx="137" cy="377" rx="73" ry="30" fill="#fff3bf" stroke="#1e1e1e" stroke-width="2"/>
+<text x="137" y="367" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="137" dy="16">Contributor</tspan></text>
+<rect x="330" y="342" width="223" height="70" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="441.5" y="357" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="441.5" dy="16">lefthook pre-commit</tspan><tspan x="441.5" dy="20">[T018]</tspan></text>
+<ellipse cx="751" cy="377" rx="78" ry="30" fill="#fff3bf" stroke="#1e1e1e" stroke-width="2"/>
+<text x="751" y="367" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="751" dy="16">Pull request</tspan></text>
+<rect x="949" y="142" width="252" height="90" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="1075" y="157" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="1075" dy="16">CI matrix (3 OS × Node</tspan><tspan x="1075" dy="20">22/24)</tspan><tspan x="1075" dy="20">[T016, T017]</tspan></text>
+<rect x="949" y="282" width="252" height="90" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="1075" y="297" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="1075" dy="16">Security (CodeQL, OSV,</tspan><tspan x="1075" dy="20">gitleaks)</tspan><tspan x="1075" dy="20">[T019, T020]</tspan></text>
+<rect x="969" y="422" width="213" height="70" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="1075.5" y="437" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="1075.5" dy="16">Mutation (Stryker)</tspan><tspan x="1075.5" dy="20">[T023, T024]</tspan></text>
+<rect x="997" y="542" width="156" height="70" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="1075" y="557" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="1075" dy="16">TypeDoc</tspan><tspan x="1075" dy="20">[T028, T029]</tspan></text>
+<polygon points="1391,342 1461,377 1391,412 1321,377" fill="#ffe3e3" stroke="#1e1e1e" stroke-width="2"/>
+<text x="1391" y="357" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="1391" dy="16">Merge gate</tspan><tspan x="1391" dy="20">[T032]</tspan></text>
+<rect x="1581" y="332" width="242" height="90" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="1702" y="347" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="1702" dy="16">Release (Changesets +</tspan><tspan x="1702" dy="20">OIDC + SBOM)</tspan><tspan x="1702" dy="20">[T025, T026]</tspan></text>
+<rect x="1943" y="347" width="156" height="60" rx="14" fill="#d3f9d8" stroke="#1e1e1e" stroke-width="2"/><path d="M1943,359 Q2021,373 2099,359" fill="none" stroke="#1e1e1e" stroke-width="1.5"/>
+<text x="2021" y="367" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="2021" dy="16">npm registry</tspan></text>
+<polyline points="210,377 330,377" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="553,377 673,377" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="802,347 998,232" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="829,365 949,346" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="829,396 969,431" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="800,407 1018,542" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="1150,232 1333,342" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="1201,347 1321,366" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="1182,430 1321,395" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="1130,542 1336,412" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="1461,377 1581,377" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="1823,377 1943,377" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/><rect x="1838" y="355" width="90" height="22" fill="#ffffff" opacity="0.85"/><text x="1883" y="355" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="middle" fill="#1e1e1e"><tspan x="1883" dy="14">provenance</tspan></text>
+<text x="40" y="30" font-family="Helvetica, Arial, sans-serif" font-size="24" text-anchor="start" fill="#1e1e1e"><tspan x="40" dy="24">003 HLD — Quality, security and release gates</tspan></text>
+</svg>

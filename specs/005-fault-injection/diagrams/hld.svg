@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1621" height="1154" viewBox="0 0 1621 1154" role="img">
+<title>005 HLD — Fault strategies around external calls</title>
+<defs><marker id="rg-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1e1e1e"/></marker></defs>
+<rect width="1621" height="1154" fill="#ffffff"/>
+<rect x="40" y="90" width="937" height="526" rx="10" fill="none" stroke="#868e96" stroke-width="1" stroke-dasharray="8 6"/>
+<text x="50" y="96" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="start" fill="#868e96"><tspan x="50" dy="14">@replayguard/core (in-process)</tspan></text>
+<rect x="735" y="666" width="518" height="286" rx="10" fill="none" stroke="#868e96" stroke-width="1" stroke-dasharray="8 6"/>
+<text x="745" y="672" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="start" fill="#868e96"><tspan x="745" dy="14">@replayguard/adapter-workflows</tspan></text>
+<rect x="64" y="332" width="223" height="70" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="175.5" y="347" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="175.5" dy="16">FaultSpec + helpers</tspan><tspan x="175.5" dy="20">[T006, T007]</tspan></text>
+<rect x="407" y="332" width="184" height="70" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="499" y="347" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="499" dy="16">FaultController</tspan><tspan x="499" dy="20">[T008, T009]</tspan></text>
+<rect x="726" y="142" width="213" height="70" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="832.5" y="157" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="832.5" dy="16">none (Null Object)</tspan><tspan x="832.5" dy="20">[T016]</tspan></text>
+<rect x="754" y="262" width="156" height="70" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="832" y="277" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="832" dy="16">crash</tspan><tspan x="832" dy="20">[T013, T015]</tspan></text>
+<rect x="735" y="382" width="194" height="90" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="832" y="397" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="832" dy="16">throwAfter (lost</tspan><tspan x="832" dy="20">response)</tspan><tspan x="832" dy="20">[T017, T018]</tspan></text>
+<rect x="711" y="522" width="242" height="70" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="832" y="537" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="832" dy="16">delay (provider hang)</tspan><tspan x="832" dy="20">[T020, T021]</tspan></text>
+<rect x="1073" y="718" width="156" height="90" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="1151" y="733" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="1151" dy="16">FaultyDriver</tspan><tspan x="1151" dy="20">(Decorator)</tspan><tspan x="1151" dy="20">[T011, T012]</tspan></text>
+<rect x="1073" y="858" width="156" height="70" rx="14" fill="#d3f9d8" stroke="#1e1e1e" stroke-width="2"/><path d="M1073,870 Q1151,884 1229,870" fill="none" stroke="#1e1e1e" stroke-width="1.5"/>
+<text x="1151" y="873" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="1151" dy="16">FileDriver</tspan><tspan x="1151" dy="20">[T023, T024]</tspan></text>
+<rect x="759" y="788" width="146" height="70" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="832" y="803" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="832" dy="16">processKill</tspan><tspan x="832" dy="20">[T028]</tspan></text>
+<ellipse cx="1465" cy="1084" rx="116" ry="30" fill="#fff3bf" stroke="#1e1e1e" stroke-width="2"/>
+<text x="1465" y="1074" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="1465" dy="16">@rivet-dev/workflows</tspan></text>
+<polyline points="287,367 407,367" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="560,332 771,212" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="591,348 754,313" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="591,384 735,410" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="560,402 771,522" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="525,402 806,788" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="856,332 1120,718" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/><rect x="905" y="503" width="166" height="22" fill="#ffffff" opacity="0.85"/><text x="988" y="503" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="middle" fill="#1e1e1e"><tspan x="988" dy="14">persistence.crash()</tspan></text>
+<polyline points="1195,808 1436,1054" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/><rect x="1262" y="909" width="107" height="22" fill="#ffffff" opacity="0.85"/><text x="1315.5" y="909" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="middle" fill="#1e1e1e"><tspan x="1315.5" dy="14">EngineDriver</tspan></text>
+<polyline points="905,839 1073,876" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<text x="40" y="30" font-family="Helvetica, Arial, sans-serif" font-size="24" text-anchor="start" fill="#1e1e1e"><tspan x="40" dy="24">005 HLD — Fault strategies around external calls</tspan></text>
+</svg>

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="685" height="902" viewBox="0 0 685 902" role="img">
+<title>004 Technical architecture — data and docs</title>
+<defs><marker id="rg-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1e1e1e"/></marker></defs>
+<rect width="685" height="902" fill="#ffffff"/>
+<rect x="162" y="352" width="204" height="90" rx="14" fill="#d3f9d8" stroke="#1e1e1e" stroke-width="2"/><path d="M162,364 Q264,378 366,364" fill="none" stroke="#1e1e1e" stroke-width="1.5"/>
+<text x="264" y="367" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="264" dy="16">LedgerSnapshot v1</tspan><tspan x="264" dy="20">(plain JSON)</tspan><tspan x="264" dy="20">[T009]</tspan></text>
+<polygon points="161,142 258,187 161,232 64,187" fill="#ffe3e3" stroke="#1e1e1e" stroke-width="2"/>
+<text x="161" y="157" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="161" dy="16">preview (opt-in,</tspan><tspan x="161" dy="20">redacted)</tspan><tspan x="161" dy="20">[T024]</tspan></text>
+<rect x="138" y="552" width="60" height="12" fill="#f3f0ff" stroke="#1e1e1e" stroke-width="2"/><rect x="138" y="562" width="252" height="110" fill="#f3f0ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="264" y="577" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="264" dy="16">TSDoc +</tspan><tspan x="264" dy="20">docs/concepts/effects.</tspan><tspan x="264" dy="20">md</tspan><tspan x="264" dy="20">[T026]</tspan></text>
+<rect x="308" y="142" width="52" height="12" fill="#f3f0ff" stroke="#1e1e1e" stroke-width="2"/><rect x="308" y="152" width="156" height="70" fill="#f3f0ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="386" y="167" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="386" dy="16">diagram.yaml</tspan><tspan x="386" dy="20">[T027]</tspan></text>
+<rect x="143" y="792" width="242" height="70" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="264" y="807" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="264" dy="16">quickstart validation</tspan><tspan x="264" dy="20">[T028]</tspan></text>
+<polyline points="183,232 242,352" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="264,442 264,562" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="264,672 264,792" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="376,222 280,562" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)" stroke-dasharray="8 6"/>
+<text x="40" y="30" font-family="Helvetica, Arial, sans-serif" font-size="24" text-anchor="start" fill="#1e1e1e"><tspan x="40" dy="24">004 Technical architecture — data and docs</tspan></text>
+</svg>

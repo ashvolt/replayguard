@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="499" viewBox="0 0 700 499" role="img">
+<title>010 User workflow — failing assertion</title>
+<defs><marker id="rg-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1e1e1e"/></marker></defs>
+<rect width="700" height="499" fill="#ffffff"/>
+<polyline points="150,146 150,459" fill="none" stroke="#868e96" stroke-width="1" stroke-dasharray="8 6"/>
+<polyline points="370,146 370,459" fill="none" stroke="#868e96" stroke-width="1" stroke-dasharray="8 6"/>
+<polyline points="590,146 590,459" fill="none" stroke="#868e96" stroke-width="1" stroke-dasharray="8 6"/>
+<rect x="80" y="90" width="140" height="56" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="150" y="108" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="150" dy="16">Test</tspan></text>
+<rect x="300" y="90" width="140" height="56" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="370" y="108" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="370" dy="16">Matcher</tspan></text>
+<rect x="520" y="90" width="140" height="56" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="590" y="108" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="590" dy="16">Violations</tspan></text>
+<polyline points="150,219 370,219" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/><rect x="139" y="180" width="242" height="39" fill="#ffffff" opacity="0.85"/><text x="260" y="180" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="middle" fill="#1e1e1e"><tspan x="260" dy="14">expect(r).toPassSideEffectPo</tspan><tspan x="260" dy="17.5">licy() [T006]</tspan></text>
+<polyline points="370,265 590,265" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/><rect x="359" y="243" width="242" height="22" fill="#ffffff" opacity="0.85"/><text x="480" y="243" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="middle" fill="#1e1e1e"><tspan x="480" dy="14">collect fail verdicts [T005]</tspan></text>
+<polyline points="590,328 370,328" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)" stroke-dasharray="8 6"/><rect x="376" y="289" width="208" height="39" fill="#ffffff" opacity="0.85"/><text x="480" y="289" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="middle" fill="#1e1e1e"><tspan x="480" dy="14">first 20 + &apos;…and N more&apos;</tspan><tspan x="480" dy="17.5">[T004]</tspan></text>
+<polyline points="370,409 150,409" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)" stroke-dasharray="8 6"/><rect x="165" y="352" width="191" height="57" fill="#ffffff" opacity="0.85"/><text x="260.5" y="352" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="middle" fill="#1e1e1e"><tspan x="260.5" dy="14">message: case › kind</tspan><tspan x="260.5" dy="17.5">subject: outcome — why</tspan><tspan x="260.5" dy="17.5">[T009]</tspan></text>
+<text x="40" y="30" font-family="Helvetica, Arial, sans-serif" font-size="24" text-anchor="start" fill="#1e1e1e"><tspan x="40" dy="24">010 User workflow — failing assertion</tspan></text>
+</svg>

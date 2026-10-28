@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1036" height="1516" viewBox="0 0 1036 1516" role="img">
+<title>001 LLD — tools/diagrams modules</title>
+<defs><marker id="rg-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1e1e1e"/></marker></defs>
+<rect width="1036" height="1516" fill="#ffffff"/>
+<rect x="419" y="90" width="577" height="146" rx="10" fill="none" stroke="#868e96" stroke-width="1" stroke-dasharray="8 6"/>
+<text x="429" y="96" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="start" fill="#868e96"><tspan x="429" dy="14">load + validate</tspan></text>
+<rect x="383" y="286" width="572" height="266" rx="10" fill="none" stroke="#868e96" stroke-width="1" stroke-dasharray="8 6"/>
+<text x="393" y="292" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="start" fill="#868e96"><tspan x="393" dy="14">layout (Strategy)</tspan></text>
+<rect x="373" y="602" width="609" height="266" rx="10" fill="none" stroke="#868e96" stroke-width="1" stroke-dasharray="8 6"/>
+<text x="383" y="608" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="start" fill="#868e96"><tspan x="383" dy="14">render (Visitor targets)</tspan></text>
+<rect x="383" y="918" width="261" height="386" rx="10" fill="none" stroke="#868e96" stroke-width="1" stroke-dasharray="8 6"/>
+<text x="393" y="924" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="start" fill="#868e96"><tspan x="393" dy="14">trace + freshness</tspan></text>
+<rect x="64" y="1406" width="213" height="70" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="170.5" y="1421" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="170.5" dy="16">cli.ts</tspan><tspan x="170.5" dy="20">[T018, T023, T025]</tspan></text>
+<rect x="443" y="142" width="140" height="70" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="513" y="157" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="513" dy="16">load.ts</tspan><tspan x="513" dy="20">[T009]</tspan></text>
+<rect x="749" y="142" width="223" height="70" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="860.5" y="157" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="860.5" dy="16">schema.ts (Valibot)</tspan><tspan x="860.5" dy="20">[T005, T006]</tspan></text>
+<rect x="764" y="714" width="194" height="70" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="861" y="729" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="861" dy="16">ids.ts (Factory)</tspan><tspan x="861" dy="20">[T007]</tspan></text>
+<rect x="791" y="398" width="140" height="70" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="861" y="413" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="861" dy="16">text.ts</tspan><tspan x="861" dy="20">[T008]</tspan></text>
+<rect x="426" y="338" width="175" height="70" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="513.5" y="353" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="513.5" dy="16">layout/flow.ts</tspan><tspan x="513.5" dy="20">[T010, T014]</tspan></text>
+<rect x="407" y="458" width="213" height="70" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="513.5" y="473" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="513.5" dy="16">layout/sequence.ts</tspan><tspan x="513.5" dy="20">[T011, T015]</tspan></text>
+<rect x="397" y="654" width="232" height="70" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="513" y="669" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="513" dy="16">render/excalidraw.ts</tspan><tspan x="513" dy="20">[T012, T016]</tspan></text>
+<rect x="431" y="774" width="165" height="70" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="513.5" y="789" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="513.5" dy="16">render/svg.ts</tspan><tspan x="513.5" dy="20">[T013, T017]</tspan></text>
+<rect x="407" y="970" width="213" height="70" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="513.5" y="985" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="513.5" dy="16">trace.ts</tspan><tspan x="513.5" dy="20">[T019, T021, T026]</tspan></text>
+<rect x="435" y="1090" width="156" height="70" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="513" y="1105" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="513" dy="16">stale.ts</tspan><tspan x="513" dy="20">[T020, T022]</tspan></text>
+<rect x="440" y="1210" width="146" height="70" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="513" y="1225" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="513" dy="16">coverage.ts</tspan><tspan x="513" dy="20">[T024]</tspan></text>
+<polyline points="180,1406 504,212" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="583,177 749,177" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="182,1406 502,408" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="183,1406 501,528" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="601,388 791,421" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="620,475 791,445" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="186,1406 497,724" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="189,1406 495,844" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="629,709 764,732" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="198,1406 486,1040" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="208,1406 475,1160" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="232,1406 452,1280" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<text x="40" y="30" font-family="Helvetica, Arial, sans-serif" font-size="24" text-anchor="start" fill="#1e1e1e"><tspan x="40" dy="24">001 LLD — tools/diagrams modules</tspan></text>
+</svg>

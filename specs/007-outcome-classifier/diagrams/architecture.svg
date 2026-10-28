@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="642" viewBox="0 0 1080 642" role="img">
+<title>007 Technical architecture — module and quality gates</title>
+<defs><marker id="rg-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1e1e1e"/></marker></defs>
+<rect width="1080" height="642" fill="#ffffff"/>
+<rect x="436" y="327" width="60" height="12" fill="#f3f0ff" stroke="#1e1e1e" stroke-width="2"/><rect x="436" y="337" width="232" height="70" fill="#f3f0ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="552" y="352" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="552" dy="16">core/src/classifier/</tspan><tspan x="552" dy="20">[T001]</tspan></text>
+<rect x="64" y="142" width="252" height="70" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="190" y="157" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="190" dy="16">fast-check arbitraries</tspan><tspan x="190" dy="20">[T002]</tspan></text>
+<rect x="69" y="262" width="242" height="90" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="190" y="277" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="190" dy="16">perf: 100 cases &lt; 100</tspan><tspan x="190" dy="20">ms</tspan><tspan x="190" dy="20">[T018]</tspan></text>
+<polygon points="190.5,402 273,432 190.5,462 108,432" fill="#ffe3e3" stroke="#1e1e1e" stroke-width="2"/>
+<text x="190.5" y="422" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="190.5" dy="16">Stryker ≥ 85%</tspan></text>
+<rect x="788" y="317" width="60" height="12" fill="#f3f0ff" stroke="#1e1e1e" stroke-width="2"/><rect x="788" y="327" width="252" height="90" fill="#f3f0ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="914" y="342" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="914" dy="16">docs/concepts/outcomes</tspan><tspan x="914" dy="20">.md</tspan><tspan x="914" dy="20">[T019]</tspan></text>
+<rect x="103" y="502" width="58.333333333333336" height="12" fill="#f3f0ff" stroke="#1e1e1e" stroke-width="2"/><rect x="103" y="512" width="175" height="90" fill="#f3f0ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="190.5" y="527" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="190.5" dy="16">diagram.yaml +</tspan><tspan x="190.5" dy="20">quickstart</tspan><tspan x="190.5" dy="20">[T021, T022]</tspan></text>
+<polyline points="255,212 487,337" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="311,329 436,351" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="273,418 436,391" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="668,372 788,372" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="278,535 788,404" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)" stroke-dasharray="8 6"/>
+<text x="40" y="30" font-family="Helvetica, Arial, sans-serif" font-size="24" text-anchor="start" fill="#1e1e1e"><tspan x="40" dy="24">007 Technical architecture — module and quality gates</tspan></text>
+</svg>

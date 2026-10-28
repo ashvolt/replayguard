@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1645" height="1144" viewBox="0 0 1645 1144" role="img">
+<title>006 LLD — scenario modules</title>
+<defs><marker id="rg-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1e1e1e"/></marker></defs>
+<rect width="1645" height="1144" fill="#ffffff"/>
+<rect x="354" y="90" width="1251" height="526" rx="10" fill="none" stroke="#868e96" stroke-width="1" stroke-dasharray="8 6"/>
+<text x="364" y="96" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="start" fill="#868e96"><tspan x="364" dy="14">core/src/scenario</tspan></text>
+<rect x="45" y="666" width="232" height="266" rx="10" fill="none" stroke="#868e96" stroke-width="1" stroke-dasharray="8 6"/>
+<text x="55" y="672" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="start" fill="#868e96"><tspan x="55" dy="14">test support</tspan></text>
+<rect x="64" y="1034" width="194" height="70" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="161" y="1049" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="161" dy="16">index.ts exports</tspan><tspan x="161" dy="20">[T001]</tspan></text>
+<rect x="997" y="142" width="232" height="70" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="1113" y="157" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="1113" dy="16">types.ts + result.ts</tspan><tspan x="1113" dy="20">[T004]</tspan></text>
+<rect x="1021" y="262" width="184" height="90" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="1113" y="277" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="1113" dy="16">context.ts</tspan><tspan x="1113" dy="20">(EffectContext)</tspan><tspan x="1113" dy="20">[T007]</tspan></text>
+<rect x="659" y="392" width="213" height="70" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="765.5" y="407" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="765.5" dy="16">runner.ts</tspan><tspan x="765.5" dy="20">[T005, T006, T023]</tspan></text>
+<rect x="1035" y="402" width="156" height="70" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="1113" y="417" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="1113" dy="16">discovery.ts</tspan><tspan x="1113" dy="20">[T012, T014]</tspan></text>
+<rect x="1035" y="522" width="156" height="70" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="1113" y="537" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="1113" dy="16">matrix.ts</tspan><tspan x="1113" dy="20">[T013, T015]</tspan></text>
+<rect x="654" y="272" width="223" height="70" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="765.5" y="287" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="765.5" dy="16">schema.ts (Valibot)</tspan><tspan x="765.5" dy="20">[T018]</tspan></text>
+<rect x="378" y="332" width="156" height="70" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="456" y="347" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="456" dy="16">builder.ts</tspan><tspan x="456" dy="20">[T017, T019]</tspan></text>
+<rect x="1349" y="332" width="232" height="70" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="1465" y="347" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="1465" dy="16">seed.ts (mulberry32)</tspan><tspan x="1465" dy="20">[T022]</tspan></text>
+<rect x="69" y="718" width="184" height="70" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="161" y="733" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="161" dy="16">fake-runtime.ts</tspan><tspan x="161" dy="20">[T003]</tspan></text>
+<rect x="69" y="838" width="184" height="70" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="161" y="853" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="161" dy="16">isolation tests</tspan><tspan x="161" dy="20">[T020]</tspan></text>
+<polyline points="176,1034 441,402" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="534,352 654,329" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="534,382 659,406" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="867,392 1021,339" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="872,430 1035,435" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="859,462 1035,528" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="1178,522 1400,402" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="814,392 1064,212" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="226,718 701,462" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)" stroke-dasharray="8 6"/><rect x="435" y="568" width="57" height="22" fill="#ffffff" opacity="0.85"/><text x="463.5" y="568" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="middle" fill="#1e1e1e"><tspan x="463.5" dy="14">drives</tspan></text>
+<polyline points="208,838 718,462" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)" stroke-dasharray="8 6"/>
+<text x="40" y="30" font-family="Helvetica, Arial, sans-serif" font-size="24" text-anchor="start" fill="#1e1e1e"><tspan x="40" dy="24">006 LLD — scenario modules</tspan></text>
+</svg>

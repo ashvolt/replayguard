@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2022" height="272" viewBox="0 0 2022 272" role="img">
+<title>013 HLD — Upstream proposal flow</title>
+<defs><marker id="rg-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1e1e1e"/></marker></defs>
+<rect width="2022" height="272" fill="#ffffff"/>
+<rect x="64" y="157" width="204" height="60" rx="14" fill="#d3f9d8" stroke="#1e1e1e" stroke-width="2"/><path d="M64,169 Q166,183 268,169" fill="none" stroke="#1e1e1e" stroke-width="1.5"/>
+<text x="166" y="177" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="166" dy="16">Spike F0 findings</tspan></text>
+<rect x="388" y="142" width="213" height="90" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="494.5" y="157" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="494.5" dy="16">Standalone</tspan><tspan x="494.5" dy="20">reproductions</tspan><tspan x="494.5" dy="20">[T003, T004, T005]</tspan></text>
+<rect x="721" y="142" width="242" height="90" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="842" y="157" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="842" dy="16">Issue drafts + design</tspan><tspan x="842" dy="20">options</tspan><tspan x="842" dy="20">[T007, T008, T009]</tspan></text>
+<polygon points="1194.5,152 1306,187 1194.5,222 1083,187" fill="#ffe3e3" stroke="#1e1e1e" stroke-width="2"/>
+<text x="1194.5" y="167" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="1194.5" dy="16">Maintainer approval</tspan><tspan x="1194.5" dy="20">[T010]</tspan></text>
+<ellipse cx="1537.5" cy="187" rx="111.5" ry="35" fill="#fff3bf" stroke="#1e1e1e" stroke-width="2"/>
+<text x="1537.5" y="167" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="1537.5" dy="16">rivet-dev/workflows</tspan><tspan x="1537.5" dy="20">issues</tspan></text>
+<rect x="1769" y="142" width="213" height="90" rx="14" fill="#d3f9d8" stroke="#1e1e1e" stroke-width="2"/><path d="M1769,154 Q1875.5,168 1982,154" fill="none" stroke="#1e1e1e" stroke-width="1.5"/>
+<text x="1875.5" y="157" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="1875.5" dy="16">upstream/README.md</tspan><tspan x="1875.5" dy="20">tracker</tspan><tspan x="1875.5" dy="20">[T001]</tspan></text>
+<polyline points="268,187 388,187" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="601,187 721,187" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="963,187 1083,187" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="1306,187 1426,187" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/><rect x="1346" y="165" width="40" height="22" fill="#ffffff" opacity="0.85"/><text x="1366" y="165" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="middle" fill="#1e1e1e"><tspan x="1366" dy="14">file</tspan></text>
+<polyline points="1649,187 1769,187" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/><rect x="1668" y="165" width="82" height="22" fill="#ffffff" opacity="0.85"/><text x="1709" y="165" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="middle" fill="#1e1e1e"><tspan x="1709" dy="14">responses</tspan></text>
+<text x="40" y="30" font-family="Helvetica, Arial, sans-serif" font-size="24" text-anchor="start" fill="#1e1e1e"><tspan x="40" dy="24">013 HLD — Upstream proposal flow</tspan></text>
+</svg>

@@ -1,0 +1,65 @@
+feature: 012-rivetkit-adapter
+diagrams:
+  - kind: hld
+    title: "012 HLD — RivetKit actor runtime"
+    layout: flow
+    nodes:
+      - { id: runner, label: ScenarioRunner, shape: ellipse }
+      - { id: rt, label: "rivetkitRuntime()", tasks: [T008] }
+      - { id: host, label: ActorHost (parent side), tasks: [T007] }
+      - { id: child, label: "Host process: registry + workflow actor", tasks: [T006] }
+      - { id: engine, label: Rivet engine (local), shape: database }
+      - { id: conf, label: Runtime conformance suite, shape: diamond, tasks: [T003] }
+    edges:
+      - { from: runner, to: rt, label: WorkflowRuntime }
+      - { from: rt, to: host }
+      - { from: host, to: child, label: "start / kill / restart" }
+      - { from: child, to: engine }
+      - { from: conf, to: rt, style: dashed }
+  - kind: lld
+    title: "012 LLD — modules"
+    layout: flow
+    nodes:
+      - { id: pkg, label: "package.json (peers rivetkit, workflows)", shape: package, tasks: [T001] }
+      - { id: spike, label: spikes/actor-restart/FINDINGS.md, shape: package, tasks: [T002] }
+      - { id: entry, label: host/host-entry.ts, tasks: [T006] }
+      - { id: host, label: host/actor-host.ts, tasks: [T005, T007, T011] }
+      - { id: rt, label: runtime.ts, tasks: [T008] }
+      - { id: suite, label: "adapter-workflows/test-support/conformance.ts", tasks: [T003, T004] }
+      - { id: actest, label: conformance.actor.test.ts, tasks: [T009] }
+    edges:
+      - { from: rt, to: host }
+      - { from: host, to: entry, label: spawn }
+      - { from: actest, to: suite }
+      - { from: spike, to: host, style: dashed, label: decides kill model }
+      - { from: pkg, to: rt, style: dashed }
+  - kind: workflow
+    title: "012 User workflow — actor crash and resume"
+    layout: sequence
+    actors:
+      - { id: run, label: Runner }
+      - { id: host, label: ActorHost }
+      - { id: proc, label: Host process }
+      - { id: actor, label: Workflow actor }
+    messages:
+      - { from: run, to: host, label: "prepareCase (temp storage, free port)", tasks: [T005] }
+      - { from: host, to: proc, label: start registry, tasks: [T006] }
+      - { from: proc, to: actor, label: run workflow steps }
+      - { from: actor, to: run, label: "ledger events via relay", style: dashed }
+      - { from: run, to: host, label: "killAfter anchor → kill", tasks: [T010] }
+      - { from: host, to: proc, label: "restart on same storage", tasks: [T011] }
+      - { from: actor, to: run, label: "resumes from history", style: dashed }
+  - kind: architecture
+    title: "012 Technical architecture — CI and cleanup"
+    layout: flow
+    nodes:
+      - { id: matrix, label: "CI: rivetkit 2.3.11 + latest 2.3.x", tasks: [T012] }
+      - { id: leaks, label: "leak check (processes, dirs)", tasks: [T013] }
+      - { id: guide, label: docs/guides/rivetkit-actors.md, shape: package, tasks: [T014] }
+      - { id: yaml, label: "diagram.yaml + quickstart", shape: package, tasks: [T015, T016] }
+      - { id: pkg, label: "@replayguard/adapter-rivetkit", shape: package }
+    edges:
+      - { from: matrix, to: pkg }
+      - { from: leaks, to: pkg }
+      - { from: guide, to: pkg, style: dashed }
+      - { from: yaml, to: guide, style: dashed }

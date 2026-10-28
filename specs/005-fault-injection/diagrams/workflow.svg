@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1176" height="765" viewBox="0 0 1176 765" role="img">
+<title>005 User workflow — crash after the provider applied</title>
+<defs><marker id="rg-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1e1e1e"/></marker></defs>
+<rect width="1176" height="765" fill="#ffffff"/>
+<polyline points="153,146 153,725" fill="none" stroke="#868e96" stroke-width="1" stroke-dasharray="8 6"/>
+<polyline points="375,154 375,725" fill="none" stroke="#868e96" stroke-width="1" stroke-dasharray="8 6"/>
+<polyline points="603,146 603,725" fill="none" stroke="#868e96" stroke-width="1" stroke-dasharray="8 6"/>
+<polyline points="830,146 830,725" fill="none" stroke="#868e96" stroke-width="1" stroke-dasharray="8 6"/>
+<polyline points="1053,146 1053,725" fill="none" stroke="#868e96" stroke-width="1" stroke-dasharray="8 6"/>
+<rect x="71" y="90" width="165" height="56" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="153.5" y="108" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="153.5" dy="16">Workflow step</tspan></text>
+<rect x="297" y="90" width="156" height="64" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="375" y="102" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="375" dy="16">instrumented</tspan><tspan x="375" dy="20">charge</tspan></text>
+<rect x="516" y="90" width="175" height="56" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="603.5" y="108" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="603.5" dy="16">crash strategy</tspan></text>
+<rect x="752" y="90" width="156" height="56" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="830" y="108" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="830" dy="16">FaultyDriver</tspan></text>
+<rect x="971" y="90" width="165" height="56" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="1053.5" y="108" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="1053.5" dy="16">Runner (host)</tspan></text>
+<polyline points="153,210 375,210" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/><rect x="198" y="188" width="132" height="22" fill="#ffffff" opacity="0.85"/><text x="264" y="188" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="middle" fill="#1e1e1e"><tspan x="264" dy="14">charge() [T014]</tspan></text>
+<polyline points="375,273 435,273 435,297 375,297" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/><rect x="440" y="269" width="216" height="39" fill="#ffffff" opacity="0.85"/><text x="548" y="269" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="middle" fill="#1e1e1e"><tspan x="548" dy="14">provider applies (attempt</tspan><tspan x="548" dy="17.5">applied)</tspan></text>
+<polyline points="375,360 603,360" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/><rect x="368" y="321" width="242" height="39" fill="#ffffff" opacity="0.85"/><text x="489" y="321" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="middle" fill="#1e1e1e"><tspan x="489" dy="14">afterSettle → anchor matched</tspan><tspan x="489" dy="17.5">[T015]</tspan></text>
+<polyline points="603,423 830,423" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/><rect x="613" y="384" width="208" height="39" fill="#ffffff" opacity="0.85"/><text x="717" y="384" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="middle" fill="#1e1e1e"><tspan x="717" dy="14">crash() — all writes now</tspan><tspan x="717" dy="17.5">fail [T012]</tspan></text>
+<polyline points="603,486 153,486" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)" stroke-dasharray="8 6"/><rect x="283" y="447" width="191" height="39" fill="#ffffff" opacity="0.85"/><text x="378.5" y="447" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="middle" fill="#1e1e1e"><tspan x="378.5" dy="14">throw CrashSignal (run</tspan><tspan x="378.5" dy="17.5">marked dead) [T013]</tspan></text>
+<polyline points="1053,549 830,549" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/><rect x="838" y="510" width="208" height="39" fill="#ffffff" opacity="0.85"/><text x="942" y="510" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="middle" fill="#1e1e1e"><tspan x="942" dy="14">restart() — new process,</tspan><tspan x="942" dy="17.5">same KV [T011]</tspan></text>
+<polyline points="1053,612 153,612" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/><rect x="487" y="573" width="233" height="39" fill="#ffffff" opacity="0.85"/><text x="603.5" y="573" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="middle" fill="#1e1e1e"><tspan x="603.5" dy="14">re-run from durable history</tspan><tspan x="603.5" dy="17.5">→ step re-executes</tspan></text>
+<polyline points="153,675 375,675" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/><rect x="152" y="636" width="225" height="39" fill="#ffffff" opacity="0.85"/><text x="264.5" y="636" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="middle" fill="#1e1e1e"><tspan x="264.5" dy="14">charge() again → duplicate</tspan><tspan x="264.5" dy="17.5">[T034]</tspan></text>
+<text x="40" y="30" font-family="Helvetica, Arial, sans-serif" font-size="24" text-anchor="start" fill="#1e1e1e"><tspan x="40" dy="24">005 User workflow — crash after the provider applied</tspan></text>
+</svg>

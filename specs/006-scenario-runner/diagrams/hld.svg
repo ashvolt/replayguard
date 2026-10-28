@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1684" height="904" viewBox="0 0 1684 904" role="img">
+<title>006 HLD — Scenario runner and fault matrix</title>
+<defs><marker id="rg-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1e1e1e"/></marker></defs>
+<rect width="1684" height="904" fill="#ffffff"/>
+<rect x="335" y="90" width="1309" height="266" rx="10" fill="none" stroke="#868e96" stroke-width="1" stroke-dasharray="8 6"/>
+<text x="345" y="96" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="start" fill="#868e96"><tspan x="345" dy="14">@replayguard/core</tspan></text>
+<rect x="1344" y="406" width="300" height="286" rx="10" fill="none" stroke="#868e96" stroke-width="1" stroke-dasharray="8 6"/>
+<text x="1354" y="412" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="start" fill="#868e96"><tspan x="1354" dy="14">@replayguard/adapter-workflows</tspan></text>
+<ellipse cx="151.5" cy="829" rx="87.5" ry="30" fill="#fff3bf" stroke="#1e1e1e" stroke-width="2"/>
+<text x="151.5" y="819" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="151.5" dy="16">Developer test</tspan></text>
+<rect x="359" y="202" width="213" height="70" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="465.5" y="217" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="465.5" dy="16">scenario() Builder</tspan><tspan x="465.5" dy="20">[T019]</tspan></text>
+<rect x="692" y="192" width="204" height="90" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="794" y="207" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="794" dy="16">ScenarioRunner</tspan><tspan x="794" dy="20">(Template Method)</tspan><tspan x="794" dy="20">[T006]</tspan></text>
+<rect x="1062" y="142" width="140" height="70" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="1132" y="157" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="1132" dy="16">Discovery</tspan><tspan x="1132" dy="20">[T014]</tspan></text>
+<rect x="1368" y="202" width="252" height="70" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="1494" y="217" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="1494" dy="16">FaultMatrix (budgeted)</tspan><tspan x="1494" dy="20">[T015, T016]</tspan></text>
+<polygon points="1132,262 1248,297 1132,332 1016,297" fill="#ffe3e3" stroke="#1e1e1e" stroke-width="2"/>
+<text x="1132" y="277" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="1132" dy="16">WorkflowRuntime port</tspan><tspan x="1132" dy="20">[T002]</tspan></text>
+<rect x="1388" y="458" width="213" height="70" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="1494.5" y="473" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="1494.5" dy="16">workflowsRuntime()</tspan><tspan x="1494.5" dy="20">[T009]</tspan></text>
+<rect x="1368" y="578" width="252" height="90" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="1494" y="593" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="1494" dy="16">workflowsProcessRuntim</tspan><tspan x="1494" dy="20">e()</tspan><tspan x="1494" dy="20">[T010]</tspan></text>
+<rect x="1045" y="794" width="175" height="70" rx="14" fill="#d3f9d8" stroke="#1e1e1e" stroke-width="2"/><path d="M1045,806 Q1132.5,820 1220,806" fill="none" stroke="#1e1e1e" stroke-width="1.5"/>
+<text x="1132.5" y="809" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="1132.5" dy="16">ScenarioResult</tspan><tspan x="1132.5" dy="20">[T004]</tspan></text>
+<polyline points="167,799 447,272" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="572,237 692,237" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/><rect x="574" y="215" width="116" height="22" fill="#ffffff" opacity="0.85"/><text x="632" y="215" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="middle" fill="#1e1e1e"><tspan x="632" dy="14">build().run()</tspan></text>
+<polyline points="896,219 1062,189" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/><rect x="942" y="182" width="74" height="22" fill="#ffffff" opacity="0.85"/><text x="979" y="182" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="middle" fill="#1e1e1e"><tspan x="979" dy="14">baseline</tspan></text>
+<polyline points="1202,189 1368,216" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="896,255 1016,276" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="1197,332 1430,458" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="1171,332 1444,578" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="820,282 1112,794" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<text x="40" y="30" font-family="Helvetica, Arial, sans-serif" font-size="24" text-anchor="start" fill="#1e1e1e"><tspan x="40" dy="24">006 HLD — Scenario runner and fault matrix</tspan></text>
+</svg>

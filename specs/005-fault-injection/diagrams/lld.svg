@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1064" height="1204" viewBox="0 0 1064 1204" role="img">
+<title>005 LLD — modules</title>
+<defs><marker id="rg-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1e1e1e"/></marker></defs>
+<rect width="1064" height="1204" fill="#ffffff"/>
+<rect x="392" y="90" width="280" height="266" rx="10" fill="none" stroke="#868e96" stroke-width="1" stroke-dasharray="8 6"/>
+<text x="402" y="96" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="start" fill="#868e96"><tspan x="402" dy="14">core ports</tspan></text>
+<rect x="64" y="406" width="960" height="166" rx="10" fill="none" stroke="#868e96" stroke-width="1" stroke-dasharray="8 6"/>
+<text x="74" y="412" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="start" fill="#868e96"><tspan x="74" dy="14">adapter-workflows/process</tspan></text>
+<rect x="88" y="674" width="184" height="70" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="180" y="689" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="180" dy="16">faults/index.ts</tspan><tspan x="180" dy="20">[T001]</tspan></text>
+<rect x="416" y="864" width="60" height="12" fill="#f3f0ff" stroke="#1e1e1e" stroke-width="2"/><rect x="416" y="874" width="232" height="90" fill="#f3f0ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="532" y="889" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="532" dy="16">adapter package.json</tspan><tspan x="532" dy="20">(peer workflows)</tspan><tspan x="532" dy="20">[T002]</tspan></text>
+<rect x="435" y="142" width="194" height="70" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="532" y="157" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="532" dy="16">ports/sleeper.ts</tspan><tspan x="532" dy="20">[T003, T004]</tspan></text>
+<rect x="416" y="262" width="232" height="70" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="532" y="277" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="532" dy="16">ports/persistence.ts</tspan><tspan x="532" dy="20">[T005]</tspan></text>
+<rect x="74" y="794" width="213" height="90" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="180.5" y="809" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="180.5" dy="16">driver-conformance</tspan><tspan x="180.5" dy="20">suite</tspan><tspan x="180.5" dy="20">[T010]</tspan></text>
+<rect x="768" y="458" width="232" height="90" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="884" y="473" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="884" dy="16">protocol.ts (Valibot</tspan><tspan x="884" dy="20">IPC)</tspan><tspan x="884" dy="20">[T025, T026]</tspan></text>
+<rect x="440" y="458" width="184" height="90" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="532" y="473" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="532" dy="16">child-host.ts +</tspan><tspan x="532" dy="20">child-entry.ts</tspan><tspan x="532" dy="20">[T027]</tspan></text>
+<rect x="88" y="468" width="184" height="70" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="180" y="483" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="180" dy="16">process-kill.ts</tspan><tspan x="180" dy="20">[T028, T029]</tspan></text>
+<rect x="74" y="934" width="213" height="90" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="180.5" y="949" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="180.5" dy="16">spike-parity tests</tspan><tspan x="180.5" dy="20">(H0–H4)</tspan><tspan x="180.5" dy="20">[T014, T019, T022]</tspan></text>
+<rect x="64" y="1074" width="232" height="90" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="180" y="1089" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="180" dy="16">baseline equivalence</tspan><tspan x="180" dy="20">test</tspan><tspan x="180" dy="20">[T030]</tspan></text>
+<polyline points="203,674 509,212" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="210,674 502,332" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="272,503 768,503" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="624,503 768,503" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="272,503 440,503" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/><rect x="336" y="481" width="40" height="22" fill="#ffffff" opacity="0.85"/><text x="356" y="481" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="middle" fill="#1e1e1e"><tspan x="356" dy="14">fork</tspan></text>
+<polyline points="287,863 416,893" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)" stroke-dasharray="8 6"/>
+<polyline points="287,961 416,939" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)" stroke-dasharray="8 6"/>
+<polyline points="259,1074 453,964" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)" stroke-dasharray="8 6"/>
+<text x="40" y="30" font-family="Helvetica, Arial, sans-serif" font-size="24" text-anchor="start" fill="#1e1e1e"><tspan x="40" dy="24">005 LLD — modules</tspan></text>
+</svg>

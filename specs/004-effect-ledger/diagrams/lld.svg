@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1340" height="1020" viewBox="0 0 1340 1020" role="img">
+<title>004 LLD — core modules</title>
+<defs><marker id="rg-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1e1e1e"/></marker></defs>
+<rect width="1340" height="1020" fill="#ffffff"/>
+<rect x="1058" y="90" width="223" height="146" rx="10" fill="none" stroke="#868e96" stroke-width="1" stroke-dasharray="8 6"/>
+<text x="1068" y="96" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="start" fill="#868e96"><tspan x="1068" dy="14">ports</tspan></text>
+<rect x="706" y="286" width="594" height="306" rx="10" fill="none" stroke="#868e96" stroke-width="1" stroke-dasharray="8 6"/>
+<text x="716" y="292" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="start" fill="#868e96"><tspan x="716" dy="14">ledger/</tspan></text>
+<rect x="40" y="642" width="594" height="166" rx="10" fill="none" stroke="#868e96" stroke-width="1" stroke-dasharray="8 6"/>
+<text x="50" y="648" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="start" fill="#868e96"><tspan x="50" dy="14">instrument/</tspan></text>
+<rect x="79" y="910" width="184" height="70" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="171" y="925" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="171" dy="16">index.ts barrel</tspan><tspan x="171" dy="20">[T001]</tspan></text>
+<rect x="759" y="910" width="156" height="70" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="837" y="925" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="837" dy="16">errors.ts</tspan><tspan x="837" dy="20">[T002, T003]</tspan></text>
+<rect x="1082" y="142" width="175" height="70" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="1169.5" y="157" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="1169.5" dy="16">ports/clock.ts</tspan><tspan x="1169.5" dy="20">[T004, T005]</tspan></text>
+<rect x="759" y="338" width="156" height="90" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="837" y="353" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="837" dy="16">canonical.ts</tspan><tspan x="837" dy="20">(FNV-1a-64)</tspan><tspan x="837" dy="20">[T006, T007]</tspan></text>
+<rect x="1100" y="358" width="140" height="70" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="1170" y="373" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="1170" dy="16">types.ts</tspan><tspan x="1170" dy="20">[T008]</tspan></text>
+<rect x="730" y="478" width="213" height="90" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="836.5" y="493" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="836.5" dy="16">ledger.ts</tspan><tspan x="836.5" dy="20">[T009, T011, T017,</tspan><tspan x="836.5" dy="20">T019, T022]</tspan></text>
+<rect x="1063" y="478" width="213" height="70" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="1169.5" y="493" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="1169.5" dy="16">queries.ts</tspan><tspan x="1169.5" dy="20">[T016, T018, T020]</tspan></text>
+<rect x="397" y="694" width="213" height="90" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="503.5" y="709" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="503.5" dy="16">instrument.ts</tspan><tspan x="503.5" dy="20">[T010, T012, T013,</tspan><tspan x="503.5" dy="20">T014, T015, T024]</tspan></text>
+<rect x="64" y="704" width="213" height="70" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="170.5" y="719" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="170.5" dy="16">overhead benchmark</tspan><tspan x="170.5" dy="20">[T025]</tspan></text>
+<polyline points="227,910 431,784" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="573,694 767,568" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="546,694 795,428" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="576,784 780,910" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="943,481 1100,420" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="880,478 1136,212" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="943,520 1063,516" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="277,739 397,739" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)" stroke-dasharray="8 6"/>
+<text x="40" y="30" font-family="Helvetica, Arial, sans-serif" font-size="24" text-anchor="start" fill="#1e1e1e"><tspan x="40" dy="24">004 LLD — core modules</tspan></text>
+</svg>

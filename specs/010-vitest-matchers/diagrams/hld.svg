@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1558" height="272" viewBox="0 0 1558 272" role="img">
+<title>010 HLD — Vitest matchers</title>
+<defs><marker id="rg-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1e1e1e"/></marker></defs>
+<rect width="1558" height="272" fill="#ffffff"/>
+<ellipse cx="134" cy="187" rx="70" ry="30" fill="#fff3bf" stroke="#1e1e1e" stroke-width="2"/>
+<text x="134" y="177" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="134" dy="16">Test file</tspan></text>
+<rect x="324" y="132" width="60" height="12" fill="#f3f0ff" stroke="#1e1e1e" stroke-width="2"/><rect x="324" y="142" width="252" height="90" fill="#f3f0ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="450" y="157" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="450" dy="16">@replayguard/vitest/se</tspan><tspan x="450" dy="20">tup</tspan><tspan x="450" dy="20">[T008]</tspan></text>
+<rect x="696" y="152" width="156" height="70" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="774" y="167" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="774" dy="16">Matchers</tspan><tspan x="774" dy="20">[T007, T010]</tspan></text>
+<rect x="972" y="152" width="213" height="70" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="1078.5" y="167" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="1078.5" dy="16">toReport() adapter</tspan><tspan x="1078.5" dy="20">[T003]</tspan></text>
+<rect x="1305" y="142" width="60" height="12" fill="#f3f0ff" stroke="#1e1e1e" stroke-width="2"/><rect x="1305" y="152" width="213" height="70" fill="#f3f0ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="1411.5" y="167" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="1411.5" dy="16">@replayguard/core</tspan><tspan x="1411.5" dy="20">(classify, Report)</tspan></text>
+<polyline points="204,187 324,187" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/><rect x="219" y="165" width="90" height="22" fill="#ffffff" opacity="0.85"/><text x="264" y="165" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="middle" fill="#1e1e1e"><tspan x="264" dy="14">setupFiles</tspan></text>
+<polyline points="576,187 696,187" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/><rect x="578" y="165" width="116" height="22" fill="#ffffff" opacity="0.85"/><text x="636" y="165" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="middle" fill="#1e1e1e"><tspan x="636" dy="14">expect.extend</tspan></text>
+<polyline points="204,187 696,187" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/><rect x="384" y="165" width="132" height="22" fill="#ffffff" opacity="0.85"/><text x="450" y="165" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="middle" fill="#1e1e1e"><tspan x="450" dy="14">expect(result)…</tspan></text>
+<polyline points="852,187 972,187" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="1185,187 1305,187" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<text x="40" y="30" font-family="Helvetica, Arial, sans-serif" font-size="24" text-anchor="start" fill="#1e1e1e"><tspan x="40" dy="24">010 HLD — Vitest matchers</tspan></text>
+</svg>

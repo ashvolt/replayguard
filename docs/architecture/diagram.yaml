@@ -1,0 +1,63 @@
+feature: architecture
+diagrams:
+  - kind: hld
+    title: "ReplayGuard — product HLD"
+    layout: flow
+    groups:
+      - { id: core, label: "@replayguard/core (pure TS)" }
+      - { id: rivet, label: "Rivet (external)" }
+    nodes:
+      - { id: dev, label: Developer test suite, shape: ellipse }
+      - { id: builder, label: "scenario() Builder", group: core }
+      - { id: runner, label: ScenarioRunner (Template Method), group: core }
+      - { id: matrix, label: FaultMatrix + discovery, group: core }
+      - { id: faults, label: FaultStrategies, group: core }
+      - { id: ledger, label: EffectLedger (Observer), group: core, shape: database }
+      - { id: classifier, label: Classifier + Policy, group: core }
+      - { id: hints, label: Fix hints, group: core }
+      - { id: report, label: Report model, group: core }
+      - { id: fakes, label: "@replayguard/fakes" }
+      - { id: adapter, label: "@replayguard/adapter-workflows" }
+      - { id: engine, label: "@rivet-dev/workflows engine", group: rivet }
+      - { id: reporters, label: "console · HTML · vitest" }
+    edges:
+      - { from: dev, to: builder }
+      - { from: builder, to: runner }
+      - { from: runner, to: matrix }
+      - { from: runner, to: faults }
+      - { from: runner, to: adapter, label: WorkflowRuntime port }
+      - { from: adapter, to: engine }
+      - { from: fakes, to: ledger, label: records }
+      - { from: faults, to: ledger, label: hooks }
+      - { from: runner, to: classifier }
+      - { from: classifier, to: hints }
+      - { from: classifier, to: report }
+      - { from: report, to: reporters }
+  - kind: architecture
+    title: "ReplayGuard — package dependencies (allowed edges)"
+    layout: flow
+    direction: TB
+    nodes:
+      - { id: facade, label: replayguard (facade), shape: package }
+      - { id: vitest, label: "@replayguard/vitest", shape: package }
+      - { id: rcons, label: "@replayguard/reporter-console", shape: package }
+      - { id: rhtml, label: "@replayguard/reporter-html", shape: package }
+      - { id: fakes, label: "@replayguard/fakes", shape: package }
+      - { id: rk, label: "@replayguard/adapter-rivetkit", shape: package }
+      - { id: aw, label: "@replayguard/adapter-workflows", shape: package }
+      - { id: core, label: "@replayguard/core", shape: package }
+      - { id: wf, label: "@rivet-dev/workflows (peer)", shape: database }
+      - { id: rkit, label: "rivetkit (peer)", shape: database }
+    edges:
+      - { from: facade, to: core }
+      - { from: facade, to: fakes }
+      - { from: facade, to: vitest }
+      - { from: vitest, to: core }
+      - { from: rcons, to: core }
+      - { from: rhtml, to: core }
+      - { from: fakes, to: core }
+      - { from: rk, to: aw }
+      - { from: rk, to: core }
+      - { from: rk, to: rkit, style: dashed }
+      - { from: aw, to: core }
+      - { from: aw, to: wf, style: dashed }

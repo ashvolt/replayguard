@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="671" height="1112" viewBox="0 0 671 1112" role="img">
+<title>005 Technical architecture — process kill</title>
+<defs><marker id="rg-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1e1e1e"/></marker></defs>
+<rect width="671" height="1112" fill="#ffffff"/>
+<rect x="196" y="562" width="252" height="70" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="322" y="577" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="322" dy="16">Parent (test process +</tspan><tspan x="322" dy="20">ledger)</tspan></text>
+<rect x="206" y="752" width="232" height="90" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="322" y="767" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="322" dy="16">Child process (fork,</tspan><tspan x="322" dy="20">no shell)</tspan><tspan x="322" dy="20">[T027]</tspan></text>
+<rect x="64" y="972" width="242" height="90" rx="14" fill="#d3f9d8" stroke="#1e1e1e" stroke-width="2"/><path d="M64,984 Q185,998 306,984" fill="none" stroke="#1e1e1e" stroke-width="1.5"/>
+<text x="185" y="987" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="185" dy="16">&lt;tmp&gt;/kv.json (atomic</tspan><tspan x="185" dy="20">rename)</tspan><tspan x="185" dy="20">[T024]</tspan></text>
+<polygon points="467.5,962 579,1017 467.5,1072 356,1017" fill="#ffe3e3" stroke="#1e1e1e" stroke-width="2"/>
+<text x="467.5" y="977" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="467.5" dy="16">IPC: ledger-event ·</tspan><tspan x="467.5" dy="20">await-continue ·</tspan><tspan x="467.5" dy="20">run-ended</tspan><tspan x="467.5" dy="20">[T026]</tspan></text>
+<rect x="196" y="342" width="60" height="12" fill="#f3f0ff" stroke="#1e1e1e" stroke-width="2"/><rect x="196" y="352" width="252" height="90" fill="#f3f0ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="322" y="367" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="322" dy="16">docs/faults/strategies</tspan><tspan x="322" dy="20">.md</tspan><tspan x="322" dy="20">[T031]</tspan></text>
+<rect x="88" y="152" width="242" height="70" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="209" y="167" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="209" dy="16">Stryker 85% (faults/)</tspan><tspan x="209" dy="20">[T032]</tspan></text>
+<rect x="380" y="132" width="58.333333333333336" height="12" fill="#f3f0ff" stroke="#1e1e1e" stroke-width="2"/><rect x="380" y="142" width="175" height="90" fill="#f3f0ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="467.5" y="157" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="467.5" dy="16">diagram.yaml +</tspan><tspan x="467.5" dy="20">quickstart</tspan><tspan x="467.5" dy="20">[T033, T034]</tspan></text>
+<polyline points="322,632 322,752" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/><rect x="243" y="653" width="158" height="39" fill="#ffffff" opacity="0.85"/><text x="322" y="653" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="middle" fill="#1e1e1e"><tspan x="322" dy="14">start / continue /</tspan><tspan x="322" dy="17.5">SIGKILL</tspan></text>
+<polyline points="352,842 431,962" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="448,962 334,632" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="294,842 213,972" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="322,442 322,562" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)" stroke-dasharray="8 6"/>
+<polyline points="219,222 312,562" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)" stroke-dasharray="8 6"/>
+<polyline points="436,232 353,352" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)" stroke-dasharray="8 6"/>
+<text x="40" y="30" font-family="Helvetica, Arial, sans-serif" font-size="24" text-anchor="start" fill="#1e1e1e"><tspan x="40" dy="24">005 Technical architecture — process kill</tspan></text>
+</svg>

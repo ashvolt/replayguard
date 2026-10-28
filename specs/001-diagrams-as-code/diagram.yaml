@@ -1,0 +1,92 @@
+feature: 001-diagrams-as-code
+diagrams:
+  - kind: hld
+    title: "001 HLD — Diagrams-as-code traceability"
+    layout: flow
+    nodes:
+      - { id: author, label: Contributor, shape: ellipse }
+      - { id: yaml, label: specs/NNN/diagram.yaml, shape: package, tasks: [T030] }
+      - { id: tasks, label: specs/NNN/tasks.md, shape: package }
+      - { id: tool, label: rg-diagrams CLI, tasks: [T001, T018] }
+      - { id: outputs, label: ".excalidraw + .svg outputs", shape: database, tasks: [T031] }
+      - { id: trace, label: TRACEABILITY.md, shape: database, tasks: [T025] }
+      - { id: gate, label: CI traceability gate, shape: diamond, tasks: [T023] }
+      - { id: arch, label: docs/architecture overview, shape: package, tasks: [T027] }
+    edges:
+      - { from: author, to: yaml, label: writes }
+      - { from: yaml, to: tool }
+      - { from: tasks, to: tool }
+      - { from: tool, to: outputs, label: generate }
+      - { from: tool, to: trace, label: coverage }
+      - { from: tool, to: gate, label: check }
+      - { from: arch, to: tool }
+  - kind: lld
+    title: "001 LLD — tools/diagrams modules"
+    layout: flow
+    groups:
+      - { id: load, label: "load + validate" }
+      - { id: layout, label: "layout (Strategy)" }
+      - { id: render, label: "render (Visitor targets)" }
+      - { id: check, label: "trace + freshness" }
+    nodes:
+      - { id: cli, label: cli.ts, tasks: [T018, T023, T025] }
+      - { id: loader, label: load.ts, group: load, tasks: [T009] }
+      - { id: schema, label: schema.ts (Valibot), group: load, tasks: [T005, T006] }
+      - { id: ids, label: ids.ts (Factory), group: render, tasks: [T007] }
+      - { id: text, label: text.ts, group: layout, tasks: [T008] }
+      - { id: flow, label: layout/flow.ts, group: layout, tasks: [T010, T014] }
+      - { id: seq, label: layout/sequence.ts, group: layout, tasks: [T011, T015] }
+      - { id: excal, label: render/excalidraw.ts, group: render, tasks: [T012, T016] }
+      - { id: svg, label: render/svg.ts, group: render, tasks: [T013, T017] }
+      - { id: tracemod, label: trace.ts, group: check, tasks: [T019, T021, T026] }
+      - { id: stale, label: stale.ts, group: check, tasks: [T020, T022] }
+      - { id: cov, label: coverage.ts, group: check, tasks: [T024] }
+    edges:
+      - { from: cli, to: loader }
+      - { from: loader, to: schema }
+      - { from: cli, to: flow }
+      - { from: cli, to: seq }
+      - { from: flow, to: text }
+      - { from: seq, to: text }
+      - { from: cli, to: excal }
+      - { from: cli, to: svg }
+      - { from: excal, to: ids }
+      - { from: cli, to: tracemod }
+      - { from: cli, to: stale }
+      - { from: cli, to: cov }
+  - kind: workflow
+    title: "001 User workflow — author, generate, check"
+    layout: sequence
+    actors:
+      - { id: dev, label: Contributor }
+      - { id: cli, label: rg-diagrams }
+      - { id: fs, label: Repository files }
+      - { id: ci, label: CI }
+    messages:
+      - { from: dev, to: fs, label: "edit diagram.yaml + tasks.md", tasks: [T030] }
+      - { from: dev, to: cli, label: "pnpm diagrams:generate", tasks: [T004] }
+      - { from: cli, to: fs, label: "read + validate sources", tasks: [T009] }
+      - { from: cli, to: fs, label: "write diagrams/*.excalidraw|svg", tasks: [T018] }
+      - { from: dev, to: fs, label: "open in Excalidraw, review", tasks: [T031] }
+      - { from: ci, to: cli, label: "pnpm diagrams:check", tasks: [T023] }
+      - { from: cli, to: ci, label: "✗ untraced / unknown / stale → exit 1", style: dashed, tasks: [T021, T022] }
+      - { from: dev, to: cli, label: "pnpm diagrams:coverage", tasks: [T025] }
+  - kind: architecture
+    title: "001 Technical architecture — tooling package"
+    layout: flow
+    direction: TB
+    nodes:
+      - { id: root, label: root package.json scripts, shape: package, tasks: [T004] }
+      - { id: pkg, label: "@replayguard-tools/diagrams (private)", shape: package, tasks: [T001] }
+      - { id: tsconfig, label: tsconfig (erasable syntax), tasks: [T002] }
+      - { id: vitest, label: Vitest + coverage 90/90, tasks: [T003, T029] }
+      - { id: node, label: Node --experimental-strip-types, shape: ellipse }
+      - { id: deps, label: "yaml + valibot", shape: database }
+      - { id: readme, label: README (format + CLI), shape: package, tasks: [T028] }
+    edges:
+      - { from: root, to: pkg }
+      - { from: pkg, to: tsconfig }
+      - { from: pkg, to: vitest }
+      - { from: pkg, to: node, label: runs on }
+      - { from: pkg, to: deps }
+      - { from: pkg, to: readme, style: dashed }

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="967" height="636" viewBox="0 0 967 636" role="img">
+<title>008 User workflow — payment with idempotency key</title>
+<defs><marker id="rg-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1e1e1e"/></marker></defs>
+<rect width="967" height="636" fill="#ffffff"/>
+<polyline points="153,146 153,596" fill="none" stroke="#868e96" stroke-width="1" stroke-dasharray="8 6"/>
+<polyline points="375,146 375,596" fill="none" stroke="#868e96" stroke-width="1" stroke-dasharray="8 6"/>
+<polyline points="612,146 612,596" fill="none" stroke="#868e96" stroke-width="1" stroke-dasharray="8 6"/>
+<polyline points="849,146 849,596" fill="none" stroke="#868e96" stroke-width="1" stroke-dasharray="8 6"/>
+<rect x="71" y="90" width="165" height="56" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="153.5" y="108" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="153.5" dy="16">Workflow step</tspan></text>
+<rect x="302" y="90" width="146" height="56" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="375" y="108" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="375" dy="16">FakePayment</tspan></text>
+<rect x="515" y="90" width="194" height="56" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="612" y="108" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="612" dy="16">IdempotencyStore</tspan></text>
+<rect x="771" y="90" width="156" height="56" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="849" y="108" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="849" dy="16">EffectLedger</tspan></text>
+<polyline points="153,219 375,219" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/><rect x="160" y="180" width="208" height="39" fill="#ffffff" opacity="0.85"/><text x="264" y="180" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="middle" fill="#1e1e1e"><tspan x="264" dy="14">charge({orderId, amount,</tspan><tspan x="264" dy="17.5">key}) [T006]</tspan></text>
+<polyline points="375,282 612,282" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/><rect x="390" y="243" width="208" height="39" fill="#ffffff" opacity="0.85"/><text x="494" y="243" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="middle" fill="#1e1e1e"><tspan x="494" dy="14">lookup(key, fingerprint)</tspan><tspan x="494" dy="17.5">[T002]</tspan></text>
+<polyline points="612,328 375,328" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)" stroke-dasharray="8 6"/><rect x="407" y="306" width="174" height="22" fill="#ffffff" opacity="0.85"/><text x="494" y="306" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="middle" fill="#1e1e1e"><tspan x="494" dy="14">miss → create charge</tspan></text>
+<polyline points="375,374 849,374" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/><rect x="517" y="352" width="191" height="22" fill="#ffffff" opacity="0.85"/><text x="612.5" y="352" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="middle" fill="#1e1e1e"><tspan x="612.5" dy="14">attempt applied [T005]</tspan></text>
+<polyline points="153,437 375,437" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/><rect x="160" y="398" width="208" height="39" fill="#ffffff" opacity="0.85"/><text x="264" y="398" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="middle" fill="#1e1e1e"><tspan x="264" dy="14">charge again after crash</tspan><tspan x="264" dy="17.5">(same key) [T014]</tspan></text>
+<polyline points="612,500 375,500" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)" stroke-dasharray="8 6"/><rect x="398" y="461" width="191" height="39" fill="#ffffff" opacity="0.85"/><text x="493.5" y="461" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="middle" fill="#1e1e1e"><tspan x="493.5" dy="14">hit → original result,</tspan><tspan x="493.5" dy="17.5">replayed [T003]</tspan></text>
+<polyline points="375,546 849,546" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/><rect x="496" y="524" width="233" height="22" fill="#ffffff" opacity="0.85"/><text x="612.5" y="524" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="middle" fill="#1e1e1e"><tspan x="612.5" dy="14">attempt deduplicated [T007]</tspan></text>
+<text x="40" y="30" font-family="Helvetica, Arial, sans-serif" font-size="24" text-anchor="start" fill="#1e1e1e"><tspan x="40" dy="24">008 User workflow — payment with idempotency key</tspan></text>
+</svg>

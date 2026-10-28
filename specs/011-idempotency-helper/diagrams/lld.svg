@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1248" height="664" viewBox="0 0 1248 664" role="img">
+<title>011 LLD — modules</title>
+<defs><marker id="rg-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1e1e1e"/></marker></defs>
+<rect width="1248" height="664" fill="#ffffff"/>
+<rect x="354" y="90" width="261" height="146" rx="10" fill="none" stroke="#868e96" stroke-width="1" stroke-dasharray="8 6"/>
+<text x="364" y="96" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="start" fill="#868e96"><tspan x="364" dy="14">core/src/idempotency</tspan></text>
+<rect x="383" y="286" width="825" height="166" rx="10" fill="none" stroke="#868e96" stroke-width="1" stroke-dasharray="8 6"/>
+<text x="393" y="292" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="start" fill="#868e96"><tspan x="393" dy="14">core/src/hints</tspan></text>
+<rect x="64" y="554" width="194" height="70" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="161" y="569" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="161" dy="16">index.ts exports</tspan><tspan x="161" dy="20">[T001]</tspan></text>
+<rect x="378" y="142" width="213" height="70" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="484.5" y="157" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="484.5" dy="16">key.ts</tspan><tspan x="484.5" dy="20">[T003, T004, T005]</tspan></text>
+<rect x="1044" y="348" width="140" height="70" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="1114" y="363" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="1114" dy="16">types.ts</tspan><tspan x="1114" dy="20">[T002]</tspan></text>
+<rect x="711" y="338" width="213" height="90" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="817.5" y="353" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="817.5" dy="16">catalog.ts</tspan><tspan x="817.5" dy="20">[T006, T008, T011,</tspan><tspan x="817.5" dy="20">T012]</tspan></text>
+<rect x="407" y="348" width="156" height="70" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="485" y="363" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="485" dy="16">attach.ts</tspan><tspan x="485" dy="20">[T007, T009]</tspan></text>
+<polyline points="188,554 457,212" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="216,554 430,418" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="563,383 711,383" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="924,383 1044,383" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<text x="40" y="30" font-family="Helvetica, Arial, sans-serif" font-size="24" text-anchor="start" fill="#1e1e1e"><tspan x="40" dy="24">011 LLD — modules</tspan></text>
+</svg>

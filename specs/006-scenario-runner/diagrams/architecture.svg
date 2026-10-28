@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="728" height="1112" viewBox="0 0 728 1112" role="img">
+<title>006 Technical architecture — runtime adapters</title>
+<defs><marker id="rg-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1e1e1e"/></marker></defs>
+<rect width="728" height="1112" fill="#ffffff"/>
+<polygon points="312,562 414,607 312,652 210,607" fill="#ffe3e3" stroke="#1e1e1e" stroke-width="2"/>
+<text x="312" y="577" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="312" dy="16">WorkflowRuntime /</tspan><tspan x="312" dy="20">RuntimeCase port</tspan><tspan x="312" dy="20">[T002]</tspan></text>
+<rect x="64" y="772" width="194" height="110" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="161" y="787" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="161" dy="16">In-process:</tspan><tspan x="161" dy="20">InMemoryDriver +</tspan><tspan x="161" dy="20">FaultyDriver</tspan><tspan x="161" dy="20">[T008, T009]</tspan></text>
+<rect x="308" y="782" width="252" height="90" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="434" y="797" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="434" dy="16">Process: FileDriver in</tspan><tspan x="434" dy="20">temp dir + child host</tspan><tspan x="434" dy="20">[T010]</tspan></text>
+<ellipse cx="312" cy="1037" rx="102" ry="35" fill="#fff3bf" stroke="#1e1e1e" stroke-width="2"/>
+<text x="312" y="1017" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="312" dy="16">runWorkflow(mode:</tspan><tspan x="312" dy="20">yield)</tspan></text>
+<rect x="84" y="152" width="232" height="70" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="200" y="167" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="200" dy="16">perf: 20 cases &lt; 5 s</tspan><tspan x="200" dy="20">[T024]</tspan></text>
+<rect x="186" y="342" width="60" height="12" fill="#f3f0ff" stroke="#1e1e1e" stroke-width="2"/><rect x="186" y="352" width="252" height="90" fill="#f3f0ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="312" y="367" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="312" dy="16">docs/guides/scenarios.</tspan><tspan x="312" dy="20">md</tspan><tspan x="312" dy="20">[T025]</tspan></text>
+<rect x="366" y="132" width="58.333333333333336" height="12" fill="#f3f0ff" stroke="#1e1e1e" stroke-width="2"/><rect x="366" y="142" width="175" height="90" fill="#f3f0ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="453.5" y="157" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="453.5" dy="16">diagram.yaml +</tspan><tspan x="453.5" dy="20">quickstart</tspan><tspan x="453.5" dy="20">[T026, T027]</tspan></text>
+<polyline points="281,652 199,772" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="337,652 409,782" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="201,882 287,1002" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="408,872 332,1002" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="198,222 164,772" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)" stroke-dasharray="8 6"/>
+<polyline points="312,442 312,562" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)" stroke-dasharray="8 6"/>
+<polyline points="423,232 342,352" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)" stroke-dasharray="8 6"/>
+<text x="40" y="30" font-family="Helvetica, Arial, sans-serif" font-size="24" text-anchor="start" fill="#1e1e1e"><tspan x="40" dy="24">006 Technical architecture — runtime adapters</tspan></text>
+</svg>

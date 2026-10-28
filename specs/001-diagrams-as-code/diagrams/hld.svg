@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1345" height="512" viewBox="0 0 1345 512" role="img">
+<title>001 HLD — Diagrams-as-code traceability</title>
+<defs><marker id="rg-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1e1e1e"/></marker></defs>
+<rect width="1345" height="512" fill="#ffffff"/>
+<ellipse cx="171" cy="182" rx="73" ry="30" fill="#fff3bf" stroke="#1e1e1e" stroke-width="2"/>
+<text x="171" y="172" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="171" dy="16">Contributor</tspan></text>
+<rect x="397" y="262" width="60" height="12" fill="#f3f0ff" stroke="#1e1e1e" stroke-width="2"/><rect x="397" y="272" width="252" height="70" fill="#f3f0ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="523" y="287" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="523" dy="16">specs/NNN/diagram.yaml</tspan><tspan x="523" dy="20">[T030]</tspan></text>
+<rect x="64" y="252" width="60" height="12" fill="#f3f0ff" stroke="#1e1e1e" stroke-width="2"/><rect x="64" y="262" width="213" height="60" fill="#f3f0ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="170.5" y="282" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="170.5" dy="16">specs/NNN/tasks.md</tspan></text>
+<rect x="769" y="272" width="184" height="70" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="861" y="287" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="861" dy="16">rg-diagrams CLI</tspan><tspan x="861" dy="20">[T001, T018]</tspan></text>
+<rect x="1083" y="142" width="213" height="90" rx="14" fill="#d3f9d8" stroke="#1e1e1e" stroke-width="2"/><path d="M1083,154 Q1189.5,168 1296,154" fill="none" stroke="#1e1e1e" stroke-width="1.5"/>
+<text x="1189.5" y="157" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="1189.5" dy="16">.excalidraw + .svg</tspan><tspan x="1189.5" dy="20">outputs</tspan><tspan x="1189.5" dy="20">[T031]</tspan></text>
+<rect x="1097" y="282" width="184" height="70" rx="14" fill="#d3f9d8" stroke="#1e1e1e" stroke-width="2"/><path d="M1097,294 Q1189,308 1281,294" fill="none" stroke="#1e1e1e" stroke-width="1.5"/>
+<text x="1189" y="297" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="1189" dy="16">TRACEABILITY.md</tspan><tspan x="1189" dy="20">[T025]</tspan></text>
+<polygon points="1189,402 1305,437 1189,472 1073,437" fill="#ffe3e3" stroke="#1e1e1e" stroke-width="2"/>
+<text x="1189" y="417" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="1189" dy="16">CI traceability gate</tspan><tspan x="1189" dy="20">[T023]</tspan></text>
+<rect x="69" y="362" width="60" height="12" fill="#f3f0ff" stroke="#1e1e1e" stroke-width="2"/><rect x="69" y="372" width="204" height="90" fill="#f3f0ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="171" y="387" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="171" dy="16">docs/architecture</tspan><tspan x="171" dy="20">overview</tspan><tspan x="171" dy="20">[T027]</tspan></text>
+<polyline points="244,208 424,272" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/><rect x="306" y="218" width="57" height="22" fill="#ffffff" opacity="0.85"/><text x="334.5" y="218" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="middle" fill="#1e1e1e"><tspan x="334.5" dy="14">writes</tspan></text>
+<polyline points="649,307 769,307" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="277,294 769,305" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="953,273 1083,226" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/><rect x="981" y="228" width="74" height="22" fill="#ffffff" opacity="0.85"/><text x="1018" y="228" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="middle" fill="#1e1e1e"><tspan x="1018" dy="14">generate</tspan></text>
+<polyline points="953,310 1097,314" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/><rect x="988" y="290" width="74" height="22" fill="#ffffff" opacity="0.85"/><text x="1025" y="290" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="middle" fill="#1e1e1e"><tspan x="1025" dy="14">coverage</tspan></text>
+<polyline points="949,342 1101,402" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/><rect x="1001" y="350" width="48" height="22" fill="#ffffff" opacity="0.85"/><text x="1025" y="350" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="middle" fill="#1e1e1e"><tspan x="1025" dy="14">check</tspan></text>
+<polyline points="273,401 769,322" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<text x="40" y="30" font-family="Helvetica, Arial, sans-serif" font-size="24" text-anchor="start" fill="#1e1e1e"><tspan x="40" dy="24">001 HLD — Diagrams-as-code traceability</tspan></text>
+</svg>

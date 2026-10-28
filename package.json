@@ -13,7 +13,10 @@
 		"test": "turbo run test",
 		"lint": "biome check .",
 		"lint:fix": "biome check --write .",
-		"spike": "pnpm --filter @replayguard/spike-engine-assumptions test"
+		"spike": "pnpm --filter @replayguard/spike-engine-assumptions test",
+		"diagrams:generate": "node --experimental-strip-types --no-warnings tools/diagrams/src/cli.ts generate",
+		"diagrams:check": "node --experimental-strip-types --no-warnings tools/diagrams/src/cli.ts check",
+		"diagrams:coverage": "node --experimental-strip-types --no-warnings tools/diagrams/src/cli.ts coverage"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "2.5.15",

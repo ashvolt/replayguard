@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="979" height="559" viewBox="0 0 979 559" role="img">
+<title>013 User workflow — demonstrate, approve, file</title>
+<defs><marker id="rg-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1e1e1e"/></marker></defs>
+<rect width="979" height="559" fill="#ffffff"/>
+<polyline points="150,154 150,519" fill="none" stroke="#868e96" stroke-width="1" stroke-dasharray="8 6"/>
+<polyline points="370,146 370,519" fill="none" stroke="#868e96" stroke-width="1" stroke-dasharray="8 6"/>
+<polyline points="593,146 593,519" fill="none" stroke="#868e96" stroke-width="1" stroke-dasharray="8 6"/>
+<polyline points="837,146 837,519" fill="none" stroke="#868e96" stroke-width="1" stroke-dasharray="8 6"/>
+<rect x="77" y="90" width="146" height="64" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="150" y="102" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="150" dy="16">ReplayGuard</tspan><tspan x="150" dy="20">maintainer</tspan></text>
+<rect x="300" y="90" width="140" height="56" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="370" y="108" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="370" dy="16">CI</tspan></text>
+<rect x="511" y="90" width="165" height="56" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="593.5" y="108" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="593.5" dy="16">Project owner</tspan></text>
+<rect x="735" y="90" width="204" height="56" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="837" y="108" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="837" dy="16">Rivet maintainers</tspan></text>
+<polyline points="370,227 430,227 430,251 370,251" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/><rect x="435" y="223" width="208" height="39" fill="#ffffff" opacity="0.85"/><text x="539" y="223" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="middle" fill="#1e1e1e"><tspan x="539" dy="14">repros with EXPECT_GAP=1</tspan><tspan x="539" dy="17.5">(stay green) [T006]</tspan></text>
+<polyline points="150,314 593,314" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/><rect x="255" y="275" width="233" height="39" fill="#ffffff" opacity="0.85"/><text x="371.5" y="275" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="middle" fill="#1e1e1e"><tspan x="371.5" dy="14">request approval for drafts</tspan><tspan x="371.5" dy="17.5">[T010]</tspan></text>
+<polyline points="593,360 150,360" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)" stroke-dasharray="8 6"/><rect x="335" y="338" width="74" height="22" fill="#ffffff" opacity="0.85"/><text x="372" y="338" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="middle" fill="#1e1e1e"><tspan x="372" dy="14">approved</tspan></text>
+<polyline points="150,406 837,406" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/><rect x="398" y="384" width="191" height="22" fill="#ffffff" opacity="0.85"/><text x="493.5" y="384" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="middle" fill="#1e1e1e"><tspan x="493.5" dy="14">gh issue create [T010]</tspan></text>
+<polyline points="837,469 150,469" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)" stroke-dasharray="8 6"/><rect x="386" y="430" width="216" height="39" fill="#ffffff" opacity="0.85"/><text x="494" y="430" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="middle" fill="#1e1e1e"><tspan x="494" dy="14">response → tracker + docs</tspan><tspan x="494" dy="17.5">[T011]</tspan></text>
+<text x="40" y="30" font-family="Helvetica, Arial, sans-serif" font-size="24" text-anchor="start" fill="#1e1e1e"><tspan x="40" dy="24">013 User workflow — demonstrate, approve, file</tspan></text>
+</svg>

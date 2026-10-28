@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1390" height="692" viewBox="0 0 1390 692" role="img">
+<title>001 Technical architecture — tooling package</title>
+<defs><marker id="rg-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1e1e1e"/></marker></defs>
+<rect width="1390" height="692" fill="#ffffff"/>
+<rect x="605" y="132" width="60" height="12" fill="#f3f0ff" stroke="#1e1e1e" stroke-width="2"/><rect x="605" y="142" width="204" height="90" fill="#f3f0ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="707" y="157" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="707" dy="16">root package.json</tspan><tspan x="707" dy="20">scripts</tspan><tspan x="707" dy="20">[T004]</tspan></text>
+<rect x="581" y="342" width="60" height="12" fill="#f3f0ff" stroke="#1e1e1e" stroke-width="2"/><rect x="581" y="352" width="252" height="90" fill="#f3f0ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="707" y="367" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="707" dy="16">@replayguard-tools/dia</tspan><tspan x="707" dy="20">grams (private)</tspan><tspan x="707" dy="20">[T001]</tspan></text>
+<rect x="64" y="562" width="213" height="90" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="170.5" y="577" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="170.5" dy="16">tsconfig (erasable</tspan><tspan x="170.5" dy="20">syntax)</tspan><tspan x="170.5" dy="20">[T002]</tspan></text>
+<rect x="327" y="562" width="204" height="90" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="429" y="577" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="429" dy="16">Vitest + coverage</tspan><tspan x="429" dy="20">90/90</tspan><tspan x="429" dy="20">[T003, T029]</tspan></text>
+<ellipse cx="707" cy="607" rx="126" ry="45" fill="#fff3bf" stroke="#1e1e1e" stroke-width="2"/>
+<text x="707" y="577" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="707" dy="16">Node</tspan><tspan x="707" dy="20">--experimental-strip-t</tspan><tspan x="707" dy="20">ypes</tspan></text>
+<rect x="883" y="577" width="175" height="60" rx="14" fill="#d3f9d8" stroke="#1e1e1e" stroke-width="2"/><path d="M883,589 Q970.5,603 1058,589" fill="none" stroke="#1e1e1e" stroke-width="1.5"/>
+<text x="970.5" y="597" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="970.5" dy="16">yaml + valibot</tspan></text>
+<rect x="1108" y="562" width="60" height="12" fill="#f3f0ff" stroke="#1e1e1e" stroke-width="2"/><rect x="1108" y="572" width="242" height="70" fill="#f3f0ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="1229" y="587" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="1229" dy="16">README (format + CLI)</tspan><tspan x="1229" dy="20">[T028]</tspan></text>
+<polyline points="707,232 707,352" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="592,442 277,565" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="647,442 489,562" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="707,442 707,562" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/><rect x="675" y="480" width="65" height="22" fill="#ffffff" opacity="0.85"/><text x="707.5" y="480" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="middle" fill="#1e1e1e"><tspan x="707.5" dy="14">runs on</tspan></text>
+<polyline points="763,442 933,577" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="819,442 1142,572" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)" stroke-dasharray="8 6"/>
+<text x="40" y="30" font-family="Helvetica, Arial, sans-serif" font-size="24" text-anchor="start" fill="#1e1e1e"><tspan x="40" dy="24">001 Technical architecture — tooling package</tspan></text>
+</svg>

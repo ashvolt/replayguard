@@ -1,0 +1,57 @@
+feature: 010-vitest-matchers
+diagrams:
+  - kind: hld
+    title: "010 HLD — Vitest matchers"
+    layout: flow
+    nodes:
+      - { id: test, label: Test file, shape: ellipse }
+      - { id: setup, label: "@replayguard/vitest/setup", shape: package, tasks: [T008] }
+      - { id: matchers, label: Matchers, tasks: [T007, T010] }
+      - { id: norm, label: "toReport() adapter", tasks: [T003] }
+      - { id: core, label: "@replayguard/core (classify, Report)", shape: package }
+    edges:
+      - { from: test, to: setup, label: setupFiles }
+      - { from: setup, to: matchers, label: expect.extend }
+      - { from: test, to: matchers, label: "expect(result)…" }
+      - { from: matchers, to: norm }
+      - { from: norm, to: core }
+  - kind: lld
+    title: "010 LLD — modules"
+    layout: flow
+    nodes:
+      - { id: pkg, label: "package.json (exports . and ./setup)", shape: package, tasks: [T001] }
+      - { id: norm, label: normalize.ts, tasks: [T002, T003] }
+      - { id: viol, label: violations.ts, tasks: [T004, T005] }
+      - { id: mat, label: matchers.ts (createMatcher), tasks: [T006, T007, T009, T010] }
+      - { id: setup, label: setup.ts, tasks: [T008] }
+      - { id: types, label: types.d.ts augmentation, tasks: [T011, T012] }
+    edges:
+      - { from: setup, to: mat }
+      - { from: mat, to: viol }
+      - { from: mat, to: norm }
+      - { from: types, to: mat, style: dashed }
+      - { from: pkg, to: setup, style: dashed }
+  - kind: workflow
+    title: "010 User workflow — failing assertion"
+    layout: sequence
+    actors:
+      - { id: dev, label: Test }
+      - { id: m, label: Matcher }
+      - { id: v, label: Violations }
+    messages:
+      - { from: dev, to: m, label: "expect(r).toPassSideEffectPolicy()", tasks: [T006] }
+      - { from: m, to: v, label: "collect fail verdicts", tasks: [T005] }
+      - { from: v, to: m, label: "first 20 + '…and N more'", style: dashed, tasks: [T004] }
+      - { from: m, to: dev, label: "message: case › kind subject: outcome — why", style: dashed, tasks: [T009] }
+  - kind: architecture
+    title: "010 Technical architecture — compatibility"
+    layout: flow
+    nodes:
+      - { id: ci, label: "CI job: previous Vitest major", tasks: [T013] }
+      - { id: peer, label: "peer vitest >=4 <6", shape: diamond }
+      - { id: docs, label: docs/vitest/README.md, shape: package, tasks: [T014] }
+      - { id: yaml, label: "diagram.yaml + quickstart", shape: package, tasks: [T015, T016] }
+    edges:
+      - { from: ci, to: peer }
+      - { from: docs, to: peer, style: dashed }
+      - { from: yaml, to: docs, style: dashed }

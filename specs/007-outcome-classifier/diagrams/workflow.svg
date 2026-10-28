@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="928" height="677" viewBox="0 0 928 677" role="img">
+<title>007 User workflow — from result to verdict</title>
+<defs><marker id="rg-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1e1e1e"/></marker></defs>
+<rect width="928" height="677" fill="#ffffff"/>
+<polyline points="150,146 150,637" fill="none" stroke="#868e96" stroke-width="1" stroke-dasharray="8 6"/>
+<polyline points="370,146 370,637" fill="none" stroke="#868e96" stroke-width="1" stroke-dasharray="8 6"/>
+<polyline points="590,146 590,637" fill="none" stroke="#868e96" stroke-width="1" stroke-dasharray="8 6"/>
+<polyline points="810,146 810,637" fill="none" stroke="#868e96" stroke-width="1" stroke-dasharray="8 6"/>
+<rect x="80" y="90" width="140" height="56" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="150" y="108" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="150" dy="16">Developer</tspan></text>
+<rect x="300" y="90" width="140" height="56" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="370" y="108" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="370" dy="16">classify()</tspan></text>
+<rect x="520" y="90" width="140" height="56" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="590" y="108" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="590" dy="16">Rules</tspan></text>
+<rect x="732" y="90" width="156" height="56" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="810" y="108" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="810" dy="16">Policy chain</tspan></text>
+<polyline points="150,219 370,219" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/><rect x="156" y="180" width="208" height="39" fill="#ffffff" opacity="0.85"/><text x="260" y="180" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="middle" fill="#1e1e1e"><tspan x="260" dy="14">classify(result, policy)</tspan><tspan x="260" dy="17.5">[T007, T020]</tspan></text>
+<polyline points="370,282 430,282 430,306 370,306" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/><rect x="435" y="278" width="174" height="39" fill="#ffffff" opacity="0.85"/><text x="522" y="278" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="middle" fill="#1e1e1e"><tspan x="522" dy="14">expected counts from</tspan><tspan x="522" dy="17.5">baseline [T004]</tspan></text>
+<polyline points="370,369 590,369" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/><rect x="368" y="330" width="225" height="39" fill="#ffffff" opacity="0.85"/><text x="480.5" y="330" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="middle" fill="#1e1e1e"><tspan x="480.5" dy="14">evaluate in severity order</tspan><tspan x="480.5" dy="17.5">[T008]</tspan></text>
+<polyline points="590,415 370,415" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)" stroke-dasharray="8 6"/><rect x="448" y="393" width="65" height="22" fill="#ffffff" opacity="0.85"/><text x="480.5" y="393" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="middle" fill="#1e1e1e"><tspan x="480.5" dy="14">outcome</tspan></text>
+<polyline points="370,478 810,478" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/><rect x="482" y="439" width="216" height="39" fill="#ffffff" opacity="0.85"/><text x="590" y="439" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="middle" fill="#1e1e1e"><tspan x="590" dy="14">identity → kind → default</tspan><tspan x="590" dy="17.5">[T013]</tspan></text>
+<polyline points="810,524 370,524" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)" stroke-dasharray="8 6"/><rect x="482" y="502" width="216" height="22" fill="#ffffff" opacity="0.85"/><text x="590" y="502" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="middle" fill="#1e1e1e"><tspan x="590" dy="14">pass | warn | fail [T011]</tspan></text>
+<polyline points="370,587 150,587" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)" stroke-dasharray="8 6"/><rect x="156" y="548" width="208" height="39" fill="#ffffff" opacity="0.85"/><text x="260" y="548" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="middle" fill="#1e1e1e"><tspan x="260" dy="14">verdict + explanations +</tspan><tspan x="260" dy="17.5">anomalies [T015, T017]</tspan></text>
+<text x="40" y="30" font-family="Helvetica, Arial, sans-serif" font-size="24" text-anchor="start" fill="#1e1e1e"><tspan x="40" dy="24">007 User workflow — from result to verdict</tspan></text>
+</svg>

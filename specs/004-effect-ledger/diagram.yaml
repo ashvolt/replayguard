@@ -1,0 +1,83 @@
+feature: 004-effect-ledger
+diagrams:
+  - kind: hld
+    title: "004 HLD — Effect ledger in context"
+    layout: flow
+    groups:
+      - { id: core, label: "@replayguard/core" }
+    nodes:
+      - { id: step, label: Workflow step, shape: ellipse }
+      - { id: inst, label: "instrument(fn)", group: core, tasks: [T012] }
+      - { id: user, label: User side-effect function, shape: ellipse }
+      - { id: ledger, label: EffectLedger, group: core, shape: database, tasks: [T011] }
+      - { id: hooks, label: "EffectHooks (faults)", group: core, tasks: [T023] }
+      - { id: obs, label: "Observers (reporters, relay)", tasks: [T021] }
+      - { id: snap, label: LedgerSnapshot, shape: database, tasks: [T009] }
+    edges:
+      - { from: step, to: inst, label: calls }
+      - { from: inst, to: user, label: invokes }
+      - { from: inst, to: ledger, label: records }
+      - { from: ledger, to: hooks, label: control flow }
+      - { from: ledger, to: obs, label: events }
+      - { from: ledger, to: snap }
+  - kind: lld
+    title: "004 LLD — core modules"
+    layout: flow
+    groups:
+      - { id: ports, label: ports }
+      - { id: led, label: ledger/ }
+      - { id: ins, label: instrument/ }
+    nodes:
+      - { id: index, label: index.ts barrel, tasks: [T001] }
+      - { id: errors, label: errors.ts, tasks: [T002, T003] }
+      - { id: clock, label: ports/clock.ts, group: ports, tasks: [T004, T005] }
+      - { id: canon, label: "canonical.ts (FNV-1a-64)", group: led, tasks: [T006, T007] }
+      - { id: types, label: types.ts, group: led, tasks: [T008] }
+      - { id: ledger, label: ledger.ts, group: led, tasks: [T009, T011, T017, T019, T022] }
+      - { id: queries, label: queries.ts, group: led, tasks: [T016, T018, T020] }
+      - { id: instr, label: instrument.ts, group: ins, tasks: [T010, T012, T013, T014, T015, T024] }
+      - { id: bench, label: overhead benchmark, group: ins, tasks: [T025] }
+    edges:
+      - { from: index, to: instr }
+      - { from: instr, to: ledger }
+      - { from: instr, to: canon }
+      - { from: instr, to: errors }
+      - { from: ledger, to: types }
+      - { from: ledger, to: clock }
+      - { from: ledger, to: queries }
+      - { from: bench, to: instr, style: dashed }
+  - kind: workflow
+    title: "004 User workflow — recording an attempt"
+    layout: sequence
+    actors:
+      - { id: step, label: Workflow step }
+      - { id: wrap, label: instrumented fn }
+      - { id: ledger, label: EffectLedger }
+      - { id: hooks, label: Fault hooks }
+      - { id: fn, label: User function }
+    messages:
+      - { from: step, to: wrap, label: "charge(orderId, amount)", tasks: [T010] }
+      - { from: wrap, to: ledger, label: "isRunDead? (CrashSignal if dead)", tasks: [T017] }
+      - { from: wrap, to: hooks, label: "beforeStart(pendingCall)", tasks: [T022] }
+      - { from: wrap, to: ledger, label: "attempt-started", tasks: [T021] }
+      - { from: wrap, to: hooks, label: "inFlight(attempt) — may await", tasks: [T023] }
+      - { from: wrap, to: fn, label: invoke }
+      - { from: fn, to: wrap, label: result / error, style: dashed }
+      - { from: wrap, to: ledger, label: "settle: applied | deduplicated | failed", tasks: [T014, T015] }
+      - { from: wrap, to: hooks, label: "afterSettle(attempt) — may throw", tasks: [T023] }
+      - { from: wrap, to: step, label: "original result / error", style: dashed, tasks: [T013] }
+  - kind: architecture
+    title: "004 Technical architecture — data and docs"
+    layout: flow
+    direction: TB
+    nodes:
+      - { id: snap, label: "LedgerSnapshot v1 (plain JSON)", shape: database, tasks: [T009] }
+      - { id: preview, label: "preview (opt-in, redacted)", shape: diamond, tasks: [T024] }
+      - { id: docs, label: "TSDoc + docs/concepts/effects.md", shape: package, tasks: [T026] }
+      - { id: yaml, label: diagram.yaml, shape: package, tasks: [T027] }
+      - { id: qs, label: quickstart validation, tasks: [T028] }
+    edges:
+      - { from: preview, to: snap }
+      - { from: snap, to: docs }
+      - { from: docs, to: qs }
+      - { from: yaml, to: docs, style: dashed }

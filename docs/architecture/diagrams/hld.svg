@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2031" height="964" viewBox="0 0 2031 964" role="img">
+<title>ReplayGuard — product HLD</title>
+<defs><marker id="rg-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1e1e1e"/></marker></defs>
+<rect width="2031" height="964" fill="#ffffff"/>
+<rect x="392" y="90" width="1271" height="366" rx="10" fill="none" stroke="#868e96" stroke-width="1" stroke-dasharray="8 6"/>
+<text x="402" y="96" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="start" fill="#868e96"><tspan x="402" dy="14">@replayguard/core (pure TS)</tspan></text>
+<rect x="1421" y="506" width="280" height="146" rx="10" fill="none" stroke="#868e96" stroke-width="1" stroke-dasharray="8 6"/>
+<text x="1431" y="512" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="start" fill="#868e96"><tspan x="1431" dy="14">Rivet (external)</tspan></text>
+<ellipse cx="180" cy="784" rx="116" ry="30" fill="#fff3bf" stroke="#1e1e1e" stroke-width="2"/>
+<text x="180" y="774" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="180" dy="16">Developer test suite</tspan></text>
+<rect x="416" y="257" width="213" height="60" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="522.5" y="277" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="522.5" dy="16">scenario() Builder</tspan></text>
+<rect x="749" y="252" width="204" height="70" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="851" y="267" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="851" dy="16">ScenarioRunner</tspan><tspan x="851" dy="20">(Template Method)</tspan></text>
+<rect x="1117" y="142" width="165" height="70" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="1199.5" y="157" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="1199.5" dy="16">FaultMatrix +</tspan><tspan x="1199.5" dy="20">discovery</tspan></text>
+<rect x="1107" y="262" width="184" height="60" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="1199" y="282" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="1199" dy="16">FaultStrategies</tspan></text>
+<rect x="1483" y="142" width="156" height="70" rx="14" fill="#d3f9d8" stroke="#1e1e1e" stroke-width="2"/><path d="M1483,154 Q1561,168 1639,154" fill="none" stroke="#1e1e1e" stroke-width="1.5"/>
+<text x="1561" y="157" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="1561" dy="16">EffectLedger</tspan><tspan x="1561" dy="20">(Observer)</tspan></text>
+<rect x="1088" y="372" width="223" height="60" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="1199.5" y="392" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="1199.5" dy="16">Classifier + Policy</tspan></text>
+<rect x="1491" y="262" width="140" height="60" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="1561" y="282" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="1561" dy="16">Fix hints</tspan></text>
+<rect x="1483" y="372" width="156" height="60" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="1561" y="392" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="1561" dy="16">Report model</tspan></text>
+<rect x="74" y="864" width="213" height="60" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="180.5" y="884" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="180.5" dy="16">@replayguard/fakes</tspan></text>
+<rect x="1073" y="804" width="252" height="70" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="1199" y="819" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="1199" dy="16">@replayguard/adapter-w</tspan><tspan x="1199" dy="20">orkflows</tspan></text>
+<rect x="1445" y="558" width="232" height="70" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="1561" y="573" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="1561" dy="16">@rivet-dev/workflows</tspan><tspan x="1561" dy="20">engine</tspan></text>
+<rect x="1797" y="804" width="194" height="70" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="1894" y="819" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="1894" dy="16">console · HTML ·</tspan><tspan x="1894" dy="20">vitest</tspan></text>
+<polyline points="201,754 502,317" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="629,287 749,287" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="953,255 1117,203" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="953,288 1107,291" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="873,322 1177,804" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/><rect x="959" y="524" width="132" height="39" fill="#ffffff" opacity="0.85"/><text x="1025" y="524" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="middle" fill="#1e1e1e"><tspan x="1025" dy="14">WorkflowRuntime</tspan><tspan x="1025" dy="17.5">port</tspan></text>
+<polyline points="1251,804 1509,628" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="238,864 1494,212" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/><rect x="834" y="516" width="65" height="22" fill="#ffffff" opacity="0.85"/><text x="866.5" y="516" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="middle" fill="#1e1e1e"><tspan x="866.5" dy="14">records</tspan></text>
+<polyline points="1291,263 1483,202" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/><rect x="1363" y="211" width="48" height="22" fill="#ffffff" opacity="0.85"/><text x="1387" y="211" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="middle" fill="#1e1e1e"><tspan x="1387" dy="14">hooks</tspan></text>
+<polyline points="953,321 1109,372" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="1298,372 1491,313" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="1311,402 1483,402" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="1584,432 1867,804" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<text x="40" y="30" font-family="Helvetica, Arial, sans-serif" font-size="24" text-anchor="start" fill="#1e1e1e"><tspan x="40" dy="24">ReplayGuard — product HLD</tspan></text>
+</svg>

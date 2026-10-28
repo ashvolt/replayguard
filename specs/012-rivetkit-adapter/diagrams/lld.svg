@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1394" height="552" viewBox="0 0 1394 552" role="img">
+<title>012 LLD — modules</title>
+<defs><marker id="rg-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1e1e1e"/></marker></defs>
+<rect width="1394" height="552" fill="#ffffff"/>
+<rect x="74" y="132" width="60" height="12" fill="#f3f0ff" stroke="#1e1e1e" stroke-width="2"/><rect x="74" y="142" width="232" height="90" fill="#f3f0ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="190" y="157" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="190" dy="16">package.json (peers</tspan><tspan x="190" dy="20">rivetkit, workflows)</tspan><tspan x="190" dy="20">[T001]</tspan></text>
+<rect x="64" y="272" width="60" height="12" fill="#f3f0ff" stroke="#1e1e1e" stroke-width="2"/><rect x="64" y="282" width="252" height="90" fill="#f3f0ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="190" y="297" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="190" dy="16">spikes/actor-restart/F</tspan><tspan x="190" dy="20">INDINGS.md</tspan><tspan x="190" dy="20">[T002]</tspan></text>
+<rect x="1141" y="292" width="213" height="70" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="1247.5" y="307" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="1247.5" dy="16">host/host-entry.ts</tspan><tspan x="1247.5" dy="20">[T006]</tspan></text>
+<rect x="808" y="292" width="213" height="70" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="914.5" y="307" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="914.5" dy="16">host/actor-host.ts</tspan><tspan x="914.5" dy="20">[T005, T007, T011]</tspan></text>
+<rect x="492" y="212" width="140" height="70" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="562" y="227" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="562" dy="16">runtime.ts</tspan><tspan x="562" dy="20">[T008]</tspan></text>
+<rect x="436" y="332" width="252" height="110" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="562" y="347" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="562" dy="16">adapter-workflows/test</tspan><tspan x="562" dy="20">-support/conformance.t</tspan><tspan x="562" dy="20">s</tspan><tspan x="562" dy="20">[T003, T004]</tspan></text>
+<rect x="64" y="422" width="252" height="90" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="190" y="437" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="190" dy="16">conformance.actor.test</tspan><tspan x="190" dy="20">.ts</tspan><tspan x="190" dy="20">[T009]</tspan></text>
+<polyline points="632,263 808,303" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="1021,327 1141,327" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/><rect x="1057" y="305" width="48" height="22" fill="#ffffff" opacity="0.85"/><text x="1081" y="305" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="middle" fill="#1e1e1e"><tspan x="1081" dy="14">spawn</tspan></text>
+<polyline points="316,440 436,414" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="316,327 808,327" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)" stroke-dasharray="8 6"/><rect x="483" y="305" width="158" height="22" fill="#ffffff" opacity="0.85"/><text x="562" y="305" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="middle" fill="#1e1e1e"><tspan x="562" dy="14">decides kill model</tspan></text>
+<polyline points="306,206 492,236" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)" stroke-dasharray="8 6"/>
+<text x="40" y="30" font-family="Helvetica, Arial, sans-serif" font-size="24" text-anchor="start" fill="#1e1e1e"><tspan x="40" dy="24">012 LLD — modules</tspan></text>
+</svg>

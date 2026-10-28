@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1242" height="632" viewBox="0 0 1242 632" role="img">
+<title>ReplayGuard — package dependencies (allowed edges)</title>
+<defs><marker id="rg-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1e1e1e"/></marker></defs>
+<rect width="1242" height="632" fill="#ffffff"/>
+<rect x="64" y="137" width="60" height="12" fill="#f3f0ff" stroke="#1e1e1e" stroke-width="2"/><rect x="64" y="147" width="232" height="60" fill="#f3f0ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="180" y="167" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="180" dy="16">replayguard (facade)</tspan></text>
+<rect x="122" y="327" width="60" height="12" fill="#f3f0ff" stroke="#1e1e1e" stroke-width="2"/><rect x="122" y="337" width="223" height="60" fill="#f3f0ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="233.5" y="357" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="233.5" dy="16">@replayguard/vitest</tspan></text>
+<rect x="346" y="132" width="60" height="12" fill="#f3f0ff" stroke="#1e1e1e" stroke-width="2"/><rect x="346" y="142" width="252" height="70" fill="#f3f0ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="472" y="157" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="472" dy="16">@replayguard/reporter-</tspan><tspan x="472" dy="20">console</tspan></text>
+<rect x="648" y="132" width="60" height="12" fill="#f3f0ff" stroke="#1e1e1e" stroke-width="2"/><rect x="648" y="142" width="252" height="70" fill="#f3f0ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="774" y="157" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="774" dy="16">@replayguard/reporter-</tspan><tspan x="774" dy="20">html</tspan></text>
+<rect x="395" y="327" width="60" height="12" fill="#f3f0ff" stroke="#1e1e1e" stroke-width="2"/><rect x="395" y="337" width="213" height="60" fill="#f3f0ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="501.5" y="357" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="501.5" dy="16">@replayguard/fakes</tspan></text>
+<rect x="950" y="132" width="60" height="12" fill="#f3f0ff" stroke="#1e1e1e" stroke-width="2"/><rect x="950" y="142" width="252" height="70" fill="#f3f0ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="1076" y="157" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="1076" dy="16">@replayguard/adapter-r</tspan><tspan x="1076" dy="20">ivetkit</tspan></text>
+<rect x="658" y="322" width="60" height="12" fill="#f3f0ff" stroke="#1e1e1e" stroke-width="2"/><rect x="658" y="332" width="252" height="70" fill="#f3f0ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="784" y="347" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="784" dy="16">@replayguard/adapter-w</tspan><tspan x="784" dy="20">orkflows</tspan></text>
+<rect x="390" y="517" width="60" height="12" fill="#f3f0ff" stroke="#1e1e1e" stroke-width="2"/><rect x="390" y="527" width="204" height="60" fill="#f3f0ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="492" y="547" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="492" dy="16">@replayguard/core</tspan></text>
+<rect x="644" y="522" width="232" height="70" rx="14" fill="#d3f9d8" stroke="#1e1e1e" stroke-width="2"/><path d="M644,534 Q760,548 876,534" fill="none" stroke="#1e1e1e" stroke-width="1.5"/>
+<text x="760" y="537" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="760" dy="16">@rivet-dev/workflows</tspan><tspan x="760" dy="20">(peer)</tspan></text>
+<rect x="960" y="337" width="184" height="60" rx="14" fill="#d3f9d8" stroke="#1e1e1e" stroke-width="2"/><path d="M960,349 Q1052,363 1144,349" fill="none" stroke="#1e1e1e" stroke-width="1.5"/>
+<text x="1052" y="357" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="1052" dy="16">rivetkit (peer)</tspan></text>
+<polyline points="205,207 467,527" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="231,207 451,337" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="188,207 225,337" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="274,397 451,527" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="474,212 490,527" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="748,212 514,527" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="500,397 494,527" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="1022,212 838,332" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="1022,212 538,527" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="1072,212 1056,337" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)" stroke-dasharray="8 6"/>
+<polyline points="730,402 538,527" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="780,402 764,522" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)" stroke-dasharray="8 6"/>
+<text x="40" y="30" font-family="Helvetica, Arial, sans-serif" font-size="24" text-anchor="start" fill="#1e1e1e"><tspan x="40" dy="24">ReplayGuard — package dependencies (allowed edges)</tspan></text>
+</svg>

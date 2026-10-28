@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1699" height="382" viewBox="0 0 1699 382" role="img">
+<title>012 HLD — RivetKit actor runtime</title>
+<defs><marker id="rg-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1e1e1e"/></marker></defs>
+<rect width="1699" height="382" fill="#ffffff"/>
+<ellipse cx="175.5" cy="172" rx="87.5" ry="30" fill="#fff3bf" stroke="#1e1e1e" stroke-width="2"/>
+<text x="175.5" y="162" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="175.5" dy="16">ScenarioRunner</tspan></text>
+<rect x="407" y="207" width="204" height="70" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="509" y="222" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="509" dy="16">rivetkitRuntime()</tspan><tspan x="509" dy="20">[T008]</tspan></text>
+<rect x="731" y="197" width="204" height="90" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="833" y="212" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="833" dy="16">ActorHost (parent</tspan><tspan x="833" dy="20">side)</tspan><tspan x="833" dy="20">[T007]</tspan></text>
+<rect x="1055" y="197" width="252" height="90" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="1181" y="212" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="1181" dy="16">Host process: registry</tspan><tspan x="1181" dy="20">+ workflow actor</tspan><tspan x="1181" dy="20">[T006]</tspan></text>
+<rect x="1427" y="212" width="232" height="60" rx="14" fill="#d3f9d8" stroke="#1e1e1e" stroke-width="2"/><path d="M1427,224 Q1543,238 1659,224" fill="none" stroke="#1e1e1e" stroke-width="1.5"/>
+<text x="1543" y="232" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="1543" dy="16">Rivet engine (local)</tspan></text>
+<polygon points="175.5,252 287,297 175.5,342 64,297" fill="#ffe3e3" stroke="#1e1e1e" stroke-width="2"/>
+<text x="175.5" y="267" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="175.5" dy="16">Runtime conformance</tspan><tspan x="175.5" dy="20">suite</tspan><tspan x="175.5" dy="20">[T003]</tspan></text>
+<polyline points="263,190 407,221" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/><rect x="269" y="184" width="132" height="22" fill="#ffffff" opacity="0.85"/><text x="335" y="184" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="middle" fill="#1e1e1e"><tspan x="335" dy="14">WorkflowRuntime</tspan></text>
+<polyline points="611,242 731,242" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="935,242 1055,242" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/><rect x="933" y="203" width="124" height="39" fill="#ffffff" opacity="0.85"/><text x="995" y="203" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="middle" fill="#1e1e1e"><tspan x="995" dy="14">start / kill /</tspan><tspan x="995" dy="17.5">restart</tspan></text>
+<polyline points="1307,242 1427,242" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="287,279 407,259" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)" stroke-dasharray="8 6"/>
+<text x="40" y="30" font-family="Helvetica, Arial, sans-serif" font-size="24" text-anchor="start" fill="#1e1e1e"><tspan x="40" dy="24">012 HLD — RivetKit actor runtime</tspan></text>
+</svg>

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1392" height="694" viewBox="0 0 1392 694" role="img">
+<title>009 User workflow — read results</title>
+<defs><marker id="rg-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1e1e1e"/></marker></defs>
+<rect width="1392" height="694" fill="#ffffff"/>
+<polyline points="150,146 150,654" fill="none" stroke="#868e96" stroke-width="1" stroke-dasharray="8 6"/>
+<polyline points="373,146 373,654" fill="none" stroke="#868e96" stroke-width="1" stroke-dasharray="8 6"/>
+<polyline points="612,146 612,654" fill="none" stroke="#868e96" stroke-width="1" stroke-dasharray="8 6"/>
+<polyline points="852,146 852,654" fill="none" stroke="#868e96" stroke-width="1" stroke-dasharray="8 6"/>
+<polyline points="1074,146 1074,654" fill="none" stroke="#868e96" stroke-width="1" stroke-dasharray="8 6"/>
+<rect x="80" y="90" width="140" height="56" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="150" y="108" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="150" dy="16">Developer</tspan></text>
+<rect x="291" y="90" width="165" height="56" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="373.5" y="108" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="373.5" dy="16">buildReport()</tspan></text>
+<rect x="515" y="90" width="194" height="56" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="612" y="108" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="612" dy="16">Console reporter</tspan></text>
+<rect x="770" y="90" width="165" height="56" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="852.5" y="108" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="852.5" dy="16">HTML reporter</tspan></text>
+<rect x="1004" y="90" width="140" height="56" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="1074" y="108" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="1074" dy="16">Browser</tspan></text>
+<polyline points="150,219 373,219" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/><rect x="141" y="180" width="242" height="39" fill="#ffffff" opacity="0.85"/><text x="262" y="180" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="middle" fill="#1e1e1e"><tspan x="262" dy="14">buildReport(classify(result)</tspan><tspan x="262" dy="17.5">) [T006]</tspan></text>
+<polyline points="373,282 150,282" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)" stroke-dasharray="8 6"/><rect x="162" y="243" width="200" height="39" fill="#ffffff" opacity="0.85"/><text x="262" y="243" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="middle" fill="#1e1e1e"><tspan x="262" dy="14">Report (JSON round-trip</tspan><tspan x="262" dy="17.5">safe) [T007]</tspan></text>
+<polyline points="150,328 612,328" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/><rect x="260" y="306" width="242" height="22" fill="#ffffff" opacity="0.85"/><text x="381" y="306" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="middle" fill="#1e1e1e"><tspan x="381" dy="14">renderConsole(report) [T015]</tspan></text>
+<polyline points="612,391 150,391" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)" stroke-dasharray="8 6"/><rect x="290" y="352" width="183" height="39" fill="#ffffff" opacity="0.85"/><text x="381.5" y="352" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="middle" fill="#1e1e1e"><tspan x="381.5" dy="14">table: failing rows +</tspan><tspan x="381.5" dy="17.5">explanations</tspan></text>
+<polyline points="150,454 852,454" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/><rect x="401" y="415" width="200" height="39" fill="#ffffff" opacity="0.85"/><text x="501" y="415" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="middle" fill="#1e1e1e"><tspan x="501" dy="14">writeHtmlReport(report,</tspan><tspan x="501" dy="17.5">path) [T022]</tspan></text>
+<polyline points="150,517 1074,517" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/><rect x="521" y="478" width="183" height="39" fill="#ffffff" opacity="0.85"/><text x="612.5" y="478" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="middle" fill="#1e1e1e"><tspan x="612.5" dy="14">open single-file HTML</tspan><tspan x="612.5" dy="17.5">offline</tspan></text>
+<polyline points="1074,580 1134,580 1134,604 1074,604" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/><rect x="1139" y="576" width="216" height="39" fill="#ffffff" opacity="0.85"/><text x="1247" y="576" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="middle" fill="#1e1e1e"><tspan x="1247" dy="14">filter by verdict/outcome</tspan><tspan x="1247" dy="17.5">(keyboard) [T018]</tspan></text>
+<text x="40" y="30" font-family="Helvetica, Arial, sans-serif" font-size="24" text-anchor="start" fill="#1e1e1e"><tspan x="40" dy="24">009 User workflow — read results</tspan></text>
+</svg>

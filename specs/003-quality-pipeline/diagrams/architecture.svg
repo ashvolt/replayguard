@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="887" height="792" viewBox="0 0 887 792" role="img">
+<title>003 Technical architecture — repository governance files</title>
+<defs><marker id="rg-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1e1e1e"/></marker></defs>
+<rect width="887" height="792" fill="#ffffff"/>
+<rect x="74" y="132" width="60" height="12" fill="#f3f0ff" stroke="#1e1e1e" stroke-width="2"/><rect x="74" y="142" width="232" height="90" fill="#f3f0ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="190" y="157" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="190" dy="16">renovate.json (7-day</tspan><tspan x="190" dy="20">age, pinned actions)</tspan><tspan x="190" dy="20">[T021]</tspan></text>
+<rect x="120" y="272" width="46.666666666666664" height="12" fill="#f3f0ff" stroke="#1e1e1e" stroke-width="2"/><rect x="120" y="282" width="140" height="70" fill="#f3f0ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="190" y="297" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="190" dy="16">CODEOWNERS</tspan><tspan x="190" dy="20">[T022]</tspan></text>
+<rect x="88" y="392" width="60" height="12" fill="#f3f0ff" stroke="#1e1e1e" stroke-width="2"/><rect x="88" y="402" width="204" height="90" fill="#f3f0ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="190" y="417" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="190" dy="16">CONTRIBUTING.md +</tspan><tspan x="190" dy="20">SECURITY.md</tspan><tspan x="190" dy="20">[T013]</tspan></text>
+<rect x="64" y="532" width="60" height="12" fill="#f3f0ff" stroke="#1e1e1e" stroke-width="2"/><rect x="64" y="542" width="252" height="90" fill="#f3f0ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="190" y="557" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="190" dy="16">docs/maintainers/relea</tspan><tspan x="190" dy="20">sing.md</tspan><tspan x="190" dy="20">[T027]</tspan></text>
+<rect x="478" y="457" width="46.666666666666664" height="12" fill="#f3f0ff" stroke="#1e1e1e" stroke-width="2"/><rect x="478" y="467" width="140" height="70" fill="#f3f0ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="548" y="482" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="548" dy="16">README.md</tspan><tspan x="548" dy="20">[T030]</tspan></text>
+<rect x="112" y="672" width="52" height="12" fill="#f3f0ff" stroke="#1e1e1e" stroke-width="2"/><rect x="112" y="682" width="156" height="70" fill="#f3f0ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="190" y="697" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="190" dy="16">diagram.yaml</tspan><tspan x="190" dy="20">[T031]</tspan></text>
+<rect x="436" y="357" width="223" height="60" rx="14" fill="#d3f9d8" stroke="#1e1e1e" stroke-width="2"/><path d="M436,369 Q547.5,383 659,369" fill="none" stroke="#1e1e1e" stroke-width="1.5"/>
+<text x="547.5" y="377" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="547.5" dy="16">.github/workflows/*</tspan></text>
+<polyline points="270,232 494,357" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/><rect x="337" y="273" width="90" height="22" fill="#ffffff" opacity="0.85"/><text x="382" y="273" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="middle" fill="#1e1e1e"><tspan x="382" dy="14">bumps SHAs</tspan></text>
+<polyline points="260,331 436,365" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/><rect x="320" y="326" width="57" height="22" fill="#ffffff" opacity="0.85"/><text x="348.5" y="326" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="middle" fill="#1e1e1e"><tspan x="348.5" dy="14">review</tspan></text>
+<polyline points="292,463 478,491" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="270,542 494,417" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="248,682 490,537" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)" stroke-dasharray="8 6"/>
+<text x="40" y="30" font-family="Helvetica, Arial, sans-serif" font-size="24" text-anchor="start" fill="#1e1e1e"><tspan x="40" dy="24">003 Technical architecture — repository governance files</tspan></text>
+</svg>

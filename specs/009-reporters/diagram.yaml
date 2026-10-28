@@ -1,0 +1,83 @@
+feature: 009-reporters
+diagrams:
+  - kind: hld
+    title: "009 HLD — Report model and reporters"
+    layout: flow
+    groups:
+      - { id: core, label: "@replayguard/core/report" }
+    nodes:
+      - { id: cls, label: ClassifiedResult, shape: database }
+      - { id: build, label: "buildReport()", group: core, tasks: [T008] }
+      - { id: model, label: Report v1 (schema), group: core, shape: database, tasks: [T003] }
+      - { id: json, label: "reportToJson / parseReport", group: core, tasks: [T009] }
+      - { id: visitor, label: "ReportVisitor + walkReport", group: core, tasks: [T004, T005] }
+      - { id: console, label: "@replayguard/reporter-console", shape: package, tasks: [T015] }
+      - { id: html, label: "@replayguard/reporter-html", shape: package, tasks: [T022] }
+    edges:
+      - { from: cls, to: build }
+      - { from: build, to: model }
+      - { from: model, to: json }
+      - { from: model, to: visitor }
+      - { from: visitor, to: console }
+      - { from: visitor, to: html }
+  - kind: lld
+    title: "009 LLD — reporter modules"
+    layout: flow
+    groups:
+      - { id: rc, label: reporter-console }
+      - { id: rh, label: reporter-html }
+    nodes:
+      - { id: barrel, label: core report/index.ts, tasks: [T001] }
+      - { id: deps, label: reporter package.json, shape: package, tasks: [T002] }
+      - { id: table, label: table.ts, group: rc, tasks: [T010, T013] }
+      - { id: color, label: color.ts (NO_COLOR), group: rc, tasks: [T011, T014] }
+      - { id: crender, label: render golden tests, group: rc, tasks: [T012] }
+      - { id: esc, label: "html.ts (escaping template)", group: rh, tasks: [T016, T019] }
+      - { id: tl, label: timeline.ts (inline SVG), group: rh, tasks: [T017, T020] }
+      - { id: assets, label: "assets.ts + csp.ts (sha256)", group: rh, tasks: [T021] }
+      - { id: hrender, label: document tests, group: rh, tasks: [T018] }
+    edges:
+      - { from: barrel, to: table }
+      - { from: barrel, to: esc }
+      - { from: table, to: color }
+      - { from: crender, to: table, style: dashed }
+      - { from: tl, to: esc }
+      - { from: assets, to: esc }
+      - { from: hrender, to: assets, style: dashed }
+      - { from: deps, to: barrel, style: dashed }
+  - kind: workflow
+    title: "009 User workflow — read results"
+    layout: sequence
+    actors:
+      - { id: dev, label: Developer }
+      - { id: core, label: "buildReport()" }
+      - { id: con, label: Console reporter }
+      - { id: html, label: HTML reporter }
+      - { id: br, label: Browser }
+    messages:
+      - { from: dev, to: core, label: "buildReport(classify(result))", tasks: [T006] }
+      - { from: core, to: dev, label: "Report (JSON round-trip safe)", style: dashed, tasks: [T007] }
+      - { from: dev, to: con, label: "renderConsole(report)", tasks: [T015] }
+      - { from: con, to: dev, label: "table: failing rows + explanations", style: dashed }
+      - { from: dev, to: html, label: "writeHtmlReport(report, path)", tasks: [T022] }
+      - { from: dev, to: br, label: open single-file HTML offline }
+      - { from: br, to: br, label: "filter by verdict/outcome (keyboard)", tasks: [T018] }
+  - kind: architecture
+    title: "009 Technical architecture — HTML security model"
+    layout: flow
+    direction: TB
+    nodes:
+      - { id: html, label: report.html (single file) }
+      - { id: csp, label: "CSP default-src 'none' + hashes", shape: diamond, tasks: [T021] }
+      - { id: data, label: "JSON data block (\\u003c escaped)", shape: database, tasks: [T019] }
+      - { id: svg, label: inline SVG timelines, tasks: [T020] }
+      - { id: perf, label: "100 cases < 1 MB / 200 ms", tasks: [T023] }
+      - { id: docs, label: docs/reporters/README.md, shape: package, tasks: [T024] }
+      - { id: yaml, label: "diagram.yaml + quickstart", shape: package, tasks: [T025, T026] }
+    edges:
+      - { from: html, to: csp }
+      - { from: html, to: data }
+      - { from: html, to: svg }
+      - { from: perf, to: html, style: dashed }
+      - { from: docs, to: html, style: dashed }
+      - { from: yaml, to: docs, style: dashed }

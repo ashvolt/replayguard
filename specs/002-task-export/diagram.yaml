@@ -1,0 +1,102 @@
+feature: 002-task-export
+diagrams:
+  - kind: hld
+    title: "002 HLD — Backlog export to trackers"
+    layout: flow
+    nodes:
+      - { id: specs, label: "specs/*/spec.md + tasks.md", shape: package }
+      - { id: tool, label: rg-export, tasks: [T001, T013] }
+      - { id: model, label: Backlog model (Epic→Story→Sub-task), shape: database, tasks: [T009] }
+      - { id: jcsv, label: exports/jira.csv, shape: package, tasks: [T012] }
+      - { id: jjson, label: exports/jira.json, shape: package, tasks: [T017] }
+      - { id: gh, label: exports/github-issues.json, shape: package, tasks: [T022] }
+      - { id: gcsv, label: exports/backlog.csv, shape: package, tasks: [T026] }
+      - { id: jira, label: Jira Cloud, shape: ellipse, tasks: [T019] }
+      - { id: github, label: GitHub Issues, shape: ellipse, tasks: [T023] }
+      - { id: linear, label: "Linear / Azure Boards", shape: ellipse }
+    edges:
+      - { from: specs, to: tool, label: parse }
+      - { from: tool, to: model }
+      - { from: model, to: jcsv }
+      - { from: model, to: jjson }
+      - { from: model, to: gh }
+      - { from: model, to: gcsv }
+      - { from: jcsv, to: jira, label: CSV import }
+      - { from: jjson, to: jira, label: REST --apply }
+      - { from: gh, to: github, label: gh --apply }
+      - { from: gcsv, to: linear, label: CSV import }
+  - kind: lld
+    title: "002 LLD — tools/export modules"
+    layout: flow
+    groups:
+      - { id: parse, label: parse }
+      - { id: render, label: "renderers (Strategy)" }
+      - { id: import, label: "importers (Template Method)" }
+    nodes:
+      - { id: cli, label: cli.ts, tasks: [T013, T020, T024] }
+      - { id: pspec, label: parse/spec.ts, group: parse, tasks: [T005, T007] }
+      - { id: ptasks, label: parse/tasks.ts, group: parse, tasks: [T006, T008] }
+      - { id: model, label: model.ts, shape: database, tasks: [T009, T014] }
+      - { id: csv, label: render/csv.ts (RFC 4180), group: render, tasks: [T010] }
+      - { id: rjcsv, label: render/jira-csv.ts, group: render, tasks: [T011, T012] }
+      - { id: rjjson, label: render/jira-json.ts, group: render, tasks: [T015, T017] }
+      - { id: rgh, label: render/github.ts, group: render, tasks: [T021, T022] }
+      - { id: rgen, label: render/generic-csv.ts, group: render, tasks: [T025, T026] }
+      - { id: imp, label: import/importer.ts + state.ts, group: import, tasks: [T016, T018] }
+      - { id: ijira, label: "import/jira.ts (HttpPort)", group: import, tasks: [T019] }
+      - { id: igh, label: "import/github.ts (CommandPort)", group: import, tasks: [T023] }
+    edges:
+      - { from: cli, to: pspec }
+      - { from: cli, to: ptasks }
+      - { from: pspec, to: model }
+      - { from: ptasks, to: model }
+      - { from: model, to: rjcsv }
+      - { from: model, to: rjjson }
+      - { from: model, to: rgh }
+      - { from: model, to: rgen }
+      - { from: rjcsv, to: csv }
+      - { from: rgen, to: csv }
+      - { from: cli, to: imp }
+      - { from: ijira, to: imp, label: extends, style: dashed }
+      - { from: igh, to: imp, label: extends, style: dashed }
+  - kind: workflow
+    title: "002 User workflow — export and import"
+    layout: sequence
+    actors:
+      - { id: lead, label: Project lead }
+      - { id: tool, label: rg-export }
+      - { id: state, label: .export-state }
+      - { id: jira, label: Jira }
+      - { id: gh, label: GitHub }
+    messages:
+      - { from: lead, to: tool, label: "pnpm export:generate", tasks: [T004, T013] }
+      - { from: tool, to: lead, label: "exports/*.csv|json", style: dashed, tasks: [T030] }
+      - { from: lead, to: jira, label: "upload jira.csv (no credentials)", tasks: [T011] }
+      - { from: lead, to: tool, label: "import-jira (dry run)", tasks: [T020] }
+      - { from: tool, to: lead, label: planned creates, style: dashed, tasks: [T016] }
+      - { from: lead, to: tool, label: "import-jira --apply", tasks: [T019] }
+      - { from: tool, to: jira, label: "create Epic → Story → Sub-task", tasks: [T018] }
+      - { from: tool, to: state, label: "record source ID → key", tasks: [T018] }
+      - { from: lead, to: tool, label: "import-github --apply", tasks: [T024] }
+      - { from: tool, to: gh, label: "gh issue create (skip existing)", tasks: [T023] }
+  - kind: architecture
+    title: "002 Technical architecture"
+    layout: flow
+    direction: TB
+    nodes:
+      - { id: root, label: root scripts export:*, shape: package, tasks: [T004] }
+      - { id: pkg, label: "@replayguard-tools/export (private)", shape: package, tasks: [T001] }
+      - { id: ts, label: tsconfig (erasable), tasks: [T002] }
+      - { id: vt, label: Vitest + fast-check, tasks: [T003, T028] }
+      - { id: env, label: "env: JIRA_* (never logged)", shape: diamond }
+      - { id: ghcli, label: "gh CLI (execFile, no shell)", shape: ellipse }
+      - { id: readme, label: README import guides, shape: package, tasks: [T027] }
+      - { id: yaml, label: diagram.yaml, shape: package, tasks: [T029] }
+    edges:
+      - { from: root, to: pkg }
+      - { from: pkg, to: ts }
+      - { from: pkg, to: vt }
+      - { from: pkg, to: env, style: dashed }
+      - { from: pkg, to: ghcli, style: dashed }
+      - { from: pkg, to: readme }
+      - { from: pkg, to: yaml }

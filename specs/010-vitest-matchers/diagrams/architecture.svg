@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="993" height="412" viewBox="0 0 993 412" role="img">
+<title>010 Technical architecture — compatibility</title>
+<defs><marker id="rg-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1e1e1e"/></marker></defs>
+<rect width="993" height="412" fill="#ffffff"/>
+<rect x="64" y="142" width="194" height="90" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="161" y="157" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="161" dy="16">CI job: previous</tspan><tspan x="161" dy="20">Vitest major</tspan><tspan x="161" dy="20">[T013]</tspan></text>
+<polygon points="846.5,227 953,257 846.5,287 740,257" fill="#ffe3e3" stroke="#1e1e1e" stroke-width="2"/>
+<text x="846.5" y="247" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="846.5" dy="16">peer vitest &gt;=4 &lt;6</tspan></text>
+<rect x="378" y="212" width="60" height="12" fill="#f3f0ff" stroke="#1e1e1e" stroke-width="2"/><rect x="378" y="222" width="242" height="70" fill="#f3f0ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="499" y="237" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="499" dy="16">docs/vitest/README.md</tspan><tspan x="499" dy="20">[T014]</tspan></text>
+<rect x="74" y="272" width="58.333333333333336" height="12" fill="#f3f0ff" stroke="#1e1e1e" stroke-width="2"/><rect x="74" y="282" width="175" height="90" fill="#f3f0ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="161.5" y="297" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="161.5" dy="16">diagram.yaml +</tspan><tspan x="161.5" dy="20">quickstart</tspan><tspan x="161.5" dy="20">[T015, T016]</tspan></text>
+<polyline points="258,197 740,246" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="620,257 740,257" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)" stroke-dasharray="8 6"/>
+<polyline points="249,309 378,282" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)" stroke-dasharray="8 6"/>
+<text x="40" y="30" font-family="Helvetica, Arial, sans-serif" font-size="24" text-anchor="start" fill="#1e1e1e"><tspan x="40" dy="24">010 Technical architecture — compatibility</tspan></text>
+</svg>

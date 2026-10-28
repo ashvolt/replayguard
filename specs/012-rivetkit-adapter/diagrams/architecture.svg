@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="552" viewBox="0 0 1100 552" role="img">
+<title>012 Technical architecture — CI and cleanup</title>
+<defs><marker id="rg-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1e1e1e"/></marker></defs>
+<rect width="1100" height="552" fill="#ffffff"/>
+<rect x="69" y="142" width="242" height="90" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="190" y="157" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="190" dy="16">CI: rivetkit 2.3.11 +</tspan><tspan x="190" dy="20">latest 2.3.x</tspan><tspan x="190" dy="20">[T012]</tspan></text>
+<rect x="64" y="282" width="252" height="90" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="190" y="297" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="190" dy="16">leak check (processes,</tspan><tspan x="190" dy="20">dirs)</tspan><tspan x="190" dy="20">[T013]</tspan></text>
+<rect x="436" y="272" width="60" height="12" fill="#f3f0ff" stroke="#1e1e1e" stroke-width="2"/><rect x="436" y="282" width="252" height="90" fill="#f3f0ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="562" y="297" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="562" dy="16">docs/guides/rivetkit-a</tspan><tspan x="562" dy="20">ctors.md</tspan><tspan x="562" dy="20">[T014]</tspan></text>
+<rect x="103" y="412" width="58.333333333333336" height="12" fill="#f3f0ff" stroke="#1e1e1e" stroke-width="2"/><rect x="103" y="422" width="175" height="90" fill="#f3f0ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="190.5" y="437" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="190.5" dy="16">diagram.yaml +</tspan><tspan x="190.5" dy="20">quickstart</tspan><tspan x="190.5" dy="20">[T015, T016]</tspan></text>
+<rect x="808" y="282" width="60" height="12" fill="#f3f0ff" stroke="#1e1e1e" stroke-width="2"/><rect x="808" y="292" width="252" height="70" fill="#f3f0ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="934" y="307" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="934" dy="16">@replayguard/adapter-r</tspan><tspan x="934" dy="20">ivetkit</tspan></text>
+<polyline points="311,210 808,303" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="316,327 808,327" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="688,327 808,327" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)" stroke-dasharray="8 6"/>
+<polyline points="278,434 443,372" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)" stroke-dasharray="8 6"/>
+<text x="40" y="30" font-family="Helvetica, Arial, sans-serif" font-size="24" text-anchor="start" fill="#1e1e1e"><tspan x="40" dy="24">012 Technical architecture — CI and cleanup</tspan></text>
+</svg>

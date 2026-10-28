@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1259" height="588" viewBox="0 0 1259 588" role="img">
+<title>004 HLD — Effect ledger in context</title>
+<defs><marker id="rg-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1e1e1e"/></marker></defs>
+<rect width="1259" height="588" fill="#ffffff"/>
+<rect x="325" y="90" width="894" height="146" rx="10" fill="none" stroke="#868e96" stroke-width="1" stroke-dasharray="8 6"/>
+<text x="335" y="96" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="start" fill="#868e96"><tspan x="335" dy="14">@replayguard/core</tspan></text>
+<ellipse cx="146.5" cy="443" rx="82.5" ry="30" fill="#fff3bf" stroke="#1e1e1e" stroke-width="2"/>
+<text x="146.5" y="433" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="146.5" dy="16">Workflow step</tspan></text>
+<rect x="349" y="142" width="175" height="70" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="436.5" y="157" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="436.5" dy="16">instrument(fn)</tspan><tspan x="436.5" dy="20">[T012]</tspan></text>
+<ellipse cx="741" cy="443" rx="97" ry="35" fill="#fff3bf" stroke="#1e1e1e" stroke-width="2"/>
+<text x="741" y="423" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="741" dy="16">User side-effect</tspan><tspan x="741" dy="20">function</tspan></text>
+<rect x="663" y="142" width="156" height="70" rx="14" fill="#d3f9d8" stroke="#1e1e1e" stroke-width="2"/><path d="M663,154 Q741,168 819,154" fill="none" stroke="#1e1e1e" stroke-width="1.5"/>
+<text x="741" y="157" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="741" dy="16">EffectLedger</tspan><tspan x="741" dy="20">[T011]</tspan></text>
+<rect x="963" y="142" width="232" height="70" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="1079" y="157" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="1079" dy="16">EffectHooks (faults)</tspan><tspan x="1079" dy="20">[T023]</tspan></text>
+<rect x="958" y="338" width="242" height="90" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="1079" y="353" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="1079" dy="16">Observers (reporters,</tspan><tspan x="1079" dy="20">relay)</tspan><tspan x="1079" dy="20">[T021]</tspan></text>
+<rect x="992" y="478" width="175" height="70" rx="14" fill="#d3f9d8" stroke="#1e1e1e" stroke-width="2"/><path d="M992,490 Q1079.5,504 1167,490" fill="none" stroke="#1e1e1e" stroke-width="1.5"/>
+<text x="1079.5" y="493" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="1079.5" dy="16">LedgerSnapshot</tspan><tspan x="1079.5" dy="20">[T009]</tspan></text>
+<polyline points="179,413 398,212" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/><rect x="265" y="291" width="48" height="22" fill="#ffffff" opacity="0.85"/><text x="289" y="291" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="middle" fill="#1e1e1e"><tspan x="289" dy="14">calls</tspan></text>
+<polyline points="477,212 701,408" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/><rect x="557" y="288" width="65" height="22" fill="#ffffff" opacity="0.85"/><text x="589.5" y="288" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="middle" fill="#1e1e1e"><tspan x="589.5" dy="14">invokes</tspan></text>
+<polyline points="524,177 663,177" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/><rect x="561" y="155" width="65" height="22" fill="#ffffff" opacity="0.85"/><text x="593.5" y="155" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="middle" fill="#1e1e1e"><tspan x="593.5" dy="14">records</tspan></text>
+<polyline points="819,177 963,177" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/><rect x="838" y="155" width="107" height="22" fill="#ffffff" opacity="0.85"/><text x="891.5" y="155" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="middle" fill="#1e1e1e"><tspan x="891.5" dy="14">control flow</tspan></text>
+<polyline points="798,212 1005,338" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/><rect x="873" y="253" width="57" height="22" fill="#ffffff" opacity="0.85"/><text x="901.5" y="253" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="middle" fill="#1e1e1e"><tspan x="901.5" dy="14">events</tspan></text>
+<polyline points="776,212 1044,478" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<text x="40" y="30" font-family="Helvetica, Arial, sans-serif" font-size="24" text-anchor="start" fill="#1e1e1e"><tspan x="40" dy="24">004 HLD — Effect ledger in context</tspan></text>
+</svg>

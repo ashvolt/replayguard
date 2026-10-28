@@ -1,0 +1,69 @@
+feature: 007-outcome-classifier
+diagrams:
+  - kind: hld
+    title: "007 HLD — Outcome classification and verdicts"
+    layout: flow
+    nodes:
+      - { id: result, label: ScenarioResult, shape: database }
+      - { id: evidence, label: Evidence per identity, tasks: [T005] }
+      - { id: rules, label: "Outcome rules (Specification)", tasks: [T009] }
+      - { id: classify, label: "classify()", tasks: [T010] }
+      - { id: policy, label: "Policy (strict default + overrides)", tasks: [T012, T014] }
+      - { id: explain, label: Explanations, tasks: [T016] }
+      - { id: classified, label: ClassifiedResult, shape: database, tasks: [T003] }
+    edges:
+      - { from: result, to: evidence }
+      - { from: evidence, to: rules }
+      - { from: rules, to: classify }
+      - { from: policy, to: classify }
+      - { from: classify, to: explain }
+      - { from: classify, to: classified }
+  - kind: lld
+    title: "007 LLD — rule order (first match wins)"
+    layout: flow
+    direction: TB
+    nodes:
+      - { id: r1, label: "1 concurrent-duplicate: ≥2 applied overlapping", shape: diamond, tasks: [T006] }
+      - { id: r2, label: "2 duplicated: applied > max(expected,1)", shape: diamond, tasks: [T006] }
+      - { id: r3, label: "3 orphaned: applied and workflow failed", shape: diamond, tasks: [T006] }
+      - { id: r4, label: "4 skipped: expected ≥1, none applied, completed", shape: diamond, tasks: [T006] }
+      - { id: r5, label: "5 deduplicated: provider dedup seen", shape: diamond, tasks: [T006] }
+      - { id: r6, label: "6 exactly-once", shape: box, tasks: [T009] }
+    edges:
+      - { from: r1, to: r2, label: no }
+      - { from: r2, to: r3, label: no }
+      - { from: r3, to: r4, label: no }
+      - { from: r4, to: r5, label: no }
+      - { from: r5, to: r6, label: no }
+  - kind: workflow
+    title: "007 User workflow — from result to verdict"
+    layout: sequence
+    actors:
+      - { id: dev, label: Developer }
+      - { id: cls, label: "classify()" }
+      - { id: rules, label: Rules }
+      - { id: pol, label: Policy chain }
+    messages:
+      - { from: dev, to: cls, label: "classify(result, policy)", tasks: [T007, T020] }
+      - { from: cls, to: cls, label: "expected counts from baseline", tasks: [T004] }
+      - { from: cls, to: rules, label: "evaluate in severity order", tasks: [T008] }
+      - { from: rules, to: cls, label: outcome, style: dashed }
+      - { from: cls, to: pol, label: "identity → kind → default", tasks: [T013] }
+      - { from: pol, to: cls, label: "pass | warn | fail", style: dashed, tasks: [T011] }
+      - { from: cls, to: dev, label: "verdict + explanations + anomalies", style: dashed, tasks: [T015, T017] }
+  - kind: architecture
+    title: "007 Technical architecture — module and quality gates"
+    layout: flow
+    nodes:
+      - { id: mod, label: core/src/classifier/, shape: package, tasks: [T001] }
+      - { id: arb, label: fast-check arbitraries, tasks: [T002] }
+      - { id: perf, label: "perf: 100 cases < 100 ms", tasks: [T018] }
+      - { id: mut, label: "Stryker ≥ 85%", shape: diamond }
+      - { id: docs, label: docs/concepts/outcomes.md, shape: package, tasks: [T019] }
+      - { id: yaml, label: "diagram.yaml + quickstart", shape: package, tasks: [T021, T022] }
+    edges:
+      - { from: arb, to: mod }
+      - { from: perf, to: mod }
+      - { from: mut, to: mod }
+      - { from: mod, to: docs }
+      - { from: yaml, to: docs, style: dashed }

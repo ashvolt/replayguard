@@ -1,0 +1,59 @@
+feature: 013-upstream-proposal
+diagrams:
+  - kind: hld
+    title: "013 HLD — Upstream proposal flow"
+    layout: flow
+    nodes:
+      - { id: spike, label: Spike F0 findings, shape: database }
+      - { id: repros, label: Standalone reproductions, tasks: [T003, T004, T005] }
+      - { id: drafts, label: Issue drafts + design options, tasks: [T007, T008, T009] }
+      - { id: approve, label: Maintainer approval, shape: diamond, tasks: [T010] }
+      - { id: rivet, label: rivet-dev/workflows issues, shape: ellipse }
+      - { id: tracker, label: upstream/README.md tracker, shape: database, tasks: [T001] }
+    edges:
+      - { from: spike, to: repros }
+      - { from: repros, to: drafts }
+      - { from: drafts, to: approve }
+      - { from: approve, to: rivet, label: file }
+      - { from: rivet, to: tracker, label: responses }
+  - kind: lld
+    title: "013 LLD — upstream/ layout"
+    layout: flow
+    direction: TB
+    groups:
+      - { id: up, label: upstream/ }
+    nodes:
+      - { id: ws, label: "pnpm-workspace: upstream/*", shape: package, tasks: [T001] }
+      - { id: ver, label: engine version record, group: up, tasks: [T002] }
+      - { id: r1, label: repro-crash-loop-retries, group: up, shape: package, tasks: [T003] }
+      - { id: r2, label: repro-timeout-continuation, group: up, shape: package, tasks: [T004] }
+      - { id: r3, label: repro-stable-step-identity, group: up, shape: package, tasks: [T005] }
+      - { id: d, label: drafts/01-03, group: up, shape: package, tasks: [T007, T008, T009] }
+    edges:
+      - { from: ws, to: r1 }
+      - { from: ws, to: r2 }
+      - { from: ws, to: r3 }
+  - kind: workflow
+    title: "013 User workflow — demonstrate, approve, file"
+    layout: sequence
+    actors:
+      - { id: me, label: ReplayGuard maintainer }
+      - { id: ci, label: CI }
+      - { id: owner, label: Project owner }
+      - { id: rivet, label: Rivet maintainers }
+    messages:
+      - { from: ci, to: ci, label: "repros with EXPECT_GAP=1 (stay green)", tasks: [T006] }
+      - { from: me, to: owner, label: "request approval for drafts", tasks: [T010] }
+      - { from: owner, to: me, label: approved, style: dashed }
+      - { from: me, to: rivet, label: "gh issue create", tasks: [T010] }
+      - { from: rivet, to: me, label: "response → tracker + docs", style: dashed, tasks: [T011] }
+  - kind: architecture
+    title: "013 Technical architecture — evidence links"
+    layout: flow
+    nodes:
+      - { id: docs, label: docs/faults/strategies.md, shape: package, tasks: [T011] }
+      - { id: yaml, label: "diagram.yaml + quickstart", shape: package, tasks: [T012, T013] }
+      - { id: repros, label: upstream repros, shape: package }
+    edges:
+      - { from: docs, to: repros, label: links }
+      - { from: yaml, to: docs, style: dashed }

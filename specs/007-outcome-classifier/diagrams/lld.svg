@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="642" height="1342" viewBox="0 0 642 1342" role="img">
+<title>007 LLD — rule order (first match wins)</title>
+<defs><marker id="rg-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1e1e1e"/></marker></defs>
+<rect width="642" height="1342" fill="#ffffff"/>
+<polygon points="190,142 316,197 190,252 64,197" fill="#ffe3e3" stroke="#1e1e1e" stroke-width="2"/>
+<text x="190" y="157" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="190" dy="16">1</tspan><tspan x="190" dy="20">concurrent-duplicate:</tspan><tspan x="190" dy="20">≥2 applied overlapping</tspan><tspan x="190" dy="20">[T006]</tspan></text>
+<polygon points="190,372 311,417 190,462 69,417" fill="#ffe3e3" stroke="#1e1e1e" stroke-width="2"/>
+<text x="190" y="387" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="190" dy="16">2 duplicated: applied</tspan><tspan x="190" dy="20">&gt; max(expected,1)</tspan><tspan x="190" dy="20">[T006]</tspan></text>
+<polygon points="190.5,582 302,627 190.5,672 79,627" fill="#ffe3e3" stroke="#1e1e1e" stroke-width="2"/>
+<text x="190.5" y="597" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="190.5" dy="16">3 orphaned: applied</tspan><tspan x="190.5" dy="20">and workflow failed</tspan><tspan x="190.5" dy="20">[T006]</tspan></text>
+<polygon points="190.5,792 302,847 190.5,902 79,847" fill="#ffe3e3" stroke="#1e1e1e" stroke-width="2"/>
+<text x="190.5" y="807" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="190.5" dy="16">4 skipped: expected</tspan><tspan x="190.5" dy="20">≥1, none applied,</tspan><tspan x="190.5" dy="20">completed</tspan><tspan x="190.5" dy="20">[T006]</tspan></text>
+<polygon points="190.5,1022 302,1067 190.5,1112 79,1067" fill="#ffe3e3" stroke="#1e1e1e" stroke-width="2"/>
+<text x="190.5" y="1037" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="190.5" dy="16">5 deduplicated:</tspan><tspan x="190.5" dy="20">provider dedup seen</tspan><tspan x="190.5" dy="20">[T006]</tspan></text>
+<rect x="103" y="1232" width="175" height="70" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="190.5" y="1247" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="190.5" dy="16">6 exactly-once</tspan><tspan x="190.5" dy="20">[T009]</tspan></text>
+<polyline points="190,252 190,372" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/><rect x="179" y="290" width="23" height="22" fill="#ffffff" opacity="0.85"/><text x="190.5" y="290" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="middle" fill="#1e1e1e"><tspan x="190.5" dy="14">no</tspan></text>
+<polyline points="190,462 190,582" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/><rect x="179" y="500" width="23" height="22" fill="#ffffff" opacity="0.85"/><text x="190.5" y="500" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="middle" fill="#1e1e1e"><tspan x="190.5" dy="14">no</tspan></text>
+<polyline points="191,672 191,792" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/><rect x="180" y="710" width="23" height="22" fill="#ffffff" opacity="0.85"/><text x="191.5" y="710" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="middle" fill="#1e1e1e"><tspan x="191.5" dy="14">no</tspan></text>
+<polyline points="191,902 191,1022" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/><rect x="180" y="940" width="23" height="22" fill="#ffffff" opacity="0.85"/><text x="191.5" y="940" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="middle" fill="#1e1e1e"><tspan x="191.5" dy="14">no</tspan></text>
+<polyline points="191,1112 191,1232" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/><rect x="180" y="1150" width="23" height="22" fill="#ffffff" opacity="0.85"/><text x="191.5" y="1150" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="middle" fill="#1e1e1e"><tspan x="191.5" dy="14">no</tspan></text>
+<text x="40" y="30" font-family="Helvetica, Arial, sans-serif" font-size="24" text-anchor="start" fill="#1e1e1e"><tspan x="40" dy="24">007 LLD — rule order (first match wins)</tspan></text>
+</svg>

@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1664" height="1480" viewBox="0 0 1664 1480" role="img">
+<title>002 LLD — tools/export modules</title>
+<defs><marker id="rg-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1e1e1e"/></marker></defs>
+<rect width="1664" height="1480" fill="#ffffff"/>
+<rect x="402" y="90" width="223" height="266" rx="10" fill="none" stroke="#868e96" stroke-width="1" stroke-dasharray="8 6"/>
+<text x="412" y="96" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="start" fill="#868e96"><tspan x="412" dy="14">parse</tspan></text>
+<rect x="1001" y="406" width="623" height="506" rx="10" fill="none" stroke="#868e96" stroke-width="1" stroke-dasharray="8 6"/>
+<text x="1011" y="412" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="start" fill="#868e96"><tspan x="1011" dy="14">renderers (Strategy)</tspan></text>
+<rect x="50" y="962" width="603" height="306" rx="10" fill="none" stroke="#868e96" stroke-width="1" stroke-dasharray="8 6"/>
+<text x="60" y="968" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="start" fill="#868e96"><tspan x="60" dy="14">importers (Template Method)</tspan></text>
+<rect x="64" y="1370" width="213" height="70" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="170.5" y="1385" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="170.5" dy="16">cli.ts</tspan><tspan x="170.5" dy="20">[T013, T020, T024]</tspan></text>
+<rect x="431" y="142" width="165" height="70" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="513.5" y="157" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="513.5" dy="16">parse/spec.ts</tspan><tspan x="513.5" dy="20">[T005, T007]</tspan></text>
+<rect x="426" y="262" width="175" height="70" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="513.5" y="277" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="513.5" dy="16">parse/tasks.ts</tspan><tspan x="513.5" dy="20">[T006, T008]</tspan></text>
+<rect x="749" y="1370" width="156" height="70" rx="14" fill="#d3f9d8" stroke="#1e1e1e" stroke-width="2"/><path d="M749,1382 Q827,1396 905,1382" fill="none" stroke="#1e1e1e" stroke-width="1.5"/>
+<text x="827" y="1385" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="827" dy="16">model.ts</tspan><tspan x="827" dy="20">[T009, T014]</tspan></text>
+<rect x="1387" y="628" width="213" height="90" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="1493.5" y="643" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="1493.5" dy="16">render/csv.ts (RFC</tspan><tspan x="1493.5" dy="20">4180)</tspan><tspan x="1493.5" dy="20">[T010]</tspan></text>
+<rect x="1040" y="458" width="213" height="70" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="1146.5" y="473" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="1146.5" dy="16">render/jira-csv.ts</tspan><tspan x="1146.5" dy="20">[T011, T012]</tspan></text>
+<rect x="1035" y="578" width="223" height="70" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="1146.5" y="593" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="1146.5" dy="16">render/jira-json.ts</tspan><tspan x="1146.5" dy="20">[T015, T017]</tspan></text>
+<rect x="1049" y="698" width="194" height="70" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="1146" y="713" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="1146" dy="16">render/github.ts</tspan><tspan x="1146" dy="20">[T021, T022]</tspan></text>
+<rect x="1025" y="818" width="242" height="70" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="1146" y="833" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="1146" dy="16">render/generic-csv.ts</tspan><tspan x="1146" dy="20">[T025, T026]</tspan></text>
+<rect x="397" y="1084" width="232" height="90" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="513" y="1099" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="513" dy="16">import/importer.ts +</tspan><tspan x="513" dy="20">state.ts</tspan><tspan x="513" dy="20">[T016, T018]</tspan></text>
+<rect x="83" y="1014" width="175" height="90" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="170.5" y="1029" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="170.5" dy="16">import/jira.ts</tspan><tspan x="170.5" dy="20">(HttpPort)</tspan><tspan x="170.5" dy="20">[T019]</tspan></text>
+<rect x="74" y="1154" width="194" height="90" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="171" y="1169" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="171" dy="16">import/github.ts</tspan><tspan x="171" dy="20">(CommandPort)</tspan><tspan x="171" dy="20">[T023]</tspan></text>
+<polyline points="180,1370 504,212" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="181,1370 503,332" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="522,212 818,1370" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="523,332 817,1370" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="839,1370 1134,528" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="841,1370 1132,648" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="844,1370 1129,768" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="847,1370 1126,888" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="1214,528 1407,628" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="1214,818 1407,718" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="214,1370 457,1174" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="258,1077 397,1105" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)" stroke-dasharray="8 6"/><rect x="295" y="1069" width="65" height="22" fill="#ffffff" opacity="0.85"/><text x="327.5" y="1069" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="middle" fill="#1e1e1e"><tspan x="327.5" dy="14">extends</tspan></text>
+<polyline points="268,1179 397,1153" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)" stroke-dasharray="8 6"/><rect x="300" y="1144" width="65" height="22" fill="#ffffff" opacity="0.85"/><text x="332.5" y="1144" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="middle" fill="#1e1e1e"><tspan x="332.5" dy="14">extends</tspan></text>
+<text x="40" y="30" font-family="Helvetica, Arial, sans-serif" font-size="24" text-anchor="start" fill="#1e1e1e"><tspan x="40" dy="24">002 LLD — tools/export modules</tspan></text>
+</svg>

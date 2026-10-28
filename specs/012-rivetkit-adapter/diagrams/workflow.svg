@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="946" height="619" viewBox="0 0 946 619" role="img">
+<title>012 User workflow — actor crash and resume</title>
+<defs><marker id="rg-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1e1e1e"/></marker></defs>
+<rect width="946" height="619" fill="#ffffff"/>
+<polyline points="150,146 150,579" fill="none" stroke="#868e96" stroke-width="1" stroke-dasharray="8 6"/>
+<polyline points="370,146 370,579" fill="none" stroke="#868e96" stroke-width="1" stroke-dasharray="8 6"/>
+<polyline points="590,146 590,579" fill="none" stroke="#868e96" stroke-width="1" stroke-dasharray="8 6"/>
+<polyline points="818,146 818,579" fill="none" stroke="#868e96" stroke-width="1" stroke-dasharray="8 6"/>
+<rect x="80" y="90" width="140" height="56" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="150" y="108" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="150" dy="16">Runner</tspan></text>
+<rect x="300" y="90" width="140" height="56" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="370" y="108" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="370" dy="16">ActorHost</tspan></text>
+<rect x="512" y="90" width="156" height="56" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="590" y="108" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="590" dy="16">Host process</tspan></text>
+<rect x="731" y="90" width="175" height="56" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="818.5" y="108" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="818.5" dy="16">Workflow actor</tspan></text>
+<polyline points="150,219 370,219" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/><rect x="148" y="180" width="225" height="39" fill="#ffffff" opacity="0.85"/><text x="260.5" y="180" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="middle" fill="#1e1e1e"><tspan x="260.5" dy="14">prepareCase (temp storage,</tspan><tspan x="260.5" dy="17.5">free port) [T005]</tspan></text>
+<polyline points="370,265 590,265" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/><rect x="389" y="243" width="183" height="22" fill="#ffffff" opacity="0.85"/><text x="480.5" y="243" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="middle" fill="#1e1e1e"><tspan x="480.5" dy="14">start registry [T006]</tspan></text>
+<polyline points="590,311 818,311" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/><rect x="625" y="289" width="158" height="22" fill="#ffffff" opacity="0.85"/><text x="704" y="289" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="middle" fill="#1e1e1e"><tspan x="704" dy="14">run workflow steps</tspan></text>
+<polyline points="818,357 150,357" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)" stroke-dasharray="8 6"/><rect x="384" y="335" width="200" height="22" fill="#ffffff" opacity="0.85"/><text x="484" y="335" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="middle" fill="#1e1e1e"><tspan x="484" dy="14">ledger events via relay</tspan></text>
+<polyline points="150,420 370,420" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/><rect x="160" y="381" width="200" height="39" fill="#ffffff" opacity="0.85"/><text x="260" y="381" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="middle" fill="#1e1e1e"><tspan x="260" dy="14">killAfter anchor → kill</tspan><tspan x="260" dy="17.5">[T010]</tspan></text>
+<polyline points="370,483 590,483" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/><rect x="380" y="444" width="200" height="39" fill="#ffffff" opacity="0.85"/><text x="480" y="444" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="middle" fill="#1e1e1e"><tspan x="480" dy="14">restart on same storage</tspan><tspan x="480" dy="17.5">[T011]</tspan></text>
+<polyline points="818,529 150,529" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)" stroke-dasharray="8 6"/><rect x="397" y="507" width="174" height="22" fill="#ffffff" opacity="0.85"/><text x="484" y="507" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="middle" fill="#1e1e1e"><tspan x="484" dy="14">resumes from history</tspan></text>
+<text x="40" y="30" font-family="Helvetica, Arial, sans-serif" font-size="24" text-anchor="start" fill="#1e1e1e"><tspan x="40" dy="24">012 User workflow — actor crash and resume</tspan></text>
+</svg>

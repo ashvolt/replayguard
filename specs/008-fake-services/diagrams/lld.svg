@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="950" height="948" viewBox="0 0 950 948" role="img">
+<title>008 LLD — shared components</title>
+<defs><marker id="rg-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1e1e1e"/></marker></defs>
+<rect width="950" height="948" fill="#ffffff"/>
+<rect x="668" y="90" width="242" height="286" rx="10" fill="none" stroke="#868e96" stroke-width="1" stroke-dasharray="8 6"/>
+<text x="678" y="96" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="start" fill="#868e96"><tspan x="678" dy="14">shared</tspan></text>
+<rect x="64" y="468" width="60" height="12" fill="#f3f0ff" stroke="#1e1e1e" stroke-width="2"/><rect x="64" y="478" width="232" height="70" fill="#f3f0ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="180" y="493" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="180" dy="16">package.json exports</tspan><tspan x="180" dy="20">[T001]</tspan></text>
+<rect x="692" y="142" width="194" height="70" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="789" y="157" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="789" dy="16">IdempotencyStore</tspan><tspan x="789" dy="20">[T002, T003]</tspan></text>
+<rect x="702" y="262" width="175" height="90" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="789.5" y="277" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="789.5" dy="16">recordable() →</tspan><tspan x="789.5" dy="20">ctx.instrument</tspan><tspan x="789.5" dy="20">[T004, T005]</tspan></text>
+<rect x="416" y="658" width="156" height="70" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="494" y="673" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="494" dy="16">payment.ts</tspan><tspan x="494" dy="20">[T006, T007]</tspan></text>
+<rect x="102" y="598" width="156" height="70" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="180" y="613" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="180" dy="16">email.ts</tspan><tspan x="180" dy="20">[T008, T009]</tspan></text>
+<rect x="102" y="718" width="156" height="70" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="180" y="733" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="180" dy="16">http.ts</tspan><tspan x="180" dy="20">[T010, T011]</tspan></text>
+<rect x="102" y="838" width="156" height="70" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="180" y="853" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="180" dy="16">webhook.ts</tspan><tspan x="180" dy="20">[T012, T013]</tspan></text>
+<polyline points="514,658 769,212" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="217,718 752,212" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="521,658 755,352" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="245,598 705,352" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="228,718 728,352" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="218,838 741,352" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="241,548 433,658" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)" stroke-dasharray="8 6"/>
+<text x="40" y="30" font-family="Helvetica, Arial, sans-serif" font-size="24" text-anchor="start" fill="#1e1e1e"><tspan x="40" dy="24">008 LLD — shared components</tspan></text>
+</svg>

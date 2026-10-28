@@ -1,0 +1,93 @@
+feature: 005-fault-injection
+diagrams:
+  - kind: hld
+    title: "005 HLD — Fault strategies around external calls"
+    layout: flow
+    groups:
+      - { id: core, label: "@replayguard/core (in-process)" }
+      - { id: aw, label: "@replayguard/adapter-workflows" }
+    nodes:
+      - { id: spec, label: FaultSpec + helpers, group: core, tasks: [T006, T007] }
+      - { id: ctl, label: FaultController, group: core, tasks: [T008, T009] }
+      - { id: none, label: none (Null Object), group: core, tasks: [T016] }
+      - { id: crash, label: crash, group: core, tasks: [T013, T015] }
+      - { id: lose, label: throwAfter (lost response), group: core, tasks: [T017, T018] }
+      - { id: delay, label: delay (provider hang), group: core, tasks: [T020, T021] }
+      - { id: faulty, label: "FaultyDriver (Decorator)", group: aw, tasks: [T011, T012] }
+      - { id: file, label: FileDriver, group: aw, shape: database, tasks: [T023, T024] }
+      - { id: kill, label: processKill, group: aw, tasks: [T028] }
+      - { id: engine, label: "@rivet-dev/workflows", shape: ellipse }
+    edges:
+      - { from: spec, to: ctl }
+      - { from: ctl, to: none }
+      - { from: ctl, to: crash }
+      - { from: ctl, to: lose }
+      - { from: ctl, to: delay }
+      - { from: ctl, to: kill }
+      - { from: crash, to: faulty, label: "persistence.crash()" }
+      - { from: faulty, to: engine, label: EngineDriver }
+      - { from: kill, to: file }
+  - kind: lld
+    title: "005 LLD — modules"
+    layout: flow
+    groups:
+      - { id: ports, label: core ports }
+      - { id: proc, label: adapter-workflows/process }
+    nodes:
+      - { id: barrel, label: faults/index.ts, tasks: [T001] }
+      - { id: peer, label: "adapter package.json (peer workflows)", shape: package, tasks: [T002] }
+      - { id: sleeper, label: ports/sleeper.ts, group: ports, tasks: [T003, T004] }
+      - { id: persist, label: ports/persistence.ts, group: ports, tasks: [T005] }
+      - { id: conf, label: driver-conformance suite, tasks: [T010] }
+      - { id: proto, label: protocol.ts (Valibot IPC), group: proc, tasks: [T025, T026] }
+      - { id: child, label: "child-host.ts + child-entry.ts", group: proc, tasks: [T027] }
+      - { id: pk, label: process-kill.ts, group: proc, tasks: [T028, T029] }
+      - { id: parity, label: spike-parity tests (H0–H4), tasks: [T014, T019, T022] }
+      - { id: base, label: baseline equivalence test, tasks: [T030] }
+    edges:
+      - { from: barrel, to: sleeper }
+      - { from: barrel, to: persist }
+      - { from: pk, to: proto }
+      - { from: child, to: proto }
+      - { from: pk, to: child, label: fork }
+      - { from: conf, to: peer, style: dashed }
+      - { from: parity, to: peer, style: dashed }
+      - { from: base, to: peer, style: dashed }
+  - kind: workflow
+    title: "005 User workflow — crash after the provider applied"
+    layout: sequence
+    actors:
+      - { id: step, label: Workflow step }
+      - { id: inst, label: instrumented charge }
+      - { id: ctl, label: crash strategy }
+      - { id: drv, label: FaultyDriver }
+      - { id: host, label: Runner (host) }
+    messages:
+      - { from: step, to: inst, label: "charge()", tasks: [T014] }
+      - { from: inst, to: inst, label: "provider applies (attempt applied)" }
+      - { from: inst, to: ctl, label: "afterSettle → anchor matched", tasks: [T015] }
+      - { from: ctl, to: drv, label: "crash() — all writes now fail", tasks: [T012] }
+      - { from: ctl, to: step, label: "throw CrashSignal (run marked dead)", style: dashed, tasks: [T013] }
+      - { from: host, to: drv, label: "restart() — new process, same KV", tasks: [T011] }
+      - { from: host, to: step, label: "re-run from durable history → step re-executes" }
+      - { from: step, to: inst, label: "charge() again → duplicate", tasks: [T034] }
+  - kind: architecture
+    title: "005 Technical architecture — process kill"
+    layout: flow
+    direction: TB
+    nodes:
+      - { id: parent, label: Parent (test process + ledger) }
+      - { id: child, label: "Child process (fork, no shell)", tasks: [T027] }
+      - { id: kv, label: "<tmp>/kv.json (atomic rename)", shape: database, tasks: [T024] }
+      - { id: ipc, label: "IPC: ledger-event · await-continue · run-ended", shape: diamond, tasks: [T026] }
+      - { id: docs, label: docs/faults/strategies.md, shape: package, tasks: [T031] }
+      - { id: stryker, label: "Stryker 85% (faults/)", tasks: [T032] }
+      - { id: yaml, label: diagram.yaml + quickstart, shape: package, tasks: [T033, T034] }
+    edges:
+      - { from: parent, to: child, label: "start / continue / SIGKILL" }
+      - { from: child, to: ipc }
+      - { from: ipc, to: parent }
+      - { from: child, to: kv }
+      - { from: docs, to: parent, style: dashed }
+      - { from: stryker, to: parent, style: dashed }
+      - { from: yaml, to: docs, style: dashed }

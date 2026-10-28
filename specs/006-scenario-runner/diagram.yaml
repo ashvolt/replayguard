@@ -1,0 +1,95 @@
+feature: 006-scenario-runner
+diagrams:
+  - kind: hld
+    title: "006 HLD — Scenario runner and fault matrix"
+    layout: flow
+    groups:
+      - { id: core, label: "@replayguard/core" }
+      - { id: aw, label: "@replayguard/adapter-workflows" }
+    nodes:
+      - { id: test, label: Developer test, shape: ellipse }
+      - { id: builder, label: "scenario() Builder", group: core, tasks: [T019] }
+      - { id: runner, label: "ScenarioRunner (Template Method)", group: core, tasks: [T006] }
+      - { id: disc, label: Discovery, group: core, tasks: [T014] }
+      - { id: matrix, label: FaultMatrix (budgeted), group: core, tasks: [T015, T016] }
+      - { id: port, label: WorkflowRuntime port, group: core, shape: diamond, tasks: [T002] }
+      - { id: rt, label: "workflowsRuntime()", group: aw, tasks: [T009] }
+      - { id: prt, label: "workflowsProcessRuntime()", group: aw, tasks: [T010] }
+      - { id: result, label: ScenarioResult, shape: database, tasks: [T004] }
+    edges:
+      - { from: test, to: builder }
+      - { from: builder, to: runner, label: "build().run()" }
+      - { from: runner, to: disc, label: baseline }
+      - { from: disc, to: matrix }
+      - { from: runner, to: port }
+      - { from: port, to: rt }
+      - { from: port, to: prt }
+      - { from: runner, to: result }
+  - kind: lld
+    title: "006 LLD — scenario modules"
+    layout: flow
+    groups:
+      - { id: sc, label: core/src/scenario }
+      - { id: tests, label: test support }
+    nodes:
+      - { id: barrel, label: index.ts exports, tasks: [T001] }
+      - { id: types, label: "types.ts + result.ts", group: sc, tasks: [T004] }
+      - { id: ctx, label: context.ts (EffectContext), group: sc, tasks: [T007] }
+      - { id: run, label: runner.ts, group: sc, tasks: [T005, T006, T023] }
+      - { id: dis, label: discovery.ts, group: sc, tasks: [T012, T014] }
+      - { id: mat, label: matrix.ts, group: sc, tasks: [T013, T015] }
+      - { id: sch, label: schema.ts (Valibot), group: sc, tasks: [T018] }
+      - { id: bld, label: builder.ts, group: sc, tasks: [T017, T019] }
+      - { id: seed, label: seed.ts (mulberry32), group: sc, tasks: [T022] }
+      - { id: fake, label: fake-runtime.ts, group: tests, tasks: [T003] }
+      - { id: iso, label: isolation tests, group: tests, tasks: [T020] }
+    edges:
+      - { from: barrel, to: bld }
+      - { from: bld, to: sch }
+      - { from: bld, to: run }
+      - { from: run, to: ctx }
+      - { from: run, to: dis }
+      - { from: run, to: mat }
+      - { from: mat, to: seed }
+      - { from: run, to: types }
+      - { from: fake, to: run, style: dashed, label: drives }
+      - { from: iso, to: run, style: dashed }
+  - kind: workflow
+    title: "006 User workflow — explicit and explored cases"
+    layout: sequence
+    actors:
+      - { id: dev, label: Developer test }
+      - { id: run, label: ScenarioRunner }
+      - { id: ctl, label: FaultController }
+      - { id: rt, label: WorkflowRuntime }
+      - { id: led, label: EffectLedger }
+    messages:
+      - { from: dev, to: run, label: "scenario()…case()…explore().build().run()", tasks: [T011] }
+      - { from: run, to: rt, label: "baseline: prepareCase + runOnce", tasks: [T008] }
+      - { from: run, to: led, label: "discover effect occurrences", tasks: [T014] }
+      - { from: run, to: run, label: "matrix: occurrences × points × strategies", tasks: [T016] }
+      - { from: run, to: ctl, label: "arm faults on fresh ledger + store", tasks: [T007] }
+      - { from: run, to: rt, label: "runOnce → crashed → restart", tasks: [T006] }
+      - { from: rt, to: run, label: "sleeping(wakeAt) → wait → rerun", style: dashed, tasks: [T005] }
+      - { from: run, to: led, label: "grace period → finalize snapshot", tasks: [T023] }
+      - { from: run, to: dev, label: "ScenarioResult (repeatable for a seed)", style: dashed, tasks: [T021] }
+  - kind: architecture
+    title: "006 Technical architecture — runtime adapters"
+    layout: flow
+    direction: TB
+    nodes:
+      - { id: port, label: "WorkflowRuntime / RuntimeCase port", shape: diamond, tasks: [T002] }
+      - { id: inproc, label: "In-process: InMemoryDriver + FaultyDriver", tasks: [T008, T009] }
+      - { id: proc, label: "Process: FileDriver in temp dir + child host", tasks: [T010] }
+      - { id: engine, label: "runWorkflow(mode: yield)", shape: ellipse }
+      - { id: perf, label: "perf: 20 cases < 5 s", tasks: [T024] }
+      - { id: guide, label: docs/guides/scenarios.md, shape: package, tasks: [T025] }
+      - { id: yaml, label: "diagram.yaml + quickstart", shape: package, tasks: [T026, T027] }
+    edges:
+      - { from: port, to: inproc }
+      - { from: port, to: proc }
+      - { from: inproc, to: engine }
+      - { from: proc, to: engine }
+      - { from: perf, to: inproc, style: dashed }
+      - { from: guide, to: port, style: dashed }
+      - { from: yaml, to: guide, style: dashed }

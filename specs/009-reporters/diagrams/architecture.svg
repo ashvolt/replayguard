@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="882" height="882" viewBox="0 0 882 882" role="img">
+<title>009 Technical architecture — HTML security model</title>
+<defs><marker id="rg-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1e1e1e"/></marker></defs>
+<rect width="882" height="882" fill="#ffffff"/>
+<rect x="342" y="562" width="223" height="70" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="453.5" y="577" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="453.5" dy="16">report.html (single</tspan><tspan x="453.5" dy="20">file)</tspan></text>
+<polygon points="190,752 316,797 190,842 64,797" fill="#ffe3e3" stroke="#1e1e1e" stroke-width="2"/>
+<text x="190" y="767" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="190" dy="16">CSP default-src &apos;none&apos;</tspan><tspan x="190" dy="20">+ hashes</tspan><tspan x="190" dy="20">[T021]</tspan></text>
+<rect x="366" y="752" width="194" height="90" rx="14" fill="#d3f9d8" stroke="#1e1e1e" stroke-width="2"/><path d="M366,764 Q463,778 560,764" fill="none" stroke="#1e1e1e" stroke-width="1.5"/>
+<text x="463" y="767" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="463" dy="16">JSON data block</tspan><tspan x="463" dy="20">(\u003c escaped)</tspan><tspan x="463" dy="20">[T019]</tspan></text>
+<rect x="610" y="762" width="232" height="70" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="726" y="777" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="726" dy="16">inline SVG timelines</tspan><tspan x="726" dy="20">[T020]</tspan></text>
+<rect x="215" y="142" width="252" height="90" rx="8" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="341" y="157" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="341" dy="16">100 cases &lt; 1 MB / 200</tspan><tspan x="341" dy="20">ms</tspan><tspan x="341" dy="20">[T023]</tspan></text>
+<rect x="327" y="342" width="60" height="12" fill="#f3f0ff" stroke="#1e1e1e" stroke-width="2"/><rect x="327" y="352" width="252" height="90" fill="#f3f0ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="453" y="367" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="453" dy="16">docs/reporters/README.</tspan><tspan x="453" dy="20">md</tspan><tspan x="453" dy="20">[T024]</tspan></text>
+<rect x="517" y="132" width="58.333333333333336" height="12" fill="#f3f0ff" stroke="#1e1e1e" stroke-width="2"/><rect x="517" y="142" width="175" height="90" fill="#f3f0ff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="604.5" y="157" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1e1e1e"><tspan x="604.5" dy="16">diagram.yaml +</tspan><tspan x="604.5" dy="20">quickstart</tspan><tspan x="604.5" dy="20">[T025, T026]</tspan></text>
+<polyline points="407,632 249,752" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="455,632 461,752" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="501,632 678,762" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)"/>
+<polyline points="353,232 444,562" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)" stroke-dasharray="8 6"/>
+<polyline points="453,442 453,562" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)" stroke-dasharray="8 6"/>
+<polyline points="572,232 485,352" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#rg-arrow)" stroke-dasharray="8 6"/>
+<text x="40" y="30" font-family="Helvetica, Arial, sans-serif" font-size="24" text-anchor="start" fill="#1e1e1e"><tspan x="40" dy="24">009 Technical architecture — HTML security model</tspan></text>
+</svg>

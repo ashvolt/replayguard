@@ -1,0 +1,72 @@
+feature: 008-fake-services
+diagrams:
+  - kind: hld
+    title: "008 HLD — Fake external services"
+    layout: flow
+    groups:
+      - { id: fakes, label: "@replayguard/fakes" }
+    nodes:
+      - { id: step, label: Workflow step, shape: ellipse }
+      - { id: pay, label: createFakePayment, group: fakes, tasks: [T007] }
+      - { id: mail, label: createFakeEmail, group: fakes, tasks: [T009] }
+      - { id: http, label: createFakeHttp, group: fakes, tasks: [T011] }
+      - { id: hook, label: createFakeWebhookReceiver, group: fakes, tasks: [T013] }
+      - { id: ledger, label: EffectLedger, shape: database }
+    edges:
+      - { from: step, to: pay }
+      - { from: step, to: mail }
+      - { from: step, to: http }
+      - { from: step, to: hook }
+      - { from: pay, to: ledger, label: records }
+      - { from: mail, to: ledger }
+      - { from: http, to: ledger }
+      - { from: hook, to: ledger }
+  - kind: lld
+    title: "008 LLD — shared components"
+    layout: flow
+    groups:
+      - { id: shared, label: shared }
+    nodes:
+      - { id: pkg, label: package.json exports, shape: package, tasks: [T001] }
+      - { id: idem, label: IdempotencyStore, group: shared, tasks: [T002, T003] }
+      - { id: rec, label: "recordable() → ctx.instrument", group: shared, tasks: [T004, T005] }
+      - { id: pay, label: payment.ts, tasks: [T006, T007] }
+      - { id: mail, label: email.ts, tasks: [T008, T009] }
+      - { id: http, label: http.ts, tasks: [T010, T011] }
+      - { id: hook, label: webhook.ts, tasks: [T012, T013] }
+    edges:
+      - { from: pay, to: idem }
+      - { from: http, to: idem }
+      - { from: pay, to: rec }
+      - { from: mail, to: rec }
+      - { from: http, to: rec }
+      - { from: hook, to: rec }
+      - { from: pkg, to: pay, style: dashed }
+  - kind: workflow
+    title: "008 User workflow — payment with idempotency key"
+    layout: sequence
+    actors:
+      - { id: step, label: Workflow step }
+      - { id: pay, label: FakePayment }
+      - { id: idem, label: IdempotencyStore }
+      - { id: led, label: EffectLedger }
+    messages:
+      - { from: step, to: pay, label: "charge({orderId, amount, key})", tasks: [T006] }
+      - { from: pay, to: idem, label: "lookup(key, fingerprint)", tasks: [T002] }
+      - { from: idem, to: pay, label: "miss → create charge", style: dashed }
+      - { from: pay, to: led, label: "attempt applied", tasks: [T005] }
+      - { from: step, to: pay, label: "charge again after crash (same key)", tasks: [T014] }
+      - { from: idem, to: pay, label: "hit → original result, replayed", style: dashed, tasks: [T003] }
+      - { from: pay, to: led, label: "attempt deduplicated", tasks: [T007] }
+  - kind: architecture
+    title: "008 Technical architecture — examples and docs"
+    layout: flow
+    nodes:
+      - { id: ex, label: outcome examples (all classes), tasks: [T014] }
+      - { id: docs, label: docs/fakes/README.md, shape: package, tasks: [T015] }
+      - { id: yaml, label: "diagram.yaml + quickstart", shape: package, tasks: [T016, T017] }
+      - { id: core, label: "@replayguard/core", shape: package }
+    edges:
+      - { from: ex, to: core }
+      - { from: docs, to: ex, style: dashed }
+      - { from: yaml, to: docs, style: dashed }
