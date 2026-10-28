@@ -20,7 +20,10 @@
 		"testing",
 		"fault-injection"
 	],
-	"sideEffects": false,
+	"sideEffects": [
+		"./dist/setup.js",
+		"./dist/setup.cjs"
+	],
 	"engines": {
 		"node": ">=22"
 	},
@@ -33,6 +36,16 @@
 			"require": {
 				"types": "./dist/index.d.cts",
 				"default": "./dist/index.cjs"
+			}
+		},
+		"./setup": {
+			"import": {
+				"types": "./dist/setup.d.ts",
+				"default": "./dist/setup.js"
+			},
+			"require": {
+				"types": "./dist/setup.d.cts",
+				"default": "./dist/setup.cjs"
 			}
 		},
 		"./package.json": "./package.json"
@@ -60,6 +73,12 @@
 		"@replayguard/vitest": "workspace:*"
 	},
 	"devDependencies": {
-		"@replayguard-tools/config": "workspace:*"
+		"@replayguard-tools/config": "workspace:*",
+		"@replayguard/adapter-workflows": "workspace:*",
+		"@rivet-dev/workflows": "1.0.0",
+		"vitest": "4.1.12"
+	},
+	"peerDependencies": {
+		"vitest": ">=3.2 <5"
 	}
 }

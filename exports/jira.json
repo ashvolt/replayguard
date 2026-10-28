@@ -6426,7 +6426,7 @@
     {
       "sourceId": "012-rivetkit-adapter",
       "parentSourceId": null,
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Epic"
@@ -6463,7 +6463,7 @@
     {
       "sourceId": "012-rivetkit-adapter-US2",
       "parentSourceId": "012-rivetkit-adapter",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Story"
@@ -6693,7 +6693,7 @@
     {
       "sourceId": "012-rivetkit-adapter-T011",
       "parentSourceId": "012-rivetkit-adapter-US2",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Sub-task"

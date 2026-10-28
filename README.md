@@ -20,16 +20,18 @@ the way a real host would, and reports the outcome for every effect:
 | `orphaned` | Applied, but the workflow failed or never recorded it | fail |
 | `skipped` | Expected but never applied | fail |
 
-> **Status:** under active, spec-driven development. See [`specs/`](specs/) for the feature
-> roadmap and [`spikes/engine-assumptions/FINDINGS.md`](spikes/engine-assumptions/FINDINGS.md)
-> for the engine behaviors ReplayGuard detects.
+> **Status:** pre-release. Every spec in [`specs/`](specs/) is implemented. Packages are not
+> yet published. [`spikes/engine-assumptions/FINDINGS.md`](spikes/engine-assumptions/FINDINGS.md)
+> describes the engine behaviors ReplayGuard detects.
 
-## Example (target API)
+## Example
+
+This example runs as a test in `packages/replayguard/test/index.test.ts`.
 
 ```ts
-import { scenario, fault, classify, idempotencyKey } from "replayguard";
+// vitest.config.ts: test: { setupFiles: ["replayguard/setup"] }
+import { createFakePayment, fault, idempotencyKey, scenario } from "replayguard";
 import { workflowsRuntime } from "@replayguard/adapter-workflows";
-import { createFakePayment } from "replayguard";
 
 const result = await scenario()
   .runtime(workflowsRuntime())
@@ -44,6 +46,12 @@ const result = await scenario()
 
 expect(result).toPassSideEffectPolicy();
 ```
+
+Remove the `idempotencyKey` and the test fails, because the crash makes the payment
+`duplicated`. Each failing effect explains its cause and comes with a fix hint. See
+[outcomes](docs/concepts/outcomes.md), [fixing duplicates](docs/guides/fixing-duplicates.md),
+[fakes](docs/fakes/README.md), [reporters](docs/reporters/README.md),
+[Vitest matchers](docs/vitest/README.md) and [RivetKit actors](docs/guides/rivetkit-actors.md).
 
 ## Packages
 

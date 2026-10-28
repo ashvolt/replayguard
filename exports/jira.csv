@@ -1886,7 +1886,7 @@ ReplayGuard-ID: 011-idempotency-helper-T015",Medium,Done,011-idempotency-helper,
 333,,Epic,012 RivetKit Actor Adapter,"RivetKit Actor Adapter (012-rivetkit-adapter).
 
 Source: specs/012-rivetkit-adapter/spec.md:1
-ReplayGuard-ID: 012-rivetkit-adapter",High,To Do,012-rivetkit-adapter,,
+ReplayGuard-ID: 012-rivetkit-adapter",High,Done,012-rivetkit-adapter,,
 334,333,Story,US1: Run a scenario against a workflow actor,"User story 1 (P1) of 012-rivetkit-adapter.
 
 Source: specs/012-rivetkit-adapter/spec.md:13
@@ -1894,7 +1894,7 @@ ReplayGuard-ID: 012-rivetkit-adapter-US1",High,Done,012-rivetkit-adapter,us1,
 335,333,Story,US2: Actor crash and restart,"User story 2 (P1) of 012-rivetkit-adapter.
 
 Source: specs/012-rivetkit-adapter/spec.md:33
-ReplayGuard-ID: 012-rivetkit-adapter-US2",High,To Do,012-rivetkit-adapter,us2,
+ReplayGuard-ID: 012-rivetkit-adapter-US2",High,Done,012-rivetkit-adapter,us2,
 336,333,Story,US3: Version compatibility,"User story 3 (P2) of 012-rivetkit-adapter.
 
 Source: specs/012-rivetkit-adapter/spec.md:52
@@ -1964,7 +1964,7 @@ ReplayGuard-ID: 012-rivetkit-adapter-T010",High,Done,012-rivetkit-adapter,us2,pa
 Phase: Phase 4: User Story 2 - Actor crash and restart (Priority: P1)
 
 Source: specs/012-rivetkit-adapter/tasks.md:51
-ReplayGuard-ID: 012-rivetkit-adapter-T011",High,To Do,012-rivetkit-adapter,us2,
+ReplayGuard-ID: 012-rivetkit-adapter-T011",High,Done,012-rivetkit-adapter,us2,
 348,336,Sub-task,"T012 Add RivetKit version matrix job (2.3.11, latest 2.3.x) with explicit skip message when engine binary unavailable in .github/workflows/ci.yml","Add RivetKit version matrix job (2.3.11, latest 2.3.x) with explicit skip message when engine binary unavailable in .github/workflows/ci.yml
 
 Phase: Phase 5: User Story 3 - Version compatibility (Priority: P2)

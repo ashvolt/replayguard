@@ -48,7 +48,7 @@ description: "Task list for 012-rivetkit-adapter"
 **Independent Test**: killAfter payment → actor resumes, outcome matches engine adapter.
 
 - [X] T010 [P] [US2] Write failing crash/restart and sleep/wake tests in packages/adapter-rivetkit/test/restart.actor.test.ts
-- [ ] T011 [US2] Implement kill/restart per T002 decision in packages/adapter-rivetkit/src/host/actor-host.ts
+- [X] T011 [US2] Implement kill/restart per T002 decision in packages/adapter-rivetkit/src/host/actor-host.ts
 
 ---
 

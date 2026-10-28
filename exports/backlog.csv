@@ -1553,13 +1553,13 @@ Phase: Phase 6: Polish & Cross-Cutting Concerns
 Source: specs/011-idempotency-helper/tasks.md:69",011-idempotency-helper;polish,Medium,Done,011-idempotency-helper
 012-rivetkit-adapter,,Epic,012 RivetKit Actor Adapter,"RivetKit Actor Adapter (012-rivetkit-adapter).
 
-Source: specs/012-rivetkit-adapter/spec.md:1",012-rivetkit-adapter,High,To Do,012-rivetkit-adapter
+Source: specs/012-rivetkit-adapter/spec.md:1",012-rivetkit-adapter,High,Done,012-rivetkit-adapter
 012-rivetkit-adapter-US1,012-rivetkit-adapter,Story,US1: Run a scenario against a workflow actor,"User story 1 (P1) of 012-rivetkit-adapter.
 
 Source: specs/012-rivetkit-adapter/spec.md:13",012-rivetkit-adapter;us1,High,Done,012-rivetkit-adapter
 012-rivetkit-adapter-US2,012-rivetkit-adapter,Story,US2: Actor crash and restart,"User story 2 (P1) of 012-rivetkit-adapter.
 
-Source: specs/012-rivetkit-adapter/spec.md:33",012-rivetkit-adapter;us2,High,To Do,012-rivetkit-adapter
+Source: specs/012-rivetkit-adapter/spec.md:33",012-rivetkit-adapter;us2,High,Done,012-rivetkit-adapter
 012-rivetkit-adapter-US3,012-rivetkit-adapter,Story,US3: Version compatibility,"User story 3 (P2) of 012-rivetkit-adapter.
 
 Source: specs/012-rivetkit-adapter/spec.md:52",012-rivetkit-adapter;us3,Medium,Done,012-rivetkit-adapter
@@ -1617,7 +1617,7 @@ Source: specs/012-rivetkit-adapter/tasks.md:50",012-rivetkit-adapter;us2;paralle
 
 Phase: Phase 4: User Story 2 - Actor crash and restart (Priority: P1)
 
-Source: specs/012-rivetkit-adapter/tasks.md:51",012-rivetkit-adapter;us2,High,To Do,012-rivetkit-adapter
+Source: specs/012-rivetkit-adapter/tasks.md:51",012-rivetkit-adapter;us2,High,Done,012-rivetkit-adapter
 012-rivetkit-adapter-T012,012-rivetkit-adapter-US3,Sub-task,"T012 Add RivetKit version matrix job (2.3.11, latest 2.3.x) with explicit skip message when engine binary unavailable in .github/workflows/ci.yml","Add RivetKit version matrix job (2.3.11, latest 2.3.x) with explicit skip message when engine binary unavailable in .github/workflows/ci.yml
 
 Phase: Phase 5: User Story 3 - Version compatibility (Priority: P2)
