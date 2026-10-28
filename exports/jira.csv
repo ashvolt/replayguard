@@ -1916,13 +1916,13 @@ ReplayGuard-ID: 012-rivetkit-adapter-T002",Medium,Done,012-rivetkit-adapter,setu
 Phase: Phase 2: Foundational (Blocking Prerequisites)
 
 Source: specs/012-rivetkit-adapter/tasks.md:25
-ReplayGuard-ID: 012-rivetkit-adapter-T003",Medium,To Do,012-rivetkit-adapter,foundational,
+ReplayGuard-ID: 012-rivetkit-adapter-T003",Medium,Done,012-rivetkit-adapter,foundational,
 340,333,Task,T004 Run conformance suite against `workflowsRuntime()` in packages/adapter-workflows/test/conformance.engine.test.ts,"Run conformance suite against `workflowsRuntime()` in packages/adapter-workflows/test/conformance.engine.test.ts
 
 Phase: Phase 2: Foundational (Blocking Prerequisites)
 
 Source: specs/012-rivetkit-adapter/tasks.md:26
-ReplayGuard-ID: 012-rivetkit-adapter-T004",Medium,To Do,012-rivetkit-adapter,foundational,
+ReplayGuard-ID: 012-rivetkit-adapter-T004",Medium,Done,012-rivetkit-adapter,foundational,
 341,334,Sub-task,"T005 Write failing ActorHost lifecycle tests (start on free port + temp storage, ready detection, dispose cleans processes/dirs) in packages/adapter-rivetkit/test/host.actor.test.ts","Write failing ActorHost lifecycle tests (start on free port + temp storage, ready detection, dispose cleans processes/dirs) in packages/adapter-rivetkit/test/host.actor.test.ts
 
 Phase: Phase 3: User Story 1 - Run a scenario against a workflow actor (Priority: P1) 🎯 MVP

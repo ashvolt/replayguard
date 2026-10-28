@@ -70,3 +70,12 @@ engine (option a), or should it restart both the engine and the host (option b)?
   factory runs in the host, with ledger events relayed over the existing process protocol
   (spec 005/006). The conformance suite (T003) compares *outcomes*, not code.
 - Default budget for actor kill cases: `graceMs` ≥ 30 s.
+
+## Phase C: engine PID and ports
+
+- The engine writes `{ pid, endpoint, bind_host }` to
+  `<RIVETKIT_STORAGE_PATH>/.rivetkit/var/engine/runtime.json`, with its logs under
+  `.rivetkit/var/logs/rivet-engine/`. When disposing, the adapter reads the PID from that file and
+  sends `SIGKILL` to the engine.
+- `enginePort: P` makes the engine listen on **P, P+1 and P+10**. Each scenario claims a port
+  block whose three ports are all free, so concurrent scenarios do not share an engine.

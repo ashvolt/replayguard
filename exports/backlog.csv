@@ -1577,12 +1577,12 @@ Source: specs/012-rivetkit-adapter/tasks.md:19",012-rivetkit-adapter;setup,Mediu
 
 Phase: Phase 2: Foundational (Blocking Prerequisites)
 
-Source: specs/012-rivetkit-adapter/tasks.md:25",012-rivetkit-adapter;foundational,Medium,To Do,012-rivetkit-adapter
+Source: specs/012-rivetkit-adapter/tasks.md:25",012-rivetkit-adapter;foundational,Medium,Done,012-rivetkit-adapter
 012-rivetkit-adapter-T004,012-rivetkit-adapter,Task,T004 Run conformance suite against `workflowsRuntime()` in packages/adapter-workflows/test/conformance.engine.test.ts,"Run conformance suite against `workflowsRuntime()` in packages/adapter-workflows/test/conformance.engine.test.ts
 
 Phase: Phase 2: Foundational (Blocking Prerequisites)
 
-Source: specs/012-rivetkit-adapter/tasks.md:26",012-rivetkit-adapter;foundational,Medium,To Do,012-rivetkit-adapter
+Source: specs/012-rivetkit-adapter/tasks.md:26",012-rivetkit-adapter;foundational,Medium,Done,012-rivetkit-adapter
 012-rivetkit-adapter-T005,012-rivetkit-adapter-US1,Sub-task,"T005 Write failing ActorHost lifecycle tests (start on free port + temp storage, ready detection, dispose cleans processes/dirs) in packages/adapter-rivetkit/test/host.actor.test.ts","Write failing ActorHost lifecycle tests (start on free port + temp storage, ready detection, dispose cleans processes/dirs) in packages/adapter-rivetkit/test/host.actor.test.ts
 
 Phase: Phase 3: User Story 1 - Run a scenario against a workflow actor (Priority: P1) 🎯 MVP

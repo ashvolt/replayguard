@@ -22,8 +22,8 @@ description: "Task list for 012-rivetkit-adapter"
 
 ## Phase 2: Foundational (Blocking Prerequisites)
 
-- [ ] T003 Extract shared runtime conformance suite (H0, H1, H1b, H3a, H3b, H4, clean baseline) parameterized by runtime factory in packages/adapter-workflows/test-support/conformance.ts
-- [ ] T004 Run conformance suite against `workflowsRuntime()` in packages/adapter-workflows/test/conformance.engine.test.ts
+- [X] T003 Extract shared runtime conformance suite (H0, H1, H1b, H3a, H3b, H4, clean baseline) parameterized by runtime factory in packages/adapter-workflows/test-support/conformance.ts
+- [X] T004 Run conformance suite against `workflowsRuntime()` in packages/adapter-workflows/test/conformance.engine.test.ts
 
 ---
 

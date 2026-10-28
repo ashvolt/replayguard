@@ -9,7 +9,8 @@ const Serialized = v.strictObject({
 });
 
 const Outcome = v.variant("state", [
-	v.strictObject({ state: v.literal("completed"), output: v.unknown() }),
+	// `output` may be absent: JSON IPC drops keys whose value is undefined.
+	v.strictObject({ state: v.literal("completed"), output: v.exactOptional(v.unknown()) }),
 	v.strictObject({ state: v.literal("failed"), error: Serialized }),
 	v.strictObject({ state: v.literal("sleeping"), wakeAt: v.number() }),
 	v.strictObject({ state: v.literal("waiting"), names: v.array(v.string()) }),

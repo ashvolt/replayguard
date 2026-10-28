@@ -36,6 +36,8 @@ describe("IPC protocol", () => {
 			error: { name: "Error", message: "x" },
 		},
 		{ type: "run-ended", outcome: { state: "completed", output: { any: ["json"] } } },
+		// A workflow returning undefined: JSON IPC drops the `output` key.
+		{ type: "run-ended", outcome: { state: "completed" } },
 		{ type: "run-ended", outcome: { state: "sleeping", wakeAt: 5 } },
 		{ type: "run-ended", outcome: { state: "waiting", names: [] } },
 		{ type: "run-ended", outcome: { state: "failed", error: { name: "E", message: "m" } } },

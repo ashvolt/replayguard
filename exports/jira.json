@@ -6539,7 +6539,7 @@
     {
       "sourceId": "012-rivetkit-adapter-T003",
       "parentSourceId": "012-rivetkit-adapter",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Task"
@@ -6558,7 +6558,7 @@
     {
       "sourceId": "012-rivetkit-adapter-T004",
       "parentSourceId": "012-rivetkit-adapter",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Task"

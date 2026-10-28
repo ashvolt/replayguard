@@ -170,7 +170,8 @@ describe("process edges: protocol robustness", () => {
 				return {
 					send: (m) => {
 						if (m.type === "init")
-							for (const msg of messages(m)) queueMicrotask(() => listener(msg));
+							for (const msg of messages(m as unknown as { storeDir: string }))
+								queueMicrotask(() => listener(msg));
 					},
 					onMessage: (l) => {
 						listener = l;

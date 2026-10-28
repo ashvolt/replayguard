@@ -34,11 +34,15 @@ CI runs these reproductions in gap mode, so ReplayGuard notices when upstream be
 - **`workflowsProcessRuntime({ scenarioModule })`**: each run executes in a child process on a
   `FileDriver`. The child pauses at every effect checkpoint, before start, while in flight, and
   after settle. The parent decides whether to continue, return an error, or kill the child, so
-  every effect strategy works, plus `processKill`. Limits:
-  - Write anchors are not supported.
-  - Scripted messages are not supported.
-  - Workflow input must be JSON-serializable.
-  - Effect checkpoints are handled one at a time.
+  every effect strategy works, plus `processKill`.
+  - Checkpoints are ordered per call, so a hanging call does not block other calls.
+  - A host keeps running effects that outlived their run until they settle. A timed-out call
+    therefore still lands in the background, and process isolation reproduces
+    `concurrent-duplicate` and `orphaned` just like the in-process engine.
+  - Limits:
+    - Write anchors are not supported.
+    - Scripted messages are not supported.
+    - Workflow input must be JSON-serializable.
 
 ## Custom strategies
 

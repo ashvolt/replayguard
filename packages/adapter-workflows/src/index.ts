@@ -28,6 +28,14 @@ export type {
 } from "./process/protocol.js";
 export { parseChildMessage, parseParentMessage } from "./process/protocol.js";
 export {
+	type CheckpointClient,
+	createCheckpointClient,
+	type InitEnvelope,
+	type ParentEnvelope,
+	relayRun,
+	resolveScenarioModule,
+} from "./process/relay.js";
+export {
 	type EngineWorkflow,
 	runEngineOnce,
 	toOutcome,

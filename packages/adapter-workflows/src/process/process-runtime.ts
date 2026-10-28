@@ -1,36 +1,21 @@
 import { fork } from "node:child_process";
-import { existsSync, mkdtempSync, realpathSync, rmSync } from "node:fs";
+import { mkdtempSync, rmSync } from "node:fs";
 import { tmpdir } from "node:os";
-import { isAbsolute, join, relative, resolve } from "node:path";
+import { join } from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
 import {
 	ConfigError,
 	createCrashStrategy,
 	DEFAULT_STRATEGIES,
-	type EffectHooks,
 	type FaultStrategy,
-	HarnessError,
-	type PendingCall,
 	type PersistenceControl,
-	type RunOutcome,
 	type RuntimeCase,
-	serializeError,
 	type WorkflowRuntime,
 } from "@replayguard/core";
 import type { EngineWorkflow } from "../runtime.js";
-import { type ParentMessage, parseChildMessage } from "./protocol.js";
+import { type ChildChannel, relayRun, resolveScenarioModule } from "./relay.js";
 
-/** A running child process, as seen by the parent. */
-export interface ChildChannel {
-	/** Sends a message to the child. */
-	send(message: ParentMessage): void;
-	/** Registers the handler for child messages. */
-	onMessage(listener: (raw: unknown) => void): void;
-	/** Registers the handler for child exit. */
-	onExit(listener: (code: number | null) => void): void;
-	/** Forcibly terminates the child. */
-	kill(): void;
-}
+export type { ChildChannel } from "./relay.js";
 
 /** Starts a child host from an entry file. */
 export type SpawnChild = (entry: string) => ChildChannel;
@@ -95,18 +80,6 @@ class ProcessPersistence implements PersistenceControl {
 	}
 }
 
-function resolveModule(module: string | URL, root: string): string {
-	const path =
-		module instanceof URL || module.startsWith("file:") ? fileURLToPath(module) : resolve(module);
-	if (!existsSync(path))
-		throw new ConfigError(`scenario module not found: ${path}`, "RG_CONFIG_PROCESS");
-	const rel = relative(realpathSync(root), realpathSync(path));
-	if (rel.startsWith("..") || isAbsolute(rel)) {
-		throw new ConfigError("scenario module must be inside the project root", "RG_CONFIG_PROCESS");
-	}
-	return path;
-}
-
 const defaultChildEntry = () => fileURLToPath(new URL("./process/child-entry.js", import.meta.url));
 
 /**
@@ -137,114 +110,28 @@ export function workflowsProcessRuntime(
 					);
 				}
 			}
-			const modulePath = resolveModule(
+			const modulePath = resolveScenarioModule(
 				options.scenarioModule,
 				options.projectRoot ?? process.cwd(),
 			);
 			const storeDir = mkdtempSync(join(options.tempDir ?? tmpdir(), "replayguard-"));
 			const entry = options.childEntry ?? defaultChildEntry();
 			const persistence = new ProcessPersistence();
-			const { ledger } = input;
 			let current: ChildChannel | undefined;
 
-			const runOnce = () =>
-				new Promise<RunOutcome>((resolveRun, rejectRun) => {
-					const child = spawn(entry);
-					current = child;
-					const calls = new Map<number, PendingCall>();
-					const seqs = new Map<number, number>();
-					let done = false;
-					let killed = false;
-					const finish = (fn: () => void) => {
-						if (!done) {
-							done = true;
-							fn();
-						}
-					};
-					const kill = () => {
-						killed = true;
-						child.kill();
-						finish(() => resolveRun({ state: "crashed" }));
-					};
-					const runHooks = async (token: number, step: (hooks: EffectHooks) => unknown) => {
-						try {
-							for (const hooks of ledger.hooks()) await step(hooks);
-							child.send({ type: "continue", token });
-						} catch (error) {
-							if (persistence.crashed) kill();
-							else child.send({ type: "continue", token, error: serializeError(error) });
-						}
-					};
-					const handle = async (raw: unknown) => {
-						const message = parseChildMessage(raw);
-						if (done) return;
-						switch (message.type) {
-							case "before-start": {
-								const call = ledger.pendingCall(
-									message.kind,
-									message.subject,
-									message.idempotencyKey,
-								);
-								calls.set(message.token, call);
-								await runHooks(message.token, (h) => h.beforeStart?.(call));
-								return;
-							}
-							case "in-flight": {
-								const call = calls.get(message.call);
-								if (!call) throw new HarnessError(`unknown call token ${message.call}`);
-								const attempt = ledger.beginAttempt(call, undefined);
-								seqs.set(message.seq, attempt.seq);
-								await runHooks(message.token, (h) => h.inFlight?.(attempt));
-								return;
-							}
-							case "after-settle": {
-								const seq = seqs.get(message.seq);
-								if (seq === undefined) throw new HarnessError(`unknown attempt ${message.seq}`);
-								ledger.settleAttempt(seq, message.status, message.error);
-								const attempt = ledger.attempts()[seq - 1];
-								await runHooks(message.token, (h) =>
-									attempt ? h.afterSettle?.(attempt) : undefined,
-								);
-								return;
-							}
-							case "run-ended":
-								finish(() => resolveRun(message.outcome));
-								return;
-							case "harness-error":
-								finish(() => rejectRun(new HarnessError(`child host failed: ${message.message}`)));
-								return;
-						}
-					};
-					let queue = Promise.resolve();
-					child.onMessage((raw) => {
-						queue = queue
-							.then(() => handle(raw))
-							.catch((error: unknown) => {
-								child.kill();
-								finish(() => rejectRun(error));
-							});
-					});
-					child.onExit((code) => {
-						finish(() =>
-							killed
-								? resolveRun({ state: "crashed" })
-								: rejectRun(
-										new HarnessError(
-											`child process exited (code ${String(code)}) before reporting a result`,
-										),
-									),
-						);
-					});
-					child.send({
-						type: "init",
-						caseIndex: input.caseIndex,
-						workflowId: input.workflowId,
-						storeDir,
-						scenarioModule: pathToFileURL(modulePath).href,
-						exportName,
-						input: input.input,
-					});
+			const runOnce = () => {
+				const child = spawn(entry);
+				current = child;
+				return relayRun(child, input.ledger, persistence, {
+					type: "init",
+					caseIndex: input.caseIndex,
+					workflowId: input.workflowId,
+					storeDir,
+					scenarioModule: pathToFileURL(modulePath).href,
+					exportName,
+					input: input.input,
 				});
+			};
 
 			return {
 				persistence,
