@@ -6060,7 +6060,7 @@
     {
       "sourceId": "011-idempotency-helper",
       "parentSourceId": null,
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Epic"
@@ -6078,7 +6078,7 @@
     {
       "sourceId": "011-idempotency-helper-US1",
       "parentSourceId": "011-idempotency-helper",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Story"
@@ -6097,7 +6097,7 @@
     {
       "sourceId": "011-idempotency-helper-US2",
       "parentSourceId": "011-idempotency-helper",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Story"
@@ -6116,7 +6116,7 @@
     {
       "sourceId": "011-idempotency-helper-US3",
       "parentSourceId": "011-idempotency-helper",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Story"
@@ -6135,7 +6135,7 @@
     {
       "sourceId": "011-idempotency-helper-T001",
       "parentSourceId": "011-idempotency-helper",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Task"
@@ -6154,7 +6154,7 @@
     {
       "sourceId": "011-idempotency-helper-T002",
       "parentSourceId": "011-idempotency-helper",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Task"
@@ -6173,7 +6173,7 @@
     {
       "sourceId": "011-idempotency-helper-T003",
       "parentSourceId": "011-idempotency-helper-US1",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Sub-task"
@@ -6193,7 +6193,7 @@
     {
       "sourceId": "011-idempotency-helper-T004",
       "parentSourceId": "011-idempotency-helper-US1",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Sub-task"
@@ -6213,7 +6213,7 @@
     {
       "sourceId": "011-idempotency-helper-T005",
       "parentSourceId": "011-idempotency-helper-US1",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Sub-task"
@@ -6232,7 +6232,7 @@
     {
       "sourceId": "011-idempotency-helper-T006",
       "parentSourceId": "011-idempotency-helper-US2",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Sub-task"
@@ -6252,7 +6252,7 @@
     {
       "sourceId": "011-idempotency-helper-T007",
       "parentSourceId": "011-idempotency-helper-US2",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Sub-task"
@@ -6272,7 +6272,7 @@
     {
       "sourceId": "011-idempotency-helper-T008",
       "parentSourceId": "011-idempotency-helper-US2",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Sub-task"
@@ -6291,7 +6291,7 @@
     {
       "sourceId": "011-idempotency-helper-T009",
       "parentSourceId": "011-idempotency-helper-US2",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Sub-task"
@@ -6310,7 +6310,7 @@
     {
       "sourceId": "011-idempotency-helper-T010",
       "parentSourceId": "011-idempotency-helper-US2",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Sub-task"
@@ -6329,7 +6329,7 @@
     {
       "sourceId": "011-idempotency-helper-T011",
       "parentSourceId": "011-idempotency-helper-US3",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Sub-task"
@@ -6349,7 +6349,7 @@
     {
       "sourceId": "011-idempotency-helper-T012",
       "parentSourceId": "011-idempotency-helper-US3",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Sub-task"
@@ -6368,7 +6368,7 @@
     {
       "sourceId": "011-idempotency-helper-T013",
       "parentSourceId": "011-idempotency-helper",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Task"
@@ -6388,7 +6388,7 @@
     {
       "sourceId": "011-idempotency-helper-T014",
       "parentSourceId": "011-idempotency-helper",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Task"
@@ -6407,7 +6407,7 @@
     {
       "sourceId": "011-idempotency-helper-T015",
       "parentSourceId": "011-idempotency-helper",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Task"

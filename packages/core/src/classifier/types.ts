@@ -1,4 +1,4 @@
-import type { FixHint } from "../hints/types.js";
+import type { FixHint } from "../hints/fix-hint.js";
 import type { ScenarioResult } from "../scenario/result.js";
 
 /** What happened to one logical effect in one case. */

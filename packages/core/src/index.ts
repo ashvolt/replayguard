@@ -67,7 +67,10 @@ export {
 	validateFaultSpec,
 	type WriteAnchor,
 } from "./faults/types.js";
-export type { FixHint } from "./hints/types.js";
+export { attachHints } from "./hints/attach.js";
+export { HINT_RULES, INVESTIGATE } from "./hints/catalog.js";
+export type { FixHint, HintContext, HintRule } from "./hints/types.js";
+export { type IdempotencyKeyOptions, idempotencyKey } from "./idempotency/key.js";
 export { type InstrumentOptions, instrument } from "./instrument/instrument.js";
 export { canonicalHash, canonicalize, fnv1a64 } from "./ledger/canonical.js";
 export { EffectLedger } from "./ledger/ledger.js";

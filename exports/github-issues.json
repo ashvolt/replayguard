@@ -4557,7 +4557,7 @@
         "011-idempotency-helper",
         "epic"
       ],
-      "status": "To Do"
+      "status": "Done"
     },
     {
       "sourceId": "011-idempotency-helper-US1",
@@ -4571,7 +4571,7 @@
         "us1",
         "story"
       ],
-      "status": "To Do"
+      "status": "Done"
     },
     {
       "sourceId": "011-idempotency-helper-US2",
@@ -4585,7 +4585,7 @@
         "us2",
         "story"
       ],
-      "status": "To Do"
+      "status": "Done"
     },
     {
       "sourceId": "011-idempotency-helper-US3",
@@ -4599,7 +4599,7 @@
         "us3",
         "story"
       ],
-      "status": "To Do"
+      "status": "Done"
     },
     {
       "sourceId": "011-idempotency-helper-T001",
@@ -4613,7 +4613,7 @@
         "setup",
         "task"
       ],
-      "status": "To Do"
+      "status": "Done"
     },
     {
       "sourceId": "011-idempotency-helper-T002",
@@ -4627,7 +4627,7 @@
         "foundational",
         "task"
       ],
-      "status": "To Do"
+      "status": "Done"
     },
     {
       "sourceId": "011-idempotency-helper-T003",
@@ -4642,7 +4642,7 @@
         "parallel",
         "sub-task"
       ],
-      "status": "To Do"
+      "status": "Done"
     },
     {
       "sourceId": "011-idempotency-helper-T004",
@@ -4657,7 +4657,7 @@
         "parallel",
         "sub-task"
       ],
-      "status": "To Do"
+      "status": "Done"
     },
     {
       "sourceId": "011-idempotency-helper-T005",
@@ -4671,7 +4671,7 @@
         "us1",
         "sub-task"
       ],
-      "status": "To Do"
+      "status": "Done"
     },
     {
       "sourceId": "011-idempotency-helper-T006",
@@ -4686,7 +4686,7 @@
         "parallel",
         "sub-task"
       ],
-      "status": "To Do"
+      "status": "Done"
     },
     {
       "sourceId": "011-idempotency-helper-T007",
@@ -4701,7 +4701,7 @@
         "parallel",
         "sub-task"
       ],
-      "status": "To Do"
+      "status": "Done"
     },
     {
       "sourceId": "011-idempotency-helper-T008",
@@ -4715,7 +4715,7 @@
         "us2",
         "sub-task"
       ],
-      "status": "To Do"
+      "status": "Done"
     },
     {
       "sourceId": "011-idempotency-helper-T009",
@@ -4729,7 +4729,7 @@
         "us2",
         "sub-task"
       ],
-      "status": "To Do"
+      "status": "Done"
     },
     {
       "sourceId": "011-idempotency-helper-T010",
@@ -4743,7 +4743,7 @@
         "us2",
         "sub-task"
       ],
-      "status": "To Do"
+      "status": "Done"
     },
     {
       "sourceId": "011-idempotency-helper-T011",
@@ -4758,7 +4758,7 @@
         "parallel",
         "sub-task"
       ],
-      "status": "To Do"
+      "status": "Done"
     },
     {
       "sourceId": "011-idempotency-helper-T012",
@@ -4772,7 +4772,7 @@
         "us3",
         "sub-task"
       ],
-      "status": "To Do"
+      "status": "Done"
     },
     {
       "sourceId": "011-idempotency-helper-T013",
@@ -4787,7 +4787,7 @@
         "parallel",
         "task"
       ],
-      "status": "To Do"
+      "status": "Done"
     },
     {
       "sourceId": "011-idempotency-helper-T014",
@@ -4801,7 +4801,7 @@
         "polish",
         "task"
       ],
-      "status": "To Do"
+      "status": "Done"
     },
     {
       "sourceId": "011-idempotency-helper-T015",
@@ -4815,7 +4815,7 @@
         "polish",
         "task"
       ],
-      "status": "To Do"
+      "status": "Done"
     },
     {
       "sourceId": "012-rivetkit-adapter",

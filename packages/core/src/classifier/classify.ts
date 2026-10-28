@@ -1,3 +1,4 @@
+import { attachHints } from "../hints/attach.js";
 import type { CaseResult, ScenarioResult } from "../scenario/result.js";
 import { buildEvidence, expectedCounts } from "./evidence.js";
 import { explain } from "./explain.js";
@@ -77,12 +78,12 @@ export function classify(result: ScenarioResult, policy: Policy = {}): Classifie
 	validatePolicy(policy);
 	const expected = expectedCounts(result.baseline);
 	const cases = [result.baseline, ...result.cases].map((c) => classifyCase(c, expected, policy));
-	return {
+	return attachHints({
 		version: 1,
 		result,
 		cases,
 		verdict: worstVerdict(cases.map((c) => c.verdict)),
 		baselineAnomalies: baselineAnomalies(result.baseline, expected),
 		policy,
-	};
+	});
 }

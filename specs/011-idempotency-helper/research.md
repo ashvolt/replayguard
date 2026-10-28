@@ -2,8 +2,12 @@
 
 ## R1 — Key format
 
-- **Decision**: `[namespace:]workflowId:step[:iteration][:extra...]`, each component escaped by
-  replacing `%` → `%25` and `:` → `%3A`. If length > 255: `prefix(200) + ":h" + fnv64(full)`.
+- **Decision**: `[namespace/]workflowId:step[#iteration][:extra...]`, each component escaped by
+  replacing `%` → `%25`, `:` → `%3A`, `#` → `%23`, `/` → `%2F`. If length > 255:
+  `prefix(200) + ":h" + fnv64(full)`.
+- **Amendment (implementation)**: the first draft used `:` for every separator, which is ambiguous
+  (namespace `a` + workflow `b` + step `c` equals workflow `a` + step `b` + part `c`). Distinct
+  separators for namespace (`/`) and iteration (`#`) make the encoding injective (property-tested).
 - **Rationale**: Readable in provider dashboards, unambiguous, provider-limit safe.
 - **Why not attempt numbers**: Spike H2 — attempts reset after crashes; keys must survive.
 

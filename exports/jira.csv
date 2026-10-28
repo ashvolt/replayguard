@@ -1780,109 +1780,109 @@ ReplayGuard-ID: 010-vitest-matchers-T016",Medium,To Do,010-vitest-matchers,polis
 314,,Epic,011 Idempotency Key Helper & Fix Hints,"Idempotency Key Helper & Fix Hints (011-idempotency-helper).
 
 Source: specs/011-idempotency-helper/spec.md:1
-ReplayGuard-ID: 011-idempotency-helper",High,To Do,011-idempotency-helper,,
+ReplayGuard-ID: 011-idempotency-helper",High,Done,011-idempotency-helper,,
 315,314,Story,US1: Stable idempotency key for a step,"User story 1 (P1) of 011-idempotency-helper.
 
 Source: specs/011-idempotency-helper/spec.md:13
-ReplayGuard-ID: 011-idempotency-helper-US1",High,To Do,011-idempotency-helper,us1,
+ReplayGuard-ID: 011-idempotency-helper-US1",High,Done,011-idempotency-helper,us1,
 316,314,Story,US2: Fix hints in reports,"User story 2 (P1) of 011-idempotency-helper.
 
 Source: specs/011-idempotency-helper/spec.md:36
-ReplayGuard-ID: 011-idempotency-helper-US2",High,To Do,011-idempotency-helper,us2,
+ReplayGuard-ID: 011-idempotency-helper-US2",High,Done,011-idempotency-helper,us2,
 317,314,Story,US3: Detect unstable keys,"User story 3 (P2) of 011-idempotency-helper.
 
 Source: specs/011-idempotency-helper/spec.md:63
-ReplayGuard-ID: 011-idempotency-helper-US3",Medium,To Do,011-idempotency-helper,us3,
+ReplayGuard-ID: 011-idempotency-helper-US3",Medium,Done,011-idempotency-helper,us3,
 318,314,Task,T001 Create `idempotency/` and `hints/` modules with exports in packages/core/src/index.ts,"Create `idempotency/` and `hints/` modules with exports in packages/core/src/index.ts
 
 Phase: Phase 1: Setup (Shared Infrastructure)
 
 Source: specs/011-idempotency-helper/tasks.md:18
-ReplayGuard-ID: 011-idempotency-helper-T001",Medium,To Do,011-idempotency-helper,setup,
+ReplayGuard-ID: 011-idempotency-helper-T001",Medium,Done,011-idempotency-helper,setup,
 319,314,Task,"T002 Define FixHint, HintRule, HintContext types (""title ≤ 80 chars"") in packages/core/src/hints/types.ts","Define FixHint, HintRule, HintContext types (""title ≤ 80 chars"") in packages/core/src/hints/types.ts
 
 Phase: Phase 2: Foundational (Blocking Prerequisites)
 
 Source: specs/011-idempotency-helper/tasks.md:24
-ReplayGuard-ID: 011-idempotency-helper-T002",Medium,To Do,011-idempotency-helper,foundational,
+ReplayGuard-ID: 011-idempotency-helper-T002",Medium,Done,011-idempotency-helper,foundational,
 320,315,Sub-task,"T003 Write failing key tests (format, escaping `%`/`:`, iteration, namespace ""1–64"", parts, empty workflowId/step → ConfigError, > 255 → prefix + hash) in packages/core/test/idempotency/key.test.ts","Write failing key tests (format, escaping `%`/`:`, iteration, namespace ""1–64"", parts, empty workflowId/step → ConfigError, > 255 → prefix + hash) in packages/core/test/idempotency/key.test.ts
 
 Phase: Phase 3: User Story 1 - Stable idempotency key for a step (Priority: P1) 🎯 MVP
 
 Source: specs/011-idempotency-helper/tasks.md:34
-ReplayGuard-ID: 011-idempotency-helper-T003",High,To Do,011-idempotency-helper,us1,parallel
+ReplayGuard-ID: 011-idempotency-helper-T003",High,Done,011-idempotency-helper,us1,parallel
 321,315,Sub-task,"T004 Write failing property tests (stability, injectivity on escaped components, length ≤ 255) in packages/core/test/idempotency/key.property.test.ts","Write failing property tests (stability, injectivity on escaped components, length ≤ 255) in packages/core/test/idempotency/key.property.test.ts
 
 Phase: Phase 3: User Story 1 - Stable idempotency key for a step (Priority: P1) 🎯 MVP
 
 Source: specs/011-idempotency-helper/tasks.md:35
-ReplayGuard-ID: 011-idempotency-helper-T004",High,To Do,011-idempotency-helper,us1,parallel
+ReplayGuard-ID: 011-idempotency-helper-T004",High,Done,011-idempotency-helper,us1,parallel
 322,315,Sub-task,T005 Implement `idempotencyKey` in packages/core/src/idempotency/key.ts,"Implement `idempotencyKey` in packages/core/src/idempotency/key.ts
 
 Phase: Phase 3: User Story 1 - Stable idempotency key for a step (Priority: P1) 🎯 MVP
 
 Source: specs/011-idempotency-helper/tasks.md:36
-ReplayGuard-ID: 011-idempotency-helper-T005",High,To Do,011-idempotency-helper,us1,
+ReplayGuard-ID: 011-idempotency-helper-T005",High,Done,011-idempotency-helper,us1,
 323,316,Sub-task,"T006 Write failing catalog tests, one per rule (matches + rendered example) in packages/core/test/hints/catalog.test.ts","Write failing catalog tests, one per rule (matches + rendered example) in packages/core/test/hints/catalog.test.ts
 
 Phase: Phase 4: User Story 2 - Fix hints in reports (Priority: P1)
 
 Source: specs/011-idempotency-helper/tasks.md:46
-ReplayGuard-ID: 011-idempotency-helper-T006",High,To Do,011-idempotency-helper,us2,parallel
+ReplayGuard-ID: 011-idempotency-helper-T006",High,Done,011-idempotency-helper,us2,parallel
 324,316,Sub-task,"T007 Write failing attach tests (fallback `investigate`, passing outcomes get no hints, invariant property) in packages/core/test/hints/attach.test.ts","Write failing attach tests (fallback `investigate`, passing outcomes get no hints, invariant property) in packages/core/test/hints/attach.test.ts
 
 Phase: Phase 4: User Story 2 - Fix hints in reports (Priority: P1)
 
 Source: specs/011-idempotency-helper/tasks.md:47
-ReplayGuard-ID: 011-idempotency-helper-T007",High,To Do,011-idempotency-helper,us2,parallel
+ReplayGuard-ID: 011-idempotency-helper-T007",High,Done,011-idempotency-helper,us2,parallel
 325,316,Sub-task,"T008 Implement hint catalog (add-idempotency-key, provider-ignores-key, timeout-retry-concurrency, orphan-compensate, crash-loop-retries, skipped-ephemeral, allow-by-policy, investigate) in packages/core/src/hints/catalog.ts","Implement hint catalog (add-idempotency-key, provider-ignores-key, timeout-retry-concurrency, orphan-compensate, crash-loop-retries, skipped-ephemeral, allow-by-policy, investigate) in packages/core/src/hints/catalog.ts
 
 Phase: Phase 4: User Story 2 - Fix hints in reports (Priority: P1)
 
 Source: specs/011-idempotency-helper/tasks.md:48
-ReplayGuard-ID: 011-idempotency-helper-T008",High,To Do,011-idempotency-helper,us2,
+ReplayGuard-ID: 011-idempotency-helper-T008",High,Done,011-idempotency-helper,us2,
 326,316,Sub-task,T009 Implement `attachHints` and call it at the end of `classify()` in packages/core/src/hints/attach.ts and packages/core/src/classifier/classify.ts,"Implement `attachHints` and call it at the end of `classify()` in packages/core/src/hints/attach.ts and packages/core/src/classifier/classify.ts
 
 Phase: Phase 4: User Story 2 - Fix hints in reports (Priority: P1)
 
 Source: specs/011-idempotency-helper/tasks.md:49
-ReplayGuard-ID: 011-idempotency-helper-T009",High,To Do,011-idempotency-helper,us2,
+ReplayGuard-ID: 011-idempotency-helper-T009",High,Done,011-idempotency-helper,us2,
 327,316,Sub-task,"T010 Write end-to-end fix test: H1 scenario fails without key, passes with `idempotencyKey` in packages/adapter-workflows/test/fix-with-key.e2e.test.ts","Write end-to-end fix test: H1 scenario fails without key, passes with `idempotencyKey` in packages/adapter-workflows/test/fix-with-key.e2e.test.ts
 
 Phase: Phase 4: User Story 2 - Fix hints in reports (Priority: P1)
 
 Source: specs/011-idempotency-helper/tasks.md:50
-ReplayGuard-ID: 011-idempotency-helper-T010",High,To Do,011-idempotency-helper,us2,
+ReplayGuard-ID: 011-idempotency-helper-T010",High,Done,011-idempotency-helper,us2,
 328,317,Sub-task,T011 Write failing unstable-key rule tests in packages/core/test/hints/unstable-key.test.ts,"Write failing unstable-key rule tests in packages/core/test/hints/unstable-key.test.ts
 
 Phase: Phase 5: User Story 3 - Detect unstable keys (Priority: P2)
 
 Source: specs/011-idempotency-helper/tasks.md:60
-ReplayGuard-ID: 011-idempotency-helper-T011",Medium,To Do,011-idempotency-helper,us3,parallel
+ReplayGuard-ID: 011-idempotency-helper-T011",Medium,Done,011-idempotency-helper,us3,parallel
 329,317,Sub-task,T012 Implement `unstable-idempotency-key` rule in packages/core/src/hints/catalog.ts,"Implement `unstable-idempotency-key` rule in packages/core/src/hints/catalog.ts
 
 Phase: Phase 5: User Story 3 - Detect unstable keys (Priority: P2)
 
 Source: specs/011-idempotency-helper/tasks.md:61
-ReplayGuard-ID: 011-idempotency-helper-T012",Medium,To Do,011-idempotency-helper,us3,
+ReplayGuard-ID: 011-idempotency-helper-T012",Medium,Done,011-idempotency-helper,us3,
 330,314,Task,"T013 Guide ""Fixing duplicate side effects"" in docs/guides/fixing-duplicates.md","Guide ""Fixing duplicate side effects"" in docs/guides/fixing-duplicates.md
 
 Phase: Phase 6: Polish & Cross-Cutting Concerns
 
 Source: specs/011-idempotency-helper/tasks.md:67
-ReplayGuard-ID: 011-idempotency-helper-T013",Medium,To Do,011-idempotency-helper,polish,parallel
+ReplayGuard-ID: 011-idempotency-helper-T013",Medium,Done,011-idempotency-helper,polish,parallel
 331,314,Task,T014 Author diagrams covering T001–T015 in specs/011-idempotency-helper/diagram.yaml,"Author diagrams covering T001–T015 in specs/011-idempotency-helper/diagram.yaml
 
 Phase: Phase 6: Polish & Cross-Cutting Concerns
 
 Source: specs/011-idempotency-helper/tasks.md:68
-ReplayGuard-ID: 011-idempotency-helper-T014",Medium,To Do,011-idempotency-helper,polish,
+ReplayGuard-ID: 011-idempotency-helper-T014",Medium,Done,011-idempotency-helper,polish,
 332,314,Task,T015 Validate quickstart scenarios in specs/011-idempotency-helper/quickstart.md,"Validate quickstart scenarios in specs/011-idempotency-helper/quickstart.md
 
 Phase: Phase 6: Polish & Cross-Cutting Concerns
 
 Source: specs/011-idempotency-helper/tasks.md:69
-ReplayGuard-ID: 011-idempotency-helper-T015",Medium,To Do,011-idempotency-helper,polish,
+ReplayGuard-ID: 011-idempotency-helper-T015",Medium,Done,011-idempotency-helper,polish,
 333,,Epic,012 RivetKit Actor Adapter,"RivetKit Actor Adapter (012-rivetkit-adapter).
 
 Source: specs/012-rivetkit-adapter/spec.md:1
