@@ -416,6 +416,54 @@ importers:
         specifier: 2.9.1
         version: 2.9.1
 
+  upstream/repro-crash-loop-retries:
+    dependencies:
+      '@rivet-dev/workflows':
+        specifier: 1.0.0
+        version: 1.0.0(rivetkit@2.3.27(@modelcontextprotocol/sdk@1.32.1(supports-color@7.2.0)(zod@4.6.7))(better-sqlite3@12.11.1)(supports-color@7.2.0)(ws@8.22.0))
+    devDependencies:
+      '@types/node':
+        specifier: 22.20.5
+        version: 22.20.5
+      typescript:
+        specifier: ~6.0.3
+        version: 6.0.3
+      vitest:
+        specifier: 4.1.12
+        version: 4.1.12(@opentelemetry/api@1.9.1)(@types/node@22.20.5)(@vitest/coverage-v8@4.1.12)(vite@8.3.4(@types/node@22.20.5)(esbuild@0.28.2)(yaml@2.9.1))
+
+  upstream/repro-stable-step-identity:
+    dependencies:
+      '@rivet-dev/workflows':
+        specifier: 1.0.0
+        version: 1.0.0(rivetkit@2.3.27(@modelcontextprotocol/sdk@1.32.1(supports-color@7.2.0)(zod@4.6.7))(better-sqlite3@12.11.1)(supports-color@7.2.0)(ws@8.22.0))
+    devDependencies:
+      '@types/node':
+        specifier: 22.20.5
+        version: 22.20.5
+      typescript:
+        specifier: ~6.0.3
+        version: 6.0.3
+      vitest:
+        specifier: 4.1.12
+        version: 4.1.12(@opentelemetry/api@1.9.1)(@types/node@22.20.5)(@vitest/coverage-v8@4.1.12)(vite@8.3.4(@types/node@22.20.5)(esbuild@0.28.2)(yaml@2.9.1))
+
+  upstream/repro-timeout-continuation:
+    dependencies:
+      '@rivet-dev/workflows':
+        specifier: 1.0.0
+        version: 1.0.0(rivetkit@2.3.27(@modelcontextprotocol/sdk@1.32.1(supports-color@7.2.0)(zod@4.6.7))(better-sqlite3@12.11.1)(supports-color@7.2.0)(ws@8.22.0))
+    devDependencies:
+      '@types/node':
+        specifier: 22.20.5
+        version: 22.20.5
+      typescript:
+        specifier: ~6.0.3
+        version: 6.0.3
+      vitest:
+        specifier: 4.1.12
+        version: 4.1.12(@opentelemetry/api@1.9.1)(@types/node@22.20.5)(@vitest/coverage-v8@4.1.12)(vite@8.3.4(@types/node@22.20.5)(esbuild@0.28.2)(yaml@2.9.1))
+
 packages:
 
   '@agentclientprotocol/sdk@0.16.1':

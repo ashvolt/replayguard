@@ -1,0 +1,19 @@
+{
+	"name": "@replayguard-upstream/repro-crash-loop-retries",
+	"private": true,
+	"type": "module",
+	"description": "Standalone reproduction for a proposal to @rivet-dev/workflows (see README).",
+	"scripts": {
+		"test": "vitest run",
+		"test:gap": "vitest run --mode gap",
+		"check-types": "tsc --noEmit"
+	},
+	"dependencies": {
+		"@rivet-dev/workflows": "1.0.0"
+	},
+	"devDependencies": {
+		"@types/node": "22.20.5",
+		"typescript": "~6.0.3",
+		"vitest": "4.1.12"
+	}
+}

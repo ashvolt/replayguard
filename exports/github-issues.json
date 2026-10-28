@@ -5125,7 +5125,7 @@
         "us1",
         "story"
       ],
-      "status": "To Do"
+      "status": "Done"
     },
     {
       "sourceId": "013-upstream-proposal-US2",
@@ -5139,7 +5139,7 @@
         "us2",
         "story"
       ],
-      "status": "To Do"
+      "status": "Done"
     },
     {
       "sourceId": "013-upstream-proposal-US3",
@@ -5167,7 +5167,7 @@
         "setup",
         "task"
       ],
-      "status": "To Do"
+      "status": "Done"
     },
     {
       "sourceId": "013-upstream-proposal-T002",
@@ -5181,7 +5181,7 @@
         "foundational",
         "task"
       ],
-      "status": "To Do"
+      "status": "Done"
     },
     {
       "sourceId": "013-upstream-proposal-T003",
@@ -5196,7 +5196,7 @@
         "parallel",
         "sub-task"
       ],
-      "status": "To Do"
+      "status": "Done"
     },
     {
       "sourceId": "013-upstream-proposal-T004",
@@ -5211,7 +5211,7 @@
         "parallel",
         "sub-task"
       ],
-      "status": "To Do"
+      "status": "Done"
     },
     {
       "sourceId": "013-upstream-proposal-T005",
@@ -5226,7 +5226,7 @@
         "parallel",
         "sub-task"
       ],
-      "status": "To Do"
+      "status": "Done"
     },
     {
       "sourceId": "013-upstream-proposal-T006",
@@ -5240,7 +5240,7 @@
         "us1",
         "sub-task"
       ],
-      "status": "To Do"
+      "status": "Done"
     },
     {
       "sourceId": "013-upstream-proposal-T007",
@@ -5255,7 +5255,7 @@
         "parallel",
         "sub-task"
       ],
-      "status": "To Do"
+      "status": "Done"
     },
     {
       "sourceId": "013-upstream-proposal-T008",
@@ -5270,7 +5270,7 @@
         "parallel",
         "sub-task"
       ],
-      "status": "To Do"
+      "status": "Done"
     },
     {
       "sourceId": "013-upstream-proposal-T009",
@@ -5285,7 +5285,7 @@
         "parallel",
         "sub-task"
       ],
-      "status": "To Do"
+      "status": "Done"
     },
     {
       "sourceId": "013-upstream-proposal-T010",
@@ -5313,7 +5313,7 @@
         "polish",
         "task"
       ],
-      "status": "To Do"
+      "status": "Done"
     },
     {
       "sourceId": "013-upstream-proposal-T012",
@@ -5327,7 +5327,7 @@
         "polish",
         "task"
       ],
-      "status": "To Do"
+      "status": "Done"
     },
     {
       "sourceId": "013-upstream-proposal-T013",
@@ -5341,7 +5341,7 @@
         "polish",
         "task"
       ],
-      "status": "To Do"
+      "status": "Done"
     }
   ]
 }

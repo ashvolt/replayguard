@@ -2,6 +2,8 @@ packages:
   - "packages/*"
   - "tools/*"
   - "spikes/*"
+  # Standalone reproductions for upstream proposals (spec 013).
+  - "upstream/*"
 
 # Supply-chain guard: refuse dependency versions published less than 7 days ago.
 minimumReleaseAge: 10080

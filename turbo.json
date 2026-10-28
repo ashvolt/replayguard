@@ -16,6 +16,10 @@
 			"dependsOn": ["^build"],
 			"outputs": ["reports/**"],
 			"cache": false
+		},
+		"test:gap": {
+			"dependsOn": ["^build"],
+			"cache": false
 		}
 	}
 }

@@ -2002,11 +2002,11 @@ ReplayGuard-ID: 013-upstream-proposal",High,To Do,013-upstream-proposal,,
 354,353,Story,US1: Minimal reproductions,"User story 1 (P1) of 013-upstream-proposal.
 
 Source: specs/013-upstream-proposal/spec.md:20
-ReplayGuard-ID: 013-upstream-proposal-US1",High,To Do,013-upstream-proposal,us1,
+ReplayGuard-ID: 013-upstream-proposal-US1",High,Done,013-upstream-proposal,us1,
 355,353,Story,US2: Issue drafts with design proposals,"User story 2 (P1) of 013-upstream-proposal.
 
 Source: specs/013-upstream-proposal/spec.md:41
-ReplayGuard-ID: 013-upstream-proposal-US2",High,To Do,013-upstream-proposal,us2,
+ReplayGuard-ID: 013-upstream-proposal-US2",High,Done,013-upstream-proposal,us2,
 356,353,Story,US3: Track responses,"User story 3 (P3) of 013-upstream-proposal.
 
 Source: specs/013-upstream-proposal/spec.md:62
@@ -2016,55 +2016,55 @@ ReplayGuard-ID: 013-upstream-proposal-US3",Low,To Do,013-upstream-proposal,us3,
 Phase: Phase 1: Setup (Shared Infrastructure)
 
 Source: specs/013-upstream-proposal/tasks.md:18
-ReplayGuard-ID: 013-upstream-proposal-T001",Medium,To Do,013-upstream-proposal,setup,
+ReplayGuard-ID: 013-upstream-proposal-T001",Medium,Done,013-upstream-proposal,setup,
 358,353,Task,T002 Record latest published `@rivet-dev/workflows` version and confirm gaps still reproduce in upstream/README.md,"Record latest published `@rivet-dev/workflows` version and confirm gaps still reproduce in upstream/README.md
 
 Phase: Phase 2: Foundational (Blocking Prerequisites)
 
 Source: specs/013-upstream-proposal/tasks.md:24
-ReplayGuard-ID: 013-upstream-proposal-T002",Medium,To Do,013-upstream-proposal,foundational,
+ReplayGuard-ID: 013-upstream-proposal-T002",Medium,Done,013-upstream-proposal,foundational,
 359,354,Sub-task,T003 Create crash-loop retries repro (H2) in upstream/repro-crash-loop-retries/test/repro.test.ts,"Create crash-loop retries repro (H2) in upstream/repro-crash-loop-retries/test/repro.test.ts
 
 Phase: Phase 3: User Story 1 - Minimal reproductions (Priority: P1) 🎯 MVP
 
 Source: specs/013-upstream-proposal/tasks.md:34
-ReplayGuard-ID: 013-upstream-proposal-T003",High,To Do,013-upstream-proposal,us1,parallel
+ReplayGuard-ID: 013-upstream-proposal-T003",High,Done,013-upstream-proposal,us1,parallel
 360,354,Sub-task,T004 Create timeout continuation repro (H3) in upstream/repro-timeout-continuation/test/repro.test.ts,"Create timeout continuation repro (H3) in upstream/repro-timeout-continuation/test/repro.test.ts
 
 Phase: Phase 3: User Story 1 - Minimal reproductions (Priority: P1) 🎯 MVP
 
 Source: specs/013-upstream-proposal/tasks.md:35
-ReplayGuard-ID: 013-upstream-proposal-T004",High,To Do,013-upstream-proposal,us1,parallel
+ReplayGuard-ID: 013-upstream-proposal-T004",High,Done,013-upstream-proposal,us1,parallel
 361,354,Sub-task,T005 Create stable step identity repro in upstream/repro-stable-step-identity/test/repro.test.ts,"Create stable step identity repro in upstream/repro-stable-step-identity/test/repro.test.ts
 
 Phase: Phase 3: User Story 1 - Minimal reproductions (Priority: P1) 🎯 MVP
 
 Source: specs/013-upstream-proposal/tasks.md:36
-ReplayGuard-ID: 013-upstream-proposal-T005",High,To Do,013-upstream-proposal,us1,parallel
+ReplayGuard-ID: 013-upstream-proposal-T005",High,Done,013-upstream-proposal,us1,parallel
 362,354,Sub-task,T006 Add CI job running repros with `EXPECT_GAP=1` in .github/workflows/ci.yml,"Add CI job running repros with `EXPECT_GAP=1` in .github/workflows/ci.yml
 
 Phase: Phase 3: User Story 1 - Minimal reproductions (Priority: P1) 🎯 MVP
 
 Source: specs/013-upstream-proposal/tasks.md:37
-ReplayGuard-ID: 013-upstream-proposal-T006",High,To Do,013-upstream-proposal,us1,
+ReplayGuard-ID: 013-upstream-proposal-T006",High,Done,013-upstream-proposal,us1,
 363,355,Sub-task,T007 Draft crash-loop retries issue in upstream/drafts/01-crash-loop-retries.md,"Draft crash-loop retries issue in upstream/drafts/01-crash-loop-retries.md
 
 Phase: Phase 4: User Story 2 - Issue drafts with design proposals (Priority: P1)
 
 Source: specs/013-upstream-proposal/tasks.md:47
-ReplayGuard-ID: 013-upstream-proposal-T007",High,To Do,013-upstream-proposal,us2,parallel
+ReplayGuard-ID: 013-upstream-proposal-T007",High,Done,013-upstream-proposal,us2,parallel
 364,355,Sub-task,T008 Draft timeout continuation issue in upstream/drafts/02-timeout-continuation.md,"Draft timeout continuation issue in upstream/drafts/02-timeout-continuation.md
 
 Phase: Phase 4: User Story 2 - Issue drafts with design proposals (Priority: P1)
 
 Source: specs/013-upstream-proposal/tasks.md:48
-ReplayGuard-ID: 013-upstream-proposal-T008",High,To Do,013-upstream-proposal,us2,parallel
+ReplayGuard-ID: 013-upstream-proposal-T008",High,Done,013-upstream-proposal,us2,parallel
 365,355,Sub-task,T009 Draft stable step identity issue in upstream/drafts/03-stable-step-identity.md,"Draft stable step identity issue in upstream/drafts/03-stable-step-identity.md
 
 Phase: Phase 4: User Story 2 - Issue drafts with design proposals (Priority: P1)
 
 Source: specs/013-upstream-proposal/tasks.md:49
-ReplayGuard-ID: 013-upstream-proposal-T009",High,To Do,013-upstream-proposal,us2,parallel
+ReplayGuard-ID: 013-upstream-proposal-T009",High,Done,013-upstream-proposal,us2,parallel
 366,356,Sub-task,"T010 Request maintainer approval, file approved issues, update tracker in upstream/README.md","Request maintainer approval, file approved issues, update tracker in upstream/README.md
 
 Phase: Phase 5: User Story 3 - Track responses (Priority: P3)
@@ -2076,16 +2076,16 @@ ReplayGuard-ID: 013-upstream-proposal-T010",Low,To Do,013-upstream-proposal,us3,
 Phase: Phase 6: Polish & Cross-Cutting Concerns
 
 Source: specs/013-upstream-proposal/tasks.md:65
-ReplayGuard-ID: 013-upstream-proposal-T011",Medium,To Do,013-upstream-proposal,polish,
+ReplayGuard-ID: 013-upstream-proposal-T011",Medium,Done,013-upstream-proposal,polish,
 368,353,Task,T012 Author diagrams covering T001–T013 in specs/013-upstream-proposal/diagram.yaml,"Author diagrams covering T001–T013 in specs/013-upstream-proposal/diagram.yaml
 
 Phase: Phase 6: Polish & Cross-Cutting Concerns
 
 Source: specs/013-upstream-proposal/tasks.md:66
-ReplayGuard-ID: 013-upstream-proposal-T012",Medium,To Do,013-upstream-proposal,polish,
+ReplayGuard-ID: 013-upstream-proposal-T012",Medium,Done,013-upstream-proposal,polish,
 369,353,Task,T013 Validate quickstart in specs/013-upstream-proposal/quickstart.md,"Validate quickstart in specs/013-upstream-proposal/quickstart.md
 
 Phase: Phase 6: Polish & Cross-Cutting Concerns
 
 Source: specs/013-upstream-proposal/tasks.md:67
-ReplayGuard-ID: 013-upstream-proposal-T013",Medium,To Do,013-upstream-proposal,polish,
+ReplayGuard-ID: 013-upstream-proposal-T013",Medium,Done,013-upstream-proposal,polish,

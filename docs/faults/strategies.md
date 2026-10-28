@@ -7,6 +7,15 @@ Faults are injected around effects recorded by `instrument()` or by the fakes. E
 Every behavior below was observed in the engine-assumptions spike: see
 [spikes/engine-assumptions/FINDINGS.md](../../spikes/engine-assumptions/FINDINGS.md).
 
+Three of these behaviors are engine gaps, and each has a standalone reproduction and a proposal
+draft in [upstream/](../../upstream/README.md):
+
+- [crash loops bypass `maxRetries`](../../upstream/repro-crash-loop-retries/);
+- [a step timeout does not cancel the call](../../upstream/repro-timeout-continuation/);
+- [no stable step identity for idempotency keys](../../upstream/repro-stable-step-identity/).
+
+CI runs these reproductions in gap mode, so ReplayGuard notices when upstream behavior changes.
+
 | Helper | Strategy | What happens | Typical outcome without a fix |
 |---|---|---|---|
 | `fault.crashAfter(kind, n)` | `crash` | The provider applies the effect. Then durable storage dies, the run is marked dead, and the host restarts from durable state. | `duplicated` (spike H1). Crash loops bypass `maxRetries` (H2). |

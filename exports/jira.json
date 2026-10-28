@@ -6827,7 +6827,7 @@
     {
       "sourceId": "013-upstream-proposal-US1",
       "parentSourceId": "013-upstream-proposal",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Story"
@@ -6846,7 +6846,7 @@
     {
       "sourceId": "013-upstream-proposal-US2",
       "parentSourceId": "013-upstream-proposal",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Story"
@@ -6884,7 +6884,7 @@
     {
       "sourceId": "013-upstream-proposal-T001",
       "parentSourceId": "013-upstream-proposal",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Task"
@@ -6903,7 +6903,7 @@
     {
       "sourceId": "013-upstream-proposal-T002",
       "parentSourceId": "013-upstream-proposal",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Task"
@@ -6922,7 +6922,7 @@
     {
       "sourceId": "013-upstream-proposal-T003",
       "parentSourceId": "013-upstream-proposal-US1",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Sub-task"
@@ -6942,7 +6942,7 @@
     {
       "sourceId": "013-upstream-proposal-T004",
       "parentSourceId": "013-upstream-proposal-US1",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Sub-task"
@@ -6962,7 +6962,7 @@
     {
       "sourceId": "013-upstream-proposal-T005",
       "parentSourceId": "013-upstream-proposal-US1",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Sub-task"
@@ -6982,7 +6982,7 @@
     {
       "sourceId": "013-upstream-proposal-T006",
       "parentSourceId": "013-upstream-proposal-US1",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Sub-task"
@@ -7001,7 +7001,7 @@
     {
       "sourceId": "013-upstream-proposal-T007",
       "parentSourceId": "013-upstream-proposal-US2",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Sub-task"
@@ -7021,7 +7021,7 @@
     {
       "sourceId": "013-upstream-proposal-T008",
       "parentSourceId": "013-upstream-proposal-US2",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Sub-task"
@@ -7041,7 +7041,7 @@
     {
       "sourceId": "013-upstream-proposal-T009",
       "parentSourceId": "013-upstream-proposal-US2",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Sub-task"
@@ -7080,7 +7080,7 @@
     {
       "sourceId": "013-upstream-proposal-T011",
       "parentSourceId": "013-upstream-proposal",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Task"
@@ -7099,7 +7099,7 @@
     {
       "sourceId": "013-upstream-proposal-T012",
       "parentSourceId": "013-upstream-proposal",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Task"
@@ -7118,7 +7118,7 @@
     {
       "sourceId": "013-upstream-proposal-T013",
       "parentSourceId": "013-upstream-proposal",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Task"

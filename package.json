@@ -10,7 +10,8 @@
 	"scripts": {
 		"build": "turbo run build",
 		"check-types": "turbo run check-types",
-		"test": "turbo run test --concurrency=4",
+		"test": "turbo run test --concurrency=4 --filter=!./upstream/*",
+		"upstream:gaps": "turbo run test:gap --filter=./upstream/*",
 		"lint": "biome check .",
 		"lint:fix": "biome check --write .",
 		"spike": "pnpm --filter @replayguard/spike-engine-assumptions test",
@@ -26,7 +27,7 @@
 		"docs:api": "typedoc",
 		"changeset": "changeset",
 		"version-packages": "changeset version",
-		"verify": "pnpm lint && pnpm boundaries && pnpm check-types && pnpm test && pnpm diagrams:check && pnpm export:check && pnpm build && pnpm docs:api",
+		"verify": "pnpm lint && pnpm boundaries && pnpm check-types && pnpm test && pnpm upstream:gaps && pnpm diagrams:check && pnpm export:check && pnpm build && pnpm docs:api",
 		"prepare": "lefthook install || true"
 	},
 	"devDependencies": {

@@ -1648,10 +1648,10 @@ Source: specs/012-rivetkit-adapter/tasks.md:70",012-rivetkit-adapter;polish,Medi
 Source: specs/013-upstream-proposal/spec.md:1",013-upstream-proposal,High,To Do,013-upstream-proposal
 013-upstream-proposal-US1,013-upstream-proposal,Story,US1: Minimal reproductions,"User story 1 (P1) of 013-upstream-proposal.
 
-Source: specs/013-upstream-proposal/spec.md:20",013-upstream-proposal;us1,High,To Do,013-upstream-proposal
+Source: specs/013-upstream-proposal/spec.md:20",013-upstream-proposal;us1,High,Done,013-upstream-proposal
 013-upstream-proposal-US2,013-upstream-proposal,Story,US2: Issue drafts with design proposals,"User story 2 (P1) of 013-upstream-proposal.
 
-Source: specs/013-upstream-proposal/spec.md:41",013-upstream-proposal;us2,High,To Do,013-upstream-proposal
+Source: specs/013-upstream-proposal/spec.md:41",013-upstream-proposal;us2,High,Done,013-upstream-proposal
 013-upstream-proposal-US3,013-upstream-proposal,Story,US3: Track responses,"User story 3 (P3) of 013-upstream-proposal.
 
 Source: specs/013-upstream-proposal/spec.md:62",013-upstream-proposal;us3,Low,To Do,013-upstream-proposal
@@ -1659,47 +1659,47 @@ Source: specs/013-upstream-proposal/spec.md:62",013-upstream-proposal;us3,Low,To
 
 Phase: Phase 1: Setup (Shared Infrastructure)
 
-Source: specs/013-upstream-proposal/tasks.md:18",013-upstream-proposal;setup,Medium,To Do,013-upstream-proposal
+Source: specs/013-upstream-proposal/tasks.md:18",013-upstream-proposal;setup,Medium,Done,013-upstream-proposal
 013-upstream-proposal-T002,013-upstream-proposal,Task,T002 Record latest published `@rivet-dev/workflows` version and confirm gaps still reproduce in upstream/README.md,"Record latest published `@rivet-dev/workflows` version and confirm gaps still reproduce in upstream/README.md
 
 Phase: Phase 2: Foundational (Blocking Prerequisites)
 
-Source: specs/013-upstream-proposal/tasks.md:24",013-upstream-proposal;foundational,Medium,To Do,013-upstream-proposal
+Source: specs/013-upstream-proposal/tasks.md:24",013-upstream-proposal;foundational,Medium,Done,013-upstream-proposal
 013-upstream-proposal-T003,013-upstream-proposal-US1,Sub-task,T003 Create crash-loop retries repro (H2) in upstream/repro-crash-loop-retries/test/repro.test.ts,"Create crash-loop retries repro (H2) in upstream/repro-crash-loop-retries/test/repro.test.ts
 
 Phase: Phase 3: User Story 1 - Minimal reproductions (Priority: P1) 🎯 MVP
 
-Source: specs/013-upstream-proposal/tasks.md:34",013-upstream-proposal;us1;parallel,High,To Do,013-upstream-proposal
+Source: specs/013-upstream-proposal/tasks.md:34",013-upstream-proposal;us1;parallel,High,Done,013-upstream-proposal
 013-upstream-proposal-T004,013-upstream-proposal-US1,Sub-task,T004 Create timeout continuation repro (H3) in upstream/repro-timeout-continuation/test/repro.test.ts,"Create timeout continuation repro (H3) in upstream/repro-timeout-continuation/test/repro.test.ts
 
 Phase: Phase 3: User Story 1 - Minimal reproductions (Priority: P1) 🎯 MVP
 
-Source: specs/013-upstream-proposal/tasks.md:35",013-upstream-proposal;us1;parallel,High,To Do,013-upstream-proposal
+Source: specs/013-upstream-proposal/tasks.md:35",013-upstream-proposal;us1;parallel,High,Done,013-upstream-proposal
 013-upstream-proposal-T005,013-upstream-proposal-US1,Sub-task,T005 Create stable step identity repro in upstream/repro-stable-step-identity/test/repro.test.ts,"Create stable step identity repro in upstream/repro-stable-step-identity/test/repro.test.ts
 
 Phase: Phase 3: User Story 1 - Minimal reproductions (Priority: P1) 🎯 MVP
 
-Source: specs/013-upstream-proposal/tasks.md:36",013-upstream-proposal;us1;parallel,High,To Do,013-upstream-proposal
+Source: specs/013-upstream-proposal/tasks.md:36",013-upstream-proposal;us1;parallel,High,Done,013-upstream-proposal
 013-upstream-proposal-T006,013-upstream-proposal-US1,Sub-task,T006 Add CI job running repros with `EXPECT_GAP=1` in .github/workflows/ci.yml,"Add CI job running repros with `EXPECT_GAP=1` in .github/workflows/ci.yml
 
 Phase: Phase 3: User Story 1 - Minimal reproductions (Priority: P1) 🎯 MVP
 
-Source: specs/013-upstream-proposal/tasks.md:37",013-upstream-proposal;us1,High,To Do,013-upstream-proposal
+Source: specs/013-upstream-proposal/tasks.md:37",013-upstream-proposal;us1,High,Done,013-upstream-proposal
 013-upstream-proposal-T007,013-upstream-proposal-US2,Sub-task,T007 Draft crash-loop retries issue in upstream/drafts/01-crash-loop-retries.md,"Draft crash-loop retries issue in upstream/drafts/01-crash-loop-retries.md
 
 Phase: Phase 4: User Story 2 - Issue drafts with design proposals (Priority: P1)
 
-Source: specs/013-upstream-proposal/tasks.md:47",013-upstream-proposal;us2;parallel,High,To Do,013-upstream-proposal
+Source: specs/013-upstream-proposal/tasks.md:47",013-upstream-proposal;us2;parallel,High,Done,013-upstream-proposal
 013-upstream-proposal-T008,013-upstream-proposal-US2,Sub-task,T008 Draft timeout continuation issue in upstream/drafts/02-timeout-continuation.md,"Draft timeout continuation issue in upstream/drafts/02-timeout-continuation.md
 
 Phase: Phase 4: User Story 2 - Issue drafts with design proposals (Priority: P1)
 
-Source: specs/013-upstream-proposal/tasks.md:48",013-upstream-proposal;us2;parallel,High,To Do,013-upstream-proposal
+Source: specs/013-upstream-proposal/tasks.md:48",013-upstream-proposal;us2;parallel,High,Done,013-upstream-proposal
 013-upstream-proposal-T009,013-upstream-proposal-US2,Sub-task,T009 Draft stable step identity issue in upstream/drafts/03-stable-step-identity.md,"Draft stable step identity issue in upstream/drafts/03-stable-step-identity.md
 
 Phase: Phase 4: User Story 2 - Issue drafts with design proposals (Priority: P1)
 
-Source: specs/013-upstream-proposal/tasks.md:49",013-upstream-proposal;us2;parallel,High,To Do,013-upstream-proposal
+Source: specs/013-upstream-proposal/tasks.md:49",013-upstream-proposal;us2;parallel,High,Done,013-upstream-proposal
 013-upstream-proposal-T010,013-upstream-proposal-US3,Sub-task,"T010 Request maintainer approval, file approved issues, update tracker in upstream/README.md","Request maintainer approval, file approved issues, update tracker in upstream/README.md
 
 Phase: Phase 5: User Story 3 - Track responses (Priority: P3)
@@ -1709,14 +1709,14 @@ Source: specs/013-upstream-proposal/tasks.md:59",013-upstream-proposal;us3,Low,T
 
 Phase: Phase 6: Polish & Cross-Cutting Concerns
 
-Source: specs/013-upstream-proposal/tasks.md:65",013-upstream-proposal;polish,Medium,To Do,013-upstream-proposal
+Source: specs/013-upstream-proposal/tasks.md:65",013-upstream-proposal;polish,Medium,Done,013-upstream-proposal
 013-upstream-proposal-T012,013-upstream-proposal,Task,T012 Author diagrams covering T001–T013 in specs/013-upstream-proposal/diagram.yaml,"Author diagrams covering T001–T013 in specs/013-upstream-proposal/diagram.yaml
 
 Phase: Phase 6: Polish & Cross-Cutting Concerns
 
-Source: specs/013-upstream-proposal/tasks.md:66",013-upstream-proposal;polish,Medium,To Do,013-upstream-proposal
+Source: specs/013-upstream-proposal/tasks.md:66",013-upstream-proposal;polish,Medium,Done,013-upstream-proposal
 013-upstream-proposal-T013,013-upstream-proposal,Task,T013 Validate quickstart in specs/013-upstream-proposal/quickstart.md,"Validate quickstart in specs/013-upstream-proposal/quickstart.md
 
 Phase: Phase 6: Polish & Cross-Cutting Concerns
 
-Source: specs/013-upstream-proposal/tasks.md:67",013-upstream-proposal;polish,Medium,To Do,013-upstream-proposal
+Source: specs/013-upstream-proposal/tasks.md:67",013-upstream-proposal;polish,Medium,Done,013-upstream-proposal
