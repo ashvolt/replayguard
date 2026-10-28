@@ -15,12 +15,18 @@ export {
 	type SpawnChild,
 	workflowsProcessRuntime,
 } from "./process/process-runtime.js";
-export {
-	type ChildMessage,
-	type ParentMessage,
-	parseChildMessage,
-	parseParentMessage,
+export type {
+	AfterSettleMessage,
+	BeforeStartMessage,
+	ChildMessage,
+	ContinueMessage,
+	HarnessErrorMessage,
+	InFlightMessage,
+	InitMessage,
+	ParentMessage,
+	RunEndedMessage,
 } from "./process/protocol.js";
+export { parseChildMessage, parseParentMessage } from "./process/protocol.js";
 export {
 	type EngineWorkflow,
 	runEngineOnce,
