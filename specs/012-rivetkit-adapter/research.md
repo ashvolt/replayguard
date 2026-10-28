@@ -27,3 +27,20 @@
 ## R4 — Version matrix
 
 - **Decision**: CI job for `rivetkit@2.3.x` latest and minimum (`2.3.11`).
+
+## R5 — Implementation notes (2026-10-28)
+
+- **Host per run instead of a long-lived `ActorHost` state machine (T007).** Each run forks a
+  host process that loads the scenario module, builds the actor and relays effect checkpoints
+  through the shared `relayRun` / `createCheckpointClient` from `adapter-workflows`. The engine
+  started by the first host survives host kills (spike, phase B). When a case is disposed, the
+  runtime kills the host processes and the engine (by the PID in its `runtime.json`) and
+  removes the storage directory. The states idle → ready → killed → disposed are implicit in
+  `runOnce` and `dispose`.
+- **API amended to `actorWorkflow(fn, config)`** (maintainer decision; see the contract).
+- **Ports**: `enginePort: P` binds P, P+1 and P+10; `findEnginePort()` claims a free block.
+- **pnpm**: the Linux engine binary is published only as a musl build, so
+  `supportedArchitectures.libc` includes `musl`. Without it, pnpm skips the binary on glibc.
+- **Windows**: not supported by rivetkit 2.3.x (packaging gaps). Actor suites skip there, and
+  elsewhere they need `REPLAYGUARD_ACTOR_TESTS=1`. The CI `rivetkit` job runs them on Ubuntu
+  for 2.3.11 and 2.3.27.

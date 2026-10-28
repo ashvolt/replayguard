@@ -96,3 +96,36 @@ jobs:
       - run: pnpm install --frozen-lockfile
       # Each repro asserts today's engine behavior (EXPECT_GAP); a failure means upstream changed.
       - run: pnpm upstream:gaps
+
+  rivetkit:
+    name: RivetKit actors (rivetkit ${{ matrix.rivetkit }})
+    strategy:
+      fail-fast: false
+      matrix:
+        # Minimum supported and latest 2.3.x (peer range ">=2.3.11 <2.4.0").
+        rivetkit: ["2.3.11", "2.3.27"]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: pnpm/action-setup@ea17c68df8912ef543352723c149a84f56e3d413 # v6.1.0
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: 22
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - name: Use rivetkit ${{ matrix.rivetkit }}
+        if: matrix.rivetkit != '2.3.27'
+        run: pnpm --filter @replayguard/adapter-rivetkit add --save-dev "rivetkit@${{ matrix.rivetkit }}"
+      - name: Check the engine binary
+        run: |
+          if ! ls node_modules/.pnpm | grep -q '^@rivetkit+engine-cli-linux-x64'; then
+            echo "::error::RivetKit engine binary package is not installed (see supportedArchitectures in pnpm-workspace.yaml)"
+            exit 1
+          fi
+      - run: pnpm turbo run build --filter "@replayguard/adapter-rivetkit..."
+      - name: Actor integration suites
+        env:
+          REPLAYGUARD_ACTOR_TESTS: "1"
+        run: pnpm --filter @replayguard/adapter-rivetkit exec vitest run test/conformance.actor.test.ts test/restart.actor.test.ts test/leaks.actor.test.ts

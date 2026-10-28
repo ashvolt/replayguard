@@ -4842,7 +4842,7 @@
         "us1",
         "story"
       ],
-      "status": "To Do"
+      "status": "Done"
     },
     {
       "sourceId": "012-rivetkit-adapter-US2",
@@ -4870,7 +4870,7 @@
         "us3",
         "story"
       ],
-      "status": "To Do"
+      "status": "Done"
     },
     {
       "sourceId": "012-rivetkit-adapter-T001",
@@ -4884,7 +4884,7 @@
         "setup",
         "task"
       ],
-      "status": "To Do"
+      "status": "Done"
     },
     {
       "sourceId": "012-rivetkit-adapter-T002",
@@ -4941,7 +4941,7 @@
         "parallel",
         "sub-task"
       ],
-      "status": "To Do"
+      "status": "Done"
     },
     {
       "sourceId": "012-rivetkit-adapter-T006",
@@ -4955,7 +4955,7 @@
         "us1",
         "sub-task"
       ],
-      "status": "To Do"
+      "status": "Done"
     },
     {
       "sourceId": "012-rivetkit-adapter-T007",
@@ -4969,7 +4969,7 @@
         "us1",
         "sub-task"
       ],
-      "status": "To Do"
+      "status": "Done"
     },
     {
       "sourceId": "012-rivetkit-adapter-T008",
@@ -4983,7 +4983,7 @@
         "us1",
         "sub-task"
       ],
-      "status": "To Do"
+      "status": "Done"
     },
     {
       "sourceId": "012-rivetkit-adapter-T009",
@@ -4997,7 +4997,7 @@
         "us1",
         "sub-task"
       ],
-      "status": "To Do"
+      "status": "Done"
     },
     {
       "sourceId": "012-rivetkit-adapter-T010",
@@ -5012,7 +5012,7 @@
         "parallel",
         "sub-task"
       ],
-      "status": "To Do"
+      "status": "Done"
     },
     {
       "sourceId": "012-rivetkit-adapter-T011",
@@ -5040,7 +5040,7 @@
         "us3",
         "sub-task"
       ],
-      "status": "To Do"
+      "status": "Done"
     },
     {
       "sourceId": "012-rivetkit-adapter-T013",
@@ -5055,7 +5055,7 @@
         "parallel",
         "task"
       ],
-      "status": "To Do"
+      "status": "Done"
     },
     {
       "sourceId": "012-rivetkit-adapter-T014",
@@ -5070,7 +5070,7 @@
         "parallel",
         "task"
       ],
-      "status": "To Do"
+      "status": "Done"
     },
     {
       "sourceId": "012-rivetkit-adapter-T015",
@@ -5084,7 +5084,7 @@
         "polish",
         "task"
       ],
-      "status": "To Do"
+      "status": "Done"
     },
     {
       "sourceId": "012-rivetkit-adapter-T016",
@@ -5098,7 +5098,7 @@
         "polish",
         "task"
       ],
-      "status": "To Do"
+      "status": "Done"
     },
     {
       "sourceId": "013-upstream-proposal",

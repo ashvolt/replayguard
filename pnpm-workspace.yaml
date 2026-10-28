@@ -19,3 +19,10 @@ allowBuilds:
   cbor-extract: false
   koffi: false
   protobufjs: false
+
+# RivetKit's Linux engine binary ships only as a musl build (statically linked, runs on glibc);
+# without this, pnpm skips it on glibc systems such as GitHub's Ubuntu runners.
+supportedArchitectures:
+  os: [current]
+  cpu: [current]
+  libc: [current, musl]

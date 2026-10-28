@@ -1890,7 +1890,7 @@ ReplayGuard-ID: 012-rivetkit-adapter",High,To Do,012-rivetkit-adapter,,
 334,333,Story,US1: Run a scenario against a workflow actor,"User story 1 (P1) of 012-rivetkit-adapter.
 
 Source: specs/012-rivetkit-adapter/spec.md:13
-ReplayGuard-ID: 012-rivetkit-adapter-US1",High,To Do,012-rivetkit-adapter,us1,
+ReplayGuard-ID: 012-rivetkit-adapter-US1",High,Done,012-rivetkit-adapter,us1,
 335,333,Story,US2: Actor crash and restart,"User story 2 (P1) of 012-rivetkit-adapter.
 
 Source: specs/012-rivetkit-adapter/spec.md:33
@@ -1898,13 +1898,13 @@ ReplayGuard-ID: 012-rivetkit-adapter-US2",High,To Do,012-rivetkit-adapter,us2,
 336,333,Story,US3: Version compatibility,"User story 3 (P2) of 012-rivetkit-adapter.
 
 Source: specs/012-rivetkit-adapter/spec.md:52
-ReplayGuard-ID: 012-rivetkit-adapter-US3",Medium,To Do,012-rivetkit-adapter,us3,
+ReplayGuard-ID: 012-rivetkit-adapter-US3",Medium,Done,012-rivetkit-adapter,us3,
 337,333,Task,"T001 Configure dependencies (core, adapter-workflows) and peers (`rivetkit >=2.3.11 <2.4.0`, `@rivet-dev/workflows ^1.0.0`) in packages/adapter-rivetkit/package.json","Configure dependencies (core, adapter-workflows) and peers (`rivetkit >=2.3.11 <2.4.0`, `@rivet-dev/workflows ^1.0.0`) in packages/adapter-rivetkit/package.json
 
 Phase: Phase 1: Setup (Shared Infrastructure)
 
 Source: specs/012-rivetkit-adapter/tasks.md:18
-ReplayGuard-ID: 012-rivetkit-adapter-T001",Medium,To Do,012-rivetkit-adapter,setup,
+ReplayGuard-ID: 012-rivetkit-adapter-T001",Medium,Done,012-rivetkit-adapter,setup,
 338,333,Task,T002 Spike: validate actor host kill + restart resumes workflow from persisted history; record decision (parent-owned engine vs restart both) in spikes/actor-restart/FINDINGS.md,"Spike: validate actor host kill + restart resumes workflow from persisted history; record decision (parent-owned engine vs restart both) in spikes/actor-restart/FINDINGS.md
 
 Phase: Phase 1: Setup (Shared Infrastructure)
@@ -1928,37 +1928,37 @@ ReplayGuard-ID: 012-rivetkit-adapter-T004",Medium,Done,012-rivetkit-adapter,foun
 Phase: Phase 3: User Story 1 - Run a scenario against a workflow actor (Priority: P1) 🎯 MVP
 
 Source: specs/012-rivetkit-adapter/tasks.md:36
-ReplayGuard-ID: 012-rivetkit-adapter-T005",High,To Do,012-rivetkit-adapter,us1,parallel
+ReplayGuard-ID: 012-rivetkit-adapter-T005",High,Done,012-rivetkit-adapter,us1,parallel
 342,334,Sub-task,"T006 Implement child host entry (registry with workflow actor, relay ledger events via 005 protocol) in packages/adapter-rivetkit/src/host/host-entry.ts","Implement child host entry (registry with workflow actor, relay ledger events via 005 protocol) in packages/adapter-rivetkit/src/host/host-entry.ts
 
 Phase: Phase 3: User Story 1 - Run a scenario against a workflow actor (Priority: P1) 🎯 MVP
 
 Source: specs/012-rivetkit-adapter/tasks.md:37
-ReplayGuard-ID: 012-rivetkit-adapter-T006",High,To Do,012-rivetkit-adapter,us1,
+ReplayGuard-ID: 012-rivetkit-adapter-T006",High,Done,012-rivetkit-adapter,us1,
 343,334,Sub-task,"T007 Implement ActorHost resource (state machine ""idle → starting → ready → killed|stopped → disposed"") in packages/adapter-rivetkit/src/host/actor-host.ts","Implement ActorHost resource (state machine ""idle → starting → ready → killed|stopped → disposed"") in packages/adapter-rivetkit/src/host/actor-host.ts
 
 Phase: Phase 3: User Story 1 - Run a scenario against a workflow actor (Priority: P1) 🎯 MVP
 
 Source: specs/012-rivetkit-adapter/tasks.md:38
-ReplayGuard-ID: 012-rivetkit-adapter-T007",High,To Do,012-rivetkit-adapter,us1,
+ReplayGuard-ID: 012-rivetkit-adapter-T007",High,Done,012-rivetkit-adapter,us1,
 344,334,Sub-task,T008 Implement `rivetkitRuntime()` WorkflowRuntime in packages/adapter-rivetkit/src/runtime.ts,"Implement `rivetkitRuntime()` WorkflowRuntime in packages/adapter-rivetkit/src/runtime.ts
 
 Phase: Phase 3: User Story 1 - Run a scenario against a workflow actor (Priority: P1) 🎯 MVP
 
 Source: specs/012-rivetkit-adapter/tasks.md:39
-ReplayGuard-ID: 012-rivetkit-adapter-T008",High,To Do,012-rivetkit-adapter,us1,
+ReplayGuard-ID: 012-rivetkit-adapter-T008",High,Done,012-rivetkit-adapter,us1,
 345,334,Sub-task,T009 Run conformance suite against actor runtime in packages/adapter-rivetkit/test/conformance.actor.test.ts,"Run conformance suite against actor runtime in packages/adapter-rivetkit/test/conformance.actor.test.ts
 
 Phase: Phase 3: User Story 1 - Run a scenario against a workflow actor (Priority: P1) 🎯 MVP
 
 Source: specs/012-rivetkit-adapter/tasks.md:40
-ReplayGuard-ID: 012-rivetkit-adapter-T009",High,To Do,012-rivetkit-adapter,us1,
+ReplayGuard-ID: 012-rivetkit-adapter-T009",High,Done,012-rivetkit-adapter,us1,
 346,335,Sub-task,T010 Write failing crash/restart and sleep/wake tests in packages/adapter-rivetkit/test/restart.actor.test.ts,"Write failing crash/restart and sleep/wake tests in packages/adapter-rivetkit/test/restart.actor.test.ts
 
 Phase: Phase 4: User Story 2 - Actor crash and restart (Priority: P1)
 
 Source: specs/012-rivetkit-adapter/tasks.md:50
-ReplayGuard-ID: 012-rivetkit-adapter-T010",High,To Do,012-rivetkit-adapter,us2,parallel
+ReplayGuard-ID: 012-rivetkit-adapter-T010",High,Done,012-rivetkit-adapter,us2,parallel
 347,335,Sub-task,T011 Implement kill/restart per T002 decision in packages/adapter-rivetkit/src/host/actor-host.ts,"Implement kill/restart per T002 decision in packages/adapter-rivetkit/src/host/actor-host.ts
 
 Phase: Phase 4: User Story 2 - Actor crash and restart (Priority: P1)
@@ -1970,31 +1970,31 @@ ReplayGuard-ID: 012-rivetkit-adapter-T011",High,To Do,012-rivetkit-adapter,us2,
 Phase: Phase 5: User Story 3 - Version compatibility (Priority: P2)
 
 Source: specs/012-rivetkit-adapter/tasks.md:61
-ReplayGuard-ID: 012-rivetkit-adapter-T012",Medium,To Do,012-rivetkit-adapter,us3,
+ReplayGuard-ID: 012-rivetkit-adapter-T012",Medium,Done,012-rivetkit-adapter,us3,
 349,333,Task,T013 Leak check (no engine processes/temp dirs after suite) in packages/adapter-rivetkit/test/leaks.actor.test.ts,"Leak check (no engine processes/temp dirs after suite) in packages/adapter-rivetkit/test/leaks.actor.test.ts
 
 Phase: Phase 6: Polish & Cross-Cutting Concerns
 
 Source: specs/012-rivetkit-adapter/tasks.md:67
-ReplayGuard-ID: 012-rivetkit-adapter-T013",Medium,To Do,012-rivetkit-adapter,polish,parallel
+ReplayGuard-ID: 012-rivetkit-adapter-T013",Medium,Done,012-rivetkit-adapter,polish,parallel
 350,333,Task,T014 Actor guide in docs/guides/rivetkit-actors.md,"Actor guide in docs/guides/rivetkit-actors.md
 
 Phase: Phase 6: Polish & Cross-Cutting Concerns
 
 Source: specs/012-rivetkit-adapter/tasks.md:68
-ReplayGuard-ID: 012-rivetkit-adapter-T014",Medium,To Do,012-rivetkit-adapter,polish,parallel
+ReplayGuard-ID: 012-rivetkit-adapter-T014",Medium,Done,012-rivetkit-adapter,polish,parallel
 351,333,Task,T015 Author diagrams covering T001–T016 in specs/012-rivetkit-adapter/diagram.yaml,"Author diagrams covering T001–T016 in specs/012-rivetkit-adapter/diagram.yaml
 
 Phase: Phase 6: Polish & Cross-Cutting Concerns
 
 Source: specs/012-rivetkit-adapter/tasks.md:69
-ReplayGuard-ID: 012-rivetkit-adapter-T015",Medium,To Do,012-rivetkit-adapter,polish,
+ReplayGuard-ID: 012-rivetkit-adapter-T015",Medium,Done,012-rivetkit-adapter,polish,
 352,333,Task,T016 Validate quickstart scenarios in specs/012-rivetkit-adapter/quickstart.md,"Validate quickstart scenarios in specs/012-rivetkit-adapter/quickstart.md
 
 Phase: Phase 6: Polish & Cross-Cutting Concerns
 
 Source: specs/012-rivetkit-adapter/tasks.md:70
-ReplayGuard-ID: 012-rivetkit-adapter-T016",Medium,To Do,012-rivetkit-adapter,polish,
+ReplayGuard-ID: 012-rivetkit-adapter-T016",Medium,Done,012-rivetkit-adapter,polish,
 353,,Epic,013 Upstream Proposal to Rivet,"Upstream Proposal to Rivet (013-upstream-proposal).
 
 Source: specs/013-upstream-proposal/spec.md:1
