@@ -266,6 +266,12 @@ importers:
       '@replayguard-tools/config':
         specifier: workspace:*
         version: link:../../tools/config
+      '@replayguard/adapter-workflows':
+        specifier: workspace:*
+        version: link:../adapter-workflows
+      '@rivet-dev/workflows':
+        specifier: 1.0.0
+        version: 1.0.0(rivetkit@2.3.27(@modelcontextprotocol/sdk@1.32.1(supports-color@7.2.0)(zod@4.6.7))(better-sqlite3@12.11.1)(supports-color@7.2.0)(ws@8.22.0))
 
   packages/replayguard:
     dependencies:

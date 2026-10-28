@@ -58,6 +58,8 @@
 		"@replayguard/core": "workspace:*"
 	},
 	"devDependencies": {
-		"@replayguard-tools/config": "workspace:*"
+		"@replayguard-tools/config": "workspace:*",
+		"@replayguard/adapter-workflows": "workspace:*",
+		"@rivet-dev/workflows": "1.0.0"
 	}
 }

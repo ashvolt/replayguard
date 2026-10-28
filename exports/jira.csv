@@ -1374,125 +1374,125 @@ ReplayGuard-ID: 007-outcome-classifier-T022",Medium,Done,007-outcome-classifier,
 242,,Epic,008 Fake External Services,"Fake External Services (008-fake-services).
 
 Source: specs/008-fake-services/spec.md:1
-ReplayGuard-ID: 008-fake-services",High,To Do,008-fake-services,,
+ReplayGuard-ID: 008-fake-services",High,Done,008-fake-services,,
 243,242,Story,US1: Fake payment provider,"User story 1 (P1) of 008-fake-services.
 
 Source: specs/008-fake-services/spec.md:13
-ReplayGuard-ID: 008-fake-services-US1",High,To Do,008-fake-services,us1,
+ReplayGuard-ID: 008-fake-services-US1",High,Done,008-fake-services,us1,
 244,242,Story,US2: Fake email sender,"User story 2 (P1) of 008-fake-services.
 
 Source: specs/008-fake-services/spec.md:35
-ReplayGuard-ID: 008-fake-services-US2",High,To Do,008-fake-services,us2,
+ReplayGuard-ID: 008-fake-services-US2",High,Done,008-fake-services,us2,
 245,242,Story,US3: Generic HTTP/API fake,"User story 3 (P2) of 008-fake-services.
 
 Source: specs/008-fake-services/spec.md:53
-ReplayGuard-ID: 008-fake-services-US3",Medium,To Do,008-fake-services,us3,
+ReplayGuard-ID: 008-fake-services-US3",Medium,Done,008-fake-services,us3,
 246,242,Story,US4: Webhook delivery and receiving endpoint,"User story 4 (P3) of 008-fake-services.
 
 Source: specs/008-fake-services/spec.md:74
-ReplayGuard-ID: 008-fake-services-US4",Low,To Do,008-fake-services,us4,
+ReplayGuard-ID: 008-fake-services-US4",Low,Done,008-fake-services,us4,
 247,242,Task,T001 Add `@replayguard/core` workspace dependency and exports map in packages/fakes/package.json,"Add `@replayguard/core` workspace dependency and exports map in packages/fakes/package.json
 
 Phase: Phase 1: Setup (Shared Infrastructure)
 
 Source: specs/008-fake-services/tasks.md:18
-ReplayGuard-ID: 008-fake-services-T001",Medium,To Do,008-fake-services,setup,
+ReplayGuard-ID: 008-fake-services-T001",Medium,Done,008-fake-services,setup,
 248,242,Task,"T002 Write failing IdempotencyStore tests (replay same fingerprint, conflict on different fingerprint, in-flight conflict vs wait) incl. fast-check (N same-key calls ⇒ 1 execution) in packages/fakes/test/idempotency-store.test.ts","Write failing IdempotencyStore tests (replay same fingerprint, conflict on different fingerprint, in-flight conflict vs wait) incl. fast-check (N same-key calls ⇒ 1 execution) in packages/fakes/test/idempotency-store.test.ts
 
 Phase: Phase 2: Foundational (Blocking Prerequisites)
 
 Source: specs/008-fake-services/tasks.md:24
-ReplayGuard-ID: 008-fake-services-T002",Medium,To Do,008-fake-services,foundational,parallel
+ReplayGuard-ID: 008-fake-services-T002",Medium,Done,008-fake-services,foundational,parallel
 249,242,Task,"T003 Implement IdempotencyStore and errors (`RG_FAKE_IDEMPOTENCY_CONFLICT`, `RG_FAKE_IDEMPOTENCY_IN_FLIGHT`) in packages/fakes/src/idempotency-store.ts","Implement IdempotencyStore and errors (`RG_FAKE_IDEMPOTENCY_CONFLICT`, `RG_FAKE_IDEMPOTENCY_IN_FLIGHT`) in packages/fakes/src/idempotency-store.ts
 
 Phase: Phase 2: Foundational (Blocking Prerequisites)
 
 Source: specs/008-fake-services/tasks.md:25
-ReplayGuard-ID: 008-fake-services-T003",Medium,To Do,008-fake-services,foundational,
+ReplayGuard-ID: 008-fake-services-T003",Medium,Done,008-fake-services,foundational,
 250,242,Task,"T004 Write failing `recordable()` tests (uses ctx.instrument when ctx given, plain call otherwise, latency via sleeper inside the recorded call, failure script first N calls) in packages/fakes/test/recordable.test.ts","Write failing `recordable()` tests (uses ctx.instrument when ctx given, plain call otherwise, latency via sleeper inside the recorded call, failure script first N calls) in packages/fakes/test/recordable.test.ts
 
 Phase: Phase 2: Foundational (Blocking Prerequisites)
 
 Source: specs/008-fake-services/tasks.md:26
-ReplayGuard-ID: 008-fake-services-T004",Medium,To Do,008-fake-services,foundational,parallel
+ReplayGuard-ID: 008-fake-services-T004",Medium,Done,008-fake-services,foundational,parallel
 251,242,Task,T005 Implement `recordable()` and FailureScript handling in packages/fakes/src/recordable.ts,"Implement `recordable()` and FailureScript handling in packages/fakes/src/recordable.ts
 
 Phase: Phase 2: Foundational (Blocking Prerequisites)
 
 Source: specs/008-fake-services/tasks.md:27
-ReplayGuard-ID: 008-fake-services-T005",Medium,To Do,008-fake-services,foundational,
+ReplayGuard-ID: 008-fake-services-T005",Medium,Done,008-fake-services,foundational,
 252,243,Sub-task,"T006 Write failing payment tests (""amount integer > 0"", currency default ""usd"", sequential ids ""ch_000001"", idempotency on/off, key reuse conflict, refund, read-only `charges`) in packages/fakes/test/payment.test.ts","Write failing payment tests (""amount integer > 0"", currency default ""usd"", sequential ids ""ch_000001"", idempotency on/off, key reuse conflict, refund, read-only `charges`) in packages/fakes/test/payment.test.ts
 
 Phase: Phase 3: User Story 1 - Fake payment provider (Priority: P1) 🎯 MVP
 
 Source: specs/008-fake-services/tasks.md:37
-ReplayGuard-ID: 008-fake-services-T006",High,To Do,008-fake-services,us1,parallel
+ReplayGuard-ID: 008-fake-services-T006",High,Done,008-fake-services,us1,parallel
 253,243,Sub-task,"T007 Implement `createFakePayment` (kinds `payment.charge`, `payment.refund`) in packages/fakes/src/payment.ts","Implement `createFakePayment` (kinds `payment.charge`, `payment.refund`) in packages/fakes/src/payment.ts
 
 Phase: Phase 3: User Story 1 - Fake payment provider (Priority: P1) 🎯 MVP
 
 Source: specs/008-fake-services/tasks.md:38
-ReplayGuard-ID: 008-fake-services-T007",High,To Do,008-fake-services,us1,
+ReplayGuard-ID: 008-fake-services-T007",High,Done,008-fake-services,us1,
 254,244,Sub-task,"T008 Write failing email tests (outbox, no dedup, custom subject) in packages/fakes/test/email.test.ts","Write failing email tests (outbox, no dedup, custom subject) in packages/fakes/test/email.test.ts
 
 Phase: Phase 4: User Story 2 - Fake email sender (Priority: P1)
 
 Source: specs/008-fake-services/tasks.md:48
-ReplayGuard-ID: 008-fake-services-T008",High,To Do,008-fake-services,us2,parallel
+ReplayGuard-ID: 008-fake-services-T008",High,Done,008-fake-services,us2,parallel
 255,244,Sub-task,T009 Implement `createFakeEmail` (kind `email.send`) in packages/fakes/src/email.ts,"Implement `createFakeEmail` (kind `email.send`) in packages/fakes/src/email.ts
 
 Phase: Phase 4: User Story 2 - Fake email sender (Priority: P1)
 
 Source: specs/008-fake-services/tasks.md:49
-ReplayGuard-ID: 008-fake-services-T009",High,To Do,008-fake-services,us2,
+ReplayGuard-ID: 008-fake-services-T009",High,Done,008-fake-services,us2,
 256,245,Sub-task,T010 Write failing HTTP fake tests in packages/fakes/test/http.test.ts,"Write failing HTTP fake tests in packages/fakes/test/http.test.ts
 
 Phase: Phase 5: User Story 3 - Generic HTTP/API fake (Priority: P2)
 
 Source: specs/008-fake-services/tasks.md:59
-ReplayGuard-ID: 008-fake-services-T010",Medium,To Do,008-fake-services,us3,parallel
+ReplayGuard-ID: 008-fake-services-T010",Medium,Done,008-fake-services,us3,parallel
 257,245,Sub-task,T011 Implement `createFakeHttp` (kind `http:<METHOD> <path>`) in packages/fakes/src/http.ts,"Implement `createFakeHttp` (kind `http:<METHOD> <path>`) in packages/fakes/src/http.ts
 
 Phase: Phase 5: User Story 3 - Generic HTTP/API fake (Priority: P2)
 
 Source: specs/008-fake-services/tasks.md:60
-ReplayGuard-ID: 008-fake-services-T011",Medium,To Do,008-fake-services,us3,
+ReplayGuard-ID: 008-fake-services-T011",Medium,Done,008-fake-services,us3,
 258,246,Sub-task,T012 Write failing webhook receiver tests in packages/fakes/test/webhook.test.ts,"Write failing webhook receiver tests in packages/fakes/test/webhook.test.ts
 
 Phase: Phase 6: User Story 4 - Webhook receiver (Priority: P3)
 
 Source: specs/008-fake-services/tasks.md:70
-ReplayGuard-ID: 008-fake-services-T012",Low,To Do,008-fake-services,us4,parallel
+ReplayGuard-ID: 008-fake-services-T012",Low,Done,008-fake-services,us4,parallel
 259,246,Sub-task,T013 Implement `createFakeWebhookReceiver` (kind `webhook.deliver`) in packages/fakes/src/webhook.ts,"Implement `createFakeWebhookReceiver` (kind `webhook.deliver`) in packages/fakes/src/webhook.ts
 
 Phase: Phase 6: User Story 4 - Webhook receiver (Priority: P3)
 
 Source: specs/008-fake-services/tasks.md:71
-ReplayGuard-ID: 008-fake-services-T013",Low,To Do,008-fake-services,us4,
+ReplayGuard-ID: 008-fake-services-T013",Low,Done,008-fake-services,us4,
 260,242,Task,T014 Write example scenarios reproducing every outcome class with the fakes in packages/fakes/test/outcomes.examples.test.ts,"Write example scenarios reproducing every outcome class with the fakes in packages/fakes/test/outcomes.examples.test.ts
 
 Phase: Phase 7: Polish & Cross-Cutting Concerns
 
 Source: specs/008-fake-services/tasks.md:77
-ReplayGuard-ID: 008-fake-services-T014",Medium,To Do,008-fake-services,polish,
+ReplayGuard-ID: 008-fake-services-T014",Medium,Done,008-fake-services,polish,
 261,242,Task,T015 Docs page per fake in docs/fakes/README.md,"Docs page per fake in docs/fakes/README.md
 
 Phase: Phase 7: Polish & Cross-Cutting Concerns
 
 Source: specs/008-fake-services/tasks.md:78
-ReplayGuard-ID: 008-fake-services-T015",Medium,To Do,008-fake-services,polish,parallel
+ReplayGuard-ID: 008-fake-services-T015",Medium,Done,008-fake-services,polish,parallel
 262,242,Task,T016 Author diagrams covering T001–T017 in specs/008-fake-services/diagram.yaml,"Author diagrams covering T001–T017 in specs/008-fake-services/diagram.yaml
 
 Phase: Phase 7: Polish & Cross-Cutting Concerns
 
 Source: specs/008-fake-services/tasks.md:79
-ReplayGuard-ID: 008-fake-services-T016",Medium,To Do,008-fake-services,polish,
+ReplayGuard-ID: 008-fake-services-T016",Medium,Done,008-fake-services,polish,
 263,242,Task,T017 Validate quickstart scenarios in specs/008-fake-services/quickstart.md,"Validate quickstart scenarios in specs/008-fake-services/quickstart.md
 
 Phase: Phase 7: Polish & Cross-Cutting Concerns
 
 Source: specs/008-fake-services/tasks.md:80
-ReplayGuard-ID: 008-fake-services-T017",Medium,To Do,008-fake-services,polish,
+ReplayGuard-ID: 008-fake-services-T017",Medium,Done,008-fake-services,polish,
 264,,Epic,"009 Reports (Structured, Console, HTML Timeline)","Reports (Structured, Console, HTML Timeline) (009-reporters).
 
 Source: specs/009-reporters/spec.md:1

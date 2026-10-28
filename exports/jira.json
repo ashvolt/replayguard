@@ -4669,7 +4669,7 @@
     {
       "sourceId": "008-fake-services",
       "parentSourceId": null,
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Epic"
@@ -4687,7 +4687,7 @@
     {
       "sourceId": "008-fake-services-US1",
       "parentSourceId": "008-fake-services",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Story"
@@ -4706,7 +4706,7 @@
     {
       "sourceId": "008-fake-services-US2",
       "parentSourceId": "008-fake-services",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Story"
@@ -4725,7 +4725,7 @@
     {
       "sourceId": "008-fake-services-US3",
       "parentSourceId": "008-fake-services",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Story"
@@ -4744,7 +4744,7 @@
     {
       "sourceId": "008-fake-services-US4",
       "parentSourceId": "008-fake-services",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Story"
@@ -4763,7 +4763,7 @@
     {
       "sourceId": "008-fake-services-T001",
       "parentSourceId": "008-fake-services",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Task"
@@ -4782,7 +4782,7 @@
     {
       "sourceId": "008-fake-services-T002",
       "parentSourceId": "008-fake-services",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Task"
@@ -4802,7 +4802,7 @@
     {
       "sourceId": "008-fake-services-T003",
       "parentSourceId": "008-fake-services",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Task"
@@ -4821,7 +4821,7 @@
     {
       "sourceId": "008-fake-services-T004",
       "parentSourceId": "008-fake-services",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Task"
@@ -4841,7 +4841,7 @@
     {
       "sourceId": "008-fake-services-T005",
       "parentSourceId": "008-fake-services",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Task"
@@ -4860,7 +4860,7 @@
     {
       "sourceId": "008-fake-services-T006",
       "parentSourceId": "008-fake-services-US1",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Sub-task"
@@ -4880,7 +4880,7 @@
     {
       "sourceId": "008-fake-services-T007",
       "parentSourceId": "008-fake-services-US1",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Sub-task"
@@ -4899,7 +4899,7 @@
     {
       "sourceId": "008-fake-services-T008",
       "parentSourceId": "008-fake-services-US2",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Sub-task"
@@ -4919,7 +4919,7 @@
     {
       "sourceId": "008-fake-services-T009",
       "parentSourceId": "008-fake-services-US2",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Sub-task"
@@ -4938,7 +4938,7 @@
     {
       "sourceId": "008-fake-services-T010",
       "parentSourceId": "008-fake-services-US3",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Sub-task"
@@ -4958,7 +4958,7 @@
     {
       "sourceId": "008-fake-services-T011",
       "parentSourceId": "008-fake-services-US3",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Sub-task"
@@ -4977,7 +4977,7 @@
     {
       "sourceId": "008-fake-services-T012",
       "parentSourceId": "008-fake-services-US4",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Sub-task"
@@ -4997,7 +4997,7 @@
     {
       "sourceId": "008-fake-services-T013",
       "parentSourceId": "008-fake-services-US4",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Sub-task"
@@ -5016,7 +5016,7 @@
     {
       "sourceId": "008-fake-services-T014",
       "parentSourceId": "008-fake-services",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Task"
@@ -5035,7 +5035,7 @@
     {
       "sourceId": "008-fake-services-T015",
       "parentSourceId": "008-fake-services",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Task"
@@ -5055,7 +5055,7 @@
     {
       "sourceId": "008-fake-services-T016",
       "parentSourceId": "008-fake-services",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Task"
@@ -5074,7 +5074,7 @@
     {
       "sourceId": "008-fake-services-T017",
       "parentSourceId": "008-fake-services",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Task"

@@ -3526,7 +3526,7 @@
         "008-fake-services",
         "epic"
       ],
-      "status": "To Do"
+      "status": "Done"
     },
     {
       "sourceId": "008-fake-services-US1",
@@ -3540,7 +3540,7 @@
         "us1",
         "story"
       ],
-      "status": "To Do"
+      "status": "Done"
     },
     {
       "sourceId": "008-fake-services-US2",
@@ -3554,7 +3554,7 @@
         "us2",
         "story"
       ],
-      "status": "To Do"
+      "status": "Done"
     },
     {
       "sourceId": "008-fake-services-US3",
@@ -3568,7 +3568,7 @@
         "us3",
         "story"
       ],
-      "status": "To Do"
+      "status": "Done"
     },
     {
       "sourceId": "008-fake-services-US4",
@@ -3582,7 +3582,7 @@
         "us4",
         "story"
       ],
-      "status": "To Do"
+      "status": "Done"
     },
     {
       "sourceId": "008-fake-services-T001",
@@ -3596,7 +3596,7 @@
         "setup",
         "task"
       ],
-      "status": "To Do"
+      "status": "Done"
     },
     {
       "sourceId": "008-fake-services-T002",
@@ -3611,7 +3611,7 @@
         "parallel",
         "task"
       ],
-      "status": "To Do"
+      "status": "Done"
     },
     {
       "sourceId": "008-fake-services-T003",
@@ -3625,7 +3625,7 @@
         "foundational",
         "task"
       ],
-      "status": "To Do"
+      "status": "Done"
     },
     {
       "sourceId": "008-fake-services-T004",
@@ -3640,7 +3640,7 @@
         "parallel",
         "task"
       ],
-      "status": "To Do"
+      "status": "Done"
     },
     {
       "sourceId": "008-fake-services-T005",
@@ -3654,7 +3654,7 @@
         "foundational",
         "task"
       ],
-      "status": "To Do"
+      "status": "Done"
     },
     {
       "sourceId": "008-fake-services-T006",
@@ -3669,7 +3669,7 @@
         "parallel",
         "sub-task"
       ],
-      "status": "To Do"
+      "status": "Done"
     },
     {
       "sourceId": "008-fake-services-T007",
@@ -3683,7 +3683,7 @@
         "us1",
         "sub-task"
       ],
-      "status": "To Do"
+      "status": "Done"
     },
     {
       "sourceId": "008-fake-services-T008",
@@ -3698,7 +3698,7 @@
         "parallel",
         "sub-task"
       ],
-      "status": "To Do"
+      "status": "Done"
     },
     {
       "sourceId": "008-fake-services-T009",
@@ -3712,7 +3712,7 @@
         "us2",
         "sub-task"
       ],
-      "status": "To Do"
+      "status": "Done"
     },
     {
       "sourceId": "008-fake-services-T010",
@@ -3727,7 +3727,7 @@
         "parallel",
         "sub-task"
       ],
-      "status": "To Do"
+      "status": "Done"
     },
     {
       "sourceId": "008-fake-services-T011",
@@ -3741,7 +3741,7 @@
         "us3",
         "sub-task"
       ],
-      "status": "To Do"
+      "status": "Done"
     },
     {
       "sourceId": "008-fake-services-T012",
@@ -3756,7 +3756,7 @@
         "parallel",
         "sub-task"
       ],
-      "status": "To Do"
+      "status": "Done"
     },
     {
       "sourceId": "008-fake-services-T013",
@@ -3770,7 +3770,7 @@
         "us4",
         "sub-task"
       ],
-      "status": "To Do"
+      "status": "Done"
     },
     {
       "sourceId": "008-fake-services-T014",
@@ -3784,7 +3784,7 @@
         "polish",
         "task"
       ],
-      "status": "To Do"
+      "status": "Done"
     },
     {
       "sourceId": "008-fake-services-T015",
@@ -3799,7 +3799,7 @@
         "parallel",
         "task"
       ],
-      "status": "To Do"
+      "status": "Done"
     },
     {
       "sourceId": "008-fake-services-T016",
@@ -3813,7 +3813,7 @@
         "polish",
         "task"
       ],
-      "status": "To Do"
+      "status": "Done"
     },
     {
       "sourceId": "008-fake-services-T017",
@@ -3827,7 +3827,7 @@
         "polish",
         "task"
       ],
-      "status": "To Do"
+      "status": "Done"
     },
     {
       "sourceId": "009-reporters",
