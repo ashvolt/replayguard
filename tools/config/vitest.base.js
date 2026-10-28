@@ -14,6 +14,8 @@ export function defineVitestConfig(overrides = {}) {
 		defineConfig({
 			test: {
 				include: ["test/**/*.test.ts"],
+				// Packages run in parallel under turbo; cap workers so wall-clock tests are not starved.
+				maxWorkers: "50%",
 				coverage: {
 					provider: "v8",
 					include: ["src/**/*.ts"],

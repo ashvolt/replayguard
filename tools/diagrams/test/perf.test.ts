@@ -59,5 +59,5 @@ describe("performance and isolation", () => {
 		expect(run(["generate"], silent)).toBe(0);
 		expect(run(["check"], silent)).toBe(0);
 		expect(performance.now() - start).toBeLessThan(10_000);
-	});
+	}, 20_000);
 });

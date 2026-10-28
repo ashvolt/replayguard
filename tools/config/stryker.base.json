@@ -3,6 +3,7 @@
 	"testRunner": "vitest",
 	"plugins": ["@stryker-mutator/vitest-runner"],
 	"coverageAnalysis": "perTest",
+	"disableTypeChecks": "{src,test}/**/*.{js,ts,cts,mts}",
 	"mutate": ["src/**/*.ts", "!src/**/*.d.ts"],
 	"reporters": ["clear-text", "progress", "html", "json"],
 	"htmlReporter": { "fileName": "reports/mutation/index.html" },
