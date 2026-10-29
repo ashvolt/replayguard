@@ -1,0 +1,17 @@
+{
+	"name": "@replayguard-examples/checkout-demo",
+	"version": "0.0.0",
+	"private": true,
+	"type": "module",
+	"description": "Two-minute ReplayGuard demo: a checkout workflow that double-charges under a crash, then the one-line fix.",
+	"scripts": {
+		"demo": "node demo.mjs"
+	},
+	"dependencies": {
+		"@replayguard/adapter-workflows": "workspace:*",
+		"@replayguard/reporter-console": "workspace:*",
+		"@replayguard/reporter-html": "workspace:*",
+		"@rivet-dev/workflows": "1.0.0",
+		"replayguard": "workspace:*"
+	}
+}

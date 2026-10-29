@@ -11,6 +11,7 @@
 		"build": "turbo run build",
 		"check-types": "turbo run check-types",
 		"test": "turbo run test --concurrency=4 --filter=!./upstream/*",
+		"demo": "pnpm --filter @replayguard-examples/checkout-demo demo",
 		"upstream:gaps": "turbo run test:gap --filter=./upstream/*",
 		"lint": "biome check .",
 		"lint:fix": "biome check --write .",
