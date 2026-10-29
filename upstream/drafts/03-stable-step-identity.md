@@ -34,7 +34,7 @@ effects.
 
 ## Reproduction
 
-`repro-stable-step-identity/`: run `npm i && npm test`. The test also crashes iteration 1 once,
+[`repro-stable-step-identity`](https://github.com/ashvolt/replayguard/tree/main/upstream/repro-stable-step-identity): run `npm i && npm test`. The test also crashes iteration 1 once,
 to show that a re-executed iteration derives the same key, so stability already holds.
 
 <details><summary>Core of the test</summary>

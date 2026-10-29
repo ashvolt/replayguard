@@ -31,7 +31,7 @@ failures durable execution is meant to survive. Users cannot detect this from pu
 ## Reproduction
 
 A standalone package (about 60 lines, no dependencies besides `@rivet-dev/workflows` and Vitest):
-`repro-crash-loop-retries/`. Run `npm i && npm test`.
+[`repro-crash-loop-retries`](https://github.com/ashvolt/replayguard/tree/main/upstream/repro-crash-loop-retries). Run `npm i && npm test`.
 
 <details><summary>Core of the test</summary>
 

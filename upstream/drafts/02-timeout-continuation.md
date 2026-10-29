@@ -39,7 +39,7 @@ step times out, so following that advice does not prevent the duplicate.
 
 ## Reproduction
 
-`repro-timeout-continuation/`: run `npm i && npm test`. The repro has two tests, one with
+[`repro-timeout-continuation`](https://github.com/ashvolt/replayguard/tree/main/upstream/repro-timeout-continuation): run `npm i && npm test`. The repro has two tests, one with
 retry-on-timeout and one with a critical timeout.
 
 <details><summary>Core of the test</summary>

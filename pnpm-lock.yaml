@@ -471,6 +471,9 @@ importers:
       '@rivet-dev/workflows':
         specifier: 1.0.0
         version: 1.0.0(rivetkit@2.3.27(@modelcontextprotocol/sdk@1.32.1(supports-color@7.2.0)(zod@4.6.7))(better-sqlite3@12.11.1)(supports-color@7.2.0)(ws@8.22.0))
+      rivetkit:
+        specifier: 2.3.27
+        version: 2.3.27(@modelcontextprotocol/sdk@1.32.1(supports-color@7.2.0)(zod@4.6.7))(better-sqlite3@12.11.1)(supports-color@7.2.0)(ws@8.22.0)
     devDependencies:
       '@types/node':
         specifier: 22.20.5
@@ -487,6 +490,9 @@ importers:
       '@rivet-dev/workflows':
         specifier: 1.0.0
         version: 1.0.0(rivetkit@2.3.27(@modelcontextprotocol/sdk@1.32.1(supports-color@7.2.0)(zod@4.6.7))(better-sqlite3@12.11.1)(supports-color@7.2.0)(ws@8.22.0))
+      rivetkit:
+        specifier: 2.3.27
+        version: 2.3.27(@modelcontextprotocol/sdk@1.32.1(supports-color@7.2.0)(zod@4.6.7))(better-sqlite3@12.11.1)(supports-color@7.2.0)(ws@8.22.0)
     devDependencies:
       '@types/node':
         specifier: 22.20.5
@@ -503,6 +509,9 @@ importers:
       '@rivet-dev/workflows':
         specifier: 1.0.0
         version: 1.0.0(rivetkit@2.3.27(@modelcontextprotocol/sdk@1.32.1(supports-color@7.2.0)(zod@4.6.7))(better-sqlite3@12.11.1)(supports-color@7.2.0)(ws@8.22.0))
+      rivetkit:
+        specifier: 2.3.27
+        version: 2.3.27(@modelcontextprotocol/sdk@1.32.1(supports-color@7.2.0)(zod@4.6.7))(better-sqlite3@12.11.1)(supports-color@7.2.0)(ws@8.22.0)
     devDependencies:
       '@types/node':
         specifier: 22.20.5
