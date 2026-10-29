@@ -27,3 +27,8 @@ supportedArchitectures:
   os: [current]
   cpu: [current]
   libc: [current, musl]
+
+# Security fixes for transitive dependencies of rivetkit (same major; see osv-scanner.toml).
+overrides:
+  qs: 6.16.1
+  body-parser: 2.4.0

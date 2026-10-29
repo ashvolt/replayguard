@@ -1,0 +1,59 @@
+# OSV-Scanner exceptions. Every entry is a transitive dependency of `rivetkit` (a peer of
+# @replayguard/adapter-rivetkit and @rivet-dev/workflows) or of test tooling (vite via vitest).
+# None is a runtime dependency of a published ReplayGuard package; they are installed here only
+# for tests, examples and spikes. Same-major fixes are applied as pnpm overrides
+# (pnpm-workspace.yaml); these remain because the fix is a new major or no fix exists.
+# Entries expire after 90 days: re-check, and report upstream to Rivet.
+
+# @mariozechner/pi-coding-agent 0.60.0: rivetkit → @rivet-dev/agent-os-core → secure-exec →
+# @rivet-dev/agentos-core → @agentos-software/pi. No fixed version published.
+[[IgnoredVulns]]
+id = "GHSA-7v5m-pr3q-6453"
+ignoreUntil = 2027-01-27T00:00:00Z
+reason = "transitive via rivetkit agent-os (peer, dev/test only); no fix available"
+
+[[IgnoredVulns]]
+id = "GHSA-jfgx-wxx8-mp94"
+ignoreUntil = 2027-01-27T00:00:00Z
+reason = "transitive via rivetkit agent-os (peer, dev/test only); no fix available"
+
+[[IgnoredVulns]]
+id = "GHSA-r95r-rj6r-c39x"
+ignoreUntil = 2027-01-27T00:00:00Z
+reason = "transitive via rivetkit agent-os (peer, dev/test only); no fix available"
+
+# extract-zip 2.0.1 (via pi-coding-agent): no fixed version published.
+[[IgnoredVulns]]
+id = "GHSA-7pqw-9j4j-h8q3"
+ignoreUntil = 2027-01-27T00:00:00Z
+reason = "transitive via rivetkit agent-os (peer, dev/test only); no fix available"
+
+[[IgnoredVulns]]
+id = "GHSA-jmr9-qjv8-65gv"
+ignoreUntil = 2027-01-27T00:00:00Z
+reason = "transitive via rivetkit agent-os (peer, dev/test only); no fix available"
+
+# elliptic 6.6.1: no fixed version published.
+[[IgnoredVulns]]
+id = "GHSA-848j-6mx2-7j84"
+ignoreUntil = 2027-01-27T00:00:00Z
+reason = "transitive via rivetkit (peer, dev/test only); no fix available"
+
+# basic-ftp 5.3.1: fix is 6.2.1 (new major under rivetkit's tree).
+[[IgnoredVulns]]
+id = "GHSA-c475-qrg2-pj4r"
+ignoreUntil = 2027-01-27T00:00:00Z
+reason = "transitive via rivetkit (peer, dev/test only); fix needs a major bump inside rivetkit"
+
+# uuid 9.0.1: fix is 11.1.1 (new major under rivetkit's tree).
+[[IgnoredVulns]]
+id = "GHSA-w5hq-g745-h8pq"
+ignoreUntil = 2027-01-27T00:00:00Z
+reason = "transitive via rivetkit (peer, dev/test only); fix needs a major bump inside rivetkit"
+
+# esbuild 0.27.7 (via rivetkit's @secure-exec/nodejs and vite 8.3.4 for vitest): low severity (2.5),
+# a dev-server issue; no dev server runs here. Fix 0.28.x is a breaking minor for those tools.
+[[IgnoredVulns]]
+id = "GHSA-g7r4-m6w7-qqqr"
+ignoreUntil = 2027-01-27T00:00:00Z
+reason = "test tooling only (rivetkit, vite); no esbuild dev server is run; fix is a breaking minor"

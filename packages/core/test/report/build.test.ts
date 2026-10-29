@@ -132,8 +132,8 @@ describe("buildReport (US1)", () => {
 	});
 
 	it("uses the system clock by default", () => {
-		const before = Date.now();
+		// systemClock is monotonic (performance.timeOrigin + now) and may trail Date.now() slightly.
 		const at = Date.parse(buildReport(checkoutClassified()).generatedAt);
-		expect(at).toBeGreaterThanOrEqual(before);
+		expect(Math.abs(at - Date.now())).toBeLessThan(5_000);
 	});
 });

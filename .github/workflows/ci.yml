@@ -120,7 +120,7 @@ jobs:
         run: pnpm --filter @replayguard/adapter-rivetkit add --save-dev "rivetkit@${{ matrix.rivetkit }}"
       - name: Check the engine binary
         run: |
-          if ! ls node_modules/.pnpm | grep -q '^@rivetkit+engine-cli-linux-x64'; then
+          if ! compgen -G 'node_modules/.pnpm/@rivetkit+engine-cli-linux-x64*' > /dev/null; then
             echo "::error::RivetKit engine binary package is not installed (see supportedArchitectures in pnpm-workspace.yaml)"
             exit 1
           fi

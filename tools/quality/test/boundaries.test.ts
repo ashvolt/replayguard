@@ -1,4 +1,4 @@
-import { mkdirSync, mkdtempSync, writeFileSync } from "node:fs";
+import { mkdirSync, mkdtempSync, realpathSync, writeFileSync } from "node:fs";
 import { createRequire } from "node:module";
 import { tmpdir } from "node:os";
 import { dirname, join } from "node:path";
@@ -9,7 +9,8 @@ const config = createRequire(import.meta.url)("../.dependency-cruiser.cjs") as I
 
 /** Writes a fixture repo where each file is `path → source` and returns violated rule names. */
 async function violations(files: Record<string, string>): Promise<string[]> {
-	const root = mkdtempSync(join(tmpdir(), "rg-bounds-"));
+	// realpath: macOS tmpdir() is a symlink (/tmp → /private/tmp), which dependency-cruiser rejects.
+	const root = realpathSync(mkdtempSync(join(tmpdir(), "rg-bounds-")));
 	for (const [path, source] of Object.entries(files)) {
 		mkdirSync(dirname(join(root, path)), { recursive: true });
 		writeFileSync(join(root, path), source);
