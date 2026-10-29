@@ -11,7 +11,9 @@ import {
 	scenario,
 } from "replayguard";
 
-const color = process.stdout.isTTY && !process.env.NO_COLOR;
+const color = process.env.FORCE_COLOR
+	? process.env.FORCE_COLOR !== "0"
+	: process.stdout.isTTY && !process.env.NO_COLOR;
 const fast = { retryBackoffBase: 1, retryBackoffMax: 1 };
 
 /** The workflow under test: charge the card, then email a receipt. */

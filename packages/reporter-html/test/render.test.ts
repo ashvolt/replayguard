@@ -94,6 +94,17 @@ describe("renderHtml (T018)", () => {
 		expect(doc).toContain("No fault cases ran (baseline only).");
 	});
 
+	it("rounds case durations", async () => {
+		const r = checkoutReport();
+		const doc = await renderHtml({
+			...r,
+			cases: r.cases.map((c, i) => (i === 1 ? { ...c, durationMs: 46.020751953125 } : c)),
+		});
+		expect(doc).toContain("· 46 ms ·");
+		// The embedded JSON keeps the exact value; only the visible text is rounded.
+		expect(doc.split('<script type="application/json"')[0]).not.toContain("46.0207");
+	});
+
 	it("uses a custom title and is pure", async () => {
 		const a = await renderHtml(checkoutReport(), { title: "Nightly <run>" });
 		expect(a).toContain("<title>Nightly &lt;run&gt;</title>");

@@ -49,7 +49,7 @@ function caseSection(c: CaseReport): SafeHtml {
 		c.faults.length > 0 ? `faults: ${c.faults.join(", ")}` : "no faults",
 		`${c.runs} run(s)`,
 		`${c.restarts} restart(s)`,
-		`${c.durationMs} ms`,
+		`${Math.round(c.durationMs)} ms`,
 		`final: ${c.finalState}`,
 		...(c.status === "settled" ? [] : [c.status]),
 	].join(" · ");

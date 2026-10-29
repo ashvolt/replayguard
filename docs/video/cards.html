@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>ReplayGuard — cards</title>
+<style>
+  :root{
+    --ink:#16181d; --muted:#666e7c; --bg:#f6f6f3; --line:#e1e1dc; --surface:#fff;
+    --accent:#4b46e5; --good:#1b7f4b; --warn:#b26a00; --bad:#c62f3a; --code:#0f1117;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;height:100%}
+  body{background:var(--bg);color:var(--ink);font:400 22px/1.45 "Segoe UI",system-ui,sans-serif;overflow:hidden}
+  .rule{position:fixed;inset:0 0 auto 0;height:8px;background:var(--accent);z-index:9}
+  .chrome{position:fixed;top:26px;left:56px;right:56px;display:flex;justify-content:space-between;
+    font-size:17px;color:var(--muted);font-weight:600}
+  .chrome .right{font-weight:400}
+  .card{display:none;position:absolute;inset:86px 72px 48px 72px;flex-direction:column;justify-content:center}
+  .card.on{display:flex;animation:in .5s ease both}
+  @keyframes in{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+  h1{font-size:58px;line-height:1.08;margin:0 0 14px;letter-spacing:-.5px}
+  h1.big{font-size:80px}
+  .sub{font-size:28px;color:var(--accent);margin:0 0 28px;font-weight:600}
+  .sub.plain{color:var(--muted);font-weight:400}
+  ul{margin:0;padding:0;list-style:none}
+  li{position:relative;padding:0 0 18px 40px;font-size:26px;max-width:1600px}
+  li::before{content:"";position:absolute;left:4px;top:12px;width:12px;height:12px;border-radius:50%;background:var(--accent)}
+  li .m{color:var(--muted);font-size:22px;display:block;margin-top:2px}
+  .foot{position:absolute;left:0;right:0;bottom:0;border-top:1px solid var(--line);padding-top:16px;color:var(--muted);font-size:19px}
+  .cols{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:6px}
+  .box{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px 24px}
+  .box h3{margin:0 0 8px;font-size:24px}
+  .box p{margin:0;font-size:20px;color:var(--muted)}
+  .tag{display:inline-block;font-size:15px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;color:#fff;
+    background:var(--ink);border-radius:999px;padding:3px 11px;margin-bottom:10px}
+  .flow{display:flex;align-items:center;gap:13px;flex-wrap:wrap;margin:6px 0 26px;font-size:24px}
+  .flow span{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 16px}
+  .flow span.hot{border-color:var(--bad);color:var(--bad);font-weight:700}
+  .flow i{color:var(--muted);font-style:normal}
+  .outs{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin-top:10px}
+  .outs div{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px;font-size:19px}
+  .outs b{display:block;font-size:20px;margin-bottom:4px}
+  .ok b{color:var(--good)} .no b{color:var(--bad)}
+  pre{margin:0;background:var(--code);color:#e6e8ef;border-radius:14px;padding:26px 30px;
+    font:500 23px/1.55 Consolas,"Cascadia Code",monospace;white-space:pre;max-width:1640px}
+  pre .k{color:#c4a7ff} pre .s{color:#9fe0a5} pre .c{color:#7f8697} pre .f{color:#8ec8ff}
+  pre .add{display:inline-block;background:rgba(80,200,120,.18);outline:2px solid rgba(80,200,120,.55);border-radius:4px}
+  table{border-collapse:collapse;width:100%;max-width:1600px;font-size:23px}
+  th{text-align:left;font-size:17px;letter-spacing:.6px;text-transform:uppercase;color:var(--muted);font-weight:700;
+    padding:0 18px 10px 0;border-bottom:1px solid var(--line)}
+  td{padding:13px 18px 13px 0;border-bottom:1px solid var(--line);vertical-align:top}
+  td.n{font-weight:700;white-space:nowrap}
+  .bad{color:var(--bad)} .good{color:var(--good)}
+  .big2{font-size:34px;line-height:1.3;margin-top:22px;max-width:1500px}
+  .url{font:600 30px Consolas,monospace;color:var(--accent)}
+</style>
+</head>
+<body>
+<div class="rule"></div>
+<div class="chrome"><span>ReplayGuard</span>
+  <span class="right">side-effect testing for Rivet workflows · community project, not affiliated with Rivet</span></div>
+
+<section class="card" id="title">
+  <h1 class="big">ReplayGuard</h1>
+  <p class="sub">Does your durable workflow charge the card twice when it crashes?</p>
+  <ul>
+    <li>Injects crashes, lost responses, timeouts and real process kills around every external call</li>
+    <li>Restarts the workflow like a real host, and classifies every effect</li>
+    <li>Runs on the real Rivet engine — in process, in a killed child process, and on RivetKit actors</li>
+  </ul>
+</section>
+
+<section class="card" id="problem">
+  <h1>The gap: history is written after the step</h1>
+  <p class="sub plain">Durable execution replays your code. It cannot un-send a request.</p>
+  <div class="flow"><span>step "charge" starts</span><i>→</i><span>provider charges the card</span><i>→</i>
+    <span class="hot">process dies</span><i>→</i><span>step result never saved</span><i>→</i>
+    <span>restart re-runs the step</span><i>→</i><span class="hot">charged twice</span></div>
+  <ul>
+    <li>Correct, documented at-least-once behaviour<span class="m">The fix is an idempotency key — if you know you need one, and where.</span></li>
+    <li>Rare in tests, inevitable in production<span class="m">Crashes, deploys, timeouts and lost responses all take this path.</span></li>
+  </ul>
+</section>
+
+<section class="card" id="how">
+  <h1>How it works</h1>
+  <div class="cols">
+    <div class="box"><span class="tag">1 · record</span><h3>Effect ledger</h3>
+      <p>Each external call is wrapped; every attempt, its key, timing and result are recorded.</p></div>
+    <div class="box"><span class="tag">2 · break</span><h3>One fault per case</h3>
+      <p>Crash before/after a call, lost request or response, hanging provider, real process kill — explored automatically.</p></div>
+    <div class="box"><span class="tag">3 · judge</span><h3>Outcome per effect</h3>
+      <p>Compared with a clean baseline run, with a cause, a verdict and a fix hint.</p></div>
+  </div>
+  <div class="outs">
+    <div class="ok"><b>exactly-once</b>as in the baseline</div>
+    <div class="ok"><b>deduplicated</b>replay recognised</div>
+    <div class="no"><b>duplicated</b>applied more often</div>
+    <div class="no"><b>concurrent-duplicate</b>overlapping calls</div>
+    <div class="no"><b>orphaned</b>applied, then workflow failed</div>
+    <div class="no"><b>skipped</b>expected, never applied</div>
+  </div>
+</section>
+
+<section class="card" id="code">
+  <h1>The demo workflow</h1>
+  <p class="sub plain">simplified from examples/checkout-demo · real <code>@rivet-dev/workflows</code> engine · fake providers</p>
+<pre><span class="k">await</span> <span class="f">scenario</span>()
+  .<span class="f">runtime</span>(<span class="f">workflowsRuntime</span>())
+  .<span class="f">effects</span>((ctx) =&gt; ({ payment: <span class="f">createFakePayment</span>(ctx), email: <span class="f">createFakeEmail</span>(ctx) }))
+  .<span class="f">workflow</span>(({ payment, email }) =&gt; <span class="k">async</span> (wf) =&gt; {
+    <span class="k">await</span> wf.<span class="f">step</span>(<span class="s">"charge"</span>, () =&gt; payment.<span class="f">charge</span>({ orderId: <span class="s">"order-42"</span>, amount: <span class="s">4999</span> }));
+    <span class="k">await</span> wf.<span class="f">step</span>(<span class="s">"receipt"</span>, () =&gt; email.<span class="f">send</span>({ to: <span class="s">"ada@example.com"</span>, template: <span class="s">"receipt"</span> }));
+  })
+  .<span class="f">explore</span>()      <span class="c">// crash / lost response, before / after each call → 8 cases</span>
+  .<span class="f">build</span>()
+  .<span class="f">run</span>({ classify: <span class="k">true</span> });</pre>
+</section>
+
+<section class="card" id="fix">
+  <h1>Act 2: one line</h1>
+  <p class="sub plain">A key derived from the workflow ID and the step name — the same on every re-execution</p>
+<pre><span class="k">await</span> wf.<span class="f">step</span>(<span class="s">"charge"</span>, () =&gt;
+  payment.<span class="f">charge</span>({
+    orderId: <span class="s">"order-42"</span>,
+    amount: <span class="s">4999</span>,
+    <span class="add">idempotencyKey: <span class="f">idempotencyKey</span>(wf, <span class="s">"charge"</span>),</span>   <span class="c">// "&lt;workflowId&gt;:charge"</span>
+  }));</pre>
+  <ul style="margin-top:26px">
+    <li>Never a timestamp, a random value or an attempt number<span class="m">They change on every retry; ReplayGuard flags this as unstable-idempotency-key.</span></li>
+  </ul>
+</section>
+
+<section class="card" id="runtimes">
+  <h1>Same scenarios, three runtimes</h1>
+  <div class="cols">
+    <div class="box"><span class="tag">in process</span><h3>@rivet-dev/workflows</h3>
+      <p>Fault-injecting storage driver; fast enough to explore every fault point.</p></div>
+    <div class="box"><span class="tag">process kill</span><h3>Child process + file store</h3>
+      <p>The OS process is killed at the fault; the next run is a new process on the same store.</p></div>
+    <div class="box"><span class="tag">actors</span><h3>RivetKit workflow actors</h3>
+      <p>Real engine; host killed with SIGKILL; the actor resumes on a new host from persisted history.</p></div>
+  </div>
+  <ul style="margin-top:30px">
+    <li>One conformance suite, identical outcomes on all three<span class="m">Six spike scenarios · engine runtimes in CI on Linux, macOS and Windows · actors on Linux with RivetKit 2.3.11 and 2.3.27</span></li>
+  </ul>
+</section>
+
+<section class="card" id="findings">
+  <h1>What it found in the engine</h1>
+  <p class="sub plain">Each with a standalone reproduction: <code>npm i &amp;&amp; npm test</code></p>
+  <table>
+    <tr><th>Behaviour</th><th>Observed</th><th>Proposal</th></tr>
+    <tr><td class="n">Crash loops bypass maxRetries</td><td><span class="bad">6 executions</span> with maxRetries: 2</td><td>Persist the attempt before run()</td></tr>
+    <tr><td class="n">Step timeout does not cancel</td><td>Timed-out charge <span class="bad">still lands</span>, even after the workflow failed</td><td>Abort a per-attempt signal on timeout</td></tr>
+    <tr><td class="n">No stable step identity</td><td>Two loop iterations derive <span class="bad">the same key</span></td><td>Expose a step key in step callbacks</td></tr>
+    <tr><td class="n">RivetKit 2.3 on Windows</td><td>No working runtime (packaging)</td><td>Ship the native binary and DLLs</td></tr>
+  </table>
+</section>
+
+<section class="card" id="use">
+  <h1>In your test suite</h1>
+<pre><span class="k">import</span> { scenario, fault } <span class="k">from</span> <span class="s">"replayguard"</span>;   <span class="c">// setupFiles: ["replayguard/setup"]</span>
+
+<span class="f">it</span>(<span class="s">"charges exactly once under crashes"</span>, <span class="k">async</span> () =&gt; {
+  <span class="k">const</span> result = <span class="k">await</span> checkout.<span class="f">explore</span>().<span class="f">build</span>().<span class="f">run</span>();
+  <span class="f">expect</span>(result).<span class="f">toPassSideEffectPolicy</span>();
+  <span class="f">expect</span>(result).<span class="f">toBeEffectivelyOnce</span>(<span class="s">"payment"</span>);
+});</pre>
+  <ul style="margin-top:26px">
+    <li>Console and self-contained HTML reports · fakes for payment, email, HTTP and webhooks</li>
+    <li>Strict TypeScript, ESM + CJS, mutation-tested, supply-chain hardened</li>
+  </ul>
+</section>
+
+<section class="card" id="close">
+  <h1 class="big">ReplayGuard</h1>
+  <p class="url">github.com/ashvolt/replayguard</p>
+  <p class="big2">Open source, Apache-2.0. Demo: <code>pnpm demo</code> · reproductions in <code>upstream/</code> · specs in <code>specs/</code></p>
+  <p class="big2" style="color:var(--muted)">Feedback on the engine proposals is very welcome.</p>
+</section>
+
+<script>
+  const show = () => {
+    const id = location.hash.slice(1) || "title";
+    for (const c of document.querySelectorAll(".card")) c.classList.toggle("on", c.id === id);
+  };
+  addEventListener("hashchange", show); show();
+</script>
+</body>
+</html>

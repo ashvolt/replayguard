@@ -13,3 +13,7 @@ reports/
 .claude/settings.local.json
 .export-state/
 docs/api/
+
+# Demo video build output (mp4, wav, captured demo pages)
+docs/video/out/
+docs/video/models/
