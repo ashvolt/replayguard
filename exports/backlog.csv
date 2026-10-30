@@ -1645,7 +1645,7 @@ Phase: Phase 6: Polish & Cross-Cutting Concerns
 Source: specs/012-rivetkit-adapter/tasks.md:70",012-rivetkit-adapter;polish,Medium,Done,012-rivetkit-adapter
 013-upstream-proposal,,Epic,013 Upstream Proposal to Rivet,"Upstream Proposal to Rivet (013-upstream-proposal).
 
-Source: specs/013-upstream-proposal/spec.md:1",013-upstream-proposal,High,To Do,013-upstream-proposal
+Source: specs/013-upstream-proposal/spec.md:1",013-upstream-proposal,High,Done,013-upstream-proposal
 013-upstream-proposal-US1,013-upstream-proposal,Story,US1: Minimal reproductions,"User story 1 (P1) of 013-upstream-proposal.
 
 Source: specs/013-upstream-proposal/spec.md:20",013-upstream-proposal;us1,High,Done,013-upstream-proposal
@@ -1654,7 +1654,7 @@ Source: specs/013-upstream-proposal/spec.md:20",013-upstream-proposal;us1,High,D
 Source: specs/013-upstream-proposal/spec.md:41",013-upstream-proposal;us2,High,Done,013-upstream-proposal
 013-upstream-proposal-US3,013-upstream-proposal,Story,US3: Track responses,"User story 3 (P3) of 013-upstream-proposal.
 
-Source: specs/013-upstream-proposal/spec.md:62",013-upstream-proposal;us3,Low,To Do,013-upstream-proposal
+Source: specs/013-upstream-proposal/spec.md:62",013-upstream-proposal;us3,Low,Done,013-upstream-proposal
 013-upstream-proposal-T001,013-upstream-proposal,Task,T001 Add `upstream/*` to workspace packages in pnpm-workspace.yaml and create upstream/README.md with tracker table,"Add `upstream/*` to workspace packages in pnpm-workspace.yaml and create upstream/README.md with tracker table
 
 Phase: Phase 1: Setup (Shared Infrastructure)
@@ -1704,7 +1704,7 @@ Source: specs/013-upstream-proposal/tasks.md:49",013-upstream-proposal;us2;paral
 
 Phase: Phase 5: User Story 3 - Track responses (Priority: P3)
 
-Source: specs/013-upstream-proposal/tasks.md:59",013-upstream-proposal;us3,Low,To Do,013-upstream-proposal
+Source: specs/013-upstream-proposal/tasks.md:59",013-upstream-proposal;us3,Low,Done,013-upstream-proposal
 013-upstream-proposal-T011,013-upstream-proposal,Task,T011 Link repro evidence from user docs in docs/faults/strategies.md,"Link repro evidence from user docs in docs/faults/strategies.md
 
 Phase: Phase 6: Polish & Cross-Cutting Concerns

@@ -6809,7 +6809,7 @@
     {
       "sourceId": "013-upstream-proposal",
       "parentSourceId": null,
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Epic"
@@ -6865,7 +6865,7 @@
     {
       "sourceId": "013-upstream-proposal-US3",
       "parentSourceId": "013-upstream-proposal",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Story"
@@ -7061,7 +7061,7 @@
     {
       "sourceId": "013-upstream-proposal-T010",
       "parentSourceId": "013-upstream-proposal-US3",
-      "status": "To Do",
+      "status": "Done",
       "fields": {
         "issuetype": {
           "name": "Sub-task"

@@ -3,7 +3,7 @@
 ReplayGuard found three engine behaviors that make side effects harder to keep safe. Each one
 has a standalone reproduction and an issue draft here.
 
-**Nothing is filed without explicit approval from the ReplayGuard maintainer (spec 013, FR-004).**
+**Nothing is filed without explicit approval from the ReplayGuard maintainer (spec 013, FR-004).** Drafts 01–03 were approved and filed on 2026-10-30.
 
 ## Engine version
 
@@ -31,9 +31,9 @@ upstream fixes a gap, that job fails, and the gap row and ReplayGuard's docs nee
 
 | Draft | Repro | Status | Link | Decision |
 |---|---|---|---|---|
-| [01 Crash loops bypass maxRetries](drafts/01-crash-loop-retries.md) | repro-crash-loop-retries | draft | — | awaiting maintainer review |
-| [02 Step timeout does not cancel the call](drafts/02-timeout-continuation.md) | repro-timeout-continuation | draft | — | awaiting maintainer review |
-| [03 Stable step identity for idempotency keys](drafts/03-stable-step-identity.md) | repro-stable-step-identity | draft | — | awaiting maintainer review |
+| [01 Crash loops bypass maxRetries](drafts/01-crash-loop-retries.md) | repro-crash-loop-retries | filed | [#17](https://github.com/rivet-dev/workflows/issues/17) | approved by maintainer 2026-10-30; awaiting response |
+| [02 Step timeout does not cancel the call](drafts/02-timeout-continuation.md) | repro-timeout-continuation | filed | [#18](https://github.com/rivet-dev/workflows/issues/18) | approved by maintainer 2026-10-30; awaiting response |
+| [03 Stable step identity for idempotency keys](drafts/03-stable-step-identity.md) | repro-stable-step-identity | filed | [#19](https://github.com/rivet-dev/workflows/issues/19) | approved by maintainer 2026-10-30; awaiting response |
 | [04 rivetkit cannot run on Windows (packaging)](drafts/04-rivetkit-windows-packaging.md) | [spikes/actor-restart](../spikes/actor-restart/FINDINGS.md) | draft | — | awaiting maintainer review; target `rivet-dev/rivet` |
 
 Status values are `draft`, `approved`, `filed`, `answered` and `closed`.

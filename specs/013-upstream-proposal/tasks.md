@@ -56,7 +56,7 @@ description: "Task list for 013-upstream-proposal"
 
 **Independent Test**: Tracker rows show status and decision.
 
-- [ ] T010 [US3] Request maintainer approval, file approved issues, update tracker in upstream/README.md
+- [X] T010 [US3] Request maintainer approval, file approved issues, update tracker in upstream/README.md
 
 ---
 
