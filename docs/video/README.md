@@ -1,5 +1,7 @@
 # Demo video
 
+**▶ [Watch it on YouTube](https://youtu.be/EiG0KI_fq_I)**
+
 A ~5-minute narrated walkthrough for the Rivet team and for engineers who run durable
 workflows: the double-charge problem, how ReplayGuard works, the three-act `pnpm demo`, the
 three runtimes, and the engine behaviours it found.

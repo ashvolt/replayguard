@@ -6,6 +6,12 @@
 
 **Does your durable workflow charge the card twice when it crashes?**
 
+▶ **[Watch the 5-minute demo](https://youtu.be/EiG0KI_fq_I)**: a checkout workflow that double-charges
+under a crash, the one-line fix, the three runtimes, and three engine behaviours ReplayGuard found
+([rivet-dev/workflows#17](https://github.com/rivet-dev/workflows/issues/17),
+[#18](https://github.com/rivet-dev/workflows/issues/18),
+[#19](https://github.com/rivet-dev/workflows/issues/19)).
+
 [Rivet](https://rivet.dev) workflows replay safely after crashes and restarts, but calls to
 external systems (payments, email, APIs) sit outside that durability guarantee. ReplayGuard runs
 your workflow, injects crashes, lost responses and timeouts around each external call, restarts it
